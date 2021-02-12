@@ -1,6 +1,8 @@
 # Repository for the Packt Publishing book
 ## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
+Coming November 2021
+
 Order the previous edition today!
 - [Packt](https://www.packtpub.com/product/c-9-and-net-5-modern-cross-platform-development-fifth-edition/9781800568105)
 - [Amazon.com](https://www.amazon.com/dp/180056810X/)
