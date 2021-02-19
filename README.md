@@ -11,6 +11,7 @@ Order the previous edition today!
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Errata & Improvements](errata.md)
+- [Using Visual Studio for Windows](visual-studio-win.md)
 
 ## Online materials
 Supplementary book materials available to download as PDFs: 
