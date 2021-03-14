@@ -13,7 +13,10 @@ Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Errata & Improvements](errata.md)
-- [Using Visual Studio for Windows](visual-studio-win.md)
+- [Cheat sheet for Visual Studio for Windows](cheat-sheet-vs.md)
+- [Cheat sheet for Visual Studio Code](cheat-sheet-vscode.md)
+- General feedback survey (coming soon): text box, star rating, optional email address.
+- Detailed feedback survey (coming soon): 11 questions; four minutes.
 
 ## Online materials
 Supplementary book materials available to download as PDFs: 
