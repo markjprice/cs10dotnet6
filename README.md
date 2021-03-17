@@ -10,13 +10,18 @@ Order the previous edition today!
 
 Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
+## I'm listening to my readers - please complete this survey
+
+If you have come to this GitHub repository then you're probably either a reader of an earlier edition of my book, or you're a potential reader of this and future editions. I would like to hear your opinion about what topics and tools I should cover in the sixth edition. Please tell me what you want by completing the survey at the following link: 
+
+https://www.surveymonkey.co.uk/r/6GQWPX9
+
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Errata & Improvements](errata.md)
-- [Cheat sheet for Visual Studio for Windows](cheat-sheet-vs.md)
-- [Cheat sheet for Visual Studio Code](cheat-sheet-vscode.md)
-- General feedback survey (coming soon): text box, star rating, optional email address.
-- Detailed feedback survey (coming soon): 11 questions; four minutes.
+- [Alternative tools and platforms](alternatives/alternatives-index.md)
+- General feedback survey (coming soon): comment box and star rating. For now, feel free to email me at Gmail using my GitHub username.
+- Detailed feedback survey (coming soon): 10 questions; 3 minutes.
 
 ## Online materials
 Supplementary book materials available to download as PDFs: 
