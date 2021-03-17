@@ -1,0 +1,2 @@
+- [Cheat sheet for Visual Studio for Windows](cheat-sheet-vs.md)
+- [Cheat sheet for Visual Studio Code](cheat-sheet-vscode.md)
