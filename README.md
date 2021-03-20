@@ -19,7 +19,7 @@ https://www.surveymonkey.co.uk/r/6GQWPX9
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Errata & Improvements](errata.md)
-- [Alternative tools and platforms](alternatives/alternatives-index.md)
+- [Online step-by-step instructions for code editors](docs/README.md)
 - General feedback survey (coming soon): comment box and star rating. For now, feel free to email me at Gmail using my GitHub username.
 - Detailed feedback survey (coming soon): 10 questions; 3 minutes.
 
