@@ -26,11 +26,30 @@ namespace NullHandling
       Console.WriteLine(thisCouldBeNull);
       Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
 
-      var address = new Address();
+      // Declaring non-nullable variables and parameters
+
+      // Address class is defined above Program class
+      Address address = new();
       address.Building = null;
       address.Street = null;
       address.City = "London";
       address.Region = null;
+
+      // Checking for null
+
+      string authorName = null;
+
+      // the following throws a NullReferenceException 
+      // int x = authorName.Length;
+
+      // instead of throwing an exception, null is assigned to y 
+      int? y = authorName?.Length;
+
+      Console.WriteLine($"y is null: {y is null}");
+
+      // result will be 3 if authorName?.Length is null 
+      var result = authorName?.Length ?? 3;
+      Console.WriteLine(result);
     }
   }
 }

@@ -12,8 +12,8 @@ namespace Basics
     {
       // declare some unused variables using types
       // in additional assemblies
-      //System.Data.DataSet ds;
-      //System.Net.Http.HttpClient client;
+      System.Data.DataSet ds;
+      System.Net.Http.HttpClient client;
 
       // loop through the assemblies that this app references 
       foreach (var r in Assembly.GetEntryAssembly()
@@ -31,6 +31,7 @@ namespace Basics
           // add up the counts of methods 
           methodCount += t.GetMethods().Count();
         }
+        
         // output the count of types and their methods
         Console.WriteLine(
           "{0:N0} types with {1:N0} methods in {2} assembly.",

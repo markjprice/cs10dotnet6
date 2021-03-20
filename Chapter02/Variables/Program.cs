@@ -23,7 +23,7 @@ namespace Variables
       dynamic anotherName = "Ahmed";
 
       // int does not have a Length property
-      anotherName = 12;
+      // anotherName = 12;
 
       // an array of any type has a Length property
       // anotherName = new[] { 3, 5, 7 };
@@ -44,7 +44,11 @@ namespace Variables
       // as shown in the more verbose second statement
       var xml1 = new XmlDocument();
       XmlDocument xml2 = new XmlDocument();
-      XmlDocument xml3 = new(); // target-typed new in C# 9
+      XmlDocument xml3 = new(); // target-typed new in C# 9 or later
+
+      // class Person is define below Program class
+      Person kim = new();
+      kim.BirthDate = new(1967, 12, 26); // instead of: new DateTime(1967, 12, 26)
 
       // bad use of var because we cannot tell the type, so we 
       // should use a specific type declaration as shown in 
@@ -58,6 +62,35 @@ namespace Variables
         $"default(DateTime) = {default(DateTime)}");
       Console.WriteLine(
         $"default(string) = {default(string)}");
+
+      int number = 13;
+      Console.WriteLine($"number has been set to: {number}");
+      number = default;
+      Console.WriteLine($"number has been reset to its default: {number}");
+
+      // Arrays
+      string[] names; // can reference any array of strings
+
+      // allocating memory for four strings in an array
+      names = new string[4];
+
+      // storing items at index positions
+      names[0] = "Kate";
+      names[1] = "Jack";
+      names[2] = "Rebecca";
+      names[3] = "Tom";
+
+      // looping through the names
+      for (int i = 0; i < names.Length; i++)
+      {
+        // output the item at index position i
+        Console.WriteLine(names[i]);
+      }
+    }
+
+    class Person
+    {
+      public DateTime BirthDate;
     }
   }
 }
