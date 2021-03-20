@@ -10,9 +10,9 @@ namespace PeopleApp
     {
       // Setting and outputting field values
 
-      var bob = new Person();
+      Person bob = new();
       bob.Name = "Bob Smith";
-      bob.DateOfBirth = new DateTime(1965, 12, 22);
+      bob.DateOfBirth = new(1965, 12, 22);
 
       WriteLine(
         format: "{0} was born on {1:dddd, d MMMM yyyy}",
@@ -22,7 +22,7 @@ namespace PeopleApp
       var alice = new Person
       {
         Name = "Alice Jones",
-        DateOfBirth = new DateTime(1998, 3, 7)
+        DateOfBirth = new(1998, 3, 7)
       };
 
       WriteLine(
@@ -67,7 +67,7 @@ namespace PeopleApp
 
       BankAccount.InterestRate = 0.012M; // store a shared value
 
-      var jonesAccount = new BankAccount();
+      BankAccount jonesAccount = new();
       jonesAccount.AccountName = "Mrs. Jones";
       jonesAccount.Balance = 2400;
 
@@ -75,7 +75,7 @@ namespace PeopleApp
         arg0: jonesAccount.AccountName,
         arg1: jonesAccount.Balance * BankAccount.InterestRate);
 
-      var gerrierAccount = new BankAccount();
+      BankAccount gerrierAccount = new();
       gerrierAccount.AccountName = "Ms. Gerrier";
       gerrierAccount.Balance = 98;
 
@@ -93,7 +93,7 @@ namespace PeopleApp
 
       // Initializing fields with constructors
 
-      var blankPerson = new Person();
+      Person blankPerson = new();
 
       WriteLine(format:
         "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
@@ -101,7 +101,7 @@ namespace PeopleApp
         arg1: blankPerson.HomePlanet,
         arg2: blankPerson.Instantiated);
 
-      var gunny = new Person("Gunny", "Mars");
+      Person gunny = new("Gunny", "Mars");
 
       WriteLine(format:
         "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
@@ -178,10 +178,10 @@ namespace PeopleApp
 
       // Defining read-only properties
 
-      var sam = new Person
+      Person sam = new()
       {
         Name = "Sam",
-        DateOfBirth = new DateTime(1972, 1, 27)
+        DateOfBirth = new(1972, 1, 27)
       };
 
       WriteLine(sam.Origin);
@@ -247,7 +247,7 @@ namespace PeopleApp
 
       // Working with records
 
-      var jeff = new ImmutablePerson
+      ImmutablePerson jeff = new()
       {
         FirstName = "Jeff",
         LastName = "Winger"
@@ -256,19 +256,20 @@ namespace PeopleApp
       // the following is not allowed with init properties
       // jeff.FirstName = "Geoff";
 
-      var car = new ImmutableVehicle
+      ImmutableVehicle car = new()
       {
         Brand = "Mazda MX-5",
         Color = "Metallic Soul Red",
         Wheels = 4
       };
 
-      var repaintedCar = car with { Color = "Polymetallic Grey" };
+      ImmutableVehicle repaintedCar = car
+        with { Color = "Polymetallic Grey" };
 
       WriteLine("Original color was {0}, new color is {1}.",
         arg0: car.Color, arg1: repaintedCar.Color);
 
-      var oscar = new ImmutableAnimal("Oscar", "Labrador");
+      ImmutableAnimal oscar = new("Oscar", "Labrador");
       var (who, what) = oscar; // calls Deconstruct method
       WriteLine($"{who} is a {what}.");
     }
