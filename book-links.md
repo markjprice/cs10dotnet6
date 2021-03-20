@@ -1,5 +1,17 @@
+- [Preface](#preface)
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
+  - [Visual Studio for Windows links](#visual-studio-for-windows-links)
+  - [Visual Studio Code links](#visual-studio-code-links)
+  - [Other code editor links](#other-code-editor-links)
+  - [.NET Interactive links](#net-interactive-links)
+  - [.NET Links](#net-links)
+  - [Help and learning links](#help-and-learning-links)
 - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
+  - [C# language version links](#c-language-version-links)
+  - [C# language links](#c-language-links)
+  - [Text and number type links](#text-and-number-type-links)
+  - [Null links](#null-links)
+  - [Console apps and formatting](#console-apps-and-formatting)
 - [Chapter 3 - Controlling Flow and Converting Types](#chapter-3---controlling-flow-and-converting-types)
 - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
 - [Chapter 5 - Building Your Own Types with Object-Oriented Programming](#chapter-5---building-your-own-types-with-object-oriented-programming)
@@ -20,44 +32,95 @@
 - [Chapter 20 - Building Intelligent Apps Using Machine Learning](#chapter-20---building-intelligent-apps-using-machine-learning)
 - [Practice with sample ML.NET projects](#practice-with-sample-mlnet-projects)
 
+# Preface
+
+- GitHub repository: https://github.com/markjprice/cs10dotnet6
+- Appendix has the answers to the test questions at the end of each chapter: https://static.packt-cdn.com/downloads/???_Appendix.pdf
+- Color images: https://static.packt-cdn.com/downloads/???_ColorImages.pdf
+- Packt errata: https://www.packtpub.com/support/errata
+- Become an author: https://authors.packtpub.com/
+- General feedback email: customercare@packtpub.com
+
 # Chapter 1 - Hello, C#! Welcome, .NET!
 
--  Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
--  Microsoft's plans for Visual Studio Code: https://github.com/Microsoft/vscode/wiki/Roadmap
--  Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
--  GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
--  Google and Amazon are supporters of Visual Studio Code: https://www.cnbc.com/2018/12/20/microsoft-cmo-capossela-says-google-employees-use-visual-studio-code.html
--  Official list of supported operating systems: https://github.com/dotnet/core/blob/master/release-notes/5.0/5.0-supported-os.md
--  Windows ARM64 support: https://github.com/dotnet/runtime/issues/36699
--  Latest versions of Visual Studio Code: https://code.visualstudio.com/updates
--  Default key bindings for Visual Studio Code and how to customize them: https://code.visualstudio.com/docs/getstarted/keybindings
--  Download and install Visual Studio Code: https://code.visualstudio.com/
--  Download and install the .NET 5 SDK: https://www.microsoft.com/net/download
--  Visual Studio Code support for C#: https://code.visualstudio.com/docs/languages/csharp
--  Mono project: http://www.mono-project.com/
--  Unity project: https://docs.unity3d.com/
--  Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
--  Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
--  .NET Support Policy: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
--  .NET versions: https://docs.microsoft.com/en-us/dotnet/core/versions/
--  .NET Uninstall Tool: https://docs.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool
--  Remove .NET SDKs and runtimes: https://docs.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions
--  Open source projects to enable WCF and WF to migrate to .NET 5: https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
--  Open source project for Blazor Web Forms components: https://github.com/FritzAndFriends/BlazorWebFormsComponents
--  ASP.NET Core and EF Core branding for .NET 5: https://docs.microsoft.com/en-us/dotnet/core/dotnet-five
--  .NET Standard versions and which .NET platforms support them: https://github.com/dotnet/standard/blob/master/docs/versions.md
--  Install Git: https://git-scm.com/download
--  GitHub Desktop: https://desktop.github.com
--  Source code version control with Visual Studio Code: https://code.visualstudio.com/Docs/editor/versioncontrol
--  Microsoft Docs: https://docs.microsoft.com/
--  .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
--  Scott's video series: http://computerstufftheydidnteachyou.com/
--  .NET Fiddle: https://dotnetfiddle.net/
--  Visual Studio Code documentation: https://code.visualstudio.com/docs
--  .NET Core Command-Line Interface (CLI) tool: https://aka.ms/dotnet-cli-docs
--  .NET Core runtime, CoreCLR: https://github.com/dotnet/runtime
--  .NET Core Roadmap: https://github.com/dotnet/core/blob/master/roadmap.md
--  .NET Standard FAQ: https://github.com/dotnet/standard/blob/master/docs/faq.md
+First, all the links in the printed book for this chapter.
+
+- GitHub repository: https://github.com/markjprice/cs10dotnet6
+- How to code with C# and .NET using a Raspberry Pi 400 with Ubuntu Desktop 64-bit by reading an extra article that I wrote at the following link: https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
+- Download Visual Studio for Windows: https://visualstudio.microsoft.com/downloads/
+- Sign up for a Microsoft account: https://signup.live.com/
+- Download Visual Studio Code: https://code.visualstudio.com/
+- Set up Visual Studio Code: https://code.visualstudio.com/docs/setup/setup-overview
+- Download .NET SDK: https://www.microsoft.com/net/download
+- Visual Studio Code keyboard shortcuts: https://code.visualstudio.com/docs/getstarted/keybindings
+  - Windows: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+  - macOS: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+  - Linux: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
+- Open source projects to enable WCF and WF to migrate to .NET 5: https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
+- Open source project for Blazor Web Forms components: https://github.com/FritzAndFriends/BlazorWebFormsComponents
+- Themes of .NET: https://themesof.net/
+- Raise an issue with the book: https://github.com/markjprice/cs10dotnet6/issues
+- Download Git: https://git-scm.com/download
+- Download GitHub Desktop: https://desktop.github.com
+- Microsoft Docs: https://docs.microsoft.com/
+- Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
+- Scott Hanselman's videos: https://computerstufftheydidnteachyou.com/
+- Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
+
+Second, some additional links that you might find useful to go deeper into the topics. 
+
+## Visual Studio for Windows links
+- Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
+- Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
+- Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
+- Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
+
+## Visual Studio Code links
+- Latest versions of Visual Studio Code: https://code.visualstudio.com/updates
+- Visual Studio Code documentation: https://code.visualstudio.com/docs
+- Visual Studio Code user interface: https://code.visualstudio.com/docs/getstarted/userinterface
+- Visual Studio Code support for C#: https://code.visualstudio.com/docs/languages/csharp
+- Source code version control with Visual Studio Code: https://code.visualstudio.com/Docs/editor/versioncontrol
+- Microsoft's plans for Visual Studio Code: https://github.com/Microsoft/vscode/wiki/Roadmap
+- Learning with VS Code on Chromebooks: https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started
+- Google and Amazon are supporters of Visual Studio Code: https://www.cnbc.com/2018/12/20/microsoft-cmo-capossela-says-google-employees-use-visual-studio-code.html
+- Visual Studio Code: How Microsoft's 'any OS, any programming language, any software' plan is paying off: https://www.zdnet.com/article/visual-studio-code-
+how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
+- The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
+
+## Other code editor links
+- Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
+- GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
+- JetBrains Rider: https://www.jetbrains.com/rider/
+- Rider documentation: https://www.jetbrains.com/help/rider/Introduction.html
+
+## .NET Interactive links
+- .NET Interactive documentation: https://github.com/dotnet/interactive/tree/main/docs
+- Polyglot Notebooks: Variable Sharing: https://devblogs.microsoft.com/dotnet/net-interactive-preview-3-vs-code-insiders-and-polyglot-notebooks/
+- Using HTML and JavaScript in .NET Interactive: https://github.com/dotnet/interactive/blob/main/docs/javascript-overview.md
+- .NET Interactive Samples: https://github.com/dotnet/interactive/tree/main/samples
+- Markdown syntax: https://daringfireball.net/projects/markdown/syntax
+
+## .NET Links
+- Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
+- Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
+- Official list of .NET 6 supported operating systems: https://github.com/dotnet/core/blob/master/release-notes/6.0/6.0-supported-os.md
+- Windows ARM64 support: https://github.com/dotnet/runtime/issues/36699
+- .NET Support Policy: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
+- .NET versions: https://docs.microsoft.com/en-us/dotnet/core/versions/
+- .NET Uninstall Tool: https://docs.microsoft.com/en-us/dotnet/core/additional-tools/uninstall-tool
+- Remove .NET SDKs and runtimes: https://docs.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions
+- ASP.NET Core and EF Core branding for .NET 5: https://docs.microsoft.com/en-us/dotnet/core/dotnet-five
+- .NET Optional SDK Workloads: https://github.com/dotnet/designs/blob/main/accepted/2020/workloads/workloads.md
+- .NET Core Command-Line Interface (CLI) tool: https://aka.ms/dotnet-cli-docs
+- .NET Core runtime, CoreCLR: https://github.com/dotnet/runtime
+- .NET Core Roadmap: https://github.com/dotnet/core/blob/master/roadmap.md
+- .NET Standard FAQ: https://github.com/dotnet/standard/blob/master/docs/faq.md
+- .NET Standard versions and which .NET platforms support them: https://github.com/dotnet/standard/blob/master/docs/versions.md
+- Mono project: http://www.mono-project.com/
+- Unity project: https://docs.unity3d.com/
+
+## Help and learning links
 -  Stack Overflow: https://stackoverflow.com/
 -  Google Advanced Search: https://www.google.com/advanced_search
 -  Microsoft Learn: https://docs.microsoft.com/en-us/learn/
@@ -66,55 +129,76 @@
 
 # Chapter 2 - Speaking C#
 
--  Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
--  C# Language Specification 5.0: https://www.microsoft.com/en-us/download/details.aspx?id=7029
--  Draft proposals for C# Language Specifications for 6.0 and later: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
--  What's new in C# 7.3: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3
--  New C# 9.0 features: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9
--  List of .NET versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
--  C# language versioning: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
--  An Arabic programming language: https://youtu.be/dkO8cdwf6v8
--  Naming guidelines: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
--  Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
--  Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
--  Floating point numbers: https://ciechanow.ski/exposing-floating-point/
--  Why 0.1 does not exist in floating-point numbers? https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
--  Patriot missile battery disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
--  The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
--  The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
--  Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
--  Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
--  Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
--  Formatting types: https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
--  Composite Formatting: https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting
--  C# Keywords: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
--  Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
--  Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
--  Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
--  Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
--  Nullable Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/
--  Nullable reference types: https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
--  Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
+First, all the links in the printed book for this chapter.
+
+- Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
+- An Arabic programming language: https://youtu.be/dkO8cdwf6v8
+- Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
+- American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
+
+Second, some additional links that you might find useful to go deeper into the topics. 
+
+## C# language version links
+- The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
+- Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
+- C# Language Specification 5.0: https://www.microsoft.com/en-us/download/details.aspx?id=7029
+- Draft proposals for C# Language Specifications for 6.0 and later: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
+- What's new in C# 7.3: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-7-3
+- New C# 9.0 features: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9
+- C# language versioning: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
+
+## C# language links
+- C# reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
+- C# programming guide: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/
+- C# Keywords: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
+- Naming guidelines: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+- Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
+- Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
+
+## Text and number type links
+- Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
+- Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
+- Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
+- Floating point numbers: https://ciechanow.ski/exposing-floating-point/
+
+## Null links
+- The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
+- The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
+- Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
+- Nullable Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/
+- Nullable reference types: https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
+- Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
+- Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
+
+## Console apps and formatting
+- Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
+- Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
+- Formatting types: https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
+- Composite Formatting: https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting
 
 # Chapter 3 - Controlling Flow and Converting Types
 
--  Truth tables: https://en.wikipedia.org/wiki/Truth_table
--  Side effects: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
--  Member access operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators
--  Goto Fail bug: https://gotofail.com/
--  goto keyword and examples of when it can be used: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto
--  Pattern matching: https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching
--  Patterns and switch expressions: https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/
--  Taking control of rounding: https://docs.microsoft.com/en-us/dotnet/api/system.math.round
--  Format codes for common scenarios: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
--  Why can't programmers program? http://blog.codinghorror.com/why-cant-programmers-program/
--  FizzBuzz for programming interviews: http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
--  C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
--  Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators
--  Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/statement-keywords
--  Casting and type conversions (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/types/casting-and-type-conversions
+First, all the links in the printed book for this chapter.
+
+- Truth tables: https://en.wikipedia.org/wiki/Truth_table
+- Side effects: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
+- Member access operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators
+- Goto Fail bug: https://gotofail.com/
+- goto keyword and examples of when it can be used: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto
+- Pattern matching: https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching
+- Patterns and switch expressions: https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/
+- Taking control of rounding: https://docs.microsoft.com/en-us/dotnet/api/system.math.round
+- Format codes for common scenarios: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings
+- Why can't programmers program? http://blog.codinghorror.com/why-cant-programmers-program/
+- FizzBuzz for programming interviews: http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/
+- C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
+- Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators
+- Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/statement-keywords
+- Casting and type conversions (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/types/casting-and-type-conversions
 
 # Chapter 4 - Writing, Debugging, and Testing Functions
+
+First, all the links in the printed book for this chapter.
 
 - Recursion versus interation: https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration
 - Visual Studio Code debugger: https://code.visualstudio.com/docs/editor/debugging
@@ -128,6 +212,8 @@
 - xUnit.net: http://xunit.github.io/
 
 # Chapter 5 - Building Your Own Types with Object-Oriented Programming
+
+First, all the links in the printed book for this chapter.
 
 - Visual Studio Code user interface: https://code.visualstudio.com/docs/getstarted/userinterface
 - Deconstruct method: https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct
@@ -144,6 +230,8 @@
 - Properties (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/properties
 
 # Chapter 6 - Implementing Interfaces and Inheriting Classes
+
+First, all the links in the printed book for this chapter.
 
 - Symbols that can be overloaded: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
 - Custom EventArgs: https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
@@ -165,6 +253,8 @@
 - Finalizers (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors
 
 # Chapter 7 - Understanding and Packaging .NET Types
+
+First, all the links in the printed book for this chapter.
 
 - .NET Standard 2.1 APIs and a comparison with .NET Standard 2.0: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md
 - Future of .NET Standard: https://devblogs.microsoft.com/dotnet/the-future-of-net-standard/
@@ -198,6 +288,8 @@
 
 # Chapter 8 - Working with Common .NET Types
 
+First, all the links in the printed book for this chapter.
+
 - Numerics types: https://docs.microsoft.com/en-us/dotnet/standard/numerics
 - The Half type: https://devblogs.microsoft.com/dotnet/introducing-the-half-type/
 - Unicode in regular expressions: https://www.regular-expressions.info/unicode.html
@@ -227,6 +319,8 @@
 
 # Chapter 9 - Working with Files, Streams, and Serialization
 
+First, all the links in the printed book for this chapter.
+
 - How pipelines help with I/O performance: https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/
 - Async streams tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/generate-consume-asynchronous-stream
 - System.Text.Json APIs: https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-apis/
@@ -240,6 +334,8 @@
 
 # Chapter 10 - Protecting Your Data and Applications
 
+First, all the links in the printed book for this chapter.
+
 - Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
 - Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
 - The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
@@ -249,6 +345,8 @@
 - Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
 # Chapter 11 - Working with Databases Using Entity Framework Core
+
+First, all the links in the printed book for this chapter.
 
 - Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
 - Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
@@ -274,6 +372,8 @@
 
 # Chapter 12 - Querying and Manipulating Data Using LINQ
 
+First, all the links in the printed book for this chapter.
+
 - Expression trees: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/
 - LINQ queries no longer evaluated at client: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-3.x/breaking-changes#linq-queries-are-no-longer-evaluated-on-the-client
 - LINQ comprehension syntax: https://stackoverflow.com/questions/6229187/linq-why-is-it-called-comprehension-syntax
@@ -284,6 +384,8 @@
 - LINQPad: https://www.linqpad.net/
 
 # Chapter 13 - Improving Performance and Scalability Using Multitasking
+
+First, all the links in the printed book for this chapter.
 
 - Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
 - Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
@@ -296,6 +398,8 @@
 - Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
 
 # Chapter 14 - Introducing Practical Applications of C# and .NET
+
+First, all the links in the printed book for this chapter.
 
 - .NET Application Architecture Guidance: https://www.microsoft.com/net/learn/architecture
 - TypeScript: https://www.typescriptlang.org
@@ -322,6 +426,8 @@
 
 # Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
 
+First, all the links in the printed book for this chapter.
+
 - HTML5 and CSS3: Building Responsive Websites: https://www.packtpub.com/producthtml5-and-css3-building-responsive-websites/9781787124813h
 - Kestrel web server: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
 - Free TLS/SSL certificates: https://letsencrypt.org
@@ -345,6 +451,8 @@
 - DEEP DIVE: HOW IS THE ASP.NET CORE MIDDLEWARE PIPELINE BUILT? https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipeline-built
 
 # Chapter 16 - Building Websites Using the Model-View-Controller Pattern
+
+First, all the links in the printed book for this chapter.
 
 - Built-in features for compliance with modern privacy requirements like GDPR: https://docs.microsoft.com/en-us/aspnet/core/security/gdpr
 - ASP.NET Core's support for authenticator apps: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-enable-qrcodes
@@ -372,6 +480,8 @@
 - Views in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview
 
 # Chapter 17 - Building and Consuming Web Services
+
+First, all the links in the printed book for this chapter.
 
 - Media types: http://en.wikipedia.org/wiki/Media_type
 - WS-* standards: https://en.wikipedia.org/wiki/List_of_web_service_specifications
@@ -412,6 +522,8 @@
 
 # Chapter 18 - Building Web User Interfaces Using Blazor
 
+First, all the links in the printed book for this chapter.
+
 - Official list of supported Blazor platforms: https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms
 - Blazor hosting models: https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models
 - Blazor Mobile Bindings: https://devblogs.microsoft.com/aspnet/mobile-blazor-bindings-experiment/
@@ -431,6 +543,8 @@
 - Welcome to PACMAN written in C# and running on Blazor WebAssembly: https://github.com/SteveDunn/PacManBlazor
 
 # Chapter 19 - Building Cross-Platform Mobile and Desktop Apps
+
+First, all the links in the printed book for this chapter.
 
 - Packt has two books about Xamarin.Forms with 4.5 stars on Amazon:
   - Xamarin.Forms Projects: https://www.packtpub.com/product/xamarin-forms-projects-second-edition/9781839210051
@@ -453,6 +567,8 @@
 - HttpClient and SSL/TLS implementation selector for iOS/macOS: https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/http-stack
 
 # Chapter 20 - Building Intelligent Apps Using Machine Learning
+
+First, all the links in the printed book for this chapter.
 
 - You can learn the science behind one of the most popular and successful data science techniques by enrolling in Harvard University's free Data Science: Machine Learning 8-week course: https://www.edx.org/course/data-science-machine-learning-2
 - To learn about machine learning in depth, read Python Machine Learning, Third Edition by Sebastian Raschka and Vahid Mirjalili: https://www.packtpub.com/product/python-machine-learning-third-edition/9781789955750
