@@ -31,6 +31,12 @@
   - [Memory, reference and value type links](#memory-reference-and-value-type-links)
   - [Inheritance links](#inheritance-links)
 - [Chapter 7 - Understanding and Packaging .NET Types](#chapter-7---understanding-and-packaging-net-types)
+  - [.NET Standard and API links](#net-standard-and-api-links)
+  - [.NET version links](#net-version-links)
+  - [Packages and frameworks](#packages-and-frameworks)
+  - [Roslyn, SDKs, and project templates](#roslyn-sdks-and-project-templates)
+  - [Packaging and publishing](#packaging-and-publishing)
+  - [Porting from .NET Framework](#porting-from-net-framework)
 - [Chapter 8 - Working with Common .NET Types](#chapter-8---working-with-common-net-types)
 - [Chapter 9 - Working with Files, Streams, and Serialization](#chapter-9---working-with-files-streams-and-serialization)
 - [Chapter 10 - Protecting Your Data and Applications](#chapter-10---protecting-your-data-and-applications)
@@ -298,35 +304,50 @@ Some links that you might find useful to go deeper into the topics.
 
 First, all the links in the printed book for this chapter.
 
+- How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
+- System.IO.FileSystem package details: https://www.nuget.org/packages/System.IO.FileSystem/
+
+Second, some additional links that you might find useful to go deeper into the topics. 
+
+## .NET Standard and API links
+- .NET Standard 2.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/
 - .NET Standard 2.1 APIs and a comparison with .NET Standard 2.0: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md
 - Future of .NET Standard: https://devblogs.microsoft.com/dotnet/the-future-of-net-standard/
 - Search and browse all .NET APIs: https://docs.microsoft.com/en-us/dotnet/api/
+- CoreFX README.md: https://github.com/dotnet/corefx/blob/master/Documentation/README.md
+
+## .NET version links
 - .NET Core 1.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-0/
 - .NET Core 1.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-1/
 - .NET Core 2.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/
 - .NET Core 2.2 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2/
 - .NET Core 3.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/
+- .NET Core 3.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/
 - .NET 5 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-5-0
 - Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/
-- Roslyn compiler: https://github.com/dotnet/roslyn
-- .NET Standard 2.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/
-- How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
-- .NET project SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview
+
+## Packages and frameworks
 - How packages and their APIs relate to frameworks: https://gist.github.com/davidfowl/8939f305567e1755412d6dc0b8baf1b7
 - Example .NET package and the frameworks it supports: https://www.nuget.org/packages/System.IO.FileSystem/
 - Currently supported Runtime Identifier (RID) values: https://docs.microsoft.com/en-us/dotnet/articles/core/rid-catalog
+
+## Roslyn, SDKs, and project templates
+- Roslyn compiler: https://github.com/dotnet/roslyn
+- .NET project SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview
 - Additional `dotnet new` templates: https://dotnetnew.azurewebsites.net/
+- Tutorial: Create an item template: https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-item-template
+
+## Packaging and publishing
 - PDB files: https://www.wintellect.com/pdb-files-what-every-developer-must-know/
 - Single-file app issue: https://github.com/dotnet/runtime/issues/36590
 - App trimming: https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5/
 - The PackageReference format: https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
-- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
 - NuGet packages: https://www.nuget.org/packages
-- Overview of porting from .NET Framework to .NET Core: https://docs.microsoft.com/en-us/dotnet/core/porting/
 - .NET Core application publishing overview: https://docs.microsoft.com/en-us/dotnet/core/deploying/
-- Tutorial: Create an item template: https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-item-template
+
+## Porting from .NET Framework
+- Overview of porting from .NET Framework to .NET Core: https://docs.microsoft.com/en-us/dotnet/core/porting/
 - What .NET Developers ought to know: https://www.hanselman.com/blog/WhatNETDevelopersOughtToKnowToStartIn2017.aspx
-- CoreFX README.md: https://github.com/dotnet/corefx/blob/master/Documentation/README.md
 
 # Chapter 8 - Working with Common .NET Types
 
@@ -588,6 +609,7 @@ First, all the links in the printed book for this chapter.
 
 First, all the links in the printed book for this chapter.
 
+- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
 - Packt has two books about Xamarin.Forms with 4.5 stars on Amazon:
   - Xamarin.Forms Projects: https://www.packtpub.com/product/xamarin-forms-projects-second-edition/9781839210051
   - Mastering Xamarin.Forms: https://www.packtpub.com/product/mastering-xamarin-forms-third-edition/9781839213380
