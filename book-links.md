@@ -281,7 +281,7 @@ Some links that you might find useful to go deeper into the topics.
 - Events (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
 - Custom EventArgs: https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
 
-## Interface and genetics links
+## Interface and generics links
 - Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-interfaces
 - Explicit interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
 - Design decisions for default interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods
