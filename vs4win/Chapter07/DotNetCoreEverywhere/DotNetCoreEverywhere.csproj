@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RuntimeIdentifiers>
+      win10-x64;osx-x64;rhel.7.4-x64
+    </RuntimeIdentifiers>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "AssembliesAndNamespaces"
+		},
+		{
+			"path": "SharedLibrary"
+		},
+		{
+			"path": "DotNetCoreEverywhere"
+		}
+	]
+}

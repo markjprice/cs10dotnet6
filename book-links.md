@@ -1,43 +1,50 @@
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
-  - [Visual Studio for Windows links](#visual-studio-for-windows-links)
-  - [Visual Studio Code links](#visual-studio-code-links)
-  - [Other code editor links](#other-code-editor-links)
-  - [.NET Interactive links](#net-interactive-links)
-  - [.NET links](#net-links)
-  - [Help and learning links](#help-and-learning-links)
+  - [Visual Studio for Windows](#visual-studio-for-windows)
+  - [Visual Studio Code](#visual-studio-code)
+  - [Other code editor](#other-code-editor)
+  - [.NET Interactive](#net-interactive)
+  - [.NET](#net)
+  - [Help and learning](#help-and-learning)
 - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
-  - [C# language version links](#c-language-version-links)
-  - [C# language links](#c-language-links)
-  - [Text and number type links](#text-and-number-type-links)
-  - [Null and nullability links](#null-and-nullability-links)
-  - [Console apps and formatting links](#console-apps-and-formatting-links)
+  - [C# language version](#c-language-version)
+  - [C# language](#c-language)
+  - [Text and number type](#text-and-number-type)
+  - [Null and nullability](#null-and-nullability)
+  - [Console apps and formatting](#console-apps-and-formatting)
 - [Chapter 3 - Controlling Flow and Converting Types](#chapter-3---controlling-flow-and-converting-types)
-  - [Operator links](#operator-links)
-  - [Branching statement and pattern matching links](#branching-statement-and-pattern-matching-links)
+  - [Operator](#operator)
+  - [Branching statement and pattern matching](#branching-statement-and-pattern-matching)
   - [Casting, converting, rounding, and formatting data](#casting-converting-rounding-and-formatting-data)
 - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
-  - [Debugging links](#debugging-links)
-  - [Instrumenting links](#instrumenting-links)
-  - [Testing links](#testing-links)
+  - [Debugging](#debugging)
+  - [Instrumenting](#instrumenting)
+  - [Testing](#testing)
 - [Chapter 5 - Building Your Own Types with Object-Oriented Programming](#chapter-5---building-your-own-types-with-object-oriented-programming)
-  - [Field links](#field-links)
-  - [Method links](#method-links)
-  - [Property links](#property-links)
-  - [Pattern matching links](#pattern-matching-links)
+  - [Fields](#fields)
+  - [Methods](#methods)
+  - [Properties](#properties)
+  - [Pattern matching](#pattern-matching)
 - [Chapter 6 - Implementing Interfaces and Inheriting Classes](#chapter-6---implementing-interfaces-and-inheriting-classes)
-  - [Operator overloading links](#operator-overloading-links)
-  - [Delegate and event links](#delegate-and-event-links)
-  - [Interface and genetics links](#interface-and-genetics-links)
-  - [Memory, reference and value type links](#memory-reference-and-value-type-links)
-  - [Inheritance links](#inheritance-links)
+  - [Operator overloading](#operator-overloading)
+  - [Delegates and events](#delegates-and-events)
+  - [Interfaces and generics](#interfaces-and-generics)
+  - [Memory, reference and value types](#memory-reference-and-value-types)
+  - [Inheritance](#inheritance)
 - [Chapter 7 - Understanding and Packaging .NET Types](#chapter-7---understanding-and-packaging-net-types)
-  - [.NET Standard and API links](#net-standard-and-api-links)
-  - [.NET version links](#net-version-links)
+  - [.NET Standard and API](#net-standard-and-api)
+  - [.NET version](#net-version)
   - [Packages and frameworks](#packages-and-frameworks)
   - [Roslyn, SDKs, and project templates](#roslyn-sdks-and-project-templates)
   - [Packaging and publishing](#packaging-and-publishing)
   - [Porting from .NET Framework](#porting-from-net-framework)
 - [Chapter 8 - Working with Common .NET Types](#chapter-8---working-with-common-net-types)
+  - [Working with numbers](#working-with-numbers)
+  - [Working with text and regular expressions](#working-with-text-and-regular-expressions)
+  - [Collections](#collections)
+  - [Spans](#spans)
+  - [Assemblies and reflection](#assemblies-and-reflection)
+  - [Working with images](#working-with-images)
+  - [Internationalization](#internationalization)
 - [Chapter 9 - Working with Files, Streams, and Serialization](#chapter-9---working-with-files-streams-and-serialization)
 - [Chapter 10 - Protecting Your Data and Applications](#chapter-10---protecting-your-data-and-applications)
 - [Chapter 11 - Working with Databases Using Entity Framework Core](#chapter-11---working-with-databases-using-entity-framework-core)
@@ -80,13 +87,13 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## Visual Studio for Windows links
+## Visual Studio for Windows
 - Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
 - Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
 - Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
 - Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
 
-## Visual Studio Code links
+## Visual Studio Code
 - Latest versions of Visual Studio Code: https://code.visualstudio.com/updates
 - Visual Studio Code documentation: https://code.visualstudio.com/docs
 - Visual Studio Code user interface: https://code.visualstudio.com/docs/getstarted/userinterface
@@ -99,20 +106,20 @@ Second, some additional links that you might find useful to go deeper into the t
 how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
 
-## Other code editor links
+## Other code editor
 - Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
 - GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
 - JetBrains Rider: https://www.jetbrains.com/rider/
 - Rider documentation: https://www.jetbrains.com/help/rider/Introduction.html
 
-## .NET Interactive links
+## .NET Interactive
 - .NET Interactive documentation: https://github.com/dotnet/interactive/tree/main/docs
 - Polyglot Notebooks: Variable Sharing: https://devblogs.microsoft.com/dotnet/net-interactive-preview-3-vs-code-insiders-and-polyglot-notebooks/
 - Using HTML and JavaScript in .NET Interactive: https://github.com/dotnet/interactive/blob/main/docs/javascript-overview.md
 - .NET Interactive Samples: https://github.com/dotnet/interactive/tree/main/samples
 - Markdown syntax: https://daringfireball.net/projects/markdown/syntax
 
-## .NET links
+## .NET
 - Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
 - Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
 - Official list of .NET 6 supported operating systems: https://github.com/dotnet/core/blob/master/release-notes/6.0/6.0-supported-os.md
@@ -131,7 +138,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - Mono project: http://www.mono-project.com/
 - Unity project: https://docs.unity3d.com/
 
-## Help and learning links
+## Help and learning
 -  Stack Overflow: https://stackoverflow.com/
 -  Google Advanced Search: https://www.google.com/advanced_search
 -  Microsoft Learn: https://docs.microsoft.com/en-us/learn/
@@ -149,7 +156,7 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## C# language version links
+## C# language version
 - The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 - Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
 - C# Language Specification 5.0: https://www.microsoft.com/en-us/download/details.aspx?id=7029
@@ -158,7 +165,7 @@ Second, some additional links that you might find useful to go deeper into the t
 - New C# 9.0 features: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9
 - C# language versioning: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version
 
-## C# language links
+## C# language
 - C# Reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/
 - C# Programming Guide: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/
 - C# Keywords: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/index
@@ -166,13 +173,13 @@ Second, some additional links that you might find useful to go deeper into the t
 - Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
 - Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
 
-## Text and number type links
+## Text and number type
 - Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
 - Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
 - Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
 - Floating point numbers: https://ciechanow.ski/exposing-floating-point/
 
-## Null and nullability links
+## Null and nullability
 - The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
 - The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
 - Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
@@ -181,7 +188,7 @@ Second, some additional links that you might find useful to go deeper into the t
 - Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
 - Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
 
-## Console apps and formatting links
+## Console apps and formatting
 - Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
 - Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
 - Formatting types: https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
@@ -197,13 +204,13 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## Operator links
+## Operator
 - C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
 - Side effects: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
 - Bitwise and shift operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators
 - Member access operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators
 
-## Branching statement and pattern matching links
+## Branching statement and pattern matching
 - Statement keywords (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/statement-keywords
 - Goto Fail bug: https://gotofail.com/
 - goto keyword and examples of when it can be used: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto
@@ -224,19 +231,19 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## Debugging links
+## Debugging
 - Visual Studio for Windows debugger documentation: https://docs.microsoft.com/en-us/visualstudio/debugger/
 - Visual Studio Code debugger: https://code.visualstudio.com/docs/editor/debugging
 - How to debug for absolute beginners: https://docs.microsoft.com/en-us/visualstudio/debugger/debugging-absolute-beginners
 
-## Instrumenting links
+## Instrumenting
 - System.Diagnostics Namespace: https://docs.microsoft.com/en-us/dotnet/core/api/system.diagnostics
 - Debug class: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.debug
 - Trace listeners: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.tracelistener
 - Console log formatting: https://docs.microsoft.com/en-us/dotnet/core/extensions/console-log-formatter
 - Using .env in .NET: https://dusted.codes/dotenv-in-dotnet
 
-## Testing links
+## Testing
 - Test Driven Development (TDD): https://en.wikipedia.org/wiki/Test-driven_development
 - Unit testing in .NET: https://docs.microsoft.com/en-us/dotnet/core/testing/
 - xUnit.net: http://xunit.github.io/
@@ -249,46 +256,46 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## Field links
+## Fields
 - Fields (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/fields
 - Access modifiers (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/language-reference/keywords/access-modifiers
 - Enumeration types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum
 
-## Method links
+## Methods
 - Constructors (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/constructors
 - Methods (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/methods
 - Deconstruct method: https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct
 - params keyword: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/params
 - ref keyword: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/ref-returns
 
-## Property links
+## Properties
 - Encapsulation of fields using properties: https://stackoverflow.com/questions/1568091/why-use-getters-and-setters-accessors
 - Properties (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/properties
 
-## Pattern matching links
+## Pattern matching
 - Pattern matching tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching
 
 # Chapter 6 - Implementing Interfaces and Inheriting Classes
 
 Some links that you might find useful to go deeper into the topics.
 
-## Operator overloading links
+## Operator overloading
 - Operator (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
 - Symbols that can be overloaded: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
 
-## Delegate and event links
+## Delegates and events
 - Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features-delegates-and-lambda-expressions
 - Events (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
 - Custom EventArgs: https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
 
-## Interface and generics links
+## Interfaces and generics
 - Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-interfaces
 - Explicit interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
 - Design decisions for default interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods
 - Default interface implementations tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-members-versions
 - Generics (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics
 
-## Memory, reference and value type links
+## Memory, reference and value types
 - Reference Types (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types
 - Value Types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types
 - Technical details of the internal memory layout of types in .NET: https://adamsitnik.com/Value-Types-vs-Reference-Types/
@@ -297,7 +304,7 @@ Some links that you might find useful to go deeper into the topics.
 - Finalizers and disposing: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged
 - IDisposable interface: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects
 
-## Inheritance links
+## Inheritance
 - Inheritance (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance
 
 # Chapter 7 - Understanding and Packaging .NET Types
@@ -309,14 +316,14 @@ First, all the links in the printed book for this chapter.
 
 Second, some additional links that you might find useful to go deeper into the topics. 
 
-## .NET Standard and API links
+## .NET Standard and API
 - .NET Standard 2.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/
 - .NET Standard 2.1 APIs and a comparison with .NET Standard 2.0: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.1.md
 - Future of .NET Standard: https://devblogs.microsoft.com/dotnet/the-future-of-net-standard/
 - Search and browse all .NET APIs: https://docs.microsoft.com/en-us/dotnet/api/
 - CoreFX README.md: https://github.com/dotnet/corefx/blob/master/Documentation/README.md
 
-## .NET version links
+## .NET version
 - .NET Core 1.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-0/
 - .NET Core 1.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-1-1/
 - .NET Core 2.0 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-core-2-0/
@@ -353,32 +360,54 @@ Second, some additional links that you might find useful to go deeper into the t
 
 First, all the links in the printed book for this chapter.
 
+- How to split strings with commas in values: https://stackoverflow.com/questions/18144431/regex-to-split-a-csv
+- To improve performance, many applications store a shared copy of commonly accessed objects in a central cache. To safely allow multiple threads to work with those objects knowing they won't change, you should make them immutable or use a concurrent collection type: https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent
+- Follow the rules of semantic versioning: http://semver.org
+- Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
+- Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
+- Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
+- Names for large numbers: https://en.wikipedia.org/wiki/Names_of_large_numbers
+
+Second, some additional links that you might find useful to go deeper into the topics. 
+
+## Working with numbers
 - Numerics types: https://docs.microsoft.com/en-us/dotnet/standard/numerics
 - The Half type: https://devblogs.microsoft.com/dotnet/introducing-the-half-type/
+
+## Working with text and regular expressions
+- String Class: https://docs.microsoft.com/en-us/dotnet/api/system.string
+- Regex Class: https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex
+- Regular expressions in .NET: https://docs.microsoft.com/en-us/dotnet/articles/standard/base-types/regular-expressions
+- Regular Expression Language – Quick Reference: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
 - Unicode in regular expressions: https://www.regular-expressions.info/unicode.html
 - Using a regular expression to split a comma-separated string: https://stackoverflow.com/questions/18144431/regex-to-split-a-csv
-- Regular expressions: https://www.regular-expressions.info
+- To specify a Unicode character, use `\u` followed by four characters specifying the number of the character. For example, `\u00c0` is the À character: https://www.regular-expressions.info
 - Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5/
+
+## Collections
+- Collections (C# and Visual Basic): https://docs.microsoft.com/en-us/dotnet/api/system.collections
 - Collections: https://docs.microsoft.com/en-us/dotnet/standard/collections
 - Concurrent collections: https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent
+
+## Spans
 - Span<T>: https://docs.microsoft.com/en-us/dotnet/api/system.span-1
 - How spans work internally: https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/january/csharp-all-about-span-exploring-a-new-net-mainstay
+
+## Assemblies and reflection
+- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
 - Semantic versioning: http://semver.org
 - Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
 - Dynamically load assemblies that are not currently referenced: https://docs.microsoft.com/en-us/dotnet/standard/assembly/unloadability-howto
 - Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
 - Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
-- ImageSharp: https://github.com/SixLabors/ImageSharp
-- Time zones: https://devblogs.microsoft.com/dotnet/cross-platform-time-zones-with-net-core/
-- Names of large numbers: https://en.wikipedia.org/wiki/Names_of_large_numbers
-- .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
-- String Class: https://docs.microsoft.com/en-us/dotnet/api/system.string
-- Regex Class: https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex
-- Regular expressions in .NET: https://docs.microsoft.com/en-us/dotnet/articles/standard/base-types/regular-expressions
-- Regular Expression Language – Quick Reference: https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference
-- Collections (C# and Visual Basic): https://docs.microsoft.com/en-us/dotnet/api/system.collections
 - Extending Metadata Using Attributes: https://docs.microsoft.com/en-us/dotnet/standard/attributes/
+
+## Working with images
+- ImageSharp: https://github.com/SixLabors/ImageSharp
+
+## Internationalization
 - Globalizing and localizing .NET applications: https://docs.microsoft.com/en-us/dotnet/standard/globalization-localization/
+- Time zones: https://devblogs.microsoft.com/dotnet/cross-platform-time-zones-with-net-core/
 
 # Chapter 9 - Working with Files, Streams, and Serialization
 
