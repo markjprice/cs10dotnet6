@@ -341,6 +341,7 @@ Second, some additional links that you might find useful to go deeper into the t
 ## Roslyn, SDKs, and project templates
 - Roslyn compiler: https://github.com/dotnet/roslyn
 - .NET project SDKs: https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview
+- global.json overview: https://docs.microsoft.com/en-us/dotnet/core/tools/global-json
 - Additional `dotnet new` templates: https://dotnetnew.azurewebsites.net/
 - Tutorial: Create an item template: https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-item-template
 
@@ -373,6 +374,8 @@ Second, some additional links that you might find useful to go deeper into the t
 ## Working with numbers
 - Numerics types: https://docs.microsoft.com/en-us/dotnet/standard/numerics
 - The Half type: https://devblogs.microsoft.com/dotnet/introducing-the-half-type/
+- nint and nuint types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nint-nuint
+- nint Struct: https://docs.microsoft.com/en-us/dotnet/api/system.nint
 
 ## Working with text and regular expressions
 - String Class: https://docs.microsoft.com/en-us/dotnet/api/system.string
