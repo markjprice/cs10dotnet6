@@ -1,0 +1,8 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Exercise03UnitTests
+build_property.ProjectDir = /Users/markjprice/Code/Chapter08/Exercise03UnitTests/
