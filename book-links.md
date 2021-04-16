@@ -414,7 +414,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
 - Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
-# Chapter 11 - Working with Databases Using Entity Framework Core
+# Chapter 11 - Working with Datab Using Entity Framework Core
 
 ## Links in the printed chapter 11
 - Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
