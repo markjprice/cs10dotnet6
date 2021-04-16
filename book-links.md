@@ -1,4 +1,5 @@
 - [Chapter 1 - Hello, C#! Welcome, .NET!](#chapter-1---hello-c-welcome-net)
+  - [Links in the printed chapter 1](#links-in-the-printed-chapter-1)
   - [Visual Studio for Windows](#visual-studio-for-windows)
   - [Visual Studio Code](#visual-studio-code)
   - [Other code editor](#other-code-editor)
@@ -6,20 +7,24 @@
   - [.NET](#net)
   - [Help and learning](#help-and-learning)
 - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
+  - [Links in the printed chapter 2](#links-in-the-printed-chapter-2)
   - [C# language version](#c-language-version)
   - [C# language](#c-language)
   - [Text and number type](#text-and-number-type)
   - [Null and nullability](#null-and-nullability)
   - [Console apps and formatting](#console-apps-and-formatting)
 - [Chapter 3 - Controlling Flow and Converting Types](#chapter-3---controlling-flow-and-converting-types)
+  - [Links in the printed chapter 3](#links-in-the-printed-chapter-3)
   - [Operator](#operator)
   - [Branching statement and pattern matching](#branching-statement-and-pattern-matching)
   - [Casting, converting, rounding, and formatting data](#casting-converting-rounding-and-formatting-data)
 - [Chapter 4 - Writing, Debugging, and Testing Functions](#chapter-4---writing-debugging-and-testing-functions)
+  - [Links in the printed chapter 4](#links-in-the-printed-chapter-4)
   - [Debugging](#debugging)
   - [Instrumenting](#instrumenting)
   - [Testing](#testing)
 - [Chapter 5 - Building Your Own Types with Object-Oriented Programming](#chapter-5---building-your-own-types-with-object-oriented-programming)
+  - [Links in the printed chapter 5](#links-in-the-printed-chapter-5)
   - [Fields](#fields)
   - [Methods](#methods)
   - [Properties](#properties)
@@ -30,7 +35,8 @@
   - [Interfaces and generics](#interfaces-and-generics)
   - [Memory, reference and value types](#memory-reference-and-value-types)
   - [Inheritance](#inheritance)
-- [Chapter 7 - Understanding and Packaging .NET Types](#chapter-7---understanding-and-packaging-net-types)
+- [Chapter 7 - Packaging and Distributing .NET Types](#chapter-7---packaging-and-distributing-net-types)
+  - [Links in the printed chapter 7](#links-in-the-printed-chapter-7)
   - [.NET Standard and API](#net-standard-and-api)
   - [.NET version](#net-version)
   - [Packages and frameworks](#packages-and-frameworks)
@@ -38,6 +44,7 @@
   - [Packaging and publishing](#packaging-and-publishing)
   - [Porting from .NET Framework](#porting-from-net-framework)
 - [Chapter 8 - Working with Common .NET Types](#chapter-8---working-with-common-net-types)
+  - [Links in the printed chapter 8](#links-in-the-printed-chapter-8)
   - [Working with numbers](#working-with-numbers)
   - [Working with text and regular expressions](#working-with-text-and-regular-expressions)
   - [Collections](#collections)
@@ -46,18 +53,42 @@
   - [Working with images](#working-with-images)
   - [Internationalization](#internationalization)
 - [Chapter 9 - Working with Files, Streams, and Serialization](#chapter-9---working-with-files-streams-and-serialization)
+  - [Links in the printed chapter 9](#links-in-the-printed-chapter-9)
+  - [File system](#file-system)
+  - [Encoding](#encoding)
+  - [Serialization](#serialization)
 - [Chapter 10 - Protecting Your Data and Applications](#chapter-10---protecting-your-data-and-applications)
-- [Chapter 11 - Working with Databases Using Entity Framework Core](#chapter-11---working-with-databases-using-entity-framework-core)
+  - [Links in the printed chapter 10](#links-in-the-printed-chapter-10)
+- [Chapter 11 - Working with Datab Using Entity Framework Core](#chapter-11---working-with-datab-using-entity-framework-core)
+  - [Links in the printed chapter 11](#links-in-the-printed-chapter-11)
+  - [SQLite](#sqlite)
+  - [EF Core database providers](#ef-core-database-providers)
+  - [EF Core models](#ef-core-models)
+  - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
+  - [NoSQL data stores](#nosql-data-stores)
 - [Chapter 12 - Querying and Manipulating Data Using LINQ](#chapter-12---querying-and-manipulating-data-using-linq)
+  - [Links in the printed chapter 12](#links-in-the-printed-chapter-12)
 - [Chapter 13 - Improving Performance and Scalability Using Multitasking](#chapter-13---improving-performance-and-scalability-using-multitasking)
+  - [Links in the printed chapter 13](#links-in-the-printed-chapter-13)
+  - [Tasks](#tasks)
+  - [Thread safety](#thread-safety)
+  - [async and awit](#async-and-awit)
+  - [Parallel programmng](#parallel-programmng)
+  - [Sharing resouces and synchronization](#sharing-resouces-and-synchronization)
 - [Chapter 14 - Introducing Practical Applications of C# and .NET](#chapter-14---introducing-practical-applications-of-c-and-net)
+  - [Links in the printed chapter 14](#links-in-the-printed-chapter-14)
 - [Chapter 15 - Building Websites Using ASP.NET Core Razor Pages](#chapter-15---building-websites-using-aspnet-core-razor-pages)
+  - [Links in the printed chapter 15](#links-in-the-printed-chapter-15)
 - [Chapter 16 - Building Websites Using the Model-View-Controller Pattern](#chapter-16---building-websites-using-the-model-view-controller-pattern)
+  - [Links in the printed chapter 16](#links-in-the-printed-chapter-16)
 - [Chapter 17 - Building and Consuming Web Services](#chapter-17---building-and-consuming-web-services)
-- [Chapter 18 - Building Web User Interfaces Using Blazor](#chapter-18---building-web-user-interfaces-using-blazor)
-- [Chapter 19 - Building Cross-Platform Mobile and Desktop Apps](#chapter-19---building-cross-platform-mobile-and-desktop-apps)
-- [Chapter 20 - Building Intelligent Apps Using Machine Learning](#chapter-20---building-intelligent-apps-using-machine-learning)
-- [Practice with sample ML.NET projects](#practice-with-sample-mlnet-projects)
+  - [Links in the printed chapter 17](#links-in-the-printed-chapter-17)
+- [Chapter 18 - Building and Consuming Other Services](#chapter-18---building-and-consuming-other-services)
+  - [Links in the printed chapter 18](#links-in-the-printed-chapter-18)
+- [Chapter 19 - Building Web User Interfaces Using Blazor](#chapter-19---building-web-user-interfaces-using-blazor)
+  - [Links in the printed chapter 19](#links-in-the-printed-chapter-19)
+- [Chapter 20 - Building Cross-Platform Mobile and Desktop Apps](#chapter-20---building-cross-platform-mobile-and-desktop-apps)
+  - [Links in the printed chapter 20](#links-in-the-printed-chapter-20)
 
 # Chapter 1 - Hello, C#! Welcome, .NET!
 
@@ -397,8 +428,14 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - System.Text.Json APIs: https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-apis/
 - Issues solved by the new JSON APIs, including JamesNK's comments: https://github.com/dotnet/corefx/issues/33115
 - How to migrate from Newtonsoft.Json to System.Text.Json: https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to
+
+## File system
 - File System and the Registry (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/
+
+## Encoding
 - Character encoding in .NET: https://docs.microsoft.com/en-us/dotnet/articles/standard/base-types/character-encoding
+
+## Serialization
 - Serialization (C#): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/concepts/serialization/
 - Serializing to Files, TextWriters, and XmlWriters: https://docs.microsoft.com/en-us/dotnet/standard/linq/serialize-files-textwriters-xmlwriters
 - Newtonsoft Json.NET: https://www.newtonsoft.com/json
@@ -417,27 +454,38 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 # Chapter 11 - Working with Datab Using Entity Framework Core
 
 ## Links in the printed chapter 11
-- Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
-- Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
-- Document Database Providers for Entity Framework Core: https://github.com/BlueshiftSoftware/EntityFrameworkCore
+- EF Core documentation: https://docs.microsoft.com/en-us/ef/core/
 - Entity Framework 6.3 and its .NET Core 3.0 and later support: https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/
 - EF Core team's plans: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/plan
 - New features in EF Core 5: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/whatsnew
+- New features in EF Core 6: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew
+
+## SQLite
 - Download SQLite: https://www.sqlite.org/download.html
 - SQL statements supported by SQLite: https://sqlite.org/lang.html
 - Download SQLiteStudio: http://sqlitestudio.pl
+
+## EF Core database providers
 - EF Core database providers: https://docs.microsoft.com/en-us/ef/core/providers/
 - Devart database providers: https://www.devart.com/dotconnect/entityframework.html
 - Check the latest NuGet package version: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/
+- Document Database Providers for Entity Framework Core: https://github.com/BlueshiftSoftware/EntityFrameworkCore
+
+## EF Core models
 - EF Core model conventions: https://docs.microsoft.com/en-us/ef/core/modeling/
 - Data seeding: https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
 - Humanizer library: http://humanizr.net
 - Scaffolding: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli
+
+## EF Core querying and manipulating
 - Filtered include: https://docs.microsoft.com/en-us/ef/core/querying/related-data/eager#filtered-include
 - Query tags: https://docs.microsoft.com/en-us/ef/core/querying/tags
 - Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
 - Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
-- EF Core documentation: https://docs.microsoft.com/en-us/ef/core/
+
+## NoSQL data stores
+- Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
+- Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
 
 # Chapter 12 - Querying and Manipulating Data Using LINQ
 
@@ -454,14 +502,24 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 # Chapter 13 - Improving Performance and Scalability Using Multitasking
 
 ## Links in the printed chapter 13
+- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
 - Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
+
+## Tasks
 - Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
+
+## Thread safety
 - Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
 - Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
-- Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
+
+## async and awit
 - Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
 - await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
+
+## Parallel programmng
 - Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
+
+## Sharing resouces and synchronization
 - Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
 
 # Chapter 14 - Introducing Practical Applications of C# and .NET
