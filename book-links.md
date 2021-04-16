@@ -61,8 +61,7 @@
 
 # Chapter 1 - Hello, C#! Welcome, .NET!
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 1
 - GitHub repository: https://github.com/markjprice/cs10dotnet6
 - How to code with C# and .NET using a Raspberry Pi 400 with Ubuntu Desktop 64-bit by reading an extra article that I wrote at the following link: https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
 - Download Visual Studio for Windows: https://visualstudio.microsoft.com/downloads/
@@ -84,8 +83,6 @@ First, all the links in the printed book for this chapter.
 - Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
 - Scott Hanselman's videos: https://computerstufftheydidnteachyou.com/
 - Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## Visual Studio for Windows
 - Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
@@ -147,14 +144,11 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 
 # Chapter 2 - Speaking C#
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 2
 - Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
 - An Arabic programming language: https://youtu.be/dkO8cdwf6v8
 - Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
 - American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## C# language version
 - The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
@@ -196,13 +190,10 @@ Second, some additional links that you might find useful to go deeper into the t
 
 # Chapter 3 - Controlling Flow and Converting Types
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 3
 - Truth tables: https://en.wikipedia.org/wiki/Truth_table
 - Why can't programmers program? http://blog.codinghorror.com/why-cant-programmers-program/
 - FizzBuzz for programming interviews: http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/ 
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## Operator
 - C# operators: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/operators
@@ -224,12 +215,9 @@ Second, some additional links that you might find useful to go deeper into the t
 
 # Chapter 4 - Writing, Debugging, and Testing Functions
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 4
 - Recursion versus interation: https://en.wikipedia.org/wiki/Recursion_(computer_science)#Recursion_versus_iteration
 - Instructions for setting up the .NET debugger: https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## Debugging
 - Visual Studio for Windows debugger documentation: https://docs.microsoft.com/en-us/visualstudio/debugger/
@@ -250,11 +238,8 @@ Second, some additional links that you might find useful to go deeper into the t
 
 # Chapter 5 - Building Your Own Types with Object-Oriented Programming
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 5
 - How to calculate someone's age: https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-in-c
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## Fields
 - Fields (C# programming guide): https://docs.microsoft.com/en-us/dotnet/articles/csharp/programming-guide/classes-and-structs/fields
@@ -276,8 +261,6 @@ Second, some additional links that you might find useful to go deeper into the t
 - Pattern matching tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching
 
 # Chapter 6 - Implementing Interfaces and Inheriting Classes
-
-Some links that you might find useful to go deeper into the topics.
 
 ## Operator overloading
 - Operator (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
@@ -307,14 +290,11 @@ Some links that you might find useful to go deeper into the topics.
 ## Inheritance
 - Inheritance (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance
 
-# Chapter 7 - Understanding and Packaging .NET Types
+# Chapter 7 - Packaging and Distributing .NET Types
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 7
 - How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
 - System.IO.FileSystem package details: https://www.nuget.org/packages/System.IO.FileSystem/
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## .NET Standard and API
 - .NET Standard 2.1 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/
@@ -359,8 +339,7 @@ Second, some additional links that you might find useful to go deeper into the t
 
 # Chapter 8 - Working with Common .NET Types
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 8
 - How to split strings with commas in values: https://stackoverflow.com/questions/18144431/regex-to-split-a-csv
 - To improve performance, many applications store a shared copy of commonly accessed objects in a central cache. To safely allow multiple threads to work with those objects knowing they won't change, you should make them immutable or use a concurrent collection type: https://docs.microsoft.com/en-us/dotnet/api/system.collections.concurrent
 - Follow the rules of semantic versioning: http://semver.org
@@ -368,8 +347,6 @@ First, all the links in the printed book for this chapter.
 - Dynamically execute code: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.methodbase.invoke
 - Dynamically generate new code and assemblies: https://docs.microsoft.com/en-us/dotnet/api/system.reflection.emit.assemblybuilder
 - Names for large numbers: https://en.wikipedia.org/wiki/Names_of_large_numbers
-
-Second, some additional links that you might find useful to go deeper into the topics. 
 
 ## Working with numbers
 - Numerics types: https://docs.microsoft.com/en-us/dotnet/standard/numerics
@@ -414,8 +391,7 @@ Second, some additional links that you might find useful to go deeper into the t
 
 # Chapter 9 - Working with Files, Streams, and Serialization
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 9
 - How pipelines help with I/O performance: https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/
 - Async streams tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/generate-consume-asynchronous-stream
 - System.Text.Json APIs: https://devblogs.microsoft.com/dotnet/try-the-new-system-text-json-apis/
@@ -429,8 +405,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 10 - Protecting Your Data and Applications
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 10
 - Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
 - Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
 - The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
@@ -441,8 +416,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 11 - Working with Databases Using Entity Framework Core
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 11
 - Welcome to Azure Cosmos DB: https://docs.microsoft.com/en-us/azure/cosmos-db/introduction
 - Use NoSQL databases as a persistence infrastructure: https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure
 - Document Database Providers for Entity Framework Core: https://github.com/BlueshiftSoftware/EntityFrameworkCore
@@ -467,8 +441,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 12 - Querying and Manipulating Data Using LINQ
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 12
 - Expression trees: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/
 - LINQ queries no longer evaluated at client: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-3.x/breaking-changes#linq-queries-are-no-longer-evaluated-on-the-client
 - LINQ comprehension syntax: https://stackoverflow.com/questions/6229187/linq-why-is-it-called-comprehension-syntax
@@ -480,8 +453,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 13 - Improving Performance and Scalability Using Multitasking
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 13
 - Thread pool: https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool
 - Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
 - Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
@@ -494,8 +466,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 14 - Introducing Practical Applications of C# and .NET
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 14
 - .NET Application Architecture Guidance: https://www.microsoft.com/net/learn/architecture
 - TypeScript: https://www.typescriptlang.org
 - Books from Packt about .NET and SPAs:
@@ -521,8 +492,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 15
 - HTML5 and CSS3: Building Responsive Websites: https://www.packtpub.com/producthtml5-and-css3-building-responsive-websites/9781787124813h
 - Kestrel web server: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
 - Free TLS/SSL certificates: https://letsencrypt.org
@@ -547,8 +517,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 16 - Building Websites Using the Model-View-Controller Pattern
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 16
 - Built-in features for compliance with modern privacy requirements like GDPR: https://docs.microsoft.com/en-us/aspnet/core/security/gdpr
 - ASP.NET Core's support for authenticator apps: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-enable-qrcodes
 - Default configuration of web hosts: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host
@@ -576,8 +545,7 @@ First, all the links in the printed book for this chapter.
 
 # Chapter 17 - Building and Consuming Web Services
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 17
 - Media types: http://en.wikipedia.org/wiki/Media_type
 - WS-* standards: https://en.wikipedia.org/wiki/List_of_web_service_specifications
 - gRPC as an alternative to WCF: https://devblogs.microsoft.com/premier-developer/grpc-asp-net-core-as-a-migration-path-for-wcfs-in-net-core/
@@ -615,10 +583,17 @@ First, all the links in the printed book for this chapter.
 - Health checks in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks
 - Use HttpClientFactory to implement resilient HTTP requests: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
 
-# Chapter 18 - Building Web User Interfaces Using Blazor
+# Chapter 18 - Building and Consuming Other Services
 
-First, all the links in the printed book for this chapter.
+## Links in the printed chapter 18
+- gRPC
+- SignalR
+- OData
+- Azure Functions
 
+# Chapter 19 - Building Web User Interfaces Using Blazor
+
+## Links in the printed chapter 19
 - Official list of supported Blazor platforms: https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms
 - Blazor hosting models: https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models
 - Blazor Mobile Bindings: https://devblogs.microsoft.com/aspnet/mobile-blazor-bindings-experiment/
@@ -637,10 +612,9 @@ First, all the links in the printed book for this chapter.
 - Routing in Blazor Apps: Comparing the routing of popular web frameworks like React and Angular with Blazor: https://devblogs.microsoft.com/premier-developer/routing-in-blazor-apps/
 - Welcome to PACMAN written in C# and running on Blazor WebAssembly: https://github.com/SteveDunn/PacManBlazor
 
-# Chapter 19 - Building Cross-Platform Mobile and Desktop Apps
+# Chapter 20 - Building Cross-Platform Mobile and Desktop Apps
 
-First, all the links in the printed book for this chapter.
-
+## Links in the printed chapter 20
 - UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
 - Packt has two books about Xamarin.Forms with 4.5 stars on Amazon:
   - Xamarin.Forms Projects: https://www.packtpub.com/product/xamarin-forms-projects-second-edition/9781839210051
@@ -661,44 +635,3 @@ First, all the links in the printed book for this chapter.
 - Self Signed iOS Certifcates and Certificate Pinning in a Xamarin.Forms application: https://nicksnettravels.builttoroam.com/ios-certificate/
 - Protecting your users with certificate pinning: https://www.basdecort.com/protecting-your-users-with-certificate-pinning/
 - HttpClient and SSL/TLS implementation selector for iOS/macOS: https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/http-stack
-
-# Chapter 20 - Building Intelligent Apps Using Machine Learning
-
-First, all the links in the printed book for this chapter.
-
-- You can learn the science behind one of the most popular and successful data science techniques by enrolling in Harvard University's free Data Science: Machine Learning 8-week course: https://www.edx.org/course/data-science-machine-learning-2
-- To learn about machine learning in depth, read Python Machine Learning, Third Edition by Sebastian Raschka and Vahid Mirjalili: https://www.packtpub.com/product/python-machine-learning-third-edition/9781789955750
-- Job roles who are involved with machine learning: https://www.datasciencecentral.com/profiles/blogs/difference-between-machine-learning-data-science-ai-deep-learning
-- Overfitting and underfitting and how to compensate for it: https://elitedatascience.com/overfitting-in-machine-learning
-- Announcement for ML.NET: https://devblogs.microsoft.com/dotnet/introducing-ml-net-cross-platform-proven-and-open-source-machine-learning-framework/
-- Accord.NET Framework: http://accord-framework.net
-- Microsoft Infer.NET: https://www.microsoft.com/en-us/research/blog/the-microsoft-infer-net-machine-learning-framework-goes-open-source/
-- How to create a game match up list app with Infer.NET and probabilistic programming: https://docs.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/matchup-app-infer-net
-- The traditional "Hello World" app for machine learning is one that can predict the type of iris flower based on four features: petal length, petal width, sepal length, and sepal width. You can follow a 10-minute tutorial: https://dotnet.microsoft.com/learn/machinelearning-ai/ml-dotnet-get-started-tutorial/intro
-- Design of the IDataView interface: https://github.com/dotnet/machinelearning/blob/master/docs/code/IDataViewDesignPrinciples.md
-- Simon Funk's use of SVD: https://sifter.org/~simon/journal/20061027.2.html
-- Use of matrix factorization in recommender systems: https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)
-- August 2020 ML.NET API and Tooling Updates: https://devblogs.microsoft.com/dotnet/august-ml-net-api-and-tooling-updates/
-- What is ML.Net and how does it work?: https://docs.microsoft.com/en-us/dotnet/machine-learning/how-does-mldotnet-work
-- Machine learning glossary of important terms: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/glossary
-- Channel 9 ML.NET videos: https://aka.ms/dotnet3-mlnet
-- YouTube ML.NET videos: https://aka.ms/mlnetyoutube
-- Machine Learning Explainability vs Interpretability: Two concepts that could help restore trust in AI: https://www.kdnuggets.com/2018/12/machine-learning-explainability-interpretability-ai.html
-- Machine learning tasks in ML.NET: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/tasks
-- Machine learning data transforms - ML.NET: https://docs.microsoft.com/en-us/dotnet/machine-learning/resources/transforms
-- ML.NET Samples: https://github.com/dotnet/machinelearning-samples/blob/master/README.md
-- Community Samples: https://github.com/dotnet/machinelearning-samples/blob/master/docs/COMMUNITY-SAMPLES.md
-- ML.NET API reference: https://docs.microsoft.com/en-gb/dotnet/api/?view=ml-dotnet
-- ML.NET: The Machine Learning Framework for .NET Developers: https://msdn.microsoft.com/en-us/magazine/mt848634
-- Building recommendation engine for .NET applications using Azure Machine Learning: https://devblogs.microsoft.com/dotnet/dot-net-recommendation-system-for-net-applications-using-azure-machine-learning/
-
-# Practice with sample ML.NET projects
-
-- Sentiment Analysis for User Reviews: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/BinaryClassification_SentimentAnalysis
-- Customer Segmentation - Clustering sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Clustering_CustomerSegmentation
-- Spam Detection for Text Messages: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/BinaryClassification_SpamDetection
-- GitHub Issues Labeler: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler
-- Movie Recommendation - Matrix Factorization problem sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation
-- Taxi Fare Prediction: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Regression_TaxiFarePrediction
-- Bike Sharing Demand - Regression problem sample: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Regression_BikeSharingDemand
-- eShopDashboardML - Sales forecasting: https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Forecasting-Sales
