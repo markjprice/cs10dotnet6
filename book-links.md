@@ -92,11 +92,15 @@
 
 # Chapter 1 - Hello, C#! Welcome, .NET!
 
-## Links in the printed chapter 1
-- GitHub repository: https://github.com/markjprice/cs10dotnet6
-- How to code with C# and .NET using a Raspberry Pi 400 with Ubuntu Desktop 64-bit by reading an extra article that I wrote at the following link: https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
+## Visual Studio for Windows
 - Download Visual Studio for Windows: https://visualstudio.microsoft.com/downloads/
 - Sign up for a Microsoft account: https://signup.live.com/
+- Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
+- Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
+- Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
+- Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
+
+## Visual Studio Code
 - Download Visual Studio Code: https://code.visualstudio.com/
 - Set up Visual Studio Code: https://code.visualstudio.com/docs/setup/setup-overview
 - Download .NET SDK: https://www.microsoft.com/net/download
@@ -104,24 +108,6 @@
   - Windows: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
   - macOS: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
   - Linux: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf
-- Open source projects to enable WCF and WF to migrate to .NET 5: https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
-- Open source project for Blazor Web Forms components: https://github.com/FritzAndFriends/BlazorWebFormsComponents
-- Themes of .NET: https://themesof.net/
-- Raise an issue with the book: https://github.com/markjprice/cs10dotnet6/issues
-- Download Git: https://git-scm.com/download
-- Download GitHub Desktop: https://desktop.github.com
-- Microsoft Docs: https://docs.microsoft.com/
-- Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
-- Scott Hanselman's videos: https://computerstufftheydidnteachyou.com/
-- Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
-
-## Visual Studio for Windows
-- Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
-- Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
-- Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
-- Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
-
-## Visual Studio Code
 - Latest versions of Visual Studio Code: https://code.visualstudio.com/updates
 - Visual Studio Code documentation: https://code.visualstudio.com/docs
 - Visual Studio Code user interface: https://code.visualstudio.com/docs/getstarted/userinterface
@@ -131,14 +117,17 @@
 - Learning with VS Code on Chromebooks: https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started
 - Google and Amazon are supporters of Visual Studio Code: https://www.cnbc.com/2018/12/20/microsoft-cmo-capossela-says-google-employees-use-visual-studio-code.html
 - Visual Studio Code: How Microsoft's 'any OS, any programming language, any software' plan is paying off: https://www.zdnet.com/article/visual-studio-code-
-how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
+how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
+- Comparison of Visual Studio Code and Visual Studio: https://www.infoworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
 - The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
 
-## Other code editor
+## Other code editors and platforms
 - Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
-- GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
 - JetBrains Rider: https://www.jetbrains.com/rider/
 - Rider documentation: https://www.jetbrains.com/help/rider/Introduction.html
+- How to code with C# and .NET using a Raspberry Pi 400 with Ubuntu Desktop 64-bit by reading an extra article that I wrote at the following link: https://github.com/markjprice/cs9dotnet5-extras/blob/main/raspberry-pi-ubuntu64/README.md
+- Visual Studio for Mac documentation: https://docs.microsoft.com/en-us/visualstudio/mac/
+- GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
 
 ## .NET Interactive
 - .NET Interactive documentation: https://github.com/dotnet/interactive/tree/main/docs
@@ -148,6 +137,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - Markdown syntax: https://daringfireball.net/projects/markdown/syntax
 
 ## .NET
+- Themes of .NET: https://themesof.net/
 - Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
 - Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
 - Official list of .NET 6 supported operating systems: https://github.com/dotnet/core/blob/master/release-notes/6.0/6.0-supported-os.md
@@ -163,25 +153,33 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - .NET Core Roadmap: https://github.com/dotnet/core/blob/master/roadmap.md
 - .NET Standard FAQ: https://github.com/dotnet/standard/blob/master/docs/faq.md
 - .NET Standard versions and which .NET platforms support them: https://github.com/dotnet/standard/blob/master/docs/versions.md
+
+## Open source and other projects related to .NET
 - Mono project: http://www.mono-project.com/
 - Unity project: https://docs.unity3d.com/
+- Open source projects to enable WCF and WF to migrate to .NET 5: https://devblogs.microsoft.com/dotnet/supporting-the-community-with-wf-and-wcf-oss-projects/
+- Open source project for Blazor Web Forms components: https://github.com/FritzAndFriends/BlazorWebFormsComponents
+
+## Git
+- Download Git: https://git-scm.com/download
+- Download GitHub Desktop: https://desktop.github.com
 
 ## Help and learning
--  Stack Overflow: https://stackoverflow.com/
--  Google Advanced Search: https://www.google.com/advanced_search
--  Microsoft Learn: https://docs.microsoft.com/en-us/learn/
--  .NET Videos: https://dotnet.microsoft.com/learn/videos
--  Microsoft Channel 9 – .NET Videos: https://channel9.msdn.com/Search?term=.net&lang-en=true
+- Raise an issue with the book: https://github.com/markjprice/cs10dotnet6/issues
+- Microsoft Docs: https://docs.microsoft.com/
+- Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
+- Scott Hanselman's videos: https://computerstufftheydidnteachyou.com/
+- Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
+- Stack Overflow: https://stackoverflow.com/
+- Google Advanced Search: https://www.google.com/advanced_search
+- Microsoft Learn: https://docs.microsoft.com/en-us/learn/
+- .NET Videos: https://dotnet.microsoft.com/learn/videos
+- Microsoft Channel 9 – .NET Videos: https://channel9.msdn.com/Search?term=.net&lang-en=true
 
 # Chapter 2 - Speaking C#
 
-## Links in the printed chapter 2
-- Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
-- An Arabic programming language: https://youtu.be/dkO8cdwf6v8
-- Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
-- American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
-
 ## C# language version
+- Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
 - The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 - Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
 - C# Language Specification 5.0: https://www.microsoft.com/en-us/download/details.aspx?id=7029
@@ -203,6 +201,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
 - Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
 - Floating point numbers: https://ciechanow.ski/exposing-floating-point/
+- Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
+- American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
 ## Null and nullability
 - The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
@@ -218,6 +218,9 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is- paying-off/
 - Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
 - Formatting types: https://docs.microsoft.com/en-us/dotnet/standard/base-types/formatting-types
 - Composite Formatting: https://docs.microsoft.com/en-us/dotnet/standard/base-types/composite-formatting
+
+## Miscellaneous
+- An Arabic programming language: https://youtu.be/dkO8cdwf6v8
 
 # Chapter 3 - Controlling Flow and Converting Types
 
