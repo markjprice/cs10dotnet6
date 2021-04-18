@@ -205,15 +205,6 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
 - American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
 
-## Null and nullability
-- The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
-- The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
-- Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
-- Nullable Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/nullable-types/
-- Nullable reference types: https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
-- Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
-- Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
-
 ## Console apps and formatting
 - Main() and command-line arguments (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/main-and-command-args/
 - Console Class: https://docs.microsoft.com/en-us/dotnet/api/system.console
@@ -321,6 +312,15 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Finalizers (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors
 - Finalizers and disposing: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/unmanaged
 - IDisposable interface: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/using-objects
+
+## Null and nullability
+- The inventor of null, Sir Charles Antony Richard Hoare, admits his mistake in a recorded hour-long talk: https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare
+- The tweet about achieving 80% annotations in .NET 5: https://twitter.com/terrajobst/status/1296566363880742917
+- Video to learn how to get rid of null reference exceptions forever: https://channel9.msdn.com/Shows/On-NET/This-is-how-you-get-rid-of-null-reference-exceptions-forever
+- Nullable value types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+- Nullable reference types: https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references
+- Null-conditional operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operators
+- Null-coalescing operator: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
 
 ## Inheritance
 - Inheritance (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/inheritance
