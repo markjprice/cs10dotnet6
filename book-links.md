@@ -179,6 +179,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 # Chapter 2 - Speaking C#
 
 ## C# language version
+- Announcing Open Source C# standardization: https://devblogs.microsoft.com/dotnet/announcing-open-source-c-standardization-standards/
 - Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
 - The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 - Current status of the C# language: https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md
