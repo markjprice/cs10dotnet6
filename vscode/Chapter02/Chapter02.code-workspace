@@ -4,13 +4,10 @@
 			"path": "Numbers"
 		},
 		{
-			"path": "Basics"
+			"path": "Vocabulary"
 		},
 		{
 			"path": "Variables"
-		},
-		{
-			"path": "NullHandling"
 		},
 		{
 			"path": "Formatting"
@@ -19,7 +16,7 @@
 			"path": "Arguments"
 		},
 		{
-			"path": "Exercise02"
+			"path": "Exercise03"
 		}
 	],
 	"settings": {}

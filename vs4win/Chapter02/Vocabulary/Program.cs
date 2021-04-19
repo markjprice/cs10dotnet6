@@ -4,7 +4,7 @@ using System.Reflection;
 
 // #error version
 
-namespace Basics
+namespace Vocabulary
 {
   class Program
   {
@@ -16,20 +16,20 @@ namespace Basics
       System.Net.Http.HttpClient client;
 
       // loop through the assemblies that this app references 
-      foreach (AssemblyName namedAssembly in Assembly
+      foreach (AssemblyName name in Assembly
         .GetEntryAssembly().GetReferencedAssemblies())
       {
         // load the assembly so we can read its details
-        var a = Assembly.Load(namedAssembly);
+        Assembly a = Assembly.Load(name);
 
         // declare a variable to count the number of methods
         int methodCount = 0;
 
         // loop through all the types in the assembly 
-        foreach (TypeInfo type in a.DefinedTypes)
+        foreach (TypeInfo t in a.DefinedTypes)
         {
           // add up the counts of methods 
-          methodCount += type.GetMethods().Length;
+          methodCount += t.GetMethods().Length;
         }
         
         // output the count of types and their methods
@@ -37,7 +37,7 @@ namespace Basics
           "{0:N0} types with {1:N0} methods in {2} assembly.",
           arg0: a.DefinedTypes.Count(),
           arg1: methodCount,
-          arg2: namedAssembly.Name);
+          arg2: name.Name);
       }
     }
   }

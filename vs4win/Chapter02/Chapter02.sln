@@ -1,17 +1,15 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.218
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basics", "Basics\Basics.csproj", "{A9E17252-FCFA-41A9-B004-EE7AB4B2717F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vocabulary", "Basics\Vocabulary.csproj", "{A9E17252-FCFA-41A9-B004-EE7AB4B2717F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arguments", "Arguments\Arguments.csproj", "{8AB27D04-FC2B-4379-835E-2D4E1A79E935}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise02", "Exercise02\Exercise02.csproj", "{68B69046-3524-4805-A5F1-75F6ED93FE55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise03", "Exercise03\Exercise03.csproj", "{68B69046-3524-4805-A5F1-75F6ED93FE55}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Formatting", "Formatting\Formatting.csproj", "{7401EDC0-C4BA-4ADB-B86F-D25FED5946B0}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullHandling", "NullHandling\NullHandling.csproj", "{EEC79D4C-6857-4D4C-9FD0-AC473FC91A18}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Numbers", "Numbers\Numbers.csproj", "{E7EA2D6A-67EF-4649-B414-9354DA4B406C}"
 EndProject

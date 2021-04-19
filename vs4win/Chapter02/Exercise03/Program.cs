@@ -1,6 +1,6 @@
 ﻿using static System.Console;
 
-namespace Exercise02
+namespace Exercise03
 {
     class Program
     {
