@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.218
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vocabulary", "Basics\Vocabulary.csproj", "{A9E17252-FCFA-41A9-B004-EE7AB4B2717F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vocabulary", "Vocabulary\Vocabulary.csproj", "{A9E17252-FCFA-41A9-B004-EE7AB4B2717F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arguments", "Arguments\Arguments.csproj", "{8AB27D04-FC2B-4379-835E-2D4E1A79E935}"
 EndProject
@@ -37,10 +37,6 @@ Global
 		{7401EDC0-C4BA-4ADB-B86F-D25FED5946B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7401EDC0-C4BA-4ADB-B86F-D25FED5946B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7401EDC0-C4BA-4ADB-B86F-D25FED5946B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EEC79D4C-6857-4D4C-9FD0-AC473FC91A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EEC79D4C-6857-4D4C-9FD0-AC473FC91A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EEC79D4C-6857-4D4C-9FD0-AC473FC91A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EEC79D4C-6857-4D4C-9FD0-AC473FC91A18}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7EA2D6A-67EF-4649-B414-9354DA4B406C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7EA2D6A-67EF-4649-B414-9354DA4B406C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7EA2D6A-67EF-4649-B414-9354DA4B406C}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -7,6 +7,9 @@
 			"path": "PeopleApp"
 		},
 		{
+			"path": "NullHandling"
+		},
+		{
 			"path": "Exercise02"
 		}
 	]
