@@ -86,6 +86,8 @@
   - [.NET apps](#net-apps)
   - [ASP.NET versions and features](#aspnet-versions-and-features)
   - [Web development technologies](#web-development-technologies)
+  - [Windows desktop app development](#windows-desktop-app-development)
+  - [Third-party cross-platform GUI development](#third-party-cross-platform-gui-development)
 - [Chapter 15 - Building Websites Using ASP.NET Core Razor Pages](#chapter-15---building-websites-using-aspnet-core-razor-pages)
   - [General web development](#general-web-development)
   - [ASP.NET Core](#aspnet-core)
@@ -93,14 +95,14 @@
   - [Endpoint routing](#endpoint-routing)
 - [Chapter 16 - Building Websites Using the Model-View-Controller Pattern](#chapter-16---building-websites-using-the-model-view-controller-pattern)
   - [Security and privacy](#security-and-privacy)
-  - [Setting up and configuring websites](#setting-up-and-configuring-websites)
+  - [Setting up and configuring](#setting-up-and-configuring)
   - [Controllers](#controllers)
   - [Models](#models)
   - [Views](#views)
   - [Miscellaneous](#miscellaneous-2)
 - [Chapter 17 - Building and Consuming Web Services](#chapter-17---building-and-consuming-web-services)
-  - [Web services](#web-services)
-  - [Routing](#routing)
+  - [Web service technologies](#web-service-technologies)
+  - [Web service routing](#web-service-routing)
   - [Web service clients](#web-service-clients)
   - [Documenting web services](#documenting-web-services)
   - [Securing web services](#securing-web-services)
@@ -111,15 +113,12 @@
   - [SignalR](#signalr)
   - [OData](#odata)
   - [Azure Functions](#azure-functions)
-- [Chapter 19 - Building Web User Interfaces Using Blazor](#chapter-19---building-web-user-interfaces-using-blazor)
+- [Chapter 19 - Building User Interfaces Using Blazor](#chapter-19---building-user-interfaces-using-blazor)
   - [Blazor hosting models](#blazor-hosting-models)
   - [Blazor components](#blazor-components)
   - [Advanced techniques](#advanced-techniques)
   - [Other resources](#other-resources)
-- [Chapter 20 - Building Cross-Platform Mobile and Desktop Apps](#chapter-20---building-cross-platform-mobile-and-desktop-apps)
-  - [Windows desktop development](#windows-desktop-development)
-  - [Legacy mobile development](#legacy-mobile-development)
-  - [Third-party platforms](#third-party-platforms)
+- [Chapter 20 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-20---building-mobile-and-desktop-apps-using-net-maui)
   - [.NET MAUI](#net-maui)
   - [Mobile development](#mobile-development)
 - [Chapter 21 - Epilogue](#chapter-21---epilogue)
@@ -625,6 +624,16 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - WebAssembly: https://webassembly.org
 - TypeScript: https://www.typescriptlang.org
 
+## Windows desktop app development
+- Packt book about building WPF apps: https://www.packtpub.com/product/mastering-windows-presentation-foundation/9781785883002
+- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
+- Microsoft Details 9 Desktop Dev Options, from WPF to Blazor: https://visualstudiomagazine.com/articles/2021/03/25/desktop-options.aspx
+
+## Third-party cross-platform GUI development
+- avalonia - A cross platform XAML framework for .NET: https://avaloniaui.net
+- Uno Platform: https://platform.uno
+- Getting Started with the Uno Platform (Project Reunion/WinUI): https://nicksnettravels.builttoroam.com/getting-started-uno-platform/
+
 # Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
 
 ## General web development
@@ -665,7 +674,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Authorization: https://docs.microsoft.com/en-us/aspnet/core/security/authorization/introduction
 - Anti-forgery tokens: https://docs.microsoft.com/en-us/aspnet/core/security/anti-request-forgery
 
-## Setting up and configuring websites
+## Setting up and configuring
 - dotnet new templates: https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new
 - Overview of ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/overview
 - Default configuration of web hosts: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host
@@ -696,14 +705,14 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 
 # Chapter 17 - Building and Consuming Web Services
 
-## Web services
+## Web service technologies
 - Media types: http://en.wikipedia.org/wiki/Media_type
 - WS-* standards: https://en.wikipedia.org/wiki/List_of_web_service_specifications
 - HTTP OPTIONS method and other HTTP methods: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS
 - HTTP POST requests: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
 - Create web APIs with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/web-api/
 
-## Routing
+## Web service routing
 - Design decisions around endpoint routing: https://devblogs.microsoft.com/aspnet/asp-net-core-2-2-0-preview1-endpoint-routing/
 - Endpoint routing: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/routing
 - Previous routing system: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/routing?view=aspnetcore-2.1
@@ -761,7 +770,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Azure Functions
 - Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
 
-# Chapter 19 - Building Web User Interfaces Using Blazor
+# Chapter 19 - Building User Interfaces Using Blazor
 
 ## Blazor hosting models
 - Blazor: https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
@@ -789,30 +798,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Carl Franklin's Blazor Train: https://www.youtube.com/playlist?list=PL8h4jt35t1wjvwFnvcB2LlYL4jLRzRmoz
 - Welcome to PACMAN written in C# and running on Blazor WebAssembly: https://github.com/SteveDunn/PacManBlazor
 
-# Chapter 20 - Building Cross-Platform Mobile and Desktop Apps
-
-## Windows desktop development
-- Packt book about building WPF apps: https://www.packtpub.com/product/mastering-windows-presentation-foundation/9781785883002
-- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
-- Microsoft Details 9 Desktop Dev Options, from WPF to Blazor: https://visualstudiomagazine.com/articles/2021/03/25/desktop-options.aspx
-
-## Legacy mobile development
-- Packt has two books about Xamarin.Forms with 4.5 stars on Amazon:
-  - Xamarin.Forms Projects: https://www.packtpub.com/product/xamarin-forms-projects-second-edition/9781839210051
-  - Mastering Xamarin.Forms: https://www.packtpub.com/product/mastering-xamarin-forms-third-edition/9781839213380
-- Xamarin supports creating Tizen mobile apps for Samsung devices: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/platform/other/tizen
-- Xamarin dependency services: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/dependency-service/introduction
-- Xamarin.Forms Pages: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/controls/pages
-- Entry control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/entry
-- Editor control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/editor
-- ListView control: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/
-- Xamarin.Forms documentation: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/
-- Xamarin.Essentials provides developers with cross-platform APIs for their mobile applications: https://docs.microsoft.com/en-us/xamarin/essentials/
-
-## Third-party platforms
-- avalonia - A cross platform XAML framework for .NET: https://avaloniaui.net
-- Uno Platform: https://platform.uno
-- Getting Started with the Uno Platform (Project Reunion/WinUI): https://nicksnettravels.builttoroam.com/getting-started-uno-platform/
+# Chapter 20 - Building Mobile and Desktop Apps Using .NET MAUI
 
 ## .NET MAUI
 - Introduction to .NET MAUI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
