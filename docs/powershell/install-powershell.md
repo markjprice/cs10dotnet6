@@ -4,7 +4,7 @@ You can install PowerShell by downloading the appropriate installation package f
 
 https://aka.ms/powershell-release?tag=stable
 
-For example, for Windows 10 64-bit, you would download the file named PowerShell-7.1.3-win-x64.msi.
+For example, for Windows 10 64-bit, you would download the file named `PowerShell-7.1.3-win-x64.msi`.
 
 On macOS, you can install PowerShell using Homebrew, as shown in the following command:
 ```
