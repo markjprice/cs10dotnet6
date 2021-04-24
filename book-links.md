@@ -595,6 +595,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
 - await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
 - Six Essential Tips for Async: https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async
+- Exploring the async/await State Machine – The Awaitable Pattern: https://vkontech.com/exploring-the-async-await-state-machine-the-awaitable-pattern/
+- There Is No Thread: https://blog.stephencleary.com/2013/11/there-is-no-thread.html
 
 ## Parallel programming
 - Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
