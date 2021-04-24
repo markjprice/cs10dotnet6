@@ -62,7 +62,7 @@
   - [Cross-platform cryptography](#cross-platform-cryptography)
   - [General security knowledge](#general-security-knowledge)
   - [Encryption](#encryption)
-- [Chapter 11 - Working with Datab Using Entity Framework Core](#chapter-11---working-with-datab-using-entity-framework-core)
+- [Chapter 11 - Working with Data Using Entity Framework Core](#chapter-11---working-with-data-using-entity-framework-core)
   - [Legacy EF 6](#legacy-ef-6)
   - [EF Core](#ef-core)
   - [EF Core database providers](#ef-core-database-providers)
@@ -512,7 +512,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
 - Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
 
-# Chapter 11 - Working with Datab Using Entity Framework Core
+# Chapter 11 - Working with Data Using Entity Framework Core
 
 ## Legacy EF 6
 - Entity Framework 6.3 and its .NET Core 3.0 and later support: https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/
