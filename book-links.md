@@ -79,8 +79,8 @@
   - [Threads](#threads)
   - [Tasks](#tasks)
   - [Thread safety](#thread-safety)
-  - [async and awit](#async-and-awit)
-  - [Parallel programmng](#parallel-programmng)
+  - [async and await](#async-and-await)
+  - [Parallel programming](#parallel-programming)
   - [Sharing resouces and synchronization](#sharing-resouces-and-synchronization)
 - [Chapter 14 - Introducing Practical Applications of C# and .NET](#chapter-14---introducing-practical-applications-of-c-and-net)
   - [.NET apps](#net-apps)
@@ -591,12 +591,12 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
 - Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
 
-## async and awit
+## async and await
 - Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
 - await (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/await
 - Six Essential Tips for Async: https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async
 
-## Parallel programmng
+## Parallel programming
 - Parallel Programming in .NET: https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/
 
 ## Sharing resouces and synchronization
