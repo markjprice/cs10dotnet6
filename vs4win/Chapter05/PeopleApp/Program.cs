@@ -10,23 +10,24 @@ namespace PeopleApp
     {
       // Setting and outputting field values
 
+      // var bob = new Person(); // C# 1.0 or later
       Person bob = new();
-      bob.Name = "Bob Smith";
-      bob.DateOfBirth = new(1965, 12, 22);
+      // WriteLine(bob.ToString());
 
-      WriteLine(
-        format: "{0} was born on {1:dddd, d MMMM yyyy}",
+      bob.Name = "Bob Smith";
+      bob.DateOfBirth = new DateTime(1965, 12, 22); // C# 1.0 or later
+
+      WriteLine(format: "{0} was born on {1:dddd, d MMMM yyyy}",
         arg0: bob.Name,
         arg1: bob.DateOfBirth);
 
-      var alice = new Person
+      Person alice = new()
       {
         Name = "Alice Jones",
-        DateOfBirth = new(1998, 3, 7)
+        DateOfBirth = new(1998, 3, 7) // C# 9.0 or later
       };
 
-      WriteLine(
-        format: "{0} was born on {1:dd MMM yy}",
+      WriteLine(format: "{0} was born on {1:dd MMM yy}",
         arg0: alice.Name,
         arg1: alice.DateOfBirth);
 
@@ -34,8 +35,8 @@ namespace PeopleApp
 
       bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
 
-      WriteLine(format:
-        "{0}'s favorite wonder is {1}. Its integer is {2}.",
+      WriteLine(
+        format: "{0}'s favorite wonder is {1}. Its integer is {2}.",
         arg0: bob.Name,
         arg1: bob.FavoriteAncientWonder,
         arg2: (int)bob.FavoriteAncientWonder);
@@ -58,9 +59,9 @@ namespace PeopleApp
       WriteLine(
         $"{bob.Name} has {bob.Children.Count} children:");
 
-      for (int child = 0; child < bob.Children.Count; child++)
+      for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
       {
-        WriteLine($"  {bob.Children[child].Name}");
+        WriteLine($"  {bob.Children[childIndex].Name}");
       }
 
       // Making a field static
@@ -101,7 +102,7 @@ namespace PeopleApp
         arg1: blankPerson.HomePlanet,
         arg2: blankPerson.Instantiated);
 
-      Person gunny = new("Gunny", "Mars");
+      Person gunny = new(initialName: "Gunny", homePlanet: "Mars");
 
       WriteLine(format:
         "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",

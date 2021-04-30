@@ -11,23 +11,28 @@ namespace WorkingWithFileSystems
   {
     static void OutputFileSystemInfo()
     {
-      WriteLine("{0,-33} {1}", "Path.PathSeparator", PathSeparator);
-      WriteLine("{0,-33} {1}", "Path.DirectorySeparatorChar",
-        DirectorySeparatorChar);
-      WriteLine("{0,-33} {1}", "Directory.GetCurrentDirectory()",
-        GetCurrentDirectory());
-      WriteLine("{0,-33} {1}", "Environment.CurrentDirectory",
-        CurrentDirectory);
-      WriteLine("{0,-33} {1}", "Environment.SystemDirectory", SystemDirectory);
-      WriteLine("{0,-33} {1}", "Path.GetTempPath()", GetTempPath());
+      WriteLine("{0,-33} {1}", arg0: "Path.PathSeparator", 
+        arg1: PathSeparator);
+      WriteLine("{0,-33} {1}", arg0: "Path.DirectorySeparatorChar",
+        arg1: DirectorySeparatorChar);
+      WriteLine("{0,-33} {1}", arg0: "Directory.GetCurrentDirectory()",
+        arg1: GetCurrentDirectory());
+      WriteLine("{0,-33} {1}", arg0: "Environment.CurrentDirectory",
+        arg1: CurrentDirectory);
+      WriteLine("{0,-33} {1}", arg0: "Environment.SystemDirectory", 
+        arg1: SystemDirectory);
+      WriteLine("{0,-33} {1}", arg0: "Path.GetTempPath()", 
+        arg1: GetTempPath());
+
       WriteLine("GetFolderPath(SpecialFolder");
-      WriteLine("{0,-33} {1}", "  .System)", GetFolderPath(SpecialFolder.System));
-      WriteLine("{0,-33} {1}", "  .ApplicationData)",
-        GetFolderPath(SpecialFolder.ApplicationData));
-      WriteLine("{0,-33} {1}", "  .MyDocuments)",
-        GetFolderPath(SpecialFolder.MyDocuments));
-      WriteLine("{0,-33} {1}", "  .Personal)",
-        GetFolderPath(SpecialFolder.Personal));
+      WriteLine("{0,-33} {1}", arg0: "  .System)", 
+        arg1: GetFolderPath(SpecialFolder.System));
+      WriteLine("{0,-33} {1}", arg0: "  .ApplicationData)",
+        arg1: GetFolderPath(SpecialFolder.ApplicationData));
+      WriteLine("{0,-33} {1}", arg0: "  .MyDocuments)",
+        arg1: GetFolderPath(SpecialFolder.MyDocuments));
+      WriteLine("{0,-33} {1}", arg0: "  .Personal)",
+        arg1: GetFolderPath(SpecialFolder.Personal));
     }
 
     static void WorkWithDrives()
@@ -100,21 +105,17 @@ namespace WorkingWithFileSystems
       StreamWriter textWriter = File.CreateText(textFile);
       textWriter.WriteLine("Hello, C#!");
       textWriter.Close(); // close file and release resources 
-
       WriteLine($"Does it exist? {File.Exists(textFile)}");
 
       // copy the file, and overwrite if it already exists 
       File.Copy(sourceFileName: textFile,
         destFileName: backupFile, overwrite: true);
-
       WriteLine($"Does {backupFile} exist? {File.Exists(backupFile)}");
-
       Write("Confirm the files exist, and then press ENTER: ");
       ReadLine();
 
       // delete file 
       File.Delete(textFile);
-
       WriteLine($"Does it exist? {File.Exists(textFile)}");
 
       // read from the text file backup 

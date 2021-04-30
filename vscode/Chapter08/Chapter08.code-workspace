@@ -10,6 +10,9 @@
 			"path": "WorkingWithText"
 		},
 		{
+			"path": "WorkingWithTime"
+		},
+		{
 			"path": "WorkingWithRegularExpressions"
 		},
 		{

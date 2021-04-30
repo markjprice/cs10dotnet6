@@ -53,22 +53,10 @@ namespace WorkingWithCollections
       // Using immutable collections
 
       ImmutableList<string> immutableCities = cities.ToImmutableList();
-
       ImmutableList<string> newList = immutableCities.Add("Rio");
-
-      Write("Immutable list of cities:");
-      foreach (string city in immutableCities)
-      {
-        Write($" {city}");
-      }
-      WriteLine();
-
-      Write("New list of cities:");
-      foreach (string city in newList)
-      {
-        Write($" {city}");
-      }
-      WriteLine();
+      
+      Output("Immutable list of cities:", immutableCities);
+      Output("New list of cities:", newList);
     }
 
     static void WorkingWithDictionaries()

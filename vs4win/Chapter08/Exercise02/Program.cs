@@ -23,7 +23,7 @@ namespace Exercise02
         Write("Enter some input: ");
         string input = ReadLine();
 
-        var r = new Regex(regexp);
+        Regex r = new(regexp);
 
         WriteLine($"{input} matches {regexp}: {r.IsMatch(input)}");
 

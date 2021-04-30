@@ -28,17 +28,19 @@ namespace Packt.Shared
       byte[] encryptedBytes;
       byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
 
-      var aes = Aes.Create(); // abstract class factory method
+      Aes aes = Aes.Create(); // abstract class factory method
 
-      var stopwatch = Stopwatch.StartNew();
+      Stopwatch timer = Stopwatch.StartNew();
 
       Rfc2898DeriveBytes pbkdf2 = new(password, salt, iterations);
 
       aes.Key = pbkdf2.GetBytes(32); // set a 256-bit key 
       aes.IV = pbkdf2.GetBytes(16); // set a 128-bit IV 
 
+      timer.Stop();
+
       WriteLine("{0:N0} milliseconds to generate Key and IV using {1:N0} iterations.",
-        arg0: stopwatch.ElapsedMilliseconds,
+        arg0: timer.ElapsedMilliseconds,
         arg1: iterations);
 
       using (MemoryStream ms = new())
@@ -60,7 +62,7 @@ namespace Packt.Shared
       byte[] plainBytes;
       byte[] cryptoBytes = Convert.FromBase64String(cryptoText);
 
-      var aes = Aes.Create();
+      Aes aes = Aes.Create();
 
       Rfc2898DeriveBytes pbkdf2 = new(password, salt, iterations);
 
@@ -80,21 +82,20 @@ namespace Packt.Shared
       return Encoding.Unicode.GetString(plainBytes);
     }
 
-    private static Dictionary<string, User> Users =
-      new Dictionary<string, User>();
+    private static Dictionary<string, User> Users = new();
 
-    public static User Register(string username, string password,
+    public static User Register(
+      string username, string password, 
       string[] roles = null)
     {
       // generate a random salt
-      var rng = RandomNumberGenerator.Create();
-      var saltBytes = new byte[16];
+      RandomNumberGenerator rng = RandomNumberGenerator.Create();
+      byte[] saltBytes = new byte[16];
       rng.GetBytes(saltBytes);
       string saltText = Convert.ToBase64String(saltBytes);
 
       // generate the salted and hashed password 
-      string saltedhashedPassword = SaltAndHashPassword(
-        password, saltText);
+      string saltedhashedPassword = SaltAndHashPassword(password, saltText);
 
       User user = new()
       {
@@ -117,7 +118,7 @@ namespace Packt.Shared
         return false;
       }
 
-      var user = Users[username];
+      User user = Users[username];
 
       return CheckPassword(username, password, 
         user.Salt, user.SaltedHashedPassword);
@@ -134,13 +135,12 @@ namespace Packt.Shared
       return (saltedhashedPassword == hashedPassword);
     }
 
-    private static string SaltAndHashPassword(
-      string password, string salt)
+    private static string SaltAndHashPassword(string password, string salt)
     {
-      var sha = SHA256.Create();
+      SHA256 sha = SHA256.Create();
       string saltedPassword = password + salt;
-      return Convert.ToBase64String(
-        sha.ComputeHash(Encoding.Unicode.GetBytes(saltedPassword)));
+      return Convert.ToBase64String(sha.ComputeHash(
+        Encoding.Unicode.GetBytes(saltedPassword)));
     }
 
     public static string PublicKey;
@@ -148,8 +148,10 @@ namespace Packt.Shared
     public static string ToXmlStringExt(
       this RSA rsa, bool includePrivateParameters)
     {
-      var p = rsa.ExportParameters(includePrivateParameters);
+      RSAParameters p = rsa.ExportParameters(includePrivateParameters);
+
       XElement xml;
+      
       if (includePrivateParameters)
       {
         xml = new XElement("RSAKeyValue",
@@ -175,6 +177,7 @@ namespace Packt.Shared
     {
       XDocument xml = XDocument.Parse(parametersAsXml);
       XElement root = xml.Element("RSAKeyValue");
+
       RSAParameters p = new()
       {
         Modulus = FromBase64String(root.Element("Modulus").Value),
@@ -197,8 +200,8 @@ namespace Packt.Shared
       byte[] dataBytes = Encoding.Unicode.GetBytes(data);
       SHA256 sha = SHA256.Create();
       byte[] hashedData = sha.ComputeHash(dataBytes);
-
       RSA rsa = RSA.Create();
+
       PublicKey = rsa.ToXmlStringExt(false); // exclude private key
 
       return ToBase64String(rsa.SignHash(hashedData,
@@ -210,22 +213,20 @@ namespace Packt.Shared
     {
       byte[] dataBytes = Encoding.Unicode.GetBytes(data);
       SHA256 sha = SHA256.Create();
-
       byte[] hashedData = sha.ComputeHash(dataBytes);
       byte[] signatureBytes = FromBase64String(signature);
-
       RSA rsa = RSA.Create();
       rsa.FromXmlStringExt(PublicKey);
-
       return rsa.VerifyHash(hashedData, signatureBytes,
         HashAlgorithmName.SHA256, RSASignaturePadding.Pkcs1);
     }
 
     public static byte[] GetRandomKeyOrIV(int size)
     {
-      var r = RandomNumberGenerator.Create();
-      var data = new byte[size];
+      RandomNumberGenerator r = RandomNumberGenerator.Create();
+      byte[] data = new byte[size];
       r.GetNonZeroBytes(data);
+
       // data is an array now filled with 
       // cryptographically strong random bytes
       return data;
@@ -235,11 +236,15 @@ namespace Packt.Shared
     {
       if (CheckPassword(username, password))
       {
-        GenericIdentity identity = new(username, "PacktAuth");
-        GenericPrincipal principal = new(
-          identity, Users[username].Roles);
+        GenericIdentity gi = new(
+          name: username, type: "PacktAuth");
 
-        System.Threading.Thread.CurrentPrincipal = principal;
+        GenericPrincipal gp = new(
+          identity: gi, roles: Users[username].Roles);
+
+        // set the principal on the current thread so that
+        // it will be used for authorization by default
+        System.Threading.Thread.CurrentPrincipal = gp;
       }
     }
   }

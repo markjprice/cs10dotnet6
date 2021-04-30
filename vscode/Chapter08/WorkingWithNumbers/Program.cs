@@ -9,6 +9,8 @@ namespace WorkingWithNumbers
     static void Main(string[] args)
     {
       WriteLine("Working with large integers:");
+      WriteLine("-----------------------------------");
+
       ulong big = ulong.MaxValue;
       WriteLine($"{big,40:N0}");
 

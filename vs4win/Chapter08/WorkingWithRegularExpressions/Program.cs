@@ -11,7 +11,7 @@ namespace WorkingWithRegularExpressions
       Write("Enter your age: ");
       string input = ReadLine();
 
-      var ageChecker = new Regex(@"^\d+$");
+      Regex ageChecker = new(@"^\d+$");
 
       if (ageChecker.IsMatch(input))
       {
@@ -36,7 +36,7 @@ namespace WorkingWithRegularExpressions
 
       WriteLine();
 
-      var csv = new Regex(
+      Regex csv = new(
         "(?:^|,)(?=[^\"]|(\")?)\"?((?(1)[^\"]*|[^,\"]*))\"?(?=,|$)");
 
       MatchCollection filmsSmart = csv.Matches(films);

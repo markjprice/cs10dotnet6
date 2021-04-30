@@ -4,8 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <RuntimeIdentifiers>
-      win10-x64;osx-x64;rhel.7.4-x64
+      win10-x64;osx-x64;osx.11.0-arm64;linux-x64;linux-arm64
     </RuntimeIdentifiers>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
 </Project>

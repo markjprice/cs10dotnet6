@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="newtonsoft.json" Version="13.0.1-beta2" />
+    <PackageReference Include="newtonsoft.json" Version="13.0.1" />
     <PackageReference Include="packt.csdotnet.sharedlibrary" 
-      Version="5.0.0" />
+      Version="6.0.0" />
     <PackageReference
       Include="dialectsoftware.collections.matrix"
       Version="1.0.0" />

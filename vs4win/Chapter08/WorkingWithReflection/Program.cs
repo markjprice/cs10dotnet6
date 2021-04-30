@@ -17,7 +17,7 @@ namespace WorkingWithReflection
       WriteLine($"  Full name: {assembly.FullName}");
       WriteLine($"  Location: {assembly.Location}");
 
-      var attributes = assembly.GetCustomAttributes();
+      IEnumerable<Attribute> attributes = assembly.GetCustomAttributes();
 
       WriteLine($"  Assembly-level attributes:");
       foreach (Attribute a in attributes)
@@ -25,13 +25,13 @@ namespace WorkingWithReflection
         WriteLine($"    {a.GetType()}");
       }
 
-      var version = assembly.GetCustomAttribute
-        <AssemblyInformationalVersionAttribute>();
+      AssemblyInformationalVersionAttribute version = assembly
+        .GetCustomAttribute<AssemblyInformationalVersionAttribute>();
 
       WriteLine($"  Version: {version.InformationalVersion}");
 
-      var company = assembly.GetCustomAttribute
-        <AssemblyCompanyAttribute>();
+      AssemblyCompanyAttribute company = assembly
+        .GetCustomAttribute<AssemblyCompanyAttribute>();
 
       WriteLine($"  Company: {company.Company}");
 
@@ -52,7 +52,8 @@ namespace WorkingWithReflection
             arg1: member.Name,
             arg2: member.DeclaringType.Name);
 
-          var coders = member.GetCustomAttributes<CoderAttribute>()
+          IOrderedEnumerable<CoderAttribute> coders = 
+            member.GetCustomAttributes<CoderAttribute>()
             .OrderByDescending(c => c.LastModified);
 
           foreach (CoderAttribute coder in coders)

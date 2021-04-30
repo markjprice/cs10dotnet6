@@ -17,7 +17,7 @@ namespace Exercise03App
         return;
       }
 
-      var number = BigInteger.Parse(input);
+      BigInteger number = BigInteger.Parse(input);
 
       WriteLine($"{number:N0} in words is {number.ToWords()}.");
     }

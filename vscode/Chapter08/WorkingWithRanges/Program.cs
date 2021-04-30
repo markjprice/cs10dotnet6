@@ -27,8 +27,8 @@ namespace WorkingWithRanges
       // Using spans
 
       ReadOnlySpan<char> nameAsSpan = name.AsSpan();
-      var firstNameSpan = nameAsSpan[0..lengthOfFirst];
-      var lastNameSpan = nameAsSpan[^lengthOfLast..^0];
+      ReadOnlySpan<char> firstNameSpan = nameAsSpan[0..lengthOfFirst];
+      ReadOnlySpan<char> lastNameSpan = nameAsSpan[^lengthOfLast..^0];
 
       WriteLine("First name: {0}, Last name: {1}",
         arg0: firstNameSpan.ToString(),

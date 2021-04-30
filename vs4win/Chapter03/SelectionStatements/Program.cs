@@ -8,13 +8,15 @@ namespace SelectionStatements
   {
     static void Main(string[] args)
     {
-      if (args.Length == 0)
+      string password = "ninja";
+
+      if (password.Length < 8)
       {
-        WriteLine("There are no arguments.");
+        WriteLine("Your password is too short. Use at least 8 characters.");
       }
       else
       {
-        WriteLine("There is at least one argument.");
+        WriteLine("Your password is strong.");
       }
 
       // add and remove the "" to change the behavior
@@ -31,9 +33,7 @@ namespace SelectionStatements
         WriteLine("o is not an int so it cannot multiply!");
       }
 
-    A_label:
-      var number = (new Random()).Next(1, 7);
-
+      int number = (new Random()).Next(1, 7);
       WriteLine($"My random number is {number}");
 
       switch (number)
@@ -56,6 +56,10 @@ namespace SelectionStatements
           WriteLine("Default");
           break;
       } // end of switch statement
+
+      WriteLine("After end of switch");
+      A_label:
+      WriteLine($"After A_label");
 
       string path = "/Users/markjprice/Code/Chapter03";
       // string path = @"C:\Code\Chapter03";

@@ -38,7 +38,7 @@ namespace Exercise03UnitTests
     public void Test_BigInteger_18456002032011000007()
     {
       // arrange
-      var number = BigInteger.Parse("18456002032011000007");
+      BigInteger number = BigInteger.Parse("18456002032011000007");
       string expected = "eighteen quintillion, four hundred and fifty six quadrillion, two trillion, thirty two billion, eleven million and seven";
 
       // act

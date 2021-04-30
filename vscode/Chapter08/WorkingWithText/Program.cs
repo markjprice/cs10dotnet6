@@ -34,6 +34,12 @@ namespace WorkingWithText
       WriteLine($"Original: {fullName}");
       WriteLine($"Swapped: {lastName}, {firstName}");
 
+      string company = "Microsoft";
+      bool startsWithM = company.StartsWith("M"); 
+      bool containsN = company.Contains("N");
+      WriteLine($"Text: {company}");
+      WriteLine($"Starts with M: {startsWithM}, contains an N: {containsN}");
+
       string recombined = string.Join(" => ", citiesArray);
       WriteLine(recombined);
 
@@ -44,7 +50,7 @@ namespace WorkingWithText
       WriteLine($"Interpolated:  {fruit} cost {price:C} on {when:dddd}s.");
 
       WriteLine(string.Format("string.Format: {0} cost {1:C} on {2:dddd}s.",
-        fruit, price, when));
+        arg0: fruit, arg1: price, arg2: when));
     }
   }
 }

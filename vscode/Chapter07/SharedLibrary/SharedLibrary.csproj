@@ -5,8 +5,8 @@
 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Packt.CSdotnet.SharedLibrary</PackageId>
-    <Title>C# 10 and .NET 6 Shared Library</Title>
     <PackageVersion>6.0.0.0</PackageVersion>
+    <Title>C# 10 and .NET 6 Shared Library</Title>
     <Authors>Mark J Price</Authors>
     <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/markjprice/cs10dotnet6</PackageProjectUrl>
@@ -14,8 +14,8 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Example shared library packaged for NuGet.</PackageReleaseNotes>
     <Description>Three extension methods to validate a string value.</Description>
-    <Copyright>Copyright © 2021 Packt Publishing Limited</Copyright>
-    <PackageTags>string extensions packt csharp net6 netstandard2</PackageTags>
+    <Copyright>Copyright © 2020-2021 Packt Publishing Limited</Copyright>
+    <PackageTags>string extensions packt csharp dotnet</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

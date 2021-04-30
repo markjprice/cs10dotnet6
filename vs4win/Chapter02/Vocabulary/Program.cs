@@ -36,8 +36,7 @@ namespace Vocabulary
         Console.WriteLine(
           "{0:N0} types with {1:N0} methods in {2} assembly.",
           arg0: a.DefinedTypes.Count(),
-          arg1: methodCount,
-          arg2: name.Name);
+          arg1: methodCount, arg2: name.Name);
       }
     }
   }

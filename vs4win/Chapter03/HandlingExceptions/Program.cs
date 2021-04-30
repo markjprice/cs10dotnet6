@@ -8,7 +8,6 @@ namespace HandlingExceptions
     static void Main(string[] args)
     {
       WriteLine("Before parsing");
-
       Write("What is your age? ");
       string input = ReadLine();
 
@@ -29,7 +28,6 @@ namespace HandlingExceptions
       {
         WriteLine($"{ex.GetType()} says {ex.Message}");
       }
-
       WriteLine("After parsing");
     }
   }

@@ -29,7 +29,7 @@ namespace Exercise03
         return;
       }
 
-      var xmlReader = XmlReader.Create(xmlFile,
+      XmlReader xmlReader = XmlReader.Create(xmlFile,
         new XmlReaderSettings { IgnoreWhitespace = true });
 
       while (xmlReader.Read())

@@ -1,9 +1,9 @@
-﻿using System;                         // DateTime
-using System.Collections.Generic;     // List<T>, HashSet<T> 
-using System.Xml.Serialization;       // XmlSerializer
-using System.IO;                      // FileStream
-using Packt.Shared;                   // Person 
-using System.Threading.Tasks;         // Task
+﻿using System; // DateTime
+using System.Collections.Generic; // List<T>, HashSet<T> 
+using System.Xml.Serialization; // XmlSerializer
+using System.IO; // FileStream
+using Packt.Shared; // Person 
+using System.Threading.Tasks; // Task
 using NuJson = System.Text.Json.JsonSerializer;
 using static System.Console;
 using static System.Environment;
@@ -105,14 +105,12 @@ namespace WorkingWithSerialization
 
       // Deserializing JSON using new APIs
 
-      using (FileStream jsonLoad = File.Open(
-        jsonPath, FileMode.Open))
+      using (FileStream jsonLoad = File.Open(jsonPath, FileMode.Open))
       {
         // deserialize object graph into a List of Person 
         List<Person> loadedPeople = (List<Person>)
-          await NuJson.DeserializeAsync(
-            utf8Json: jsonLoad,
-            returnType: loadedPeople.GetType());
+          await NuJson.DeserializeAsync(utf8Json: jsonLoad,
+            returnType: typeof(List<Person>));
 
         foreach (Person p in loadedPeople)
         {

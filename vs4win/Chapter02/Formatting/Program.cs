@@ -26,6 +26,7 @@ namespace Formatting
 
       string applesText = "Apples";
       int applesCount = 1234;
+      
       string bananasText = "Bananas";
       int bananasCount = 56789;
 

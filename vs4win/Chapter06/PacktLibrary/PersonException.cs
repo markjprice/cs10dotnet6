@@ -8,8 +8,7 @@ namespace Packt.Shared
 
     public PersonException(string message) : base(message) { }
  
-    public PersonException(
-      string message, Exception innerException)
+    public PersonException(string message, Exception innerException)
       : base(message, innerException) { } 
   } 
 }

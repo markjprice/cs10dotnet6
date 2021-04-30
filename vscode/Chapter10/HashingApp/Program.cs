@@ -19,11 +19,12 @@ namespace HashingApp
 
       Write("Enter a new user to register: ");
       string username = ReadLine();
+
       Write($"Enter a password for {username}: ");
       string password = ReadLine();
 
+      WriteLine("Registering a new user:");
       User newUser = Protector.Register(username, password);
-
       WriteLine($"Name: {newUser.Name}");
       WriteLine($"Salt: {newUser.Salt}");
       WriteLine("Password (salted and hashed): {0}",
@@ -31,10 +32,12 @@ namespace HashingApp
       WriteLine();
 
       bool correctPassword = false;
+
       while (!correctPassword)
       {
         Write("Enter a username to log in: ");
         string loginUsername = ReadLine();
+        
         Write("Enter a password to log in: ");
         string loginPassword = ReadLine();
 
