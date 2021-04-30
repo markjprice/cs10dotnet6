@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace DotNetCoreEverywhere
+namespace DotNetEverywhere
 {
   class Program
   {
