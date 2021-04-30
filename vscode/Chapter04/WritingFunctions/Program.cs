@@ -15,28 +15,6 @@ namespace WritingFunctions
       WriteLine();
     }
 
-    static void RunTimesTable()
-    {
-      bool isNumber;
-      do
-      {
-        Write("Enter a number between 0 and 255: ");
-
-        isNumber = byte.TryParse(
-          ReadLine(), out byte number);
-
-        if (isNumber)
-        {
-          TimesTable(number);
-        }
-        else
-        {
-          WriteLine("You did not enter a valid number!");
-        }
-      }
-      while (isNumber);
-    }
-
     static decimal CalculateTax(
       decimal amount, string twoLetterRegionCode)
     {
@@ -64,7 +42,8 @@ namespace WritingFunctions
         case "OR": // Oregon
         case "AK": // Alaska
         case "MT": // Montana
-          rate = 0.0M; break;
+          rate = 0.0M; 
+          break;
         case "ND": // North Dakota
         case "WI": // Wisconsin
         case "ME": // Maine
@@ -80,25 +59,6 @@ namespace WritingFunctions
       }
 
       return amount * rate;
-    }
-
-    static void RunCalculateTax()
-    {
-      Write("Enter an amount: ");
-      string amountInText = ReadLine();
-
-      Write("Enter a two-letter region code: ");
-      string region = ReadLine();
-
-      if (decimal.TryParse(amountInText, out decimal amount))
-      {
-        decimal taxToPay = CalculateTax(amount, region);
-        WriteLine($"You must pay {taxToPay} in sales tax.");
-      }
-      else
-      {
-        WriteLine("You did not enter a valid amount!");
-      }
     }
 
     /// <summary>
@@ -217,12 +177,15 @@ namespace WritingFunctions
 
     static void Main(string[] args)
     {
-      // RunTimesTable();
-      // RunCalculateTax();
-      RunCardinalToOrdinal();
+      // TimesTable(6);
+      
+      // decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR"); 
+      // WriteLine($"You must pay {taxToPay} in tax.");
+
+      // RunCardinalToOrdinal();
       // RunFactorial();
       // RunFibImperative();
-      // RunFibFunctional();
+      RunFibFunctional();
     }
   }
 }

@@ -12,7 +12,7 @@ namespace Packt.Shared
     public DateTime DateOfBirth;
     public WondersOfTheAncientWorld FavoriteAncientWonder;
     public WondersOfTheAncientWorld BucketList;
-    public List<Person> Children = new List<Person>();
+    public List<Person> Children = new();
 
     // constants
     public const string Species = "Homo Sapien";
@@ -75,7 +75,9 @@ namespace Packt.Shared
     {
       return string.Format(
         format: "command is {0}, number is {1}, active is {2}",
-        arg0: command, arg1: number, arg2: active);
+        arg0: command, 
+        arg1: number, 
+        arg2: active);
     }
 
     public void PassingParameters(int x, ref int y, out int z)

@@ -45,8 +45,7 @@ namespace CastingConverting
         WriteLine(format: 
           "Math.Round(value: {0}, digits: 0, mode: MidpointRounding.AwayFromZero) is {1}",
           arg0: n,
-          arg1: Math.Round(value: n, 
-            digits: 0, 
+          arg1: Math.Round(value: n, digits: 0, 
             mode: MidpointRounding.AwayFromZero));
       }
 

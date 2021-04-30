@@ -20,7 +20,7 @@ public class Circle : Square
   {
     get
     {
-      var radius = height / 2;
+      double radius = height / 2;
       return System.Math.PI * radius * radius ;
     }
   }

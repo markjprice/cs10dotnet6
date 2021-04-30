@@ -2,8 +2,8 @@ namespace Packt.Shared
 {
   public class BankAccount
   {
-    public string AccountName; 
-    public decimal Balance;
-    public static decimal InterestRate;
+    public string AccountName; // instance member
+    public decimal Balance; // instance member
+    public static decimal InterestRate; // shared member
   }
 }

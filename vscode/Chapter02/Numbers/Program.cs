@@ -6,12 +6,10 @@ namespace Numbers
   {
     static void Main(string[] args)
     {
-      // unsigned integer means positive whole number
-      // including 0
+      // unsigned integer means positive whole number or 0
       uint naturalNumber = 23;
 
-      // integer means negative or positive whole number 
-      // including 0
+      // integer means negative or positive whole number or 0
       int integerNumber = -23;
 
       // float means single-precision floating point

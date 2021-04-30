@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
@@ -10,7 +11,8 @@ namespace Instrumenting
     {
       // write to a text file in the project folder
       Trace.Listeners.Add(new TextWriterTraceListener(
-        File.CreateText("log.txt")));
+        File.CreateText(Path.Combine(Environment.GetFolderPath(
+          Environment.SpecialFolder.DesktopDirectory), "log.txt"))));
 
       // text writer is buffered, so this option calls
       // Flush() on all listeners after writing
@@ -19,14 +21,14 @@ namespace Instrumenting
       Debug.WriteLine("Debug says, I am watching!");
       Trace.WriteLine("Trace says, I am watching!");
 
-      var builder = new ConfigurationBuilder()
+      ConfigurationBuilder builder = new()
         .SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("appsettings.json",
           optional: true, reloadOnChange: true);
 
       IConfigurationRoot configuration = builder.Build();
 
-      var ts = new TraceSwitch(
+      TraceSwitch ts = new(
         displayName: "PacktSwitch",
         description: "This switch is set via a JSON config.");
 

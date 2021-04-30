@@ -8,21 +8,21 @@ namespace PeopleApp
   {
     static void Main(string[] args)
     {
-      var harry = new Person { Name = "Harry" };
-      var mary = new Person { Name = "Mary" };
-      var jill = new Person { Name = "Jill" };
+      Person harry = new() { Name = "Harry" };
+      Person mary = new() { Name = "Mary" };
+      Person jill = new() { Name = "Jill" };
 
       // Implementing functionality using methods and operators
 
       // call instance method
-      var baby1 = mary.ProcreateWith(harry);
+      Person baby1 = mary.ProcreateWith(harry);
       baby1.Name = "Gary";
 
       // call static method
-      var baby2 = Person.Procreate(harry, jill);
+      Person baby2 = Person.Procreate(harry, jill);
 
       // call an operator
-      var baby3 = harry * mary;
+      Person baby3 = harry * mary;
 
       WriteLine($"{harry.Name} has {harry.Children.Count} children.");
       WriteLine($"{mary.Name} has {mary.Children.Count} children.");
@@ -46,88 +46,91 @@ namespace PeopleApp
       harry.Poke();
       harry.Poke();
 
+      // non-generic lookup collection
+      System.Collections.Hashtable lookupObject = new();
+
+      lookupObject.Add(key: 1, value: "Alpha");
+      lookupObject.Add(key: 2, value: "Beta");
+      lookupObject.Add(key: 3, value: "Gamma");
+      lookupObject.Add(key: harry, value: "Delta");
+
+      int key = 2; // lookup the value that has 2 as its key
+      WriteLine(format: "Key {0} has value: {1}",
+        arg0: key,
+        arg1: lookupObject[key]);
+
+      // lookup the value that has harry as its key
+      WriteLine(format: "Key {0} has value: {1}",
+        arg0: harry,
+        arg1: lookupObject[harry]);
+
+      // generic lookup collection
+      System.Collections.Generic.Dictionary<int, string> lookupIntString = new();
+
+      lookupIntString.Add(key: 1, value: "Alpha");
+      lookupIntString.Add(key: 2, value: "Beta");
+      lookupIntString.Add(key: 3, value: "Gamma");
+      lookupIntString.Add(key: 4, value: "Delta");
+
+      key = 3;
+      WriteLine(format: "Key {0} has value: {1}",
+        arg0: key,
+        arg1: lookupIntString[key]);
+
       // Comparing objects when sorting
 
       Person[] people =
       {
-        new Person { Name = "Simon" },
-        new Person { Name = "Jenny" },
-        new Person { Name = "Adam" },
-        new Person { Name = "Richard" }
+        new() { Name = "Simon" },
+        new() { Name = "Jenny" },
+        new() { Name = "Adam" },
+        new() { Name = "Richard" }
       };
 
       WriteLine("Initial list of people:");
-      foreach (var person in people)
+      foreach (Person p in people)
       {
-        WriteLine($"  {person.Name}");
+        WriteLine($"  {p.Name}");
       }
 
       WriteLine("Use Person's IComparable implementation to sort:");
       Array.Sort(people);
-      foreach (var person in people)
+      foreach (Person p in people)
       {
-        WriteLine($"  {person.Name}");
+        WriteLine($"  {p.Name}");
       }
 
       // Comparing objects using a separate class
 
       WriteLine("Use PersonComparer's IComparer implementation to sort:");
       Array.Sort(people, new PersonComparer());
-      foreach (var person in people)
+      foreach (Person p in people)
       {
-        WriteLine($"{person.Name}");
+        WriteLine($"{p.Name}");
       }
-
-      // Working with generic types
-
-      var t1 = new Thing();
-      t1.Data = 42;
-      WriteLine($"Thing with an integer: {t1.Process(42)}");
-
-      var t2 = new Thing();
-      t2.Data = "apple";
-      WriteLine($"Thing with a string: {t2.Process("apple")}");
-
-      var gt1 = new GenericThing<int>();
-      gt1.Data = 42;
-      WriteLine($"GenericThing with an integer: {gt1.Process(42)}");
-
-      var gt2 = new GenericThing<string>();
-      gt2.Data = "apple";
-      WriteLine($"GenericThing with a string: {gt2.Process("apple")}");
-
-      // Working with generic methods
-
-      string number1 = "4";
-      WriteLine("{0} squared is {1}",
-        arg0: number1,
-        arg1: Squarer.Square<string>(number1));
-
-      byte number2 = 3;
-      WriteLine("{0} squared is {1}",
-        arg0: number2,
-        arg1: Squarer.Square(number2));
 
       // Working with struct types
 
-      var dv1 = new DisplacementVector(3, 5);
-      var dv2 = new DisplacementVector(-2, 7);
-      var dv3 = dv1 + dv2;
-      WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})");
+      DisplacementVector dv1 = new(3, 5);
+      DisplacementVector dv2 = new(-2, 7);
+      DisplacementVector dv3 = dv1 + dv2;
+
+      WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y})"
+        + " = ({dv3.X}, {dv3.Y})");
 
       // Inheriting from classes
 
-      Employee john = new Employee
+      Employee john = new()
       {
         Name = "John Jones",
-        DateOfBirth = new DateTime(1990, 7, 28)
+        DateOfBirth = new(year: 1990, month: 7, day: 28)
       };
       john.WriteToConsole();
 
       // Extending classes
 
       john.EmployeeCode = "JJ001";
-      john.HireDate = new DateTime(2014, 11, 23);
+      john.HireDate = new(year: 2014, month: 11, day: 23);
       WriteLine($"{john.Name} was hired on {john.HireDate:dd/MM/yy}");
 
       // Overriding  members
@@ -136,17 +139,13 @@ namespace PeopleApp
 
       // Understanding polymorphism
 
-      Employee aliceInEmployee = new Employee
-      { Name = "Alice", EmployeeCode = "AA123" };
+      Employee aliceInEmployee = new()
+        { Name = "Alice", EmployeeCode = "AA123" };
 
       Person aliceInPerson = aliceInEmployee;
-
       aliceInEmployee.WriteToConsole();
-
       aliceInPerson.WriteToConsole();
-
       WriteLine(aliceInEmployee.ToString());
-
       WriteLine(aliceInPerson.ToString());
 
       // Explicit casting
@@ -154,7 +153,6 @@ namespace PeopleApp
       if (aliceInPerson is Employee)
       {
         WriteLine($"{nameof(aliceInPerson)} IS an Employee");
-
         Employee explicitAlice = (Employee)aliceInPerson;
         // safely do something with explicitAlice 
       }
@@ -171,8 +169,8 @@ namespace PeopleApp
 
       try
       {
-        john.TimeTravel(new DateTime(1999, 12, 31));
-        john.TimeTravel(new DateTime(1950, 12, 25));
+        john.TimeTravel(when: new(1999, 12, 31));
+        john.TimeTravel(when: new(1950, 12, 25));
       }
       catch (PersonException ex)
       {
@@ -184,23 +182,19 @@ namespace PeopleApp
       string email1 = "pamela@test.com";
       string email2 = "ian&test.com";
 
-      WriteLine(
-        "{0} is a valid e-mail address: {1}",
+      WriteLine("{0} is a valid e-mail address: {1}",
         arg0: email1,
         arg1: StringExtensions.IsValidEmail(email1));
 
-      WriteLine(
-        "{0} is a valid e-mail address: {1}",
+      WriteLine("{0} is a valid e-mail address: {1}",
         arg0: email2,
         arg1: StringExtensions.IsValidEmail(email2));
 
-      WriteLine(
-        "{0} is a valid e-mail address: {1}",
+      WriteLine("{0} is a valid e-mail address: {1}",
         arg0: email1,
         arg1: email1.IsValidEmail());
 
-      WriteLine(
-        "{0} is a valid e-mail address: {1}",
+      WriteLine("{0} is a valid e-mail address: {1}",
         arg0: email2,
         arg1: email2.IsValidEmail());
     }

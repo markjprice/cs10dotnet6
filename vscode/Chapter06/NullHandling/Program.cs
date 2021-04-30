@@ -48,7 +48,7 @@ namespace NullHandling
       Console.WriteLine($"y is null: {y is null}");
 
       // result will be 3 if authorName?.Length is null 
-      var result = authorName?.Length ?? 3;
+      int result = authorName?.Length ?? 3;
       Console.WriteLine(result);
     }
   }

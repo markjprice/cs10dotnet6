@@ -4,12 +4,12 @@ using static System.Console;
 
 namespace Packt.Shared
 {
-  public class Person : IComparable<Person>
+  public class Person : object, IComparable<Person>
   {
     // fields 
     public string Name;
     public DateTime DateOfBirth;
-    public List<Person> Children = new List<Person>();
+    public List<Person> Children = new();
 
     // methods 
     public void WriteToConsole()
@@ -20,7 +20,7 @@ namespace Packt.Shared
     // static method to "multiply" 
     public static Person Procreate(Person p1, Person p2)
     {
-      var baby = new Person
+      Person baby = new()
       {
         Name = $"Baby of {p1.Name} and {p2.Name}"
       };
