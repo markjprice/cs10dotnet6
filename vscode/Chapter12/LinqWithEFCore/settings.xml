@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<appSettings>
+  <add key="color" value="red" />
+  <add key="size" value="large" />
+  <add key="price" value="23.99" />
+</appSettings>
