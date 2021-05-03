@@ -4,7 +4,7 @@ namespace Packt.Shared
 {
   public class Category
   {
-    public int CategoryID { get; set; }
+    public int CategoryId { get; set; }
 
     [Required]
     [StringLength(15)]

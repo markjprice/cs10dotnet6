@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
-using Packt.Shared;
-using static System.Console;
+﻿using System.Linq; // Enumerable
+using Packt.Shared; // Recorder
+
+using static System.Console; // WriteLine()
 
 namespace MonitoringApp
 {
@@ -14,15 +14,18 @@ namespace MonitoringApp
       Recorder.Start();
 
       // simulate a process that requires some memory resources...
-      int[] largeArrayOfInts = Enumerable.Range(1, 10_000).ToArray();
+      int[] largeArrayOfInts = Enumerable.Range(
+        start: 1, count: 10_000).ToArray();
 
       // ...and takes some time to complete
-      System.Threading.Thread.Sleep(new Random().Next(5, 10) * 1000);
+      System.Threading.Thread.Sleep(
+        new Random().Next(5, 10) * 1000);
 
       Recorder.Stop();
       */
 
-      int[] numbers = Enumerable.Range(1, 50_000).ToArray();
+      int[] numbers = Enumerable.Range(
+        start: 1, count: 50_000).ToArray();
 
       WriteLine("Using string with +");
       Recorder.Start();

@@ -10,17 +10,18 @@ namespace LinqInParallel
   {
     static void Main(string[] args)
     {
-      var watch = new Stopwatch();
+      Stopwatch watch = new();
       Write("Press ENTER to start: ");
       ReadLine();
       watch.Start();
 
-      IEnumerable<int> numbers = Enumerable.Range(1, 2_000_000_000);
+      IEnumerable<int> numbers = Enumerable.Range(
+        start: 1, count: 2_000_000_000);
 
-      // var squares = numbers
+      // int[] squares = numbers
       //   .Select(number => number * number).ToArray();
 
-      var squares = numbers.AsParallel()
+      int[] squares = numbers.AsParallel()
         .Select(number => number * number).ToArray();
 
       watch.Stop();

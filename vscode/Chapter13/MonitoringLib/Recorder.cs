@@ -1,15 +1,17 @@
-﻿using System;
-using System.Diagnostics;
-using static System.Console;
-using static System.Diagnostics.Process;
+﻿using System; // GC
+using System.Diagnostics; // Stopwatch
+
+using static System.Console; // WriteLine()
+using static System.Diagnostics.Process; // GetCurrentProcess()
 
 namespace Packt.Shared
 {
   public static class Recorder
   {
-    static Stopwatch timer = new Stopwatch();
-    static long bytesPhysicalBefore = 0;
-    static long bytesVirtualBefore = 0;
+    private static Stopwatch timer = new();
+
+    private static long bytesPhysicalBefore = 0;
+    private static long bytesVirtualBefore = 0;
 
     public static void Start()
     {
@@ -28,7 +30,9 @@ namespace Packt.Shared
     public static void Stop()
     {
       timer.Stop();
+
       long bytesPhysicalAfter = GetCurrentProcess().WorkingSet64;
+      
       long bytesVirtualAfter = GetCurrentProcess().VirtualMemorySize64;
 
       WriteLine("{0:N0} physical bytes used.",

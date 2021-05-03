@@ -8,12 +8,12 @@ namespace SynchronizingResourceAccess
 {
   class Program
   {
-    static Random r = new Random();
-    static string Message; // a shared resource
-    static int Counter; // another shared resource
-    static object conch = new object();
+    private static Random r = new();
+    private static string Message; // a shared resource
+    private static int Counter; // another shared resource
+    private static object conch = new();
 
-    static void MethodA()
+    private static void MethodA()
     {
       try
       {
@@ -38,7 +38,7 @@ namespace SynchronizingResourceAccess
       }
     }
 
-    static void MethodB()
+    private static void MethodB()
     {
       try
       {

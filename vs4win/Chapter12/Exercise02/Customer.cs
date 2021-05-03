@@ -5,7 +5,7 @@ namespace Packt.Shared
   public class Customer
   {
     [StringLength(5)]
-    public string CustomerID { get; set; }
+    public string CustomerId { get; set; }
 
     [Required]
     [StringLength(40)]

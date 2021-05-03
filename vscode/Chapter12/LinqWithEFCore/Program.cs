@@ -11,27 +11,31 @@ namespace LinqWithEFCore
   {
     static void FilterAndSort()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
-        var query = db.Products
-          // query is a DbSet<Product>
-          .ProcessSequence()
-          .Where(product => product.UnitPrice < 10M)
-          // query is now an IQueryable<Product>
-          .OrderByDescending(product => product.UnitPrice)
-          // query is now an IOrderedQueryable<Product>
+        DbSet<Product> allProducts = db.Products;
+
+        IQueryable<Product> processedProducts = allProducts.ProcessSequence().AsQueryable();
+
+        IQueryable<Product> filteredProducts = 
+          processedProducts.Where(product => product.UnitPrice < 10M);
+
+        IOrderedQueryable<Product> sortedAndFilteredProducts = 
+          filteredProducts.OrderByDescending(product => product.UnitPrice);
+
+        var projectedProducts = sortedAndFilteredProducts
           .Select(product => new // anonymous type
           {
-            product.ProductID,
-            product.ProductName,
+            product.ProductId,
+            product.ProductName, 
             product.UnitPrice
           });
 
         WriteLine("Products that cost less than $10:");
-        foreach (var item in query)
+        foreach (var p in projectedProducts)
         {
           WriteLine("{0}: {1} costs {2:$#,##0.00}",
-            item.ProductID, item.ProductName, item.UnitPrice);
+            p.ProductId, p.ProductName, p.UnitPrice);
         }
         WriteLine();
       }
@@ -39,21 +43,21 @@ namespace LinqWithEFCore
 
     static void JoinCategoriesAndProducts()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
         // join every product to its category to return 77 matches 
         var queryJoin = db.Categories.Join(
           inner: db.Products,
-          outerKeySelector: category => category.CategoryID,
-          innerKeySelector: product => product.CategoryID,
+          outerKeySelector: category => category.CategoryId,
+          innerKeySelector: product => product.CategoryId,
           resultSelector: (c, p) =>
-            new { c.CategoryName, p.ProductName, p.ProductID })
+            new { c.CategoryName, p.ProductName, p.ProductId })
           .OrderBy(cp => cp.CategoryName);
 
         foreach (var item in queryJoin)
         {
           WriteLine("{0}: {1} is in {2}.",
-            arg0: item.ProductID, 
+            arg0: item.ProductId, 
             arg1: item.ProductName, 
             arg2: item.CategoryName);
         }
@@ -62,26 +66,26 @@ namespace LinqWithEFCore
 
     static void GroupJoinCategoriesAndProducts()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
         // group all products by their category to return 8 matches 
         var queryGroup = db.Categories.AsEnumerable().GroupJoin(
           inner: db.Products,
-          outerKeySelector: category => category.CategoryID,
-          innerKeySelector: product => product.CategoryID,
+          outerKeySelector: category => category.CategoryId,
+          innerKeySelector: product => product.CategoryId,
           resultSelector: (c, matchingProducts) => new
           {
             c.CategoryName,
-            Products = matchingProducts//.OrderBy(p => p.ProductName)
+            Products = matchingProducts.OrderBy(p => p.ProductName)
           });
 
-        foreach (var item in queryGroup)
+        foreach (var category in queryGroup)
         {
           WriteLine("{0} has {1} products.",
-            arg0: item.CategoryName, 
-            arg1: item.Products.Count());
+            arg0: category.CategoryName, 
+            arg1: category.Products.Count());
 
-          foreach (var product in item.Products)
+          foreach (var product in category.Products)
           {
             WriteLine($"  {product.ProductName}");
           }
@@ -91,7 +95,7 @@ namespace LinqWithEFCore
 
     static void AggregateProducts()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
         WriteLine("{0,-25} {1,10}", 
           arg0: "Product count:",
@@ -122,7 +126,7 @@ namespace LinqWithEFCore
 
     static void CustomExtensionMethods()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
         WriteLine("Mean units in stock: {0:N0}",
           db.Products.Average(p => p.UnitsInStock));
@@ -146,14 +150,14 @@ namespace LinqWithEFCore
 
     static void OutputProductsAsXml()
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
-        var productsForXml = db.Products.ToArray();
+        Product[] productsForXml = db.Products.ToArray();
 
-        var xml = new XElement("products",
+        XElement xml = new("products",
           from p in productsForXml
           select new XElement("product",
-            new XAttribute("id", p.ProductID),
+            new XAttribute("id", p.ProductId),
             new XAttribute("price", p.UnitPrice),
             new XElement("name", p.ProductName)));
 

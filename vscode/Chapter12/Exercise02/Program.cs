@@ -8,7 +8,7 @@ namespace Exercise02
   {
     static void Main(string[] args)
     {
-      using (var db = new Northwind())
+      using (Northwind db = new())
       {
         IQueryable<string> distinctCities = 
           db.Customers.Select(c => c.City).Distinct();
@@ -18,14 +18,14 @@ namespace Exercise02
         WriteLine();
 
         Write("Enter the name of a city: ");
-        var city = ReadLine();
+        string city = ReadLine();
 
-        var customersInCity = db.Customers.Where(c => c.City == city);
+        IQueryable<Customer> customersInCity = db.Customers.Where(c => c.City == city);
 
         WriteLine($"There are {customersInCity.Count()} customers in {city}:");
-        foreach (var item in customersInCity)
+        foreach (Customer c in customersInCity)
         {
-          WriteLine($"{item.CompanyName}");
+          WriteLine($"{c.CompanyName}");
         }
       }
     }

@@ -1,30 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using System.Collections.Generic; // IAsyncEnumerable<T>
+using System.Threading.Tasks; // Task
 using static System.Console;
 
 namespace AsyncEnumerable
 {
   class Program
   {
-    async static IAsyncEnumerable<int> GetNumbers()
+    private async static IAsyncEnumerable<int> GetNumbersAsync()
     {
-      var r = new Random();
+      Random r = new();
 
       // simulate work
-      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
+      await Task.Delay(r.Next(1500, 3000));
       yield return r.Next(0, 1001);
 
-      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
+      await Task.Delay(r.Next(1500, 3000));
       yield return r.Next(0, 1001);
 
-      await Task.Run(() => Task.Delay(r.Next(1500, 3000)));
+      await Task.Delay(r.Next(1500, 3000));
       yield return r.Next(0, 1001);
     }
 
     static async Task Main(string[] args)
     {
-      await foreach (int number in GetNumbers())
+      await foreach (int number in GetNumbersAsync())
       {
         WriteLine($"Number: {number}");
       }

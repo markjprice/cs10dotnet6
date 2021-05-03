@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+using System.Net.Http; // HttpClient
+using System.Threading.Tasks; // Task
+
 using static System.Console;
 
 namespace AsyncConsole
@@ -9,7 +10,7 @@ namespace AsyncConsole
   {
     static async Task Main(string[] args)
     {
-      var client = new HttpClient();
+      HttpClient client = new();
 
       HttpResponseMessage response =
         await client.GetAsync("http://www.apple.com/");

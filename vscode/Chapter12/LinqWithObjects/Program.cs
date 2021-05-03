@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic; // for List<T>
 using System.Linq;
 using static System.Console;
 
@@ -8,7 +9,7 @@ namespace LinqWithObjects
   {
     static void LinqWithArrayOfStrings()
     {
-      var names = new string[] { "Michael", "Pam", "Jim", "Dwight",
+      string[] names = new string[] { "Michael", "Pam", "Jim", "Dwight",
         "Angela", "Kevin", "Toby", "Creed" };
 
       // var query = names.Where(
@@ -16,9 +17,10 @@ namespace LinqWithObjects
 
       // var query = names.Where(NameLongerThanFour);
 
-      var query = names
+      IOrderedEnumerable<string> query = names
         .Where(name => name.Length > 4)
-        .OrderBy(name => name.Length);
+        .OrderBy(name => name.Length)
+        .ThenBy(name => name);
 
       foreach (string item in query)
       {
@@ -26,9 +28,14 @@ namespace LinqWithObjects
       }
     }
 
+    static bool NameLongerThanFour(string name)
+    {
+      return name.Length > 4;
+    }
+
     static void LinqWithArrayOfExceptions()
     {
-      var errors = new Exception[]
+      List<Exception> errors = new()
       {
         new ArgumentException(), 
         new SystemException(),
@@ -41,17 +48,13 @@ namespace LinqWithObjects
         new ApplicationException()
       };
 
-      var numberErrors = errors.OfType<ArithmeticException>();
+      IEnumerable<ArithmeticException> arithmeticExceptionsQuery = 
+        errors.OfType<ArithmeticException>();
 
-      foreach (var error in numberErrors)
+      foreach (ArithmeticException exception in arithmeticExceptionsQuery)
       {
-        WriteLine(error);
+        WriteLine(exception);
       }
-    }
-
-    static bool NameLongerThanFour(string name)
-    {
-      return name.Length > 4;
     }
 
     static void Main(string[] args)
