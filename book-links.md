@@ -204,7 +204,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Raise an issue with the book: https://github.com/markjprice/cs10dotnet6/issues
 - Microsoft Docs: https://docs.microsoft.com/
 - Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
-- Scott Hanselman's videos: https://computerstufftheydidntteachyou.com/
+- Scott Hanselman's videos: http://computerstufftheydidntteachyou.com/
 - Get better at programming by learning how things work: https://jvns.ca/blog/learn-how-things-work/
 - Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
 - Stack Overflow: https://stackoverflow.com/
