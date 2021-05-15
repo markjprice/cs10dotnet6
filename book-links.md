@@ -609,6 +609,12 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## .NET apps
 - .NET Application Architecture Guidance: https://www.microsoft.com/net/learn/architecture
 
+## .NET Content Management Systems
+- Piranha CMS: https://piranhacms.org/
+- Orchard Core: http://www.orchardcore.net/
+- Optimizely Content Cloud Developer Guide: https://world.episerver.com/documentation/developer-guides/CMS/
+- Umbraco CMS: https://umbraco.com/products/umbraco-cms/migrating-umbraco-to-net-core/
+
 ## ASP.NET versions and features
 - ASP.NET Core 1.0 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-0/
 - ASP.NET Core 1.1 announcement: https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-1-1/
