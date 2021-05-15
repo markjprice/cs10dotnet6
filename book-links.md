@@ -633,9 +633,12 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - TypeScript: https://www.typescriptlang.org
 
 ## Windows desktop app development
+- Choices of platform for building Windows desktop apps: https://docs.microsoft.com/en-us/windows/apps/desktop/choose-your-platform
+- Migrating WPF apps: https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/
+- Windows Compatibility Pack: https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/
 - Packt book about building WPF apps: https://www.packtpub.com/product/mastering-windows-presentation-foundation/9781785883002
-- UWP apps can be created using C++, JavaScript, C#, and Visual Basic using a custom version of .NET Core: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
-- Microsoft Details 9 Desktop Dev Options, from WPF to Blazor: https://visualstudiomagazine.com/articles/2021/03/25/desktop-options.aspx
+- UWP apps: https://docs.microsoft.com/en-us/windows/uwp/get-started/universal-application-platform-guide
+- Nine desktop development options, from WPF to Blazor: https://visualstudiomagazine.com/articles/2021/03/25/desktop-options.aspx
 
 ## Third-party cross-platform GUI development
 - avalonia - A cross platform XAML framework for .NET: https://avaloniaui.net
