@@ -612,7 +612,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## .NET Content Management Systems
 - Piranha CMS: https://piranhacms.org/
 - Orchard Core: http://www.orchardcore.net/
-- Optimizely Content Cloud Developer Guide: https://world.episerver.com/documentation/developer-guides/CMS/
+- Optimizely CMS Developer Guide: https://world.optimizely.com/documentation/developer-guides/CMS/
 - Umbraco CMS: https://umbraco.com/products/umbraco-cms/migrating-umbraco-to-net-core/
 
 ## ASP.NET versions and features
