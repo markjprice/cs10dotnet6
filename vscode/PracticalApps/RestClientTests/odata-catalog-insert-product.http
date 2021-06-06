@@ -1,0 +1,15 @@
+POST https://localhost:5004/catalog/products
+Content-Type: application/json
+Content-Length: 234
+
+{
+  "ProductName": "Impossible Burger",
+  "SupplierId": 7,
+  "CategoryId": 6,
+  "QuantityPerUnit": "Pack of 4",
+  "UnitPrice": 40.25,
+  "UnitsInStock": 50,
+  "UnitsOnOrder": 0,
+  "ReorderLevel": 30,
+  "Discontinued": false
+}

@@ -1,0 +1,1 @@
+DELETE https://localhost:5001/api/customers/abcxy HTTP/1.1

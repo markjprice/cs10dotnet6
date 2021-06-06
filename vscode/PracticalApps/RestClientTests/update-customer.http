@@ -1,0 +1,18 @@
+PUT https://localhost:5001/api/customers/abcxy HTTP/1.1
+Content-Type: application/json
+Content-Length: 289
+
+{
+  "customerID": "ABCXY",
+  "companyName": "ABC Corp",
+  "contactName": "Joan Smythe",
+  "contactTitle": "Lady",
+  "address": "Wall Street",
+  "city": "New York",
+  "region": "NY",
+  "postalCode": "90210",
+  "country": "USA",
+  "phone": "(123) 555-1234",
+  "fax": null,
+  "orders": null
+}
