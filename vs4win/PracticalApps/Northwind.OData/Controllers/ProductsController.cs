@@ -2,8 +2,6 @@
 using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
-using Microsoft.EntityFrameworkCore.Infrastructure; // GetService<T>
-using Microsoft.Extensions.Logging; // ILoggerFactory
 
 using static System.Console;
 
@@ -12,13 +10,10 @@ namespace Northwind.OData.Controllers
   public class ProductsController : ODataController
   {
     private NorthwindContext db;
-    private ILoggerFactory loggerFactory;
 
     public ProductsController(NorthwindContext db)
     {
       this.db = db;
-      loggerFactory = db.GetService<ILoggerFactory>();
-      loggerFactory.AddProvider(new ConsoleLoggerProvider());
     }
 
     [EnableQuery]

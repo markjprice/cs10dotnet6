@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": "Northwind.Common"
-		},
-                {
 			"path": "Northwind.Common.EntityModels.SqlServer"
 		},
 		{
@@ -31,13 +28,25 @@
 			"path": "Minimal.WebApi"
 		},
 		{
+			"path": "Northwind.Common"
+		},
+		{
 			"path": "Northwind.GraphQL"
+		},
+		{
+			"path": "Northwind.gRPC"
 		},
 		{
 			"path": "Northwind.OData"
 		},
 		{
 			"path": "RestClientTests"
+		},
+		{
+			"path": "Northwind.SignalR.ConsoleClient"
+		},
+		{
+			"path": "Northwind.AzureFuncs"
 		}
 	]
 }

@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Packt.Shared; // AddNorthwindContext extension method
 using System.Net.Http.Headers; // MediaTypeWithQualityHeaderValue
+using Northwind.Mvc.Hubs; // ChatHub
 
 namespace Northwind.Mvc
 {
@@ -29,6 +30,8 @@ namespace Northwind.Mvc
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddSignalR();
+
       services.AddDbContext<ApplicationDbContext>(options =>
           options.UseSqlServer( // or options.UseSqlite(
               Configuration.GetConnectionString("DefaultConnection")));
@@ -108,7 +111,10 @@ namespace Northwind.Mvc
         endpoints.MapControllerRoute(
                   name: "default",
                   pattern: "{controller=Home}/{action=Index}/{id?}");
+
         endpoints.MapRazorPages();
+
+        endpoints.MapHub<ChatHub>("/chat");
       });
     }
   }

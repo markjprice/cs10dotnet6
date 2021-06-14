@@ -5,39 +5,11 @@
   ViewData["Title"] = "Home Page";
   string currentItem = "";
 }
-
 <div class="text-center">
   <h1 class="display-4">Welcome</h1>
   <p><a asp-action="ModelBinding" asp-controller="Home">Binding</a></p>
   <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-  <p class="alert alert-primary">@ViewData["greeting"] The time is @DateTime.Now.ToLongTimeString()</p>
-  @if (ViewData["productsCha"] != null)
-  {
-    <p>
-      Products that start with Cha using OData:
-      @foreach (Product p in ViewData["productsCha"] as Product[])
-      {
-        <span class="badge badge-info">@p.ProductId @p.ProductName @p.UnitPrice.Value.ToString("c")</span>
-    }
-  </p>
-  }
-  @if (ViewData["seafoodProducts"] != null)
-  {
-    <p>
-      Seafood products using GraphQL: 
-      @foreach (Product p in ViewData["seafoodProducts"] as Product[])
-      {
-        <span class="badge badge-success">@p.ProductId @p.ProductName @p.UnitsInStock.Value</span>
-    }
-  </p>
-  }
-  @if (ViewData["shipr"] != null)
-  {
-    Shipper shipper = ViewData["shipr"] as Shipper;
-  <p class="alert alert-danger">
-    ShipperId: @shipper.ShipperId, CompanyName: @shipper.CompanyName, Phone: @shipper.Phone
-  </p>
-  }
+  <p class="alert alert-primary">The time is @DateTime.Now.ToLongTimeString()</p>
   @if (ViewData["weather"] != null)
   {
     <p>

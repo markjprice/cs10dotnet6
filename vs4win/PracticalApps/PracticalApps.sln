@@ -29,6 +29,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Common.EntityMode
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Common.DataContext.Sqlite", "Northwind.Common.DataContext.Sqlite\Northwind.Common.DataContext.Sqlite.csproj", "{FB8F7D5C-3494-4417-AAFC-44A18E305BC7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.SignalR.ConsoleClient", "Northwind.SignalR.ConsoleClient\Northwind.SignalR.ConsoleClient.csproj", "{E2D9E16A-F534-478D-9F03-A18B1D522E73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.AzureFuncs", "Northwind.AzureFuncs\Northwind.AzureFuncs.csproj", "{9AC2B516-34D0-4D73-95F4-838B3460730A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{FB8F7D5C-3494-4417-AAFC-44A18E305BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB8F7D5C-3494-4417-AAFC-44A18E305BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB8F7D5C-3494-4417-AAFC-44A18E305BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D9E16A-F534-478D-9F03-A18B1D522E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D9E16A-F534-478D-9F03-A18B1D522E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D9E16A-F534-478D-9F03-A18B1D522E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D9E16A-F534-478D-9F03-A18B1D522E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC2B516-34D0-4D73-95F4-838B3460730A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC2B516-34D0-4D73-95F4-838B3460730A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC2B516-34D0-4D73-95F4-838B3460730A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC2B516-34D0-4D73-95F4-838B3460730A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,7 +21,8 @@ namespace Northwind.gRPC.Services
     public override Task<ShipperReply> GetShipper(
       ShipperRequest request, ServerCallContext context)
     {
-      return Task.FromResult(ToShipperReply(db.Shippers.Find(request.ShipperId)));
+      return Task.FromResult(ToShipperReply(
+        db.Shippers.Find(request.ShipperId)));
     }
 
     private ShipperReply ToShipperReply(Shipper shipper)

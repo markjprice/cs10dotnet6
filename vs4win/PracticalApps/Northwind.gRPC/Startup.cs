@@ -6,7 +6,6 @@ using Microsoft.Extensions.Hosting;
 using Northwind.gRPC.Services;
 using Packt.Shared; // AddNorthwindContext extension method
 
-
 namespace Northwind.gRPC
 {
   public class Startup
@@ -36,7 +35,7 @@ namespace Northwind.gRPC
         endpoints.MapGrpcService<ShipperService>();
 
         endpoints.MapGet("/", async context =>
-              {
+          {
             await context.Response.WriteAsync("Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
           });
       });

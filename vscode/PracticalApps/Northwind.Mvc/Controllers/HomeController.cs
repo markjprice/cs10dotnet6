@@ -60,96 +60,6 @@ namespace Northwind.Mvc.Controllers
         _logger.LogWarning($"Minimal.WebApi service exception: {ex.Message}");
       }
 
-      try
-      {
-        HttpClient client = clientFactory.CreateClient(
-          name: "Northwind.OData");
-
-        HttpRequestMessage request = new(
-          method: HttpMethod.Get, requestUri: 
-          "catalog/products/?$filter=startswith(ProductName, 'Cha')&$select=ProductId,ProductName,UnitPrice");
-
-        HttpResponseMessage response = await client.SendAsync(request);
-
-        ViewData["productsCha"] = (await response.Content
-          .ReadFromJsonAsync<ODataProducts>()).Value;
-      }
-      catch (Exception ex)
-      {
-        _logger.LogWarning($"Northwind.OData service exception: {ex.Message}");
-      }
-
-      try
-      {
-        HttpClient client = clientFactory.CreateClient(
-          name: "Northwind.GraphQL");
-
-        HttpRequestMessage request = new(
-          method: HttpMethod.Post, requestUri: "graphql");
-
-        request.Content = new StringContent(content: @"
-          query {
-            products (categoryId: 8) {
-              productId
-              productName
-              unitsInStock
-            }
-          }", 
-          encoding: Encoding.UTF8,
-          mediaType: "application/graphql");
-
-        HttpResponseMessage response = await client.SendAsync(request);
-
-        if (response.IsSuccessStatusCode)
-        {
-          ViewData["seafoodProducts"] = (await response.Content
-            .ReadFromJsonAsync<GraphQLProducts>()).Data.Products;
-        }
-      }
-      catch (Exception ex)
-      {
-        _logger.LogWarning($"Northwind.GraphQL service exception: {ex.Message}");
-      }
-
-      try
-      {
-        using (GrpcChannel channel =
-          GrpcChannel.ForAddress("https://localhost:5006"))
-        {
-          Greeter.GreeterClient greeter = new(channel);
-          HelloReply reply = await greeter.SayHelloAsync(
-            new HelloRequest { Name = "Henrietta" });
-          ViewData["greeting"] = "Greeting from gRPC service: " + reply.Message;
-        }
-      }
-      catch (Exception ex)
-      {
-        _logger.LogWarning($"Northwind.gRPC service exception: {ex.Message}");
-      }
-
-      try
-      {
-        using (GrpcChannel channel =
-          GrpcChannel.ForAddress("https://localhost:5006"))
-        {
-          Shipr.ShiprClient shipr = new(channel);
-
-          ShipperReply reply = await shipr.GetShipperAsync(
-            new ShipperRequest { ShipperId = 3 });
-          
-          ViewData["shipr"] = new Shipper
-          {
-            ShipperId = reply.ShipperId,
-            CompanyName = reply.CompanyName,
-            Phone = reply.Phone
-          };
-        }
-      }
-      catch (Exception ex)
-      {
-        _logger.LogWarning($"Northwind.gRPC service exception: {ex.Message}");
-      }
-
       HomeIndexViewModel model = new
       (
         VisitorCount: (new Random()).Next(1, 1001),
@@ -256,6 +166,106 @@ namespace Northwind.Mvc.Controllers
         .ReadFromJsonAsync<IEnumerable<Customer>>();
 
       return View(model);
+    }
+
+    public async Task<IActionResult> Services()
+    {
+      try
+      {
+        HttpClient client = clientFactory.CreateClient(
+          name: "Northwind.OData");
+
+        HttpRequestMessage request = new(
+          method: HttpMethod.Get, requestUri:
+          "catalog/products/?$filter=startswith(ProductName, 'Cha')&$select=ProductId,ProductName,UnitPrice");
+
+        HttpResponseMessage response = await client.SendAsync(request);
+
+        ViewData["productsCha"] = (await response.Content
+          .ReadFromJsonAsync<ODataProducts>()).Value;
+      }
+      catch (Exception ex)
+      {
+        _logger.LogWarning($"Northwind.OData service exception: {ex.Message}");
+      }
+
+      try
+      {
+        HttpClient client = clientFactory.CreateClient(
+          name: "Northwind.GraphQL");
+
+        HttpRequestMessage request = new(
+          method: HttpMethod.Post, requestUri: "graphql");
+
+        request.Content = new StringContent(content: @"
+          query {
+            products (categoryId: 8) {
+              productId
+              productName
+              unitsInStock
+            }
+          }",
+          encoding: Encoding.UTF8,
+          mediaType: "application/graphql");
+
+        HttpResponseMessage response = await client.SendAsync(request);
+
+        if (response.IsSuccessStatusCode)
+        {
+          ViewData["seafoodProducts"] = (await response.Content
+            .ReadFromJsonAsync<GraphQLProducts>()).Data.Products;
+        }
+      }
+      catch (Exception ex)
+      {
+        _logger.LogWarning($"Northwind.GraphQL service exception: {ex.Message}");
+      }
+
+      try
+      {
+        using (GrpcChannel channel =
+          GrpcChannel.ForAddress("https://localhost:5006"))
+        {
+          Greeter.GreeterClient greeter = new(channel);
+          HelloReply reply = await greeter.SayHelloAsync(
+            new HelloRequest { Name = "Henrietta" });
+          ViewData["greeting"] = "Greeting from gRPC service: " + reply.Message;
+        }
+      }
+      catch (Exception)
+      {
+        _logger.LogWarning($"Northwind.gRPC service is not responding.");
+      }
+
+      try
+      {
+        using (GrpcChannel channel =
+          GrpcChannel.ForAddress("https://localhost:5006"))
+        {
+          Shipr.ShiprClient shipr = new(channel);
+
+          ShipperReply reply = await shipr.GetShipperAsync(
+            new ShipperRequest { ShipperId = 3 });
+
+          ViewData["shipr"] = new Shipper
+          {
+            ShipperId = reply.ShipperId,
+            CompanyName = reply.CompanyName,
+            Phone = reply.Phone
+          };
+        }
+      }
+      catch (Exception)
+      {
+        _logger.LogWarning($"Northwind.gRPC service is not responding.");
+      }
+
+      return View();
+    }
+
+    public IActionResult Chat()
+    {
+      return View();
     }
   }
 }
