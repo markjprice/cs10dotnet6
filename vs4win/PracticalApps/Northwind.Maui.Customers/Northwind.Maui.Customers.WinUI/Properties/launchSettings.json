@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Northwind.Maui.Customers.WinUI": {
+      "commandName": "AppContainer"
+    }
+  }
+}

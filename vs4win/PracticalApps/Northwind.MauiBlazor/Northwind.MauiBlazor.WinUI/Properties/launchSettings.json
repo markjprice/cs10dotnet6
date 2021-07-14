@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Northwind.MauiBlazor.WinUI": {
+      "commandName": "AppContainer"
+    }
+  }
+}
