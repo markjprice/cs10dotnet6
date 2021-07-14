@@ -1,7 +1,8 @@
 # Repository for the Packt Publishing book
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/microsoft/vscode)
 ## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
-To be published in November 2021.
+To be published on Tuesday, November 9, 2021.
 
 Order the previous edition today!
 - [Packt](https://www.packtpub.com/product/c-9-and-net-5-modern-cross-platform-development-fifth-edition/9781800568105)
