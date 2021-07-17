@@ -5,6 +5,17 @@
 }
 <div class="text-center">
   <h1 class="display-4">@ViewData["Title"]</h1>
+  @if (ViewData["greeting"] != null)
+  {
+    <p class="alert alert-primary">@ViewData["greeting"]</p>
+  }
+    @if (ViewData["shipr"] != null)
+  {
+    Shipper shipper = ViewData["shipr"] as Shipper;
+    <p class="alert alert-danger">
+      ShipperId: @shipper.ShipperId, CompanyName: @shipper.CompanyName, Phone: @shipper.Phone
+    </p>
+  }
   @if (ViewData["productsCha"] != null)
   {
     <h2>Products that start with Cha using OData</h2>
@@ -31,17 +42,6 @@
           @p.UnitsInStock.Value
         </span>
       }
-    </p>
-  }
-  @if (ViewData["greeting"] != null)
-  {
-    <p class="alert alert-primary">@ViewData["greeting"]</p>
-  }
-  @if (ViewData["shipr"] != null)
-  {
-    Shipper shipper = ViewData["shipr"] as Shipper;
-    <p class="alert alert-danger">
-      ShipperId: @shipper.ShipperId, CompanyName: @shipper.CompanyName, Phone: @shipper.Phone
     </p>
   }
 </div>

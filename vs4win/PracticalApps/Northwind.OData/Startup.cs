@@ -1,14 +1,21 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.OData;
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.OData; // AddOData extension method
 using Microsoft.OData.Edm; // IEdmModel
 using Microsoft.OData.ModelBuilder; // ODataConventionModelBuilder
-using Packt.Shared; // AddNorthwindContext extension method
+using Packt.Shared; // NorthwindContext and entity models
+
 
 namespace Northwind.OData
 {
@@ -35,7 +42,7 @@ namespace Northwind.OData
       ODataConventionModelBuilder builder = new();
       builder.EntitySet<Customer>("Customers");
       builder.EntitySet<Order>("Orders");
-      //builder.EntitySet<OrderDetail>("OrderDetails");
+      builder.EntitySet<Employee>("Employees");
       builder.EntitySet<Product>("Products");
       builder.EntitySet<Shipper>("Shippers");
       return builder.GetEdmModel();
@@ -48,18 +55,22 @@ namespace Northwind.OData
 
       services.AddControllers()
         .AddOData(options => options
-          // register OData models including multiple versions
-          .AddModel(prefix: "catalog", model: GetEdmModelForCatalog())
-          .AddModel(prefix: "ordersystem", model: GetEdmModelForOrderSystem())
-          .AddModel(prefix: "v{version}", model: GetEdmModelForCatalog())
+        // register OData models including multiple versions
+        .AddRouteComponents(routePrefix: "catalog", 
+          model: GetEdmModelForCatalog())
+        .AddRouteComponents(routePrefix: "ordersystem", 
+          model: GetEdmModelForOrderSystem())
+        .AddRouteComponents(routePrefix: "v{version}",
+          model: GetEdmModelForCatalog())
 
-          // enable query options
-          .Select() // enable $select for projection
-          .Expand() // enable $expand to navigate to related entities
-          .Filter() // enable $filter
-          .OrderBy() // enable $orderby
-          .Count() // enable $count
-        );
+        // enable query options
+        .Select() // enable $select for projection
+        .Expand() // enable $expand to navigate to related entities
+        .Filter() // enable $filter
+        .OrderBy() // enable $orderby
+        .SetMaxTop(100) // enable $top
+        .Count() // enable $count
+      );
 
       services.AddSwaggerGen(c =>
       {

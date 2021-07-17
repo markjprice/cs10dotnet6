@@ -13,7 +13,7 @@ using System.Net.Http; // IHttpClientFactory
 using System.Net.Http.Json; // ReadFromJsonAsync
 using Northwind.Common; // WeatherForecast
 using Grpc.Net.Client; // GrpcChannel
-using System.Text;
+using System.Text; // Encoding
 using System.Runtime.Serialization.Formatters;
 
 namespace Northwind.Mvc.Controllers
@@ -198,7 +198,7 @@ namespace Northwind.Mvc.Controllers
           method: HttpMethod.Post, requestUri: "graphql");
 
         request.Content = new StringContent(content: @"
-          query {
+          {
             products (categoryId: 8) {
               productId
               productName
