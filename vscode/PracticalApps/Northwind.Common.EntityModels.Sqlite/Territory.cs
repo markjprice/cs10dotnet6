@@ -18,6 +18,6 @@ namespace Packt.Shared
         [Column(TypeName = "nchar")]
         public string TerritoryDescription { get; set; }
         [Column(TypeName = "int")]
-        public long RegionId { get; set; }
+        public int RegionId { get; set; }
     }
 }

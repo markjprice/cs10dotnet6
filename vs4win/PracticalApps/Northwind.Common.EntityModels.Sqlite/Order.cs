@@ -24,22 +24,22 @@ namespace Packt.Shared
         }
 
         [Key]
-        public long OrderId { get; set; }
+        public int OrderId { get; set; }
         [Column(TypeName = "nchar (5)")]
 [StringLength(5)]
         public string CustomerId { get; set; }
         [Column(TypeName = "int")]
-        public long? EmployeeId { get; set; }
+        public int? EmployeeId { get; set; }
         [Column(TypeName = "datetime")]
-        public byte[] OrderDate { get; set; }
+        public DateTime? OrderDate { get; set; }
         [Column(TypeName = "datetime")]
-        public byte[] RequiredDate { get; set; }
+        public DateTime? RequiredDate { get; set; }
         [Column(TypeName = "datetime")]
-        public byte[] ShippedDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
         [Column(TypeName = "int")]
-        public long? ShipVia { get; set; }
+        public int? ShipVia { get; set; }
         [Column(TypeName = "money")]
-        public byte[] Freight { get; set; }
+        public decimal? Freight { get; set; }
         [Column(TypeName = "nvarchar (40)")]
 [StringLength(40)]
         public string ShipName { get; set; }

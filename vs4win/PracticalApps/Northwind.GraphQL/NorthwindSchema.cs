@@ -1,7 +1,7 @@
 ﻿using GraphQL.Types; // Schema
-using Microsoft.Extensions.DependencyInjection; // GetRequiredService
-using Packt.Shared; // NorthwindContext
 using System; // IServiceProvider
+using Packt.Shared; // NorthwindContext
+using Microsoft.Extensions.DependencyInjection; // GetRequiredService
 
 namespace Northwind.GraphQL
 {

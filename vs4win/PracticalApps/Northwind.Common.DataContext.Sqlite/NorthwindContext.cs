@@ -52,6 +52,10 @@ namespace Packt.Shared
           .OnDelete(DeleteBehavior.ClientSetNull);
       });
 
+      modelBuilder.Entity<Product>()
+        .Property(product => product.UnitPrice)
+        .HasConversion<double>();
+
       OnModelCreatingPartial(modelBuilder);
     }
 

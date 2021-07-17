@@ -17,17 +17,17 @@ namespace Packt.Shared
     {
         [Key]
         [Column(TypeName = "int")]
-        public long OrderId { get; set; }
+        public int OrderId { get; set; }
         [Key]
         [Column(TypeName = "int")]
-        public long ProductId { get; set; }
+        public int ProductId { get; set; }
         [Required]
         [Column(TypeName = "money")]
-        public byte[] UnitPrice { get; set; }
+        public decimal? UnitPrice { get; set; }
         [Column(TypeName = "smallint")]
-        public long Quantity { get; set; }
+        public short? Quantity { get; set; }
         [Column(TypeName = "real")]
-        public double Discount { get; set; }
+        public double? Discount { get; set; }
 
         [ForeignKey(nameof(OrderId))]
         [InverseProperty("OrderDetails")]

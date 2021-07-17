@@ -6,9 +6,9 @@ namespace Northwind.GraphQL
   {
     public GreetQuery()
     {
-      Field<StringGraphType>(name: "greet", 
-        description: "A query type that greets the world.", 
-        resolve: context => "Hello, GraphQL!");
+      Field<StringGraphType>(name: "greet",
+        description: "A query type that greets the world.",
+        resolve: context => "Hello, World!");
     }
   }
 }

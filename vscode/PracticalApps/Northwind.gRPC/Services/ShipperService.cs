@@ -1,7 +1,6 @@
-using Grpc.Core; // ServerCallContext
+﻿using Grpc.Core; // ServerCallContext
 using Microsoft.Extensions.Logging; // ILogger
 using Packt.Shared; // NorthwindContext, Shipper
-using System.Linq;
 using System.Threading.Tasks; // Task, Task<T>
 
 namespace Northwind.gRPC.Services

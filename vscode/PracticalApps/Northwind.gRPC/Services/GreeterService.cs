@@ -1,6 +1,10 @@
-using Grpc.Core; // ServerCallContext
-using Microsoft.Extensions.Logging; // ILogger
-using System.Threading.Tasks; // Task, Task<T>
+using Grpc.Core;
+using Microsoft.Extensions.Logging;
+using Northwind.gRPC;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Northwind.gRPC.Services
 {
@@ -12,8 +16,7 @@ namespace Northwind.gRPC.Services
       _logger = logger;
     }
 
-    public override Task<HelloReply> SayHello(
-      HelloRequest request, ServerCallContext context)
+    public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
     {
       return Task.FromResult(new HelloReply
       {

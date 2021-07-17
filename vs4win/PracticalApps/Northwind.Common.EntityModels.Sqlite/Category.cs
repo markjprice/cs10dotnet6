@@ -17,7 +17,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        public long CategoryId { get; set; }
+        public int CategoryId { get; set; }
         [Required]
         [Column(TypeName = "nvarchar (15)")]
 [StringLength(15)]
