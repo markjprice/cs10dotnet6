@@ -14,7 +14,7 @@ Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Book Links](book-links.md)
-- [Errata & Improvements](errata.md)
+- [Improvements & Errata - list of corrections](errata.md)
 - [Online step-by-step instructions for common code editors](docs/README.md)
 - General feedback survey (coming soon): comment box and star rating. For now, feel free to email me at Gmail using my GitHub username.
 - Detailed feedback survey (coming soon): 10 questions; 3 minutes.
