@@ -47,6 +47,15 @@
 		},
 		{
 			"path": "Northwind.AzureFuncs"
+		},
+		{
+			"path": "Northwind.Blazor.Customers"
+		},
+		{
+			"path": "Northwind.BlazorServer"
+		},
+		{
+			"path": "Northwind.BlazorWasm"
 		}
 	]
 }

@@ -2,7 +2,7 @@
   "profiles": {
     "Northwind.gRPC": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
+      "dotnetRunMessages": true,
       "launchBrowser": false,
       "applicationUrl": "https://localhost:5006",
       "environmentVariables": {

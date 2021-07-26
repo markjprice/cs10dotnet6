@@ -18,7 +18,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        public long SupplierId { get; set; }
+        public int SupplierId { get; set; }
         [Required]
         [Column(TypeName = "nvarchar (40)")]
 [StringLength(40)]

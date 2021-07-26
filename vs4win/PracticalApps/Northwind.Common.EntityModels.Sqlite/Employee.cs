@@ -18,7 +18,7 @@ namespace Packt.Shared
         }
 
         [Key]
-        public long EmployeeId { get; set; }
+        public int EmployeeId { get; set; }
         [Required]
         [Column(TypeName = "nvarchar (20)")]
 [StringLength(20)]
@@ -34,9 +34,9 @@ namespace Packt.Shared
 [StringLength(25)]
         public string TitleOfCourtesy { get; set; }
         [Column(TypeName = "datetime")]
-        public byte[] BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         [Column(TypeName = "datetime")]
-        public byte[] HireDate { get; set; }
+        public DateTime? HireDate { get; set; }
         [Column(TypeName = "nvarchar (60)")]
 [StringLength(60)]
         public string Address { get; set; }
@@ -63,7 +63,7 @@ namespace Packt.Shared
         [Column(TypeName = "ntext")]
         public string Notes { get; set; }
         [Column(TypeName = "int")]
-        public long? ReportsTo { get; set; }
+        public int? ReportsTo { get; set; }
         [Column(TypeName = "nvarchar (255)")]
 [StringLength(255)]
         public string PhotoPath { get; set; }

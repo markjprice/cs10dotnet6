@@ -21,7 +21,7 @@ namespace Northwind.OData.Controllers
     }
 
     [EnableQuery]
-    public IActionResult Get(int key)
+    public IActionResult Get(string key)
     {
       return Ok(db.Customers.Find(key));
     }

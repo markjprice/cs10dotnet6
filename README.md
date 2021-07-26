@@ -1,7 +1,8 @@
 # Repository for the Packt Publishing book
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs10dotnet6)
 ## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
-To be published in November 2021.
+To be published on Tuesday, November 9, 2021.
 
 Order the previous edition today!
 - [Packt](https://www.packtpub.com/product/c-9-and-net-5-modern-cross-platform-development-fifth-edition/9781800568105)
@@ -13,7 +14,7 @@ Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Book Links](book-links.md)
-- [Errata & Improvements](errata.md)
+- [Improvements & Errata - list of corrections](errata.md)
 - [Online step-by-step instructions for common code editors](docs/README.md)
 - General feedback survey (coming soon): comment box and star rating. For now, feel free to email me at Gmail using my GitHub username.
 - Detailed feedback survey (coming soon): 10 questions; 3 minutes.

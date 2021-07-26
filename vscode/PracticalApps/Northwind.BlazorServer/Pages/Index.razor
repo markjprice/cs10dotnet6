@@ -1,0 +1,28 @@
+﻿@page "/"
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<button type="button" class="btn btn-info" @onclick="ShowMessageBox">
+  Poke the browser</button>
+<button type="button" class="btn btn-info" @onclick="SetCookie">
+  Store a cookie</button>
+@code {
+  [Inject]
+  public IJSRuntime JSRuntime { get; set; }
+
+  public async Task ShowMessageBox()
+  {
+    await JSRuntime.InvokeVoidAsync(
+      "messageBox", "Blazor poking the browser");
+  }
+
+  public async Task SetCookie()
+  {
+    await JSRuntime.InvokeVoidAsync(
+      "saveCookie", "{ 'color': 'red' }");
+  }
+}

@@ -13,7 +13,7 @@ namespace Northwind.Mvc.Hubs
 
     public async Task Register(RegisterModel model)
     {
-      // add to or update dictonary with username and its connectionId
+      // add to or update dictionary with username and its connectionId
       users[model.Username] = Context.ConnectionId;
 
       foreach (string group in model.Groups.Split(','))
