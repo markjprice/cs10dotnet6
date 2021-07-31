@@ -165,6 +165,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## .NET Interactive
 - .NET Interactive documentation: https://github.com/dotnet/interactive/tree/main/docs
 - VS Code Notebooks: A Deep Dive video: https://www.youtube.com/watch?v=D-AXZZDTQhM
+- Discuss: File format in the .NET Interactive VS Code extension: https://github.com/dotnet/interactive/issues/467
 - Polyglot Notebooks: Variable Sharing: https://devblogs.microsoft.com/dotnet/net-interactive-preview-3-vs-code-insiders-and-polyglot-notebooks/
 - Using HTML and JavaScript in .NET Interactive: https://github.com/dotnet/interactive/blob/main/docs/javascript-overview.md
 - .NET Interactive Samples: https://github.com/dotnet/interactive/tree/main/samples
