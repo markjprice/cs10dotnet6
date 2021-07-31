@@ -1,0 +1,20 @@
+#!markdown
+
+# Chapter 1 - Hello, C#! Welcome, .NET!
+Mixing *rich* **text** and code is cool!
+
+#!csharp
+
+#!about
+
+#!csharp
+
+Console.WriteLine("Hello, .NET Interactive!")
+
+#!csharp
+
+var number = 8;
+
+#!csharp
+
+Console.WriteLine(number);

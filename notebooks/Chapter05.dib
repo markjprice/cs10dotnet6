@@ -1,0 +1,331 @@
+#!markdown
+
+# Chapter 5 - Building Your Own Types with Object-Oriented Programming
+
+Execute the following code cell to make `Console` methods available in every code cell in this notebook.
+
+#!csharp
+
+using static System.Console;
+using System.Collections.Generic;
+
+#!markdown
+
+## Storing a value using an enum type (defining the enum)
+
+#!csharp
+
+[System.Flags]
+public enum WondersOfTheAncientWorld : byte
+{
+  None = 0b_0000_0000, // i.e. 0
+  GreatPyramidOfGiza = 0b_0000_0001, // i.e. 1
+  HangingGardensOfBabylon = 0b_0000_0010, // i.e. 2
+  StatueOfZeusAtOlympia = 0b_0000_0100, // i.e. 4
+  TempleOfArtemisAtEphesus = 0b_0000_1000, // i.e. 8
+  MausoleumAtHalicarnassus = 0b_0001_0000, // i.e. 16
+  ColossusOfRhodes = 0b_0010_0000, // i.e. 32
+  LighthouseOfAlexandria = 0b_0100_0000  // i.e. 64
+}
+
+#!markdown
+
+## Defining a class
+
+.NET Interactive notebooks do not support namespaces. You would get a "Cannot declare namesapce in script code" error. But we can declare a class.
+
+#!markdown
+
+## Storing a value using an enum type (using the enum)
+
+#!csharp
+
+public class Person : object
+{
+  // fields
+  public string Name;
+  public DateTime DateOfBirth;
+  public WondersOfTheAncientWorld FavoriteAncientWonder;
+  public WondersOfTheAncientWorld BucketList;
+  public List<Person> Children = new();
+
+  // constants
+  public const string Species = "Homo Sapien";
+
+  // read-only fields
+  public readonly string HomePlanet = "Earth";
+  public readonly DateTime Instantiated;
+
+  // constructors
+  public Person()
+  {
+    // set default values for fields
+    // including read-only fields
+    Name = "Unknown"; 
+    Instantiated = DateTime.Now;
+  }
+
+  public Person(string initialName, string homePlanet)
+  {
+    Name = initialName;
+    HomePlanet = homePlanet;
+    Instantiated = DateTime.Now;
+  }
+
+  // methods
+  public void WriteToConsole()
+  {
+    WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
+  }
+
+  public string GetOrigin()
+  {
+    return $"{Name} was born on {HomePlanet}.";
+  }
+
+  public (string, int) GetFruit()
+  {
+    return ("Apples", 5);
+  }
+
+  public (string Name, int Number) GetNamedFruit()
+  {
+    return (Name: "Apples", Number: 5);
+  }
+
+  public string SayHello()
+  {
+    return $"{Name} says 'Hello!'";
+  }
+
+  public string SayHello(string name)
+  {
+    return $"{Name} says 'Hello {name}!'";
+  }
+
+}
+
+#!markdown
+
+## Instantiating a class
+
+The namespace for a class defined in a .NET Interactive notebook follows the pattern `Submission#3+[classname]` if it is the third time a code cell has been submitted for execution in a notebook.
+
+#!csharp
+
+// var bob = new Person(); // C# 1.0 or later
+Person bob = new(); // C# 9.0 or later
+WriteLine(bob.ToString());
+
+bob.Name = "Bob Smith";
+bob.DateOfBirth = new DateTime(1965, 12, 22); // C# 1.0 or later
+
+WriteLine(format: "{0} was born on {1:dddd, d MMMM yyyy}", 
+  arg0: bob.Name,
+  arg1: bob.DateOfBirth);
+
+Person alice = new()
+{
+  Name = "Alice Jones",
+  DateOfBirth = new(1998, 3, 7) // C# 9.0 or later
+};
+
+WriteLine(format: "{0} was born on {1:dd MMM yy}",
+  arg0: alice.Name,
+  arg1: alice.DateOfBirth);
+
+#!csharp
+
+bob.FavoriteAncientWonder = WondersOfTheAncientWorld.StatueOfZeusAtOlympia;
+
+WriteLine(
+  format: "{0}'s favorite wonder is {1}. Its integer is {2}.",
+  arg0: bob.Name,
+  arg1:  bob.FavoriteAncientWonder,
+  arg2: (int)bob.FavoriteAncientWonder);
+
+bob.BucketList = 
+  WondersOfTheAncientWorld.HangingGardensOfBabylon
+  | WondersOfTheAncientWorld.MausoleumAtHalicarnassus;
+
+// bob.BucketList = (WondersOfTheAncientWorld)18;
+
+WriteLine($"{bob.Name}'s bucket list is {bob.BucketList}");
+
+#!markdown
+
+## Storing multiple values using collections
+
+#!csharp
+
+bob.Children.Add(new Person { Name = "Alfred" }); 
+bob.Children.Add(new Person { Name = "Zoe" });
+
+WriteLine(
+  $"{bob.Name} has {bob.Children.Count} children:");
+
+for (int childIndex = 0; childIndex < bob.Children.Count; childIndex++)
+{
+  WriteLine($"  {bob.Children[childIndex].Name}");
+}
+
+#!markdown
+
+## Making a field static
+
+#!csharp
+
+public class BankAccount
+{
+  public string AccountName; // instance member
+  public decimal Balance; // instance member
+  public static decimal InterestRate; // shared member
+}
+
+#!csharp
+
+BankAccount.InterestRate = 0.012M; // store a shared value
+
+var jonesAccount = new BankAccount(); 
+jonesAccount.AccountName = "Mrs. Jones"; 
+jonesAccount.Balance = 2400;
+
+WriteLine(format: "{0} earned {1:C} interest.",
+  arg0: jonesAccount.AccountName,
+  arg1: jonesAccount.Balance * BankAccount.InterestRate);
+
+var gerrierAccount = new BankAccount(); 
+gerrierAccount.AccountName = "Ms. Gerrier"; 
+gerrierAccount.Balance = 98;
+
+WriteLine(format: "{0} earned {1:C} interest.",
+  arg0: gerrierAccount.AccountName,
+  arg1: gerrierAccount.Balance * BankAccount.InterestRate);
+
+#!markdown
+
+## Making a field constant
+
+#!csharp
+
+WriteLine($"{bob.Name} is a {Person.Species}");
+
+#!markdown
+
+## Making a field read-only
+
+#!csharp
+
+WriteLine($"{bob.Name} was born on {bob.HomePlanet}");
+
+#!markdown
+
+## Initializing fields with constructors
+
+#!csharp
+
+var blankPerson = new Person();
+
+WriteLine(format:
+  "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
+  arg0: blankPerson.Name,
+  arg1: blankPerson.HomePlanet,
+  arg2: blankPerson.Instantiated);
+
+#!markdown
+
+## Defining multiple constructors
+
+#!csharp
+
+var gunny = new Person("Gunny", "Mars");
+
+WriteLine(format:
+  "{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
+  arg0: gunny.Name,
+  arg1: gunny.HomePlanet,
+  arg2: gunny.Instantiated);
+
+#!markdown
+
+## Returning values from methods
+
+#!csharp
+
+bob.WriteToConsole(); 
+WriteLine(bob.GetOrigin());
+
+#!markdown
+
+## Combining multiple returned values using tuples
+
+#!csharp
+
+public class TextAndNumber
+{
+  public string Text;
+  public int Number;
+}
+
+public class LifeTheUniverseAndEverything
+{
+  public TextAndNumber GetTheData()
+  {
+    return new TextAndNumber
+    {
+      Text = "What's the meaning of life?",
+      Number = 42
+    };
+  }
+}
+
+#!markdown
+
+### Language support for tuples
+
+#!csharp
+
+(string, int) fruit = bob.GetFruit();
+
+WriteLine($"{fruit.Item1}, {fruit.Item2} there are.");
+
+#!markdown
+
+### Naming the fields of a tuple
+
+#!csharp
+
+var fruitNamed = bob.GetNamedFruit();
+
+WriteLine($"There are {fruitNamed.Number} {fruitNamed.Name}.");
+
+#!markdown
+
+### Inferring tuple names
+
+#!csharp
+
+var thing1 = ("Neville", 4);
+WriteLine($"{thing1.Item1} has {thing1.Item2} children.");
+
+var thing2 = (bob.Name, bob.Children.Count); 
+WriteLine($"{thing2.Name} has {thing2.Count} children.");
+
+#!markdown
+
+### Deconstructing tuples
+
+#!csharp
+
+(string fruitName, int fruitNumber) = bob.GetFruit();
+
+WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
+
+#!markdown
+
+## Defining and passing parameters to methods
+
+#!csharp
+
+WriteLine(bob.SayHello());
+WriteLine(bob.SayHello("Emily"));
