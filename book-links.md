@@ -230,6 +230,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - The history of C#: https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 - Interview with the C# Boss - Mads Torgersen: https://www.dotnetcurry.com/csharp/1455/mads-torgersen-interview
 - The .NET Docs Show - C# Ask Me Anything 🤯: https://www.youtube.com/watch?v=U6cwOzUqjxY
+- [EPIC] .NET 6 C# project templates use latest language idioms #3359: https://github.com/dotnet/templating/issues/3359
+- SDK support for implicit namespaces in C# projects #25066: https://github.com/dotnet/docs/issues/25066
 
 ## C# language
 - C# Reference: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/

@@ -2,9 +2,17 @@
 
 # Chapter 3 - Controlling Flow and Converting Types
 
+#!markdown
+
+The following code cell statically imports the Console class so that we can call the `WriteLine` method anywhere.
+
 #!csharp
 
 using static System.Console;
+
+#!markdown
+
+# Operating on variables
 
 #!markdown
 
@@ -45,20 +53,6 @@ WriteLine($"g / f = {g / f}");
 
 #!csharp
 
-int a = 10; // 0000 1010
-int b = 6;	// 0000 0110
-WriteLine($"a = {a}");
-WriteLine($"b = {b}");
-WriteLine($"a & b = {a & b}"); // 2-bit column only 
-WriteLine($"a | b = {a | b}"); // 8, 4, and 2-bit columns 
-WriteLine($"a ^ b = {a ^ b}"); // 8 and 4-bit columns
-
-#!markdown
-
-## Bitwise and binary shift operators
-
-#!csharp
-
 bool a = true;
 bool b = false;
 WriteLine($"AND  | a     | b    ");
@@ -73,8 +67,9 @@ WriteLine($"XOR  | a     | b    ");
 WriteLine($"a    | {a ^ a,-5} | {a ^ b,-5} ");
 WriteLine($"b    | {b ^ a,-5} | {b ^ b,-5} ");
 
-WriteLine($"a & DoStuff() = {a & DoStuff()}"); 
-WriteLine($"b & DoStuff() = {b & DoStuff()}");
+#!markdown
+
+## Exploring conditional logical operators
 
 #!csharp
 
@@ -83,6 +78,51 @@ private static bool DoStuff()
   WriteLine("I am doing some stuff."); 
   return true;
 }
+
+#!csharp
+
+WriteLine($"a & DoStuff() = {a & DoStuff()}"); 
+WriteLine($"b & DoStuff() = {b & DoStuff()}");
+
+#!csharp
+
+WriteLine($"a && DoStuff() = {a && DoStuff()}"); 
+WriteLine($"b && DoStuff() = {b && DoStuff()}");
+
+#!markdown
+
+## Exploring bitwise and binary shift operators
+
+#!csharp
+
+int a = 10; // 0000 1010
+int b = 6;	// 0000 0110
+WriteLine($"a = {a}");
+WriteLine($"b = {b}");
+WriteLine($"a & b = {a & b}"); // 2-bit column only 
+WriteLine($"a | b = {a | b}"); // 8, 4, and 2-bit columns 
+WriteLine($"a ^ b = {a ^ b}"); // 8 and 4-bit columns
+
+#!markdown
+
+## Miscellaneous operators
+
+#!csharp
+
+int age = 47;
+
+// How many operators in the following statement?
+char firstDigit = age.ToString()[0];
+
+// There are four operators:
+// = is the assignment operator
+// . is the member access operator
+// () is the invocation operator
+// [] is the indexer access operator
+
+#!markdown
+
+# Understanding selection statements
 
 #!markdown
 
