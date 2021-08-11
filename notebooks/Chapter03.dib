@@ -166,7 +166,7 @@ else
 
 #!csharp
 
-var number = (new Random()).Next(1, 7); 
+int number = (new Random()).Next(1, 7); 
 WriteLine($"My random number is {number}");
 
 switch (number)
@@ -191,9 +191,7 @@ switch (number)
 } // end of switch statement
 
 WriteLine("After end of switch");
-
 A_label:
-
 WriteLine($"After A_label");
 
 #!markdown
@@ -204,13 +202,25 @@ WriteLine($"After A_label");
 
 using System.IO;
 
+#!markdown
+
+`ReadKey` is not supported in .NET Interactive Notebooks. To simulate the user pressing R or W, the following code instantiates a ConsoleKeyInfo object that represents the R or W key being pressed.
+
+#!markdown
+
+Comment and uncomment the appropriate path depending on your OS.
+
 #!csharp
 
-string path = "/Users/markjprice/Code/Chapter03";
-// string path = @"C:\Code\Chapter03";
+//string path = "/Users/markjprice/Code/Chapter03";
+string path = @"C:\Code\Chapter03";
 
-Write("Press R for readonly or W for write: "); 
-ConsoleKeyInfo key = ReadKey();
+Write("Press R for read-only or W for writeable: "); 
+
+ConsoleKeyInfo key = // ReadKey();
+  new ConsoleKeyInfo('R', ConsoleKey.R, 
+  shift: false, alt: false, control: false); 
+
 WriteLine();
 
 Stream s = null;
@@ -254,6 +264,31 @@ WriteLine(message);
 
 #!markdown
 
+## Simplifying switch statements with switch expressions
+
+#!csharp
+
+message = s switch
+{
+  FileStream writeableFile when s.CanWrite
+    => "The stream is a file that I can write to.", 
+  FileStream readOnlyFile
+    => "The stream is a read-only file.", 
+  MemoryStream ms
+    => "The stream is a memory address.", 
+  null
+    => "The stream is null.",
+  _
+    => "The stream is some other type."
+};
+WriteLine(message);
+
+#!markdown
+
+# Understanding iteration statements
+
+#!markdown
+
 ## Looping with the while statement
 
 #!csharp
@@ -262,7 +297,8 @@ int x = 0;
 
 while (x < 10)
 {
-  WriteLine(x); x++;
+  WriteLine(x); 
+  x++;
 }
 
 #!markdown
@@ -321,7 +357,7 @@ foreach (string name in names)
 
 #!markdown
 
-## Casting and converting
+# Casting and converting between types
 
 #!csharp
 
@@ -459,10 +495,9 @@ int count = int.Parse("abc");
 #!csharp
 
 Write("How many eggs are there? "); 
-int count;
-string input = "12";
+string input = "12"; // change to "twelve"
 
-if (int.TryParse(input, out count))
+if (int.TryParse(input, out int count))
 {
   WriteLine($"There are {count} eggs.");
 }
@@ -470,6 +505,36 @@ else
 {
   WriteLine("I could not parse the input.");
 }
+
+#!markdown
+
+## Wrapping error-prone code in a try block
+
+#!csharp
+
+WriteLine("Before parsing"); 
+Write("What is your age? "); 
+string input = "49";
+
+try
+{
+  int age = int.Parse(input); 
+  WriteLine($"You are {age} years old.");
+}
+catch (OverflowException)
+{
+  WriteLine("Your age is a valid number format but it is either too big or small.");
+}
+catch (FormatException)
+{
+  WriteLine("The age you entered is not a valid number format.");
+}
+catch (Exception ex)
+{
+  WriteLine($"{ex.GetType()} says {ex.Message}");
+}
+
+WriteLine("After parsing");
 
 #!markdown
 
@@ -515,33 +580,3 @@ unchecked
   y--;
   WriteLine($"After decrementing: {y}");
 }
-
-#!markdown
-
-## Wrapping error-prone code in a try block
-
-#!csharp
-
-WriteLine("Before parsing"); 
-Write("What is your age? "); 
-string input = "9876543210"; // or use ReadLine(); 
-
-try
-{
-  int age = int.Parse(input); 
-  WriteLine($"You are {age} years old.");
-}
-catch (OverflowException)
-{
-  WriteLine("Your age is a valid number format but it is either too big or small.");
-}
-catch (FormatException)
-{
-  WriteLine("The age you entered is not a valid number format.");
-}
-catch (Exception ex)
-{
-  WriteLine($"{ex.GetType()} says {ex.Message}");
-}
-
-WriteLine("After parsing");

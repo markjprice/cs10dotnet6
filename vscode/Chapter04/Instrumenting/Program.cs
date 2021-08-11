@@ -21,8 +21,9 @@ namespace Instrumenting
       Debug.WriteLine("Debug says, I am watching!");
       Trace.WriteLine("Trace says, I am watching!");
 
-      ConfigurationBuilder builder = new()
-        .SetBasePath(Directory.GetCurrentDirectory())
+      ConfigurationBuilder builder = new();
+
+      builder.SetBasePath(Directory.GetCurrentDirectory())
         .AddJsonFile("appsettings.json",
           optional: true, reloadOnChange: true);
 
