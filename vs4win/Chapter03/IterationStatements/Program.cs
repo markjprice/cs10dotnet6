@@ -1,59 +1,49 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
-namespace IterationStatements
+// Looping with the while statement
+
+int x = 0;
+
+while (x < 10)
 {
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      // Looping with the while statement
+  WriteLine(x);
+  x++;
+}
 
-      int x = 0;
+// Looping with the do statement
 
-      while (x < 10)
-      {
-        WriteLine(x);
-        x++;
-      }
+string? password;
+int attempts = 0;
 
-      // Looping with the do statement
+do
+{
+  attempts++;
+  Write("Enter your password: ");
+  password = ReadLine();
+}
+while ((password != "Pa$$w0rd") & (attempts < 10));
 
-      string password = string.Empty;
-      int attempts = 0;
+if (attempts < 10)
+{
+  WriteLine("Correct!");
+}
+else
+{
+  WriteLine("You have used 10 attempts!");
+}
 
-      do
-      {
-        attempts++;
-        Write("Enter your password: ");
-        password = ReadLine();
-      }
-      while ((password != "Pa$$w0rd") & (attempts < 10));
+// Looping with the for statement
 
-      if (attempts < 10)
-      {
-        WriteLine("Correct!");
-      }
-      else
-      {
-        WriteLine("You have used 10 attempts!");
-      }
+for (int y = 1; y <= 10; y++)
+{
+  WriteLine(y);
+}
 
-      // Looping with the for statement
+// Looping with the foreach statement
 
-      for (int y = 1; y <= 10; y++)
-      {
-        WriteLine(y);
-      }
+string[] names = { "Adam", "Barry", "Charlie" };
 
-      // Looping with the foreach statement
-
-      string[] names = { "Adam", "Barry", "Charlie" };
-
-      foreach (string name in names)
-      {
-        WriteLine($"{name} has {name.Length} characters.");
-      }
-    }
-  }
+foreach (string name in names)
+{
+  WriteLine($"{name} has {name.Length} characters.");
 }

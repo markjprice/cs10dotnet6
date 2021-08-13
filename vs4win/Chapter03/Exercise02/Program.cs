@@ -1,27 +1,17 @@
-﻿using System;
-using static System.Console;
+﻿using static System.Console;
 
-namespace Exercise02
+checked
 {
-  class Program
+  try
   {
-    static void Main(string[] args)
+    int max = 500;
+    for (byte i = 0; i < max; i++)
     {
-      checked
-      {
-        try
-        {
-          int max = 500;
-          for (byte i = 0; i < max; i++)
-          {
-            WriteLine(i);
-          }
-        }
-        catch (OverflowException ex)
-        {
-          WriteLine($"{ex.GetType()} says {ex.Message}");
-        }
-      }
+      WriteLine(i);
     }
+  }
+  catch (OverflowException ex)
+  {
+    WriteLine($"{ex.GetType()} says {ex.Message}");
   }
 }
