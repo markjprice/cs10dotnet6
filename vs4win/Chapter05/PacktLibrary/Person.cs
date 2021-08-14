@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System; // DateTime
+using System.Collections.Generic; // List<T>
+
 using static System.Console;
 
 namespace Packt.Shared
@@ -12,7 +13,7 @@ namespace Packt.Shared
     public DateTime DateOfBirth;
     public WondersOfTheAncientWorld FavoriteAncientWonder;
     public WondersOfTheAncientWorld BucketList;
-    public List<Person> Children = new();
+    public List<Person> Children = new List<Person>();
 
     // constants
     public const string Species = "Homo Sapien";
@@ -35,6 +36,21 @@ namespace Packt.Shared
       Name = initialName;
       HomePlanet = homePlanet;
       Instantiated = DateTime.Now;
+    }
+
+    // deconstructors
+    public void Deconstruct(out string name, out DateTime dob)
+    {
+      name = Name;
+      dob = DateOfBirth;
+    }
+
+    public void Deconstruct(out string name, 
+      out DateTime dob, out WondersOfTheAncientWorld fav)
+    {
+      name = Name;
+      dob = DateOfBirth;
+      fav = FavoriteAncientWonder;
     }
 
     // methods
