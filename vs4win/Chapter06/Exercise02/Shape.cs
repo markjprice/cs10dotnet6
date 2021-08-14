@@ -1,3 +1,5 @@
+namespace Packt;
+
 public abstract class Shape
 {
   // fields

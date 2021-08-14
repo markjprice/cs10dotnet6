@@ -1,3 +1,5 @@
+namespace Packt;
+
 public class Rectangle : Shape
 {
   public Rectangle() { }

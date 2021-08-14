@@ -1,16 +1,15 @@
 using static System.Console;
 
-namespace Packt.Shared
+namespace Packt.Shared;
+
+public interface IPlayable
 {
-  public interface IPlayable
+  void Play();
+
+  void Pause();
+
+  void Stop() // default interface implementation
   {
-    void Play();
-
-    void Pause();
-
-    void Stop() // default interface implementation
-    {
-      WriteLine("Default implementation of Stop.");
-    }
+    WriteLine("Default implementation of Stop.");
   }
 }

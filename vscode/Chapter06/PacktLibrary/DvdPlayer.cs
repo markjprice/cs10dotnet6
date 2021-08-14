@@ -1,17 +1,16 @@
 using static System.Console;
 
-namespace Packt.Shared
-{
-  public class DvdPlayer : IPlayable
-  {
-    public void Pause()
-    {
-      WriteLine("DVD player is pausing.");
-    }
+namespace Packt.Shared;
 
-    public void Play()
-    {
-      WriteLine("DVD player is playing.");
-    }
+public class DvdPlayer : IPlayable
+{
+  public void Pause()
+  {
+    WriteLine("DVD player is pausing.");
+  }
+
+  public void Play()
+  {
+    WriteLine("DVD player is playing.");
   }
 }

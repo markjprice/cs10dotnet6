@@ -1,3 +1,5 @@
+namespace Packt;
+
 public class Circle : Square
 {
   public Circle() { }
@@ -21,7 +23,7 @@ public class Circle : Square
     get
     {
       double radius = height / 2;
-      return System.Math.PI * radius * radius ;
+      return Math.PI * radius * radius ;
     }
   }
 }

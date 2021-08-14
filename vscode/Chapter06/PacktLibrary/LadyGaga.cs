@@ -1,20 +1,19 @@
 using static System.Console;
 
-namespace Packt.Shared
-{
-  public class Singer
-  {
-    public virtual void Sing()
-    {
-      WriteLine("Singing...");
-    }
-  }
+namespace Packt.Shared;
 
-  public class LadyGaga : Singer
+public class Singer
+{
+  public virtual void Sing()
   {
-    public sealed override void Sing()
-    {
-      WriteLine("Singing with style...");
-    }
+    WriteLine("Singing...");
+  }
+}
+
+public class LadyGaga : Singer
+{
+  public sealed override void Sing()
+  {
+    WriteLine("Singing with style...");
   }
 }

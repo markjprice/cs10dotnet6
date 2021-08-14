@@ -1,3 +1,5 @@
+namespace Packt;
+
 public class Square : Rectangle
 {
   public Square() { }
