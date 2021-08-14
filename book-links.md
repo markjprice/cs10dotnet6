@@ -358,6 +358,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Memory, reference and value types
 - Reference Types (C# Reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types
 - Value Types (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types
+- Choosing Between Class and Struct: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/choosing-between-class-and-struct
 - Conversation about the .NET type system: https://devblogs.microsoft.com/dotnet/conversation-about-the-net-type-system/
 - Technical details of the internal memory layout of types in .NET: https://adamsitnik.com/Value-Types-vs-Reference-Types/
 - Garbage collection: https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/
