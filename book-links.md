@@ -458,6 +458,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/regex-performance-improvements-in-net-5/
 
 ## Dates and times
+- Date, Time, and Time Zone Enhancements in .NET 6: https://devblogs.microsoft.com/dotnet/date-time-and-time-zone-enhancements-in-net-6/
 - .NET 6: Date and Time Structures: https://www.infoq.com/news/2021/04/Net6-Date-Time/
 
 ## Collections
