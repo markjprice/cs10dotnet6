@@ -1,51 +1,42 @@
-﻿using System;
+﻿using System.Text.RegularExpressions;
+
 using static System.Console;
-using System.Text.RegularExpressions;
 
-namespace WorkingWithRegularExpressions
+Write("Enter your age: ");
+string? input = ReadLine();
+
+Regex ageChecker = new(@"^\d+$");
+
+if (ageChecker.IsMatch(input))
 {
-  class Program
-  {
-    static void Main(string[] args)
-    {
-      Write("Enter your age: ");
-      string input = ReadLine();
+  WriteLine("Thank you!");
+}
+else
+{
+  WriteLine($"This is not a valid age: {input}");
+}
 
-      Regex ageChecker = new(@"^\d+$");
+string films = "\"Monsters, Inc.\",\"I, Tonya\",\"Lock, Stock and Two Smoking Barrels\"";
 
-      if (ageChecker.IsMatch(input))
-      {
-        WriteLine("Thank you!");
-      }
-      else
-      {
-        WriteLine($"This is not a valid age: {input}");
-      }
+WriteLine($"Films to split: {films}");
 
-      string films = "\"Monsters, Inc.\",\"I, Tonya\",\"Lock, Stock and Two Smoking Barrels\"";
+string[] filmsDumb = films.Split(',');
 
-      WriteLine($"Films to split: {films}");
+WriteLine("Splitting with string.Split method:");
+foreach (string film in filmsDumb)
+{
+  WriteLine(film);
+}
 
-      string[] filmsDumb = films.Split(',');
+WriteLine();
 
-      WriteLine("Splitting with string.Split method:");
-      foreach (string film in filmsDumb)
-      {
-        WriteLine(film);
-      }
+Regex csv = new(
+  "(?:^|,)(?=[^\"]|(\")?)\"?((?(1)[^\"]*|[^,\"]*))\"?(?=,|$)");
 
-      WriteLine();
+MatchCollection filmsSmart = csv.Matches(films);
 
-      Regex csv = new(
-        "(?:^|,)(?=[^\"]|(\")?)\"?((?(1)[^\"]*|[^,\"]*))\"?(?=,|$)");
-
-      MatchCollection filmsSmart = csv.Matches(films);
-
-      WriteLine("Splitting with regular expression:");
-      foreach (Match film in filmsSmart)
-      {
-        WriteLine(film.Groups[2].Value);
-      }
-    }
-  }
+WriteLine("Splitting with regular expression:");
+foreach (Match film in filmsSmart)
+{
+  WriteLine(film.Groups[2].Value);
 }

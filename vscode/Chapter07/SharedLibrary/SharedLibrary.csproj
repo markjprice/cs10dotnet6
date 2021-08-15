@@ -14,7 +14,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Example shared library packaged for NuGet.</PackageReleaseNotes>
     <Description>Three extension methods to validate a string value.</Description>
-    <Copyright>Copyright © 2020-2021 Packt Publishing Limited</Copyright>
+    <Copyright>Copyright © 2016-2021 Packt Publishing Limited</Copyright>
     <PackageTags>string extensions packt csharp dotnet</PackageTags>
   </PropertyGroup>
 
