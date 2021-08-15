@@ -435,6 +435,9 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Discover cross-platform issues: https://docs.microsoft.com/en-us/dotnet/standard/analyzers/api-analyzer#discover-cross-platform-issues
 - Amazon Porting Assistant for .NET: https://aws.amazon.com/porting-assistant-dotnet/
 
+## Preview features
+- Preview Features: https://github.com/dotnet/designs/blob/main/accepted/2021/preview-features/preview-features.md
+
 # Chapter 8 - Working with Common .NET Types
 
 ## Working with numbers
