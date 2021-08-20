@@ -1,12 +1,11 @@
 using System.Xml.Serialization;
 
-namespace Packt.Shared
+namespace Packt.Shared;
+
+[XmlInclude(typeof(Circle))]
+[XmlInclude(typeof(Rectangle))]
+public abstract class Shape
 {
-    [XmlInclude(typeof(Circle))]
-    [XmlInclude(typeof(Rectangle))]
-    public abstract class Shape
-    {
-        public string Colour { get; set; }
-        public abstract double Area { get; }
-    }
+  public string? Colour { get; set; }
+  public abstract double Area { get; }
 }

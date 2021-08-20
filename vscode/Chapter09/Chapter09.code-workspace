@@ -10,6 +10,9 @@
 			"path": "WorkingWithEncodings"
 		},
 		{
+			"path": "WorkingWithJson"
+		},
+		{
 			"path": "WorkingWithSerialization"
 		},
 		{

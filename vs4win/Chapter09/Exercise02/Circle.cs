@@ -1,17 +1,14 @@
-using System;
+namespace Packt.Shared;
 
-namespace Packt.Shared
+public class Circle : Shape
 {
-    public class Circle : Shape
+  public override double Area
+  {
+    get
     {
-        public override double Area
-        {
-            get
-            {
-                return Math.PI * Radius * Radius;
-            }
-        }
-
-        public double Radius { get; set; }
+      return Math.PI * Radius * Radius;
     }
+  }
+
+  public double Radius { get; set; }
 }

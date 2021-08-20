@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31320.298
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31606.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise02", "Exercise02\Exercise02.csproj", "{68388E16-7002-45F5-BA9F-151D160CD0CC}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithSerialization", "WorkingWithSerialization\WorkingWithSerialization.csproj", "{5DBCB8F1-EE45-4DE2-A835-A7EA659F696D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithStreams", "WorkingWithStreams\WorkingWithStreams.csproj", "{E05747FA-3902-4D33-BBA9-67625CC27078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithJson", "WorkingWithJson\WorkingWithJson.csproj", "{89D2264B-3F37-4B76-9750-9AB76B8ED9D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E05747FA-3902-4D33-BBA9-67625CC27078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E05747FA-3902-4D33-BBA9-67625CC27078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E05747FA-3902-4D33-BBA9-67625CC27078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D2264B-3F37-4B76-9750-9AB76B8ED9D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D2264B-3F37-4B76-9750-9AB76B8ED9D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D2264B-3F37-4B76-9750-9AB76B8ED9D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D2264B-3F37-4B76-9750-9AB76B8ED9D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
