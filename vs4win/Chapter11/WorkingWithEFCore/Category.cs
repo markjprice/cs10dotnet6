@@ -6,7 +6,7 @@ namespace WorkingWithEFCore
   public class Category
   {
     // these properties map to columns in the database 
-    public int CategoryID { get; set; }
+    public int CategoryId { get; set; }
     public string CategoryName { get; set; }
 
     [Column(TypeName = "ntext")]

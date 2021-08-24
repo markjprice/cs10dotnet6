@@ -5,7 +5,7 @@ namespace WorkingWithEFCore
 {
   public class Product
   {
-    public int ProductID { get; set; } // primary key
+    public int ProductId { get; set; } // primary key
 
     [Required]
     [StringLength(40)]
@@ -21,7 +21,7 @@ namespace WorkingWithEFCore
 
     // these two define the foreign key relationship
     // to the Categories table
-    public int CategoryID { get; set; }
+    public int CategoryId { get; set; }
     public virtual Category Category { get; set; }
   }
 }

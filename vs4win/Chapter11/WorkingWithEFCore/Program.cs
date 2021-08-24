@@ -118,7 +118,7 @@ namespace WorkingWithEFCore
         {
           WriteLine(
             "{0}: {1} costs {2:$#,##0.00} and has {3} in stock.",
-            p.ProductID, p.ProductName, p.Cost, p.Stock);
+            p.ProductId, p.ProductName, p.Cost, p.Stock);
         }
       }
     }
@@ -144,13 +144,13 @@ namespace WorkingWithEFCore
       }
     }
 
-    static bool AddProduct(int categoryID, string productName, decimal? price)
+    static bool AddProduct(int categoryId, string productName, decimal? price)
     {
       using (Northwind db = new())
       {
         Product p = new()
         {
-          CategoryID = categoryID,
+          CategoryId = categoryId,
           ProductName = productName,
           Cost = price
         };
@@ -175,7 +175,7 @@ namespace WorkingWithEFCore
           .OrderByDescending(product => product.Cost))
         {
           WriteLine("{0:000} {1,-35} {2,8:$#,##0.00} {3,5} {4}",
-            p.ProductID, p.ProductName, p.Cost, p.Stock, p.Discontinued);
+            p.ProductId, p.ProductName, p.Cost, p.Stock, p.Discontinued);
         }
       }
     }
