@@ -565,6 +565,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Humanizer library: http://humanizr.net
 - Scaffolding: https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli
 - Deep Dive into Many-to-Many: A Tour of EF Core 5.0: https://channel9.msdn.com/Shows/On-NET/Deep-Dive-into-Many-to-Many-A-Tour-of-EF-Core-50-pt-2
+- Naming Conventions for Entity Framework Core Tables and Columns: https://github.com/efcore/EFCore.NamingConventions
 
 ## EF Core querying and manipulating
 - Filtered include: https://docs.microsoft.com/en-us/ef/core/querying/related-data/eager#filtered-include
