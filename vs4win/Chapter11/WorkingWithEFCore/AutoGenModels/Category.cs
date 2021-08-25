@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace WorkingWithEFCore.AutoGen
 {
     [Index(nameof(CategoryName), Name = "CategoryName")]
@@ -18,16 +16,12 @@ namespace WorkingWithEFCore.AutoGen
 
         [Key]
         public long CategoryId { get; set; }
-        [Required]
-        [Column(TypeName = "nvarchar (15)")] // SQLite
-        [StringLength(15)] // SQL Server
-        public string CategoryName { get; set; }
-
+        [Column(TypeName = "nvarchar (15)")]
+        public string CategoryName { get; set; } = null!;
         [Column(TypeName = "ntext")]
-        public string Description { get; set; }
-        
+        public string? Description { get; set; }
         [Column(TypeName = "image")]
-        public byte[] Picture { get; set; }
+        public byte[]? Picture { get; set; }
 
         [InverseProperty(nameof(Product.Category))]
         public virtual ICollection<Product> Products { get; set; }

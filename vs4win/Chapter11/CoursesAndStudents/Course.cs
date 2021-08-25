@@ -1,16 +1,14 @@
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace CoursesAndStudents
+namespace CoursesAndStudents;
+
+public class Course
 {
-  public class Course
-  {
-    public int CourseId { get; set; }
+  public int CourseId { get; set; }
 
-    [Required]
-    [StringLength(60)]
-    public string Title { get; set; }
+  [Required]
+  [StringLength(60)]
+  public string? Title { get; set; }
 
-    public ICollection<Student> Students { get; set; }
-  }
+  public ICollection<Student>? Students { get; set; }
 }
