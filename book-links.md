@@ -598,6 +598,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 
 ## Tasks
 - Pros and cons of different ways to start tasks: https://devblogs.microsoft.com/pfxteam/task-factory-startnew-vs-new-task-start/
+- Task.Start Method: https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.start
 
 ## Thread safety
 - Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
