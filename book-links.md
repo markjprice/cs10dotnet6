@@ -579,6 +579,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Expression trees: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/
 - LINQ comprehension syntax: https://stackoverflow.com/questions/6229187/linq-why-is-it-called-comprehension-syntax
 - LINQ in C#: https://docs.microsoft.com/en-us/dotnet/csharp/linq/linq-in-csharp
+- New LINQ extensions in .NET 6 and benchmarks: https://blog.elmah.io/new-linq-extensions-in-net-6-and-benchmarks/
 
 ## LINQ providers
 - EF Core LINQ queries no longer evaluated at client: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-3.x/breaking-changes#linq-queries-are-no-longer-evaluated-on-the-client
