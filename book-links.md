@@ -603,6 +603,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Thread safety
 - Events and thread-safety: https://docs.microsoft.com/en-us/archive/blogs/cburrows/field-like-events-considered-harmful
 - Stephen Cleary's thoughts on events and thread-safety: https://blog.stephencleary.com/2009/06/threadsafe-events.html
+- Managed threading best practices: https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices
+- ThreadStaticAttribute Class: https://docs.microsoft.com/en-us/dotnet/api/system.threadstaticattribute
 
 ## async and await
 - Async in depth: https://docs.microsoft.com/en-us/dotnet/standard/async-in-depth
