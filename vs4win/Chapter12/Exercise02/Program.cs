@@ -1,33 +1,36 @@
-﻿using System.Linq;
+﻿using Packt.Shared;
+
 using static System.Console;
-using Packt.Shared;
 
-namespace Exercise02
+using (Northwind db = new())
 {
-  class Program
+  IQueryable<string?>? distinctCities =
+    db.Customers?.Select(c => c.City).Distinct();
+
+  if (distinctCities is null)
   {
-    static void Main(string[] args)
-    {
-      using (Northwind db = new())
-      {
-        IQueryable<string> distinctCities = 
-          db.Customers.Select(c => c.City).Distinct();
+    WriteLine("No distinct cities found.");
+    return;
+  }
 
-        WriteLine("A list of cities that at least one customers resides in:");
-        WriteLine($"{string.Join(", ", distinctCities)}");
-        WriteLine();
+  WriteLine("A list of cities that at least one customer resides in:");
+  WriteLine($"{string.Join(", ", distinctCities)}");
+  WriteLine();
 
-        Write("Enter the name of a city: ");
-        string city = ReadLine();
+  Write("Enter the name of a city: ");
+  string? city = ReadLine();
 
-        IQueryable<Customer> customersInCity = db.Customers.Where(c => c.City == city);
+  IQueryable<Customer>? customersInCity = db.Customers?.Where(c => c.City == city);
 
-        WriteLine($"There are {customersInCity.Count()} customers in {city}:");
-        foreach (Customer c in customersInCity)
-        {
-          WriteLine($"{c.CompanyName}");
-        }
-      }
-    }
+  if (customersInCity is null)
+  {
+    WriteLine($"No customers found in {city}.");
+    return;
+  }
+
+  WriteLine($"There are {customersInCity.Count()} customers in {city}:");
+  foreach (Customer c in customersInCity)
+  {
+    WriteLine($"  {c.CompanyName}");
   }
 }

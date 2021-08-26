@@ -1,15 +1,14 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Packt.Shared
+namespace Packt.Shared;
+
+public class Category
 {
-  public class Category
-  {
-    public int CategoryId { get; set; }
+  public int CategoryId { get; set; }
 
-    [Required]
-    [StringLength(15)]
-    public string CategoryName { get; set; } 
+  [Required]
+  [StringLength(15)]
+  public string CategoryName { get; set; }
 
-    public string Description { get; set; }
-  }
+  public string? Description { get; set; }
 }

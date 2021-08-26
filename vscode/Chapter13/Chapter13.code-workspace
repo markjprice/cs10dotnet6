@@ -20,6 +20,12 @@
 		},
 		{
 			"path": "AsyncEnumerable"
+		},
+		{
+			"path": "Benchmarking"
+		},
+		{
+			"path": "WpfResponsive"
 		}
 	]
 }

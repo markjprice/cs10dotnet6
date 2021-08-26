@@ -1,66 +1,74 @@
-﻿using System;
-using System.Collections.Generic; // for List<T>
-using System.Linq;
-using static System.Console;
+﻿using static System.Console;
 
-namespace LinqWithObjects
+// a string array is a sequence that implements IEnumerable<string>
+string[] names = new[] { "Michael", "Pam", "Jim", "Dwight",
+  "Angela", "Kevin", "Toby", "Creed" };
+
+WriteLine("Deferred execution");
+
+// Question: Which names end with an M?
+// (written using a LINQ extension method)
+var query1 = names.Where(name => name.EndsWith("m"));
+
+// Question: Which names end with an M?
+// (written using LINQ query comprehension syntax)
+var query2 = from name in names where name.EndsWith("m") select name;
+
+// Answer returned as an array of strings containing Pam and Jim
+string[] result1 = query1.ToArray();
+
+// Answer returned as a list of strings containing Pam and Jim
+List<string> result2 = query2.ToList();
+
+// Answer returned as we enumerate over the results
+foreach (string name in query1)
 {
-  class Program
-  {
-    static void LinqWithArrayOfStrings()
-    {
-      string[] names = new string[] { "Michael", "Pam", "Jim", "Dwight",
-        "Angela", "Kevin", "Toby", "Creed" };
+  WriteLine(name); // outputs Pam
+  names[2] = "Jimmy"; // change Jim to Jimmy
+  // on the second iteration Jimmy does not end with an M
+}
 
-      // var query = names.Where(
-      //   new Func<string, bool>(NameLongerThanFour));
+WriteLine("Writing queries");
 
-      // var query = names.Where(NameLongerThanFour);
+// var query = names.Where(
+//   new Func<string, bool>(NameLongerThanFour));
 
-      IOrderedEnumerable<string> query = names
-        .Where(name => name.Length > 4)
-        .OrderBy(name => name.Length)
-        .ThenBy(name => name);
+// var query = names.Where(NameLongerThanFour);
 
-      foreach (string item in query)
-      {
-        WriteLine(item);
-      }
-    }
+IOrderedEnumerable<string> query = names
+  .Where(name => name.Length > 4)
+  .OrderBy(name => name.Length)
+  .ThenBy(name => name);
 
-    static bool NameLongerThanFour(string name)
-    {
-      return name.Length > 4;
-    }
+foreach (string item in query)
+{
+  WriteLine(item);
+}
 
-    static void LinqWithArrayOfExceptions()
-    {
-      List<Exception> errors = new()
-      {
-        new ArgumentException(), 
-        new SystemException(),
-        new IndexOutOfRangeException(), 
-        new InvalidOperationException(),
-        new NullReferenceException(), 
-        new InvalidCastException(),
-        new OverflowException(),
-        new DivideByZeroException(), 
-        new ApplicationException()
-      };
+WriteLine("Filtering by type");
 
-      IEnumerable<ArithmeticException> arithmeticExceptionsQuery = 
-        errors.OfType<ArithmeticException>();
+List<Exception> errors = new()
+{
+  new ArgumentException(),
+  new SystemException(),
+  new IndexOutOfRangeException(),
+  new InvalidOperationException(),
+  new NullReferenceException(),
+  new InvalidCastException(),
+  new OverflowException(),
+  new DivideByZeroException(),
+  new ApplicationException()
+};
 
-      foreach (ArithmeticException exception in arithmeticExceptionsQuery)
-      {
-        WriteLine(exception);
-      }
-    }
+IEnumerable<ArithmeticException> arithmeticExceptionsQuery =
+  errors.OfType<ArithmeticException>();
 
-    static void Main(string[] args)
-    {
-      // LinqWithArrayOfStrings();
-      LinqWithArrayOfExceptions();
-    }
-  }
+foreach (ArithmeticException exception in arithmeticExceptionsQuery)
+{
+  WriteLine(exception);
+}
+
+static bool NameLongerThanFour(string name)
+{
+  return name.Length > 4;
 }

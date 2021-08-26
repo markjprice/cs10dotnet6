@@ -1,29 +1,35 @@
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; // DbContext, DbSet<T>
 
-namespace Packt.Shared
+namespace Packt.Shared;
+
+// this manages the connection to the database 
+public class Northwind : DbContext
 {
-  // this manages the connection to the database 
-  public class Northwind : DbContext
+  // these properties map to tables in the database 
+  public DbSet<Category>? Categories { get; set; }
+  public DbSet<Product>? Products { get; set; }
+
+  protected override void OnConfiguring(
+    DbContextOptionsBuilder optionsBuilder)
   {
-    // these properties map to tables in the database 
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Product> Products { get; set; }
+    string path = Path.Combine(
+      Environment.CurrentDirectory, "Northwind.db");
 
-    protected override void OnConfiguring(
-      DbContextOptionsBuilder optionsBuilder)
-    {
-      string path = System.IO.Path.Combine(
-        System.Environment.CurrentDirectory, "Northwind.db");
-        
-      optionsBuilder.UseSqlite($"Filename={path}");
-    }
+    // optionsBuilder.UseSqlite($"Filename={path}");
 
-    protected override void OnModelCreating(
-      ModelBuilder modelBuilder)
-    {
-      modelBuilder.Entity<Product>()
-        .Property(product => product.UnitPrice)
-        .HasConversion<double>();
-    }
+    string connection = "Data Source=.;" +
+        "Initial Catalog=Northwind;" +
+        "Integrated Security=true;" +
+        "MultipleActiveResultSets=true;";
+
+    optionsBuilder.UseSqlServer(connection);
+  }
+
+  protected override void OnModelCreating(
+    ModelBuilder modelBuilder)
+  {
+    modelBuilder.Entity<Product>()
+      .Property(product => product.UnitPrice)
+      .HasConversion<double>();
   }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31320.298
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncConsole", "AsyncConsole\AsyncConsole.csproj", "{DFBD8610-9046-4F76-B06C-82EC5E80E1C2}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SynchronizingResourceAccess", "SynchronizingResourceAccess\SynchronizingResourceAccess.csproj", "{64BB3C3B-B885-4E3D-A034-941072998D5C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithTasks", "WorkingWithTasks\WorkingWithTasks.csproj", "{D5A97F9B-5CBA-4CF2-9784-79ABFFC0B77B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmarking", "Benchmarking\Benchmarking.csproj", "{CE9FF38A-16C6-4762-99F9-E6DB68953736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfResponsive", "WpfResponsive\WpfResponsive.csproj", "{082C9C43-D1D9-4623-BC57-B5DB32C6D586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{D5A97F9B-5CBA-4CF2-9784-79ABFFC0B77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A97F9B-5CBA-4CF2-9784-79ABFFC0B77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A97F9B-5CBA-4CF2-9784-79ABFFC0B77B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9FF38A-16C6-4762-99F9-E6DB68953736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9FF38A-16C6-4762-99F9-E6DB68953736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9FF38A-16C6-4762-99F9-E6DB68953736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9FF38A-16C6-4762-99F9-E6DB68953736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{082C9C43-D1D9-4623-BC57-B5DB32C6D586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082C9C43-D1D9-4623-BC57-B5DB32C6D586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082C9C43-D1D9-4623-BC57-B5DB32C6D586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082C9C43-D1D9-4623-BC57-B5DB32C6D586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

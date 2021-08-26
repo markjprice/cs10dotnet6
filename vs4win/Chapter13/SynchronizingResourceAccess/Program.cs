@@ -1,82 +1,74 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Diagnostics;
+﻿using System.Diagnostics; // Stopwatch
+
 using static System.Console;
 
-namespace SynchronizingResourceAccess
+WriteLine("Please wait for the tasks to complete.");
+Stopwatch watch = Stopwatch.StartNew();
+
+Task a = Task.Factory.StartNew(MethodA);
+Task b = Task.Factory.StartNew(MethodB);
+
+Task.WaitAll(new Task[] { a, b });
+
+WriteLine();
+WriteLine($"Results: {SharedObjects.Message}.");
+WriteLine($"{watch.ElapsedMilliseconds:N0} elapsed milliseconds.");
+WriteLine($"{SharedObjects.Counter} string modifications.");
+
+static void MethodA()
 {
-  class Program
+  try
   {
-    private static Random r = new();
-    private static string Message; // a shared resource
-    private static int Counter; // another shared resource
-    private static object conch = new();
-
-    private static void MethodA()
+    if (Monitor.TryEnter(SharedObjects.Conch, TimeSpan.FromSeconds(15)))
     {
-      try
+      for (int i = 0; i < 5; i++)
       {
-        if (Monitor.TryEnter(conch, TimeSpan.FromSeconds(15)))
-        {
-          for (int i = 0; i < 5; i++)
-          {
-            Thread.Sleep(r.Next(2000));
-            Message += "A";
-            Interlocked.Increment(ref Counter);
-            Write(".");
-          }
-        }
-        else
-        {
-          WriteLine("Method A failed to enter a monitor lock.");
-        }
-      }
-      finally
-      {
-        Monitor.Exit(conch);
+        Thread.Sleep(SharedObjects.Random.Next(2000));
+        SharedObjects.Message += "A";
+        Interlocked.Increment(ref SharedObjects.Counter);
+        Write(".");
       }
     }
-
-    private static void MethodB()
+    else
     {
-      try
-      {
-        if (Monitor.TryEnter(conch, TimeSpan.FromSeconds(15)))
-        {
-          for (int i = 0; i < 5; i++)
-          {
-            Thread.Sleep(r.Next(2000));
-            Message += "B";
-            Interlocked.Increment(ref Counter);
-            Write(".");
-          }
-        }
-        else
-        {
-          WriteLine("Method B failed to enter a monitor lock.");
-        }
-      }
-      finally
-      {
-        Monitor.Exit(conch);
-      }
-    }
-
-    static void Main(string[] args)
-    {
-      WriteLine("Please wait for the tasks to complete.");
-      Stopwatch watch = Stopwatch.StartNew();
-
-      Task a = Task.Factory.StartNew(MethodA);
-      Task b = Task.Factory.StartNew(MethodB);
-
-      Task.WaitAll(new Task[] { a, b });
-
-      WriteLine();
-      WriteLine($"Results: {Message}.");
-      WriteLine($"{watch.ElapsedMilliseconds:#,##0} elapsed milliseconds.");
-      WriteLine($"{Counter} string modifications.");
+      WriteLine("Method A failed to enter a monitor lock.");
     }
   }
+  finally
+  {
+    Monitor.Exit(SharedObjects.Conch);
+  }
+}
+
+static void MethodB()
+{
+  try
+  {
+    if (Monitor.TryEnter(SharedObjects.Conch, TimeSpan.FromSeconds(15)))
+    {
+      for (int i = 0; i < 5; i++)
+      {
+        Thread.Sleep(SharedObjects.Random.Next(2000));
+        SharedObjects.Message += "B";
+        Interlocked.Increment(ref SharedObjects.Counter);
+        Write(".");
+      }
+    }
+    else
+    {
+      WriteLine("Method B failed to enter a monitor lock.");
+    }
+  }
+  finally
+  {
+    Monitor.Exit(SharedObjects.Conch);
+  }
+}
+
+static class SharedObjects
+{
+  public static Random Random = new();
+  public static string? Message; // a shared resource
+  public static object Conch = new();
+  public static int Counter; // another shared resource
 }
