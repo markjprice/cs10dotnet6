@@ -752,6 +752,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - It is the BaseAddress and DefaultRequestHeaders properties that you should treat with caution with multiple threads: https://medium.com/@nuno.caneco/c-httpclient-should-not-be-disposed-or-should-it-45d2a8f568bc
 - You're using HttpClient wrong and it is destabilizing your software: https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
 - How to initiate HTTP requests: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests
+- Issues with the original HttpClient class available in .NET: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net
 - HttpClient extension methods for easily working with JSON: https://github.com/dotnet/designs/blob/main/accepted/2020/json-http-extensions/json-http-extensions.md
 
 ## Documenting web services
