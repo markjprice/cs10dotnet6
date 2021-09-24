@@ -4,44 +4,40 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Keyless]
     public partial class Invoice
     {
         [StringLength(40)]
-        public string ShipName { get; set; }
+        public string? ShipName { get; set; }
         [StringLength(60)]
-        public string ShipAddress { get; set; }
+        public string? ShipAddress { get; set; }
         [StringLength(15)]
-        public string ShipCity { get; set; }
+        public string? ShipCity { get; set; }
         [StringLength(15)]
-        public string ShipRegion { get; set; }
+        public string? ShipRegion { get; set; }
         [StringLength(10)]
-        public string ShipPostalCode { get; set; }
+        public string? ShipPostalCode { get; set; }
         [StringLength(15)]
-        public string ShipCountry { get; set; }
+        public string? ShipCountry { get; set; }
         [Column("CustomerID")]
         [StringLength(5)]
-        public string CustomerId { get; set; }
-        [Required]
+        public string? CustomerId { get; set; }
         [StringLength(40)]
-        public string CustomerName { get; set; }
+        public string CustomerName { get; set; } = null!;
         [StringLength(60)]
-        public string Address { get; set; }
+        public string? Address { get; set; }
         [StringLength(15)]
-        public string City { get; set; }
+        public string? City { get; set; }
         [StringLength(15)]
-        public string Region { get; set; }
+        public string? Region { get; set; }
         [StringLength(10)]
-        public string PostalCode { get; set; }
+        public string? PostalCode { get; set; }
         [StringLength(15)]
-        public string Country { get; set; }
-        [Required]
+        public string? Country { get; set; }
         [StringLength(31)]
-        public string Salesperson { get; set; }
+        public string Salesperson { get; set; } = null!;
         [Column("OrderID")]
         public int OrderId { get; set; }
         [Column(TypeName = "datetime")]
@@ -50,14 +46,12 @@ namespace Packt.Shared
         public DateTime? RequiredDate { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime? ShippedDate { get; set; }
-        [Required]
         [StringLength(40)]
-        public string ShipperName { get; set; }
+        public string ShipperName { get; set; } = null!;
         [Column("ProductID")]
         public int ProductId { get; set; }
-        [Required]
         [StringLength(40)]
-        public string ProductName { get; set; }
+        public string ProductName { get; set; } = null!;
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }
         public short Quantity { get; set; }

@@ -14,25 +14,25 @@
 </form>
 @if (Model != null)
 {
-<h2>Submitted Thing</h2>
-<hr />
-<div>
-  <dl class="dl-horizontal">
-    <dt>Model.Thing.Id</dt>
-    <dd>@Model.Thing.Id</dd>
-    <dt>Model.Thing.Color</dt>
-    <dd>@Model.Thing.Color</dd>
-    <dt>Model.Thing.Email</dt>
-    <dd>@Html.DisplayFor(model => model.Thing.Email)</dd>
-  </dl>
-</div>
+  <h2>Submitted Thing</h2>
+  <hr />
+  <div>
+    <dl class="dl-horizontal">
+      <dt>Model.Thing.Id</dt>
+      <dd>@Model.Thing.Id</dd>
+      <dt>Model.Thing.Color</dt>
+      <dd>@Model.Thing.Color</dd>
+      <dt>Model.Thing.Email</dt>
+      <dd>@Html.DisplayFor(model => model.Thing.Email)</dd>
+    </dl>
+  </div>
   @if (Model.HasErrors)
   {
-<div>
-  @foreach(string errorMessage in Model.ValidationErrors)
-  {
-  <div class="alert alert-danger" role="alert">@errorMessage</div>
+    <div>
+      @foreach (string errorMessage in Model.ValidationErrors)
+      {
+        <div class="alert alert-danger" role="alert">@errorMessage</div>
+      }
+    </div>
   }
-</div>
-}
 }

@@ -1,45 +1,35 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client; // HubConnection
 using Northwind.Chat.Models; // RegisterModel, MessageModel
-using System.Threading.Tasks; // Task
 
 using static System.Console;
 
-namespace Northwind.SignalR.ConsoleClient
+Write("Enter a username: ");
+string? username = ReadLine();
+
+Write("Enter your groups: ");
+string? groups = ReadLine();
+
+HubConnection hubConnection = new HubConnectionBuilder()
+  .WithUrl("https://localhost:5001/chat")
+  .Build();
+
+hubConnection.On<MessageModel>("ReceiveMessage", message =>
 {
-  class Program
-  {
-    static async Task Main(string[] args)
-    {
-      Write("Enter a username: ");
-      string username = ReadLine();
+  WriteLine($"{message.From} says {message.Body} (sent to {message.To})");
+});
 
-      Write("Enter your groups: ");
-      string groups = ReadLine();
+await hubConnection.StartAsync();
 
-      HubConnection hubConnection = new HubConnectionBuilder()
-        .WithUrl("https://localhost:5001/chat")
-        .Build();
+WriteLine("Successfully started.");
 
-      hubConnection.On<MessageModel>("ReceiveMessage", message =>
-      {
-        WriteLine($"{message.From} says {message.Body} (sent to {message.To})");
-      });
+RegisterModel registration = new()
+{
+  Username = username,
+  Groups = groups
+};
 
-      await hubConnection.StartAsync();
+await hubConnection.InvokeAsync("Register", registration);
 
-      WriteLine("Successfully started.");
-
-      RegisterModel registration = new()
-      {
-        Username = username,
-        Groups = groups
-      };
-
-      await hubConnection.InvokeAsync("Register", registration);
-
-      WriteLine("Successfully registered.");
-      WriteLine("Listening... (press ENTER to stop.)");
-      ReadLine();
-    }
-  }
-}
+WriteLine("Successfully registered.");
+WriteLine("Listening... (press ENTER to stop.)");
+ReadLine();

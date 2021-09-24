@@ -1,51 +1,32 @@
-using Microsoft.Azure.Functions.Worker; // [Function], [HttpTrigger]
-using Microsoft.Azure.Functions.Worker.Http; // HttpRequestData, HttpResponseData
-using Microsoft.Extensions.Logging; // ILogger
-using System.Collections.Specialized; // NameValueCollection
-using System.Net; // HttpStatusCode
-using System.Numerics;
-using System.Web; // HttpUtility
-using Packt.Shared;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.WebJobs; // [FunctionName], [HttpTrigger]
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using System.Numerics; // BigInteger
+using Packt.Shared; // ToWords extension method
+using System.Threading.Tasks; // Task
 
-namespace Northwind.AzureFuncs
+namespace Northwind.AzureFuncs;
+
+public static class NumbersToWordsFunction
 {
-  public static class NumbersToWordsFunction
+  [FunctionName(nameof(NumbersToWordsFunction))]
+  public static async Task<IActionResult> Run(
+    [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")]
+      HttpRequest req, ILogger log)
   {
-    [Function(nameof(NumbersToWordsFunction))]
-    public static HttpResponseData Run(
-      [HttpTrigger(AuthorizationLevel.Anonymous, 
-        "get", "post")] HttpRequestData req,
-      FunctionContext executionContext)
+    log.LogInformation($"C# HTTP trigger function processed a request.");
+
+    string amount = req.Query["amount"];
+
+    if (BigInteger.TryParse(amount, out BigInteger number))
     {
-      ILogger logger = executionContext.GetLogger(
-        nameof(NumbersToWordsFunction));
-      logger.LogInformation($"C# HTTP trigger function URL: {req.Url}");
-
-      // convert the query string into a dictionary
-      NameValueCollection queryDictionary = HttpUtility
-        .ParseQueryString(req.Url.Query);
-
-      HttpResponseData response = req.CreateResponse();
-
-      string amount = queryDictionary["amount"];
-      string words;
-
-      if (BigInteger.TryParse(amount, out BigInteger number))
-      {
-        words = number.ToWords();
-        response.StatusCode = HttpStatusCode.OK;
-      }
-      else
-      {
-        words = $"Failed to parse: {amount}";
-        response.StatusCode = HttpStatusCode.BadRequest;
-      }
-
-      response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
-
-      response.WriteString(words);
-
-      return response;
+      return new OkObjectResult(number.ToWords());
+    }
+    else
+    {
+      return new BadRequestObjectResult($"Failed to parse: {amount}");
     }
   }
 }

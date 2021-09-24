@@ -1,6 +1,4 @@
-﻿using System.Diagnostics; // Trace
-using System.IO;
-using System.Numerics; // BigInteger
+﻿using System.Numerics; // BigInteger
 
 namespace Packt.Shared
 {
@@ -78,23 +76,6 @@ namespace Packt.Shared
         positive /= 1000;
       }
 
-      // write to a text file in the project folder
-      Trace.Listeners.Add(new TextWriterTraceListener(
-        File.AppendText("log.txt")));
-
-      // text writer is buffered, so this option calls 
-      // Flush() on all listeners after writing 
-      Trace.AutoFlush = true;
-
-      // log array of group numbers
-      for (int x = 0; x < digitGroups.Length; x++)
-      {
-        Trace.WriteLine(string.Format(
-          format: "digitGroups[{0}] = {1}",
-          arg0: x,
-          arg1: digitGroups[x]));
-      }
-
       // Convert each three-digit group to words
       string[] groupTexts = new string[groups];
 
@@ -102,15 +83,6 @@ namespace Packt.Shared
       {
         // call a local function (see below)
         groupTexts[i] = ThreeDigitGroupToWords(digitGroups[i]);
-      }
-
-      // log array of group texts
-      for (int x = 0; x < groupTexts.Length; x++)
-      {
-        Trace.WriteLine(string.Format(
-          format: "groupTexts[{0}] = {1}",
-          arg0: x,
-          arg1: groupTexts[x]));
       }
 
       /*

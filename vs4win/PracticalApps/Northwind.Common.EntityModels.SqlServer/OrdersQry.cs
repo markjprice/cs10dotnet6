@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Keyless]
@@ -15,7 +13,7 @@ namespace Packt.Shared
         public int OrderId { get; set; }
         [Column("CustomerID")]
         [StringLength(5)]
-        public string CustomerId { get; set; }
+        public string? CustomerId { get; set; }
         [Column("EmployeeID")]
         public int? EmployeeId { get; set; }
         [Column(TypeName = "datetime")]
@@ -28,29 +26,28 @@ namespace Packt.Shared
         [Column(TypeName = "money")]
         public decimal? Freight { get; set; }
         [StringLength(40)]
-        public string ShipName { get; set; }
+        public string? ShipName { get; set; }
         [StringLength(60)]
-        public string ShipAddress { get; set; }
+        public string? ShipAddress { get; set; }
         [StringLength(15)]
-        public string ShipCity { get; set; }
+        public string? ShipCity { get; set; }
         [StringLength(15)]
-        public string ShipRegion { get; set; }
+        public string? ShipRegion { get; set; }
         [StringLength(10)]
-        public string ShipPostalCode { get; set; }
+        public string? ShipPostalCode { get; set; }
         [StringLength(15)]
-        public string ShipCountry { get; set; }
-        [Required]
+        public string? ShipCountry { get; set; }
         [StringLength(40)]
-        public string CompanyName { get; set; }
+        public string CompanyName { get; set; } = null!;
         [StringLength(60)]
-        public string Address { get; set; }
+        public string? Address { get; set; }
         [StringLength(15)]
-        public string City { get; set; }
+        public string? City { get; set; }
         [StringLength(15)]
-        public string Region { get; set; }
+        public string? Region { get; set; }
         [StringLength(10)]
-        public string PostalCode { get; set; }
+        public string? PostalCode { get; set; }
         [StringLength(15)]
-        public string Country { get; set; }
+        public string? Country { get; set; }
     }
 }

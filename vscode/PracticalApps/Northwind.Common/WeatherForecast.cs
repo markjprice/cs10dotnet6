@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Northwind.Common
+﻿namespace Northwind.Common
 {
   public class WeatherForecast
   {
@@ -16,6 +14,6 @@ namespace Northwind.Common
 
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-    public string Summary { get; set; }
+    public string? Summary { get; set; }
   }
 }

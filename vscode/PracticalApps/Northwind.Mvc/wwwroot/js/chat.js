@@ -23,26 +23,26 @@ connection.on("ReceiveMessage", function (received) {
 
 document.getElementById("registerButton").addEventListener("click",
   function (event) {
-  var registermodel = {
-    username: document.getElementById("from").value,
-    groups: document.getElementById("groups").value
-  };
-  connection.invoke("Register", registermodel).catch(function (err) {
-    return console.error(err.toString());
+    var registermodel = {
+      username: document.getElementById("from").value,
+      groups: document.getElementById("groups").value
+    };
+    connection.invoke("Register", registermodel).catch(function (err) {
+      return console.error(err.toString());
+    });
+    event.preventDefault();
   });
-  event.preventDefault();
-});
 
 document.getElementById("sendButton").addEventListener("click",
   function (event) {
-  var messageToSend = {
-    to: document.getElementById("to").value,
-    toType: document.getElementById("toType").value,
-    from: document.getElementById("from").value,
-    body: document.getElementById("body").value
-  };
-  connection.invoke("SendMessage", messageToSend).catch(function (err) {
-    return console.error(err.toString());
+    var messageToSend = {
+      to: document.getElementById("to").value,
+      toType: document.getElementById("toType").value,
+      from: document.getElementById("from").value,
+      body: document.getElementById("body").value
+    };
+    connection.invoke("SendMessage", messageToSend).catch(function (err) {
+      return console.error(err.toString());
+    });
+    event.preventDefault();
   });
-  event.preventDefault();
-});

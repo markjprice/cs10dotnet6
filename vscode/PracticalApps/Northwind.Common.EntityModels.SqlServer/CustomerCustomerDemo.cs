@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Table("CustomerCustomerDemo")]
@@ -14,17 +12,17 @@ namespace Packt.Shared
         [Key]
         [Column("CustomerID")]
         [StringLength(5)]
-        public string CustomerId { get; set; }
+        public string CustomerId { get; set; } = null!;
         [Key]
         [Column("CustomerTypeID")]
         [StringLength(10)]
-        public string CustomerTypeId { get; set; }
+        public string CustomerTypeId { get; set; } = null!;
 
         [ForeignKey(nameof(CustomerId))]
         [InverseProperty("CustomerCustomerDemos")]
-        public virtual Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; } = null!;
         [ForeignKey(nameof(CustomerTypeId))]
         [InverseProperty(nameof(CustomerDemographic.CustomerCustomerDemos))]
-        public virtual CustomerDemographic CustomerType { get; set; }
+        public virtual CustomerDemographic CustomerType { get; set; } = null!;
     }
 }

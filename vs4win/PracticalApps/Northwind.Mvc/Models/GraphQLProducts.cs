@@ -1,14 +1,13 @@
-﻿using Packt.Shared;
+﻿using Packt.Shared; // Product
 
-namespace Northwind.Mvc.Models
+namespace Northwind.Mvc.Models;
+
+public class GraphQLProducts
 {
-  public class GraphQLProducts
-    {
-      public class DataProducts
-      {
-        public Product[] Products { get; set; }
-      }
+  public class DataProducts
+  {
+    public Product[]? Products { get; set; }
+  }
 
-      public DataProducts Data { get; set; }
-    }
+  public DataProducts? Data { get; set; }
 }

@@ -1,14 +1,13 @@
 ﻿using GraphQL.Types; // ObjectGraphType
 
-namespace Northwind.GraphQL
+namespace Northwind.GraphQL;
+
+public class GreetQuery : ObjectGraphType
 {
-  public class GreetQuery : ObjectGraphType
+  public GreetQuery()
   {
-    public GreetQuery()
-    {
-      Field<StringGraphType>(name: "greet",
-        description: "A query type that greets the world.",
-        resolve: context => "Hello, World!");
-    }
+    Field<StringGraphType>(name: "greet",
+      description: "A query type that greets the world.",
+      resolve: context => "Hello, World!");
   }
 }

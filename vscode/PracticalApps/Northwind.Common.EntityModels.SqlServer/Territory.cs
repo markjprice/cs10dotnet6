@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     public partial class Territory
@@ -18,16 +16,15 @@ namespace Packt.Shared
         [Key]
         [Column("TerritoryID")]
         [StringLength(20)]
-        public string TerritoryId { get; set; }
-        [Required]
+        public string TerritoryId { get; set; } = null!;
         [StringLength(50)]
-        public string TerritoryDescription { get; set; }
+        public string TerritoryDescription { get; set; } = null!;
         [Column("RegionID")]
         public int RegionId { get; set; }
 
         [ForeignKey(nameof(RegionId))]
         [InverseProperty("Territories")]
-        public virtual Region Region { get; set; }
+        public virtual Region Region { get; set; } = null!;
         [InverseProperty(nameof(EmployeeTerritory.Territory))]
         public virtual ICollection<EmployeeTerritory> EmployeeTerritories { get; set; }
     }

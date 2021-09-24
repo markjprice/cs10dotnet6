@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Index(nameof(CategoryId), Name = "CategoriesProducts")]
@@ -22,13 +20,12 @@ namespace Packt.Shared
 
         [Key]
         public int ProductId { get; set; }
-        [Required]
         [StringLength(40)]
-        public string ProductName { get; set; }
+        public string ProductName { get; set; } = null!;
         public int? SupplierId { get; set; }
         public int? CategoryId { get; set; }
         [StringLength(20)]
-        public string QuantityPerUnit { get; set; }
+        public string? QuantityPerUnit { get; set; }
         [Column(TypeName = "money")]
         public decimal? UnitPrice { get; set; }
         public short? UnitsInStock { get; set; }
@@ -38,10 +35,10 @@ namespace Packt.Shared
 
         [ForeignKey(nameof(CategoryId))]
         [InverseProperty("Products")]
-        public virtual Category Category { get; set; }
+        public virtual Category? Category { get; set; }
         [ForeignKey(nameof(SupplierId))]
         [InverseProperty("Products")]
-        public virtual Supplier Supplier { get; set; }
+        public virtual Supplier? Supplier { get; set; }
         [InverseProperty(nameof(OrderDetail.Product))]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

@@ -1,75 +1,91 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity; // RoleManager, UserManager
+using Microsoft.AspNetCore.Mvc; // Controller, IActionResult
 
 using static System.Console;
 
-namespace Northwind.Mvc.Controllers
+namespace Northwind.Mvc.Controllers;
+
+public class RolesController : Controller
 {
-  public class RolesController : Controller
+  private string AdminRole = "Administrators";
+  private string UserEmail = "test@example.com";
+
+  private readonly RoleManager<IdentityRole> roleManager;
+  private readonly UserManager<IdentityUser> userManager;
+
+  public RolesController(RoleManager<IdentityRole> roleManager,
+    UserManager<IdentityUser> userManager)
   {
-    private string AdminRole = "Administrators";
-    private string UserEmail = "test@example.com";
+    this.roleManager = roleManager;
+    this.userManager = userManager;
+  }
 
-    private readonly RoleManager<IdentityRole> roleManager;
-    private readonly UserManager<IdentityUser> userManager;
-
-    public RolesController(RoleManager<IdentityRole> roleManager,
-      UserManager<IdentityUser> userManager)
+  public async Task<IActionResult> Index()
+  {
+    if (!(await roleManager.RoleExistsAsync(AdminRole)))
     {
-      this.roleManager = roleManager;
-      this.userManager = userManager;
+      await roleManager.CreateAsync(new IdentityRole(AdminRole));
     }
 
-    public async Task<IActionResult> Index()
+    IdentityUser user = await userManager.FindByEmailAsync(UserEmail);
+
+    if (user == null)
     {
-      if (!(await roleManager.RoleExistsAsync(AdminRole)))
+      user = new();
+      user.UserName = UserEmail;
+      user.Email = UserEmail;
+      IdentityResult result = await userManager.CreateAsync(
+        user, "Pa$$w0rd");
+
+      if (result.Succeeded)
       {
-        await roleManager.CreateAsync(new IdentityRole(AdminRole));
+        WriteLine($"User {user.UserName} created successfully.");
       }
-
-      IdentityUser user = await userManager.FindByEmailAsync(UserEmail);
-
-      if (user == null)
+      else
       {
-        user = new();
-        user.UserName = UserEmail;
-        user.Email = UserEmail;
-        IdentityResult result = await userManager.CreateAsync(
-          user, "Pa$$w0rd");
-
-        if (result.Succeeded)
+        foreach (IdentityError error in result.Errors)
         {
-          WriteLine($"User {user.UserName} created successfully.");
-        }
-        else
-        { 
-          foreach (IdentityError error in result.Errors)
-          {
-            WriteLine(error.Description);
-          }
+          WriteLine(error.Description);
         }
       }
-
-      if (!(await userManager.IsInRoleAsync(user, AdminRole)))
-      {
-        IdentityResult result = await userManager
-          .AddToRoleAsync(user, AdminRole);
-
-        if (result.Succeeded)
-        {
-          WriteLine($"User {user.UserName} added to {AdminRole} successfully.");
-        }
-        else
-        {
-          foreach (IdentityError error in result.Errors)
-          {
-            WriteLine(error.Description);
-          }
-        }
-      }
-
-      return Redirect("/Identity/Account/Logout");
     }
+
+    if (!user.EmailConfirmed)
+    {
+      string token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+      IdentityResult result = await userManager.ConfirmEmailAsync(user, token);
+
+      if (result.Succeeded)
+      {
+        WriteLine($"User {user.UserName} email confirmed successfully.");
+      }
+      else
+      {
+        foreach (IdentityError error in result.Errors)
+        {
+          WriteLine(error.Description);
+        }
+      }
+    }
+
+    if (!(await userManager.IsInRoleAsync(user, AdminRole)))
+    {
+      IdentityResult result = await userManager
+        .AddToRoleAsync(user, AdminRole);
+
+      if (result.Succeeded)
+      {
+        WriteLine($"User {user.UserName} added to {AdminRole} successfully.");
+      }
+      else
+      {
+        foreach (IdentityError error in result.Errors)
+        {
+          WriteLine(error.Description);
+        }
+      }
+    }
+
+    return Redirect("/");
   }
 }

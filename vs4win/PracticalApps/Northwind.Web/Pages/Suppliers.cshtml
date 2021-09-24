@@ -13,13 +13,16 @@
       </tr>
     </thead>
     <tbody>
-    @foreach(Supplier s in Model.Suppliers)
+    @if (Model.Suppliers is not null)
     {
-      <tr>
-        <td>@s.CompanyName</td>
-        <td>@s.Country</td>
-        <td>@s.Phone</td>
-      </tr>
+      @foreach(Supplier s in Model.Suppliers)
+      {
+        <tr>
+          <td>@s.CompanyName</td>
+          <td>@s.Country</td>
+          <td>@s.Phone</td>
+        </tr>
+      }
     }
     </tbody>
   </table>

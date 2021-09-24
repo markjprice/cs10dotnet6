@@ -1,0 +1,10 @@
+GET https://localhost:5004/ordersystem/customers/
+###
+GET https://localhost:5004/ordersystem/customers('ALFKI')
+###
+GET https://localhost:5004/ordersystem/employees
+###
+GET https://localhost:5004/ordersystem/orders(10248)
+###
+GET https://localhost:5004/ordersystem/orders
+  ?$filter=EmployeeId eq 5

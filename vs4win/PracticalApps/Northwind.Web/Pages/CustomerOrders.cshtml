@@ -1,0 +1,32 @@
+﻿@page
+@using Northwind.Web.Pages
+@using Packt.Shared
+@model CustomerOrdersModel
+@{
+  string title = "Customer and their orders";
+  ViewData["Title"] = $"Northwind B2B - {title}";
+}
+<div class="row">
+  <h1 class="display-2">@title</h1>
+  <div>
+    @if (Model.Customer is not null)
+    {
+      <div>
+        <div>@Model.Customer.CompanyName</div>
+      </div>
+      <div>
+        <table>
+          <thead>
+            <tr><th>Order Id</th><th>Order Date</th></tr>
+          </thead>
+          <tbody>
+            @foreach (Order o in Model.Customer.Orders)
+            {
+              <tr><td>@o.OrderId</td><td>@o.OrderDate</td></tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</div>

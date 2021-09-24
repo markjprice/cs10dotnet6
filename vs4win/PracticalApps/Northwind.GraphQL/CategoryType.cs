@@ -1,8 +1,8 @@
 ﻿using GraphQL.Types; // ObjectGraphType<T>, ListGraphType<T>
 using Packt.Shared; // Category
 
-namespace Northwind.GraphQL
-{
+namespace Northwind.GraphQL;
+
   public class CategoryType : ObjectGraphType<Category>
   {
     public CategoryType()
@@ -15,4 +15,3 @@ namespace Northwind.GraphQL
         .Description("Products in the category.");
     }
   }
-}

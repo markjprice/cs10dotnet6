@@ -1,27 +1,39 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using GraphQL.Server; // GraphQLOptions
+using Northwind.GraphQL; // GreetQuery, NorthwindSchema, CategoryType, NorthwindQuery
+using Packt.Shared; // AddNorthwindContext extension method
 
-namespace Northwind.GraphQL
+var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.UseUrls("https://localhost:5005/");
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+
+builder.Services.AddNorthwindContext();
+
+builder.Services.AddScoped<NorthwindSchema>();
+
+builder.Services.AddGraphQL()
+  .AddGraphTypes(typeof(NorthwindSchema), ServiceLifetime.Scoped)
+  .AddDataLoader()
+  .AddSystemTextJson(); // serialize responses as JSON
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+if (builder.Environment.IsDevelopment())
 {
-  public class Program
-  {
-    public static void Main(string[] args)
-    {
-      CreateHostBuilder(args).Build().Run();
-    }
-
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-              webBuilder.UseStartup<Startup>();
-              webBuilder.UseUrls("https://localhost:5005");
-            });
-  }
+  app.UseGraphQLPlayground(); // default path is /ui/playground
 }
+
+app.UseGraphQL<NorthwindSchema>(); // default path is /graphql
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

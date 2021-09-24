@@ -3,27 +3,26 @@ using Microsoft.AspNetCore.OData.Query; // [EnableQuery]
 using Microsoft.AspNetCore.OData.Routing.Controllers; // ODataController
 using Packt.Shared; // NorthwindContext
 
-namespace Northwind.OData.Controllers
+namespace Northwind.OData.Controllers;
+
+public class CategoriesController : ODataController
 {
-  public class CategoriesController : ODataController
+  private readonly NorthwindContext db;
+
+  public CategoriesController(NorthwindContext db)
   {
-    private NorthwindContext db;
+    this.db = db;
+  }
 
-    public CategoriesController(NorthwindContext db)
-    {
-      this.db = db;
-    }
+  [EnableQuery]
+  public IActionResult Get()
+  {
+    return Ok(db.Categories);
+  }
 
-    [EnableQuery]
-    public IActionResult Get()
-    {
-      return Ok(db.Categories);
-    }
-
-    [EnableQuery]
-    public IActionResult Get(int key)
-    {
-      return Ok(db.Categories.Find(key));
-    }
+  [EnableQuery]
+  public IActionResult Get(int key)
+  {
+    return Ok(db.Categories.Find(key));
   }
 }

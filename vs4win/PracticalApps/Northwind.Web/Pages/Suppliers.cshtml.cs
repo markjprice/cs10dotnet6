@@ -1,45 +1,42 @@
 using Microsoft.AspNetCore.Mvc.RazorPages; // PageModel
-using System.Collections.Generic; // IEnumerable<T>
 using Packt.Shared; // NorthwindContext
 using Microsoft.AspNetCore.Mvc; // [BindProperty], IActionResult
-using System.Linq; // OrderBy, ThenBy extension methods
 
-namespace Northwind.Web.Pages
+namespace Northwind.Web.Pages;
+
+public class SuppliersModel : PageModel
 {
-  public class SuppliersModel : PageModel
+  public IEnumerable<Supplier>? Suppliers { get; set; }
+
+  private NorthwindContext db;
+
+  public SuppliersModel(NorthwindContext injectedContext)
   {
-    public IEnumerable<Supplier> Suppliers { get; set; }
+    db = injectedContext;
+  }
 
-    private NorthwindContext db;
+  public void OnGet()
+  {
+    ViewData["Title"] = "Northwind B2B - Suppliers";
 
-    public SuppliersModel(NorthwindContext injectedContext)
+    Suppliers = db.Suppliers
+      .OrderBy(c => c.Country).ThenBy(c => c.CompanyName);
+  }
+
+  [BindProperty]
+  public Supplier? Supplier { get; set; }
+
+  public IActionResult OnPost()
+  {
+    if ((Supplier is not null) && ModelState.IsValid)
     {
-      db = injectedContext;
+      db.Suppliers.Add(Supplier);
+      db.SaveChanges();
+      return RedirectToPage("/suppliers");
     }
-    
-    public void OnGet()
+    else
     {
-      ViewData["Title"] = "Northwind B2B - Suppliers";
-
-      Suppliers = db.Suppliers
-        .OrderBy(c => c.Country).ThenBy(c => c.CompanyName);
-    }
-    
-    [BindProperty]
-    public Supplier Supplier { get; set; }
-
-    public IActionResult OnPost()
-    {
-      if (ModelState.IsValid)
-      {
-        db.Suppliers.Add(Supplier);
-        db.SaveChanges();
-        return RedirectToPage("/suppliers");
-      }
-      else
-      {
-        return Page(); // return to original page
-      }
+      return Page(); // return to original page
     }
   }
 }

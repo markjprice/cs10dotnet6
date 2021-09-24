@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-
-#nullable disable
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Packt.Shared
 {
@@ -16,16 +15,16 @@ namespace Packt.Shared
     {
     }
 
-    public virtual DbSet<Category> Categories { get; set; }
-    public virtual DbSet<Customer> Customers { get; set; }
-    public virtual DbSet<Employee> Employees { get; set; }
-    public virtual DbSet<EmployeeTerritory> EmployeeTerritories { get; set; }
-    public virtual DbSet<Order> Orders { get; set; }
-    public virtual DbSet<OrderDetail> OrderDetails { get; set; }
-    public virtual DbSet<Product> Products { get; set; }
-    public virtual DbSet<Shipper> Shippers { get; set; }
-    public virtual DbSet<Supplier> Suppliers { get; set; }
-    public virtual DbSet<Territory> Territories { get; set; }
+    public virtual DbSet<Category> Categories { get; set; } = null!;
+    public virtual DbSet<Customer> Customers { get; set; } = null!;
+    public virtual DbSet<Employee> Employees { get; set; } = null!;
+    public virtual DbSet<EmployeeTerritory> EmployeeTerritories { get; set; } = null!;
+    public virtual DbSet<Order> Orders { get; set; } = null!;
+    public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
+    public virtual DbSet<Product> Products { get; set; } = null!;
+    public virtual DbSet<Shipper> Shippers { get; set; } = null!;
+    public virtual DbSet<Supplier> Suppliers { get; set; } = null!;
+    public virtual DbSet<Territory> Territories { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

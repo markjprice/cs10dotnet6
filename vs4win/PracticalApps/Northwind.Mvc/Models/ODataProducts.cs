@@ -1,9 +1,8 @@
 ﻿using Packt.Shared; // Product
 
-namespace Northwind.Mvc.Models
+namespace Northwind.Mvc.Models;
+
+public class ODataProducts
 {
-  public class ODataProducts
-  {
-    public Product[] Value { get; set; }
-  }
+  public Product[]? Value { get; set; }
 }

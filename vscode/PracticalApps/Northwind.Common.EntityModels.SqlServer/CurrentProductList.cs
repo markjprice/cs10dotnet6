@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Keyless]
@@ -13,8 +11,7 @@ namespace Packt.Shared
     {
         [Column("ProductID")]
         public int ProductId { get; set; }
-        [Required]
         [StringLength(40)]
-        public string ProductName { get; set; }
+        public string ProductName { get; set; } = null!;
     }
 }

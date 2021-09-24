@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Keyless]
@@ -15,9 +13,8 @@ namespace Packt.Shared
         public decimal? SaleAmount { get; set; }
         [Column("OrderID")]
         public int OrderId { get; set; }
-        [Required]
         [StringLength(40)]
-        public string CompanyName { get; set; }
+        public string CompanyName { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime? ShippedDate { get; set; }
     }

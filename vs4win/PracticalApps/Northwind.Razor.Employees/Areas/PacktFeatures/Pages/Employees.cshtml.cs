@@ -1,25 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages; // PageModel
 using Packt.Shared; // Employee, NorthwindContext
-using System.Linq; // ToArray extension method
 
-namespace PacktFeatures.Pages
+namespace PacktFeatures.Pages;
+
+public class EmployeesPageModel : PageModel
 {
-  public class EmployeesPageModel : PageModel
+  private NorthwindContext db;
+
+  public EmployeesPageModel(NorthwindContext injectedContext)
   {
-    private NorthwindContext db;
+    db = injectedContext;
+  }
 
-    public EmployeesPageModel(NorthwindContext injectedContext)
-    {
-      db = injectedContext;
-    }
+  public Employee[] Employees { get; set; } = null!;
 
-    public Employee[] Employees { get; set; }
-
-    public void OnGet()
-    {
-      ViewData["Title"] = "Northwind B2B - Employees";
-      Employees = db.Employees.OrderBy(e => e.LastName)
-        .ThenBy(e => e.FirstName).ToArray();
-    }
+  public void OnGet()
+  {
+    ViewData["Title"] = "Northwind B2B - Employees";
+    Employees = db.Employees.OrderBy(e => e.LastName)
+      .ThenBy(e => e.FirstName).ToArray();
   }
 }

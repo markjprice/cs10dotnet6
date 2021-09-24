@@ -4,8 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-#nullable disable
-
 namespace Packt.Shared
 {
     [Index(nameof(CompanyName), Name = "CompanyName")]
@@ -19,29 +17,28 @@ namespace Packt.Shared
 
         [Key]
         public int SupplierId { get; set; }
-        [Required]
         [StringLength(40)]
-        public string CompanyName { get; set; }
+        public string CompanyName { get; set; } = null!;
         [StringLength(30)]
-        public string ContactName { get; set; }
+        public string? ContactName { get; set; }
         [StringLength(30)]
-        public string ContactTitle { get; set; }
+        public string? ContactTitle { get; set; }
         [StringLength(60)]
-        public string Address { get; set; }
+        public string? Address { get; set; }
         [StringLength(15)]
-        public string City { get; set; }
+        public string? City { get; set; }
         [StringLength(15)]
-        public string Region { get; set; }
+        public string? Region { get; set; }
         [StringLength(10)]
-        public string PostalCode { get; set; }
+        public string? PostalCode { get; set; }
         [StringLength(15)]
-        public string Country { get; set; }
+        public string? Country { get; set; }
         [StringLength(24)]
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
         [StringLength(24)]
-        public string Fax { get; set; }
+        public string? Fax { get; set; }
         [Column(TypeName = "ntext")]
-        public string HomePage { get; set; }
+        public string? HomePage { get; set; }
 
         [InverseProperty(nameof(Product.Supplier))]
         public virtual ICollection<Product> Products { get; set; }
