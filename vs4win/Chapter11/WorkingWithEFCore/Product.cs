@@ -9,7 +9,7 @@ public class Product
 
   [Required]
   [StringLength(40)]
-  public string ProductName { get; set; }
+  public string ProductName { get; set; } = null!;
 
   [Column("UnitPrice", TypeName = "money")]
   public decimal? Cost { get; set; } // property name != column name
@@ -22,5 +22,5 @@ public class Product
   // these two define the foreign key relationship
   // to the Categories table
   public int CategoryId { get; set; }
-  public virtual Category Category { get; set; }
+  public virtual Category Category { get; set; } = null!;
 }

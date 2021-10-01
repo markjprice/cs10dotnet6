@@ -103,7 +103,7 @@ static void FilteredIncludes()
   using (Northwind db = new())
   {
     Write("Enter a minimum for units in stock: ");
-    string? unitsInStock = ReadLine();
+    string unitsInStock = ReadLine() ?? "10";
     int stock = int.Parse(unitsInStock);
 
     IQueryable<Category>? categories = db.Categories?
