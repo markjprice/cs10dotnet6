@@ -27,6 +27,12 @@ string? username = ReadLine();
 Write($"Enter your password: ");
 string? password = ReadLine();
 
+if ((username == null) || (password == null))
+{
+  WriteLine("Username or password is null. Cannot login.");
+  return;
+}
+
 Protector.LogIn(username, password);
 
 if (Thread.CurrentPrincipal == null)
@@ -37,15 +43,15 @@ if (Thread.CurrentPrincipal == null)
 
 IPrincipal p = Thread.CurrentPrincipal;
 
-WriteLine($"IsAuthenticated: {p.Identity.IsAuthenticated}");
-WriteLine($"AuthenticationType: {p.Identity.AuthenticationType}");
-WriteLine($"Name: {p.Identity.Name}");
+WriteLine($"IsAuthenticated: {p.Identity?.IsAuthenticated}");
+WriteLine($"AuthenticationType: {p.Identity?.AuthenticationType}");
+WriteLine($"Name: {p.Identity?.Name}");
 WriteLine($"IsInRole(\"Admins\"): {p.IsInRole("Admins")}");
 WriteLine($"IsInRole(\"Sales\"): {p.IsInRole("Sales")}");
 
 if (p is ClaimsPrincipal)
 {
-  WriteLine($"{p.Identity.Name} has the following claims:");
+  WriteLine($"{p.Identity?.Name} has the following claims:");
 
   IEnumerable<Claim>? claims = (p as ClaimsPrincipal)?.Claims;
 
