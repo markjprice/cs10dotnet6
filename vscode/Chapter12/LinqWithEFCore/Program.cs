@@ -4,19 +4,25 @@ using System.Xml.Linq;
 
 using static System.Console;
 
-// FilterAndSort();
+FilterAndSort();
 // JoinCategoriesAndProducts();
 // GroupJoinCategoriesAndProducts();
 // AggregateProducts();
 // CustomExtensionMethods();
 // OutputProductsAsXml();
-ProcessSettings();
+// ProcessSettings();
 
 static void FilterAndSort()
 {
   using (Northwind db = new())
   {
-    DbSet<Product> allProducts = db.Products;
+    DbSet<Product>? allProducts = db.Products;
+
+    if (allProducts is null)
+    {
+      WriteLine("No products found.");
+      return;
+    }
 
     IQueryable<Product> processedProducts = allProducts
       .ProcessSequence();

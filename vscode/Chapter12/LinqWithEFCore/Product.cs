@@ -9,7 +9,7 @@ public class Product
 
   [Required]
   [StringLength(40)]
-  public string ProductName { get; set; }
+  public string ProductName { get; set; } = null!;
 
   public int? SupplierId { get; set; }
 

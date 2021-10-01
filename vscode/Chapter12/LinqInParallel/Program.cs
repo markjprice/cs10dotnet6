@@ -17,7 +17,9 @@ WriteLine($"Calculating Fibonacci sequence up to {max}. Please wait...");
 //  .Select(number => Fibonacci(number)).ToArray();
 
 int[] fibonacciNumbers = numbers.AsParallel()
-  .Select(number => Fibonacci(number)).ToArray();
+  .Select(number => Fibonacci(number))
+  .OrderBy(number => number)
+  .ToArray();
 
 watch.Stop();
 WriteLine("{0:#,##0} elapsed milliseconds.",

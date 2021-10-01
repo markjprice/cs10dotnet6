@@ -8,7 +8,7 @@ public class Category
 
   [Required]
   [StringLength(15)]
-  public string CategoryName { get; set; }
+  public string CategoryName { get; set; } = null!;
 
   public string? Description { get; set; }
 }
