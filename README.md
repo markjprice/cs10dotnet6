@@ -1,5 +1,14 @@
 # Repository for the Packt Publishing book
+
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs10dotnet6)
+
+## Code solutions for Visual Studio 2022 and Visual Studio Code
+
+Visual Studio 2022 and Visual Studio Code use different files to group projects so I have separated their solution code:
+
+- Visual Studio 2022 for Windows solutions for each chapter: [/vs4win](/vs4win)
+- Visual Studio Code solutions for each chapter: [/vscode](/vscode)
+
 ## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
 To be published on Tuesday, November 9, 2021.
@@ -10,13 +19,6 @@ Order the previous edition today!
 - [Amazon.co.uk](https://www.amazon.co.uk/dp/180056810X/)
 
 Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
-
-## Code solutions for Visual Studio 2022 and Visual Studio Code
-
-Visual Studio 2022 and Visual Studio Code use different files to group projects so I have separated their solution code:
-
-- Visual Studio 2022 for Windows solutions for each chapter: [/vs4win](/vs4win)
-- Visual Studio Code solutions for each chapter: [/vscode](/vscode)
 
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
