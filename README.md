@@ -11,6 +11,13 @@ Order the previous edition today!
 
 Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
+## Code solutions for Visual Studio 2022 and Visual Studio Code
+
+Visual Studio 2022 and Visual Studio Code use different files to group projects so I have separated their solution code:
+
+- Visual Studio 2022 for Windows solutions for each chapter: [/vs4win](/vs4win)
+- Visual Studio Code solutions for each chapter: [/vscode](/vscode)
+
 ## Important
 Corrections for typos and other mistakes, and improvements like refactoring code.
 - [Book Links](book-links.md)
