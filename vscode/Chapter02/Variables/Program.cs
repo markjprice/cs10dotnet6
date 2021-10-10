@@ -10,18 +10,18 @@ Console.WriteLine($"{name} has {length2} characters.");
 
 // storing a string in a dynamic object
 // string has a Length property
-dynamic anotherName = "Ahmed";
+dynamic something = "Ahmed";
 
 // int does not have a Length property
-// anotherName = 12;
+// something = 12;
 
 // an array of any type has a Length property
-// anotherName = new[] { 3, 5, 7 };
+// something = new[] { 3, 5, 7 };
 
 // this compiles but would throw an exception at run-time
 // if you had stored a value with a data type that does not 
 // have a property named Length
-int length = anotherName.Length;
+int length = something.Length;
 
 var population = 66_000_000; // 66 million in UK 
 var weight = 1.88; // in kilograms
