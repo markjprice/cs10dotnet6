@@ -241,10 +241,13 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
 - Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
 
-## Text and number type
+## Text types
 - Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
 - Verbatim strings: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/tokens/verbatim
+- String Interpolation in C# 10 and .NET 6: https://devblogs.microsoft.com/dotnet/string-interpolation-in-c-10-and-net-6/
 - Escape sequences: https://devblogs.microsoft.com/csharpfaq/what-character-escape-sequences-are-available/
+
+## Number types
 - Floating point numbers: https://ciechanow.ski/exposing-floating-point/
 - Why 0.1 does not exist in floating-point numbers: https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/
 - American Patriot missile disaster: https://www.ima.umn.edu/~arnold/disasters/patriot.html
