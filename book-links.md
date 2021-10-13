@@ -334,6 +334,9 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Pattern matching
 - Pattern matching tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching
 
+## Records
+- Comparing struct and class records: https://devblogs.microsoft.com/dotnet/announcing-net-6-release-candidate-2/
+
 ## Miscellaneous
 - How to calculate someone's age: https://stackoverflow.com/questions/9/how-do-i-calculate-someones-age-in-c
 
