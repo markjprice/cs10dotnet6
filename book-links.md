@@ -155,7 +155,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
 
 ## Other C# code editors and platforms
-- Stack Overflow survey 2021 - Integrated development environment: https://insights.stackoverflow.com/survey/2021#integrated-development-environment
+- Stack Overflow survey 2021 - Integrated development environment: https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-integrated-development-environment
 - Stack Overflow survey 2019 - Most Popular Development Environments: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
 - Visual Studio for Mac documentation: https://docs.microsoft.com/en-us/visualstudio/mac/
 - GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
@@ -174,6 +174,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 
 ## .NET
 - Download .NET SDK: https://www.microsoft.com/net/download
+- Stack Overflow survey 2021 - Most loved frameworks and libraries: https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries
 - Themes of .NET: https://themesof.net/
 - Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
 - Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
