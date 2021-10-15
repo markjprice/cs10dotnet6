@@ -10,7 +10,7 @@ if (OperatingSystem.IsMacOS())
 }
 else if (OperatingSystem.IsWindowsVersionAtLeast(major: 10))
 {
-  WriteLine("I am Windows 10.");
+  WriteLine("I am Windows 10 or 11.");
 }
 else
 {

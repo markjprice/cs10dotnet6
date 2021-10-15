@@ -71,7 +71,7 @@ for (int index = 0; index < binaryObject.Length; index++)
 WriteLine();
 
 // convert to Base64 string and output as text
-string encoded = Convert.ToBase64String(binaryObject);
+string encoded = ToBase64String(binaryObject);
 WriteLine($"Binary Object as Base64: {encoded}");
 
 int age = int.Parse("27");
