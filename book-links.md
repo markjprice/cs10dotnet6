@@ -133,7 +133,7 @@
 - Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
 - Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
 - Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
-- Comparison of Visual Studio Code and Visual Studio 2019: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
+- Comparison of Visual Studio Code and Visual Studio: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
 
 ## Visual Studio Code
 - Download Visual Studio Code: https://code.visualstudio.com/
@@ -155,7 +155,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
 
 ## Other C# code editors and platforms
-- Stack Overflow survey 2019: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
+- Stack Overflow survey 2021 - Integrated development environment: https://insights.stackoverflow.com/survey/2021#integrated-development-environment
+- Stack Overflow survey 2019 - Most Popular Development Environments: https://insights.stackoverflow.com/survey/2019#development-environments-and-tools
 - Visual Studio for Mac documentation: https://docs.microsoft.com/en-us/visualstudio/mac/
 - GitHub Codespaces: https://docs.github.com/en/github/developing-online-with-codespaces/about-codespaces
 - JetBrains Rider: https://www.jetbrains.com/rider/
@@ -426,6 +427,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - The PackageReference format: https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
 - NuGet packages: https://www.nuget.org/packages
 - .NET Core application publishing overview: https://docs.microsoft.com/en-us/dotnet/core/deploying/
+- How to Deploy .NET apps to Raspberry Pi: https://www.ryadel.com/en/deploy-net-apps-raspberry-pi/
 - How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
 - Semantic versioning: http://semver.org
   
