@@ -10,7 +10,7 @@ Cross-platform GUI development cannot be learned in a single chapter, but like w
 
 The app will allow the listing and management of customers in the Northwind database. The mobile app that you create will call the Northwind service that you built using ASP.NET Core Web API in Chapter 17, Building and Consuming Web Services. If you have not built the Northwind service, please go back and build it now or download it from the GitHub repository for this book at the following link: https://github.com/markjprice/cs10dotnet6.
 
-Either a Windows computer with Visual Studio or a macOS computer with Visual Studio for Mac can be used to create a .NET MAUI project. But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you. That is expected to come with .NET 7.0 in later 2022. 
+After .NET MAUI has its general availability release expected in May 2022, either a Windows computer with Visual Studio or a macOS computer with Visual Studio for Mac can be used to create a .NET MAUI project. But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you. That is expected to come with .NET 7.0 in later 2022. 
 
 In this chapter, we will cover the following topics:
 - [Understanding the .NET MAUI delay](#Understanding-the-NET-MAUI-delay)
