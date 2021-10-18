@@ -46,4 +46,4 @@ Written interviews with me:
 - [Q&A with Episerver's Mark J. Price, author of C# 9 and .NET 5 - Modern Cross-Platform Development](https://www.episerver.com/articles/q-and-a-with-mark-price)
 
 ## Book cover
-![C# 10 and .NET 6 by Packt Publishing](B17442_cover.png)
+![C# 10 and .NET 6 by Packt Publishing](B17442_Cover.png)
