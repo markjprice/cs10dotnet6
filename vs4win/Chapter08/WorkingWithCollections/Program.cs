@@ -83,7 +83,7 @@ static void WorkingWithDictionaries()
   {
     ["int"] = "32-bit integer data type",
     ["long"] = "64-bit integer data type",
-    ["float"] = "Single precision floating point number" ,
+    ["float"] = "Single precision floating point number", // last comma is optional
   }; */
 
   Output("Dictionary keys:", keywords.Keys);
