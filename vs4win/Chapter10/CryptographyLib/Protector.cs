@@ -123,10 +123,10 @@ namespace Packt.Shared
         return false;
       }
 
-      User user = Users[username];
+      User u = Users[username];
 
       return CheckPassword(password, 
-        user.Salt, user.SaltedHashedPassword);
+        u.Salt, u.SaltedHashedPassword);
     }
 
     // check a user's password using salt and hashed password
