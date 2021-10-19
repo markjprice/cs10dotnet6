@@ -155,7 +155,7 @@ static void WorkingWithPriorityQueues()
 
   WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
 
-  vaccine.Enqueue("Me", 2); // me (40s)
+  vaccine.Enqueue("Mark", 2); // me (40s)
   WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
 
   OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
