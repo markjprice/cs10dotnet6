@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization; // XmlSerializer
 using Packt.Shared; // Person 
 
-using NuJson = System.Text.Json.JsonSerializer;
+using NewJson = System.Text.Json.JsonSerializer;
 
 using static System.Console;
 using static System.Environment;
@@ -104,7 +104,7 @@ using (FileStream jsonLoad = File.Open(jsonPath, FileMode.Open))
 {
   // deserialize object graph into a List of Person 
   List<Person>? loadedPeople =
-    await NuJson.DeserializeAsync(utf8Json: jsonLoad,
+    await NewJson.DeserializeAsync(utf8Json: jsonLoad,
       returnType: typeof(List<Person>)) as List<Person>;
 
   if (loadedPeople is not null)
