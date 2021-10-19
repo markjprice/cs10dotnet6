@@ -8,7 +8,7 @@ string? url = ReadLine();
 
 if (string.IsNullOrWhiteSpace(url))
 {
-  url = "https://world.episerver.com/cms/?q=pagetype";
+  url = "https://stackoverflow.com/search?q=securestring";
 }
 
 Uri uri = new(url);

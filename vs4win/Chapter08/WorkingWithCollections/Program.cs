@@ -83,7 +83,7 @@ static void WorkingWithDictionaries()
   {
     ["int"] = "32-bit integer data type",
     ["long"] = "64-bit integer data type",
-    ["float"] = "Single precision floating point number" ,
+    ["float"] = "Single precision floating point number", // last comma is optional
   }; */
 
   Output("Dictionary keys:", keywords.Keys);
@@ -155,7 +155,7 @@ static void WorkingWithPriorityQueues()
 
   WriteLine($"{vaccine.Dequeue()} has been vaccinated.");
 
-  vaccine.Enqueue("Me", 2); // me (40s)
+  vaccine.Enqueue("Mark", 2); // me (40s)
   WriteLine($"{vaccine.Peek()} will be next to be vaccinated.");
 
   OutputPQ("Current queue for vaccination:", vaccine.UnorderedItems);
