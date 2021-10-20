@@ -47,7 +47,7 @@ foreach (string item in query)
 
 WriteLine("Filtering by type");
 
-List<Exception> errors = new()
+List<Exception> exceptions = new()
 {
   new ArgumentException(),
   new SystemException(),
@@ -61,7 +61,7 @@ List<Exception> errors = new()
 };
 
 IEnumerable<ArithmeticException> arithmeticExceptionsQuery =
-  errors.OfType<ArithmeticException>();
+  exceptions.OfType<ArithmeticException>();
 
 foreach (ArithmeticException exception in arithmeticExceptionsQuery)
 {
