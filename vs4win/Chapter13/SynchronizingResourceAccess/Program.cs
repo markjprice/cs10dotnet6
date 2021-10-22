@@ -31,7 +31,7 @@ static void MethodA()
     }
     else
     {
-      WriteLine("Method A failed to enter a monitor lock.");
+      WriteLine("Method A timed out when entering a monitor on conch.");
     }
   }
   finally
@@ -56,7 +56,7 @@ static void MethodB()
     }
     else
     {
-      WriteLine("Method B failed to enter a monitor lock.");
+      WriteLine("Method B timed out when entering a monitor on conch.");
     }
   }
   finally
