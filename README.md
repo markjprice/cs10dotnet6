@@ -13,9 +13,9 @@ Visual Studio 2022 and Visual Studio Code use different files to group projects 
 
 To be published on Tuesday, November 9, 2021. Pre-order today!
 - [Packt](https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development-sixth-edition/9781801077361)
-- [Amazon.com - Kindle](https://www.amazon.com/dp/B09JV37DM6/)
-- [Amazon.com - paperback](https://www.amazon.com/dp/1801077363/)
+- [Amazon.com](https://www.amazon.com/dp/B09JV37DM6/)
 - [Amazon.co.uk](https://www.amazon.co.uk/dp/1801077363/)
+- [Amazon.com.au](https://www.amazon.com.au/10-NET-Cross-Platform-Development-websites-ebook/dp/B09JV37DM6/)
 
 Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
