@@ -1,0 +1,40 @@
+﻿<ContentPage 
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Northwind.Maui.Customers.CustomerDetailPage"
+  BackgroundColor="{DynamicResource PageBackgroundColor}" 
+  Title="Edit">
+
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+      <Grid ColumnDefinitions="Auto,Auto" 
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+        <Label Text="Customer Id" VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding CustomerId, Mode=TwoWay}" Grid.Column="1" 
+               MaxLength="5" TextTransform="Uppercase" />
+        <Label Text="Company Name" Grid.Row="1" 
+               VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding CompanyName, Mode=TwoWay}" 
+               Grid.Column="1" Grid.Row="1" />
+        <Label Text="Contact Name" Grid.Row="2" 
+             VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding ContactName, Mode=TwoWay}" 
+               Grid.Column="1" Grid.Row="2" />
+        <Label Text="City" Grid.Row="3" 
+               VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding City, Mode=TwoWay}" 
+               Grid.Column="1" Grid.Row="3" />
+        <Label Text="Country" Grid.Row="4" 
+               VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding Country, Mode=TwoWay}" 
+               Grid.Column="1" Grid.Row="4" />
+        <Label Text="Phone" Grid.Row="5" 
+               VerticalOptions="Center" Margin="6" />
+        <Entry Text="{Binding Phone, Mode=TwoWay}" 
+               Grid.Column="1" Grid.Row="5" />
+      </Grid>
+      <Button x:Name="InsertButton" Text="Insert Customer"
+              Clicked="InsertButton_Clicked" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

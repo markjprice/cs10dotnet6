@@ -1,0 +1,38 @@
+﻿<ContentPage 
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  x:Class="Northwind.Maui.Customers.CustomersListPage"
+  BackgroundColor="{DynamicResource PageBackgroundColor}" 
+  Title="List">
+
+  <ContentPage.Content>
+    <ListView ItemsSource="{Binding .}" 
+              VerticalOptions="Center" 
+              HorizontalOptions="Center" 
+              IsPullToRefreshEnabled="True" 
+              ItemTapped="Customer_Tapped" 
+              Refreshing="Customers_Refreshing">
+      <ListView.Header>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Northwind Customers" 
+                 FontSize="Subtitle" Margin="10" />
+          <Button Text="Add" Clicked="Add_Clicked" />
+        </StackLayout>
+      </ListView.Header>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding CompanyName}" 
+                    Detail="{Binding Location}"
+                    TextColor="{DynamicResource PrimaryTextColor}"
+                    DetailColor="{DynamicResource PrimaryTextColor}" >
+            <TextCell.ContextActions>
+              <MenuItem Clicked="Customer_Phoned" Text="Phone" />
+              <MenuItem Clicked="Customer_Deleted" Text="Delete" 
+                        IsDestructive="True" />
+            </TextCell.ContextActions>
+          </TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </ContentPage.Content>
+</ContentPage>
