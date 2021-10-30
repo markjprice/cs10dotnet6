@@ -8,8 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference 
-      Include="..\CryptographyLib\CryptographyLib.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0-*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.0-*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Northwind.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

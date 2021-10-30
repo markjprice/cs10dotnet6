@@ -162,10 +162,10 @@ static void OutputProductsAsXml()
 {
   using (Northwind db = new())
   {
-    Product[] productsForXml = db.Products.ToArray();
+    Product[] productsArray = db.Products.ToArray();
 
     XElement xml = new("products",
-      from p in productsForXml
+      from p in productsArray
       select new XElement("product",
         new XAttribute("id", p.ProductId),
         new XAttribute("price", p.UnitPrice),

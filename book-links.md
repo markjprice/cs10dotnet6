@@ -10,7 +10,8 @@
 - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
   - [C# language version and the journey to C# 10](#c-language-version-and-the-journey-to-c-10)
   - [C# language](#c-language)
-  - [Text and number type](#text-and-number-type)
+  - [Text types](#text-types)
+  - [Number types](#number-types)
   - [Console apps and formatting](#console-apps-and-formatting)
   - [Miscellaneous](#miscellaneous)
 - [Chapter 3 - Controlling Flow and Converting Types](#chapter-3---controlling-flow-and-converting-types)
@@ -29,6 +30,7 @@
   - [Methods](#methods)
   - [Properties](#properties)
   - [Pattern matching](#pattern-matching)
+  - [Records](#records)
   - [Miscellaneous](#miscellaneous-1)
 - [Chapter 6 - Implementing Interfaces and Inheriting Classes](#chapter-6---implementing-interfaces-and-inheriting-classes)
   - [Operator overloading](#operator-overloading)
@@ -45,6 +47,7 @@
   - [Packaging and publishing](#packaging-and-publishing)
   - [Decompiling .NET](#decompiling-net)
   - [Porting from .NET Framework to modern .NET](#porting-from-net-framework-to-modern-net)
+  - [Preview features](#preview-features)
 - [Chapter 8 - Working with Common .NET Types](#chapter-8---working-with-common-net-types)
   - [Working with numbers](#working-with-numbers)
   - [Working with text and regular expressions](#working-with-text-and-regular-expressions)
@@ -58,11 +61,7 @@
   - [File system, encoding, and streams](#file-system-encoding-and-streams)
   - [Serialization](#serialization)
   - [JSON](#json)
-- [Chapter 10 - Protecting Your Data and Applications](#chapter-10---protecting-your-data-and-applications)
-  - [Cross-platform cryptography](#cross-platform-cryptography)
-  - [General security knowledge](#general-security-knowledge)
-  - [Encryption](#encryption)
-- [Chapter 11 - Working with Data Using Entity Framework Core](#chapter-11---working-with-data-using-entity-framework-core)
+- [Chapter 10 - Working with Data Using Entity Framework Core](#chapter-10---working-with-data-using-entity-framework-core)
   - [Legacy EF 6](#legacy-ef-6)
   - [EF Core](#ef-core)
   - [EF Core database providers](#ef-core-database-providers)
@@ -71,57 +70,62 @@
   - [NoSQL data stores](#nosql-data-stores)
   - [EF Core models](#ef-core-models)
   - [EF Core querying and manipulating](#ef-core-querying-and-manipulating)
-- [Chapter 12 - Querying and Manipulating Data Using LINQ](#chapter-12---querying-and-manipulating-data-using-linq)
+- [Chapter 11 - Querying and Manipulating Data Using LINQ](#chapter-11---querying-and-manipulating-data-using-linq)
   - [LINQ concepts](#linq-concepts)
   - [LINQ providers](#linq-providers)
   - [LINQ samples and tools](#linq-samples-and-tools)
-- [Chapter 13 - Improving Performance and Scalability Using Multitasking](#chapter-13---improving-performance-and-scalability-using-multitasking)
+- [Chapter 12 - Improving Performance and Scalability Using Multitasking](#chapter-12---improving-performance-and-scalability-using-multitasking)
   - [Threads](#threads)
   - [Tasks](#tasks)
   - [Thread safety](#thread-safety)
   - [async and await](#async-and-await)
   - [Parallel programming](#parallel-programming)
   - [Sharing resouces and synchronization](#sharing-resouces-and-synchronization)
-- [Chapter 14 - Introducing Practical Applications of C# and .NET](#chapter-14---introducing-practical-applications-of-c-and-net)
+- [Chapter 13 - Introducing Practical Applications of C# and .NET](#chapter-13---introducing-practical-applications-of-c-and-net)
   - [.NET apps](#net-apps)
+  - [.NET Content Management Systems](#net-content-management-systems)
   - [ASP.NET versions and features](#aspnet-versions-and-features)
   - [Web development technologies](#web-development-technologies)
   - [Windows desktop app development](#windows-desktop-app-development)
   - [Third-party cross-platform GUI development](#third-party-cross-platform-gui-development)
-- [Chapter 15 - Building Websites Using ASP.NET Core Razor Pages](#chapter-15---building-websites-using-aspnet-core-razor-pages)
+- [Chapter 14 - Building Websites Using ASP.NET Core Razor Pages](#chapter-14---building-websites-using-aspnet-core-razor-pages)
   - [General web development](#general-web-development)
   - [ASP.NET Core](#aspnet-core)
   - [Razor Pages and layouts](#razor-pages-and-layouts)
   - [Endpoint routing](#endpoint-routing)
-- [Chapter 16 - Building Websites Using the Model-View-Controller Pattern](#chapter-16---building-websites-using-the-model-view-controller-pattern)
+- [Chapter 15 - Building Websites Using the Model-View-Controller Pattern](#chapter-15---building-websites-using-the-model-view-controller-pattern)
   - [Security and privacy](#security-and-privacy)
   - [Setting up and configuring](#setting-up-and-configuring)
   - [Controllers](#controllers)
   - [Models](#models)
   - [Views](#views)
   - [Miscellaneous](#miscellaneous-2)
-- [Chapter 17 - Building and Consuming Web Services](#chapter-17---building-and-consuming-web-services)
+- [Chapter 16 - Building and Consuming Web Services](#chapter-16---building-and-consuming-web-services)
   - [Web service technologies](#web-service-technologies)
   - [Web service routing](#web-service-routing)
   - [Web service clients](#web-service-clients)
   - [Documenting web services](#documenting-web-services)
   - [Securing web services](#securing-web-services)
   - [Health checks and reliable web services](#health-checks-and-reliable-web-services)
+- [Chapter 17 - Building User Interfaces Using Blazor](#chapter-17---building-user-interfaces-using-blazor)
+  - [Blazor hosting models](#blazor-hosting-models)
+  - [Blazor components](#blazor-components)
+  - [Advanced techniques](#advanced-techniques)
+  - [Other resources](#other-resources)
 - [Chapter 18 - Building and Consuming Other Services](#chapter-18---building-and-consuming-other-services)
   - [WCF](#wcf)
   - [gRPC](#grpc)
   - [SignalR](#signalr)
   - [OData](#odata)
   - [Azure Functions](#azure-functions)
-- [Chapter 19 - Building User Interfaces Using Blazor](#chapter-19---building-user-interfaces-using-blazor)
-  - [Blazor hosting models](#blazor-hosting-models)
-  - [Blazor components](#blazor-components)
-  - [Advanced techniques](#advanced-techniques)
-  - [Other resources](#other-resources)
-- [Chapter 20 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-20---building-mobile-and-desktop-apps-using-net-maui)
+- [Chapter 19 - Building Mobile and Desktop Apps Using .NET MAUI](#chapter-19---building-mobile-and-desktop-apps-using-net-maui)
   - [.NET MAUI](#net-maui)
   - [Mobile development](#mobile-development)
-- [Chapter 21 - Epilogue](#chapter-21---epilogue)
+- [Chapter 20 - Protecting Your Data and Applications](#chapter-20---protecting-your-data-and-applications)
+  - [Cross-platform cryptography](#cross-platform-cryptography)
+  - [General security knowledge](#general-security-knowledge)
+  - [Encryption](#encryption)
+- [Epilogue](#epilogue)
   - [Next steps on your C# and .NET learning journey](#next-steps-on-your-c-and-net-learning-journey)
   - [Learn from other Packt books](#learn-from-other-packt-books)
 
@@ -516,22 +520,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - How to migrate from Newtonsoft.Json to System.Text.Json: https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to
 - What’s next for System.Text.Json? https://devblogs.microsoft.com/dotnet/whats-next-for-system-text-json/
 
-# Chapter 10 - Protecting Your Data and Applications
-
-## Cross-platform cryptography
-- Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
-
-## General security knowledge
-- Key Security Concepts: https://docs.microsoft.com/en-us/dotnet/standard/security/key-security-concepts
-- Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
-- The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
-
-## Encryption
-- The RSA algorithm is based on the factorization of large integers: http://mathworld.wolfram.com/RSAEncryption.html
-- Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
-- Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
-
-# Chapter 11 - Working with Data Using Entity Framework Core
+# Chapter 10 - Working with Data Using Entity Framework Core
 
 ## Legacy EF 6
 - Entity Framework 6.3 and its .NET Core 3.0 and later support: https://devblogs.microsoft.com/dotnet/announcing-ef-core-3-0-and-ef-6-3-general-availability/
@@ -582,7 +571,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Loading patterns: https://docs.microsoft.com/en-us/ef/core/querying/related-data
 - Pooling database contexts: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-2.0#dbcontext-pooling
 
-# Chapter 12 - Querying and Manipulating Data Using LINQ
+# Chapter 11 - Querying and Manipulating Data Using LINQ
 
 ## LINQ concepts
 - Expression trees: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/
@@ -599,7 +588,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - 101 LINQ Samples: https://docs.microsoft.com/en-us/samples/dotnet/try-samples/101-linq-samples/
 - LINQPad: https://www.linqpad.net/
 
-# Chapter 13 - Improving Performance and Scalability Using Multitasking
+# Chapter 12 - Improving Performance and Scalability Using Multitasking
 
 ## Threads
 - Threads and threading: https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading
@@ -628,7 +617,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Sharing resouces and synchronization
 - Overview of synchronization primitives: https://docs.microsoft.com/en-us/dotnet/standard/threading/overview-of-synchronization-primitives
 
-# Chapter 14 - Introducing Practical Applications of C# and .NET
+# Chapter 13 - Introducing Practical Applications of C# and .NET
 
 ## .NET apps
 - .NET Application Architecture Guidance: https://www.microsoft.com/net/learn/architecture
@@ -669,7 +658,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Uno Platform: https://platform.uno
 - Getting Started with the Uno Platform (Project Reunion/WinUI): https://nicksnettravels.builttoroam.com/getting-started-uno-platform/
 
-# Chapter 15 - Building Websites Using ASP.NET Core Razor Pages
+# Chapter 14 - Building Websites Using ASP.NET Core Razor Pages
 
 ## General web development
 - HTML5 and CSS3: Building Responsive Websites: https://www.packtpub.com/producthtml5-and-css3-building-responsive-websites/9781787124813h
@@ -700,7 +689,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Configuring the HTTP pipeline with middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware
 - DEEP DIVE: HOW IS THE ASP.NET CORE MIDDLEWARE PIPELINE BUILT? https://www.stevejgordon.co.uk/how-is-the-asp-net-core-middleware-pipeline-built
 
-# Chapter 16 - Building Websites Using the Model-View-Controller Pattern
+# Chapter 15 - Building Websites Using the Model-View-Controller Pattern
 
 ## Security and privacy
 - Built-in features for compliance with modern privacy requirements like GDPR: https://docs.microsoft.com/en-us/aspnet/core/security/gdpr
@@ -738,7 +727,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Free stock photos for commercial use with no attribution: https://www.pexels.com/
 - Images of eight categories: https://github.com/markjprice/cs9dotnet5/tree/master/Assets/Categories
 
-# Chapter 17 - Building and Consuming Web Services
+# Chapter 16 - Building and Consuming Web Services
 
 ## Web service technologies
 - Media types: http://en.wikipedia.org/wiki/Media_type
@@ -785,28 +774,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Use HttpClientFactory to implement resilient HTTP requests: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests
 - Redis: https://redis.io
 
-# Chapter 18 - Building and Consuming Other Services
-
-## WCF
-- Core WCF repository: https://github.com/CoreWCF/CoreWCF
-
-## gRPC
-- gRPC: https://grpc.io
-- Introduction to gRPC on .NET: https://docs.microsoft.com/en-us/aspnet/core/grpc/
-- gRPC as an alternative to WCF: https://devblogs.microsoft.com/premier-developer/grpc-asp-net-core-as-a-migration-path-for-wcfs-in-net-core/
-- How to use gRPC with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/grpc/aspnetcore
-
-## SignalR
-- SignalR: https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction
-
-## OData
-- OData - the best way to REST: https://www.odata.org
-- OData documentation: https://docs.microsoft.com/en-us/odata/
-
-## Azure Functions
-- Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
-
-# Chapter 19 - Building User Interfaces Using Blazor
+# Chapter 17 - Building User Interfaces Using Blazor
 
 ## Blazor hosting models
 - Blazor: https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor
@@ -834,7 +802,28 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Carl Franklin's Blazor Train: https://www.youtube.com/playlist?list=PL8h4jt35t1wjvwFnvcB2LlYL4jLRzRmoz
 - Welcome to PACMAN written in C# and running on Blazor WebAssembly: https://github.com/SteveDunn/PacManBlazor
 
-# Chapter 20 - Building Mobile and Desktop Apps Using .NET MAUI
+# Chapter 18 - Building and Consuming Other Services
+
+## WCF
+- Core WCF repository: https://github.com/CoreWCF/CoreWCF
+
+## gRPC
+- gRPC: https://grpc.io
+- Introduction to gRPC on .NET: https://docs.microsoft.com/en-us/aspnet/core/grpc/
+- gRPC as an alternative to WCF: https://devblogs.microsoft.com/premier-developer/grpc-asp-net-core-as-a-migration-path-for-wcfs-in-net-core/
+- How to use gRPC with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/grpc/aspnetcore
+
+## SignalR
+- SignalR: https://docs.microsoft.com/en-us/aspnet/core/signalr/introduction
+
+## OData
+- OData - the best way to REST: https://www.odata.org
+- OData documentation: https://docs.microsoft.com/en-us/odata/
+
+## Azure Functions
+- Azure Functions documentation: https://docs.microsoft.com/en-us/azure/azure-functions/
+
+# Chapter 19 - Building Mobile and Desktop Apps Using .NET MAUI
 
 ## .NET MAUI
 - Introduction to .NET MAUI: https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/
@@ -850,7 +839,22 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Protecting your users with certificate pinning: https://www.basdecort.com/protecting-your-users-with-certificate-pinning/
 - HttpClient and SSL/TLS implementation selector for iOS/macOS: https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/http-stack
 
-# Chapter 21 - Epilogue
+# Chapter 20 - Protecting Your Data and Applications
+
+## Cross-platform cryptography
+- Features supported by which OS: https://docs.microsoft.com/en-us/dotnet/standard/security/cross-platform-cryptography
+
+## General security knowledge
+- Key Security Concepts: https://docs.microsoft.com/en-us/dotnet/standard/security/key-security-concepts
+- Dictionary Attacks 101: https://blog.codinghorror.com/dictionary-attacks-101/
+- The first publicly known SHA1 collision happened in 2017: https://arstechnica.co.uk/information-technology/2017/02/at-deaths-door-for-years-widely-used-sha1-function-is-now-dead/
+
+## Encryption
+- The RSA algorithm is based on the factorization of large integers: http://mathworld.wolfram.com/RSAEncryption.html
+- Encrypting Data: https://docs.microsoft.com/en-us/dotnet/standard/security/encrypting-data
+- Cryptographic Signatures: https://docs.microsoft.com/en-us/dotnet/standard/security/cryptographic-signatures
+
+# Epilogue
 
 ## Next steps on your C# and .NET learning journey
 - Follow the Framework Design Guidelines: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/
