@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
-using Packt.Shared;
+﻿using System.Net.Http.Json; // GetFromJsonAsync, ReadFromJsonAsync
+using Packt.Shared; // Customer
 
 namespace Northwind.BlazorWasm.Client.Data
 {
@@ -27,7 +24,7 @@ namespace Northwind.BlazorWasm.Client.Data
         <List<Customer>>($"api/customers/in/{country}");
     }
 
-    public Task<Customer> GetCustomerAsync(string id)
+    public Task<Customer?> GetCustomerAsync(string id)
     {
       return http.GetFromJsonAsync
         <Customer>($"api/customers/{id}");
@@ -37,7 +34,7 @@ namespace Northwind.BlazorWasm.Client.Data
       CreateCustomerAsync(Customer c)
     {
       HttpResponseMessage response = await
-        http.PostAsJsonAsync<Customer>("api/customers", c);
+        http.PostAsJsonAsync("api/customers", c);
 
       return await response.Content
         .ReadFromJsonAsync<Customer>();
@@ -46,7 +43,7 @@ namespace Northwind.BlazorWasm.Client.Data
     public async Task<Customer> UpdateCustomerAsync(Customer c)
     {
       HttpResponseMessage response = await
-        http.PutAsJsonAsync<Customer>("api/customers", c);
+        http.PutAsJsonAsync("api/customers", c);
 
       return await response.Content
         .ReadFromJsonAsync<Customer>();
