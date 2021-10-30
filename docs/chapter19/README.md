@@ -1,4 +1,4 @@
-![20 Building Mobile and Desktop Apps Using .NET MAUI](images/chapter-20-title.png)
+![19 Building Mobile and Desktop Apps Using .NET MAUI](images/chapter-19-title.png)
 
 This chapter is about learning how to make graphical user interface (GUI) apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using .NET MAUI (Multi-platform App User Interface). 
 
