@@ -7,11 +7,11 @@
                 Customer="@customer" 
                 OnValidSubmit="@Update" />
 
-@code { 
+@code {
   [Parameter]
   public string CustomerId { get; set; } 
 
-  private Customer customer = new();
+  private Customer? customer = new();
 
   protected async override Task OnParametersSetAsync()
   {
@@ -20,7 +20,10 @@
 
   private async Task Update()
   {
-    await service.UpdateCustomerAsync(customer);   
+    if (customer is not null)
+    {
+      await service.UpdateCustomerAsync(customer);
+    }
     navigation.NavigateTo("customers");
   }
 }

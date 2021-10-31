@@ -11,11 +11,11 @@
                 Customer="@customer" 
                 OnValidSubmit="@Delete" />
 
-@code { 
+@code {
   [Parameter]
   public string CustomerId { get; set; } 
 
-  private Customer customer = new();
+  private Customer? customer = new();
 
   protected async override Task OnParametersSetAsync()
   {
@@ -24,7 +24,10 @@
 
   private async Task Delete()
   {
-    await service.DeleteCustomerAsync(CustomerId);   
+    if (customer is not null)
+    {
+      await service.DeleteCustomerAsync(CustomerId);
+    }
     navigation.NavigateTo("customers");
   }
 }

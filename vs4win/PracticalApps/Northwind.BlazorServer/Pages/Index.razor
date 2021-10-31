@@ -1,28 +1,43 @@
 ﻿@page "/"
 
+<PageTitle>Index</PageTitle>
+
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<button type="button" class="btn btn-info" @onclick="ShowMessageBox">
+<button type="button" class="btn btn-info" @onclick="AlertBrowser">
   Poke the browser</button>
-<button type="button" class="btn btn-info" @onclick="SetCookie">
-  Store a cookie</button>
+
+<hr />
+
+<input id="colorBox" />
+
+<button type="button" class="btn btn-info" @onclick="SetColor">
+  Set Color</button>
+
+<button type="button" class="btn btn-info" @onclick="GetColor">
+  Get Color</button>
+
 @code {
   [Inject]
-  public IJSRuntime JSRuntime { get; set; }
+  public IJSRuntime JSRuntime { get; set; } = null!;
 
-  public async Task ShowMessageBox()
+  public async Task AlertBrowser()
   {
-    await JSRuntime.InvokeVoidAsync(
-      "messageBox", "Blazor poking the browser");
+    await JSRuntime.InvokeVoidAsync("messageBox",
+      "Blazor poking the browser");
   }
 
-  public async Task SetCookie()
+  public async Task SetColor()
   {
-    await JSRuntime.InvokeVoidAsync(
-      "saveCookie", "{ 'color': 'red' }");
+    await JSRuntime.InvokeVoidAsync("setColorInStorage");
+  }
+
+  public async Task GetColor()
+  {
+    await JSRuntime.InvokeVoidAsync("getColorFromStorage");
   }
 }

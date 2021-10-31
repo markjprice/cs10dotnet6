@@ -1,8 +1,17 @@
 ﻿function messageBox(message) {
-  alert(message);
+  window.alert(message);
 }
 
-function saveCookie(cookie) {
-  var cookie = window.cookie
-  window.setCookie(cookie);
+function setColorInStorage() {
+  if (typeof (Storage) !== "undefined") {
+    localStorage.setItem("color",
+      document.getElementById("colorBox").value);
+  }
+}
+
+function getColorFromStorage() {
+  if (typeof (Storage) !== "undefined") {
+    document.getElementById("colorBox").value =
+      localStorage.getItem("color");
+  }
 }

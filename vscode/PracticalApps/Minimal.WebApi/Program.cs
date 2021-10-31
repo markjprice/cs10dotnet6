@@ -2,7 +2,7 @@ using Northwind.Common; // WeatherForecast
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseUrls("https://localhost:5003/");
+builder.WebHost.UseUrls("https://localhost:5003");
 
 builder.Services.AddCors();
 

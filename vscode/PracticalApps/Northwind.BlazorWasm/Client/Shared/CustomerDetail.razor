@@ -41,9 +41,9 @@
   </button>
 </EditForm>
 
-@code { 
+@code {
   [Parameter]
-  public Customer Customer { get; set; }
+  public Customer Customer { get; set; } = null!;
 
   [Parameter]
   public string ButtonText { get; set; } = "Save Changes";
