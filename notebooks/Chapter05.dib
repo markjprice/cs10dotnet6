@@ -7,6 +7,7 @@ Execute the following code cell to make `Console` methods available in every cod
 #!csharp
 
 using static System.Console;
+
 using System.Collections.Generic;
 
 #!markdown
