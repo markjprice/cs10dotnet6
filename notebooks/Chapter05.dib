@@ -4,6 +4,8 @@
 
 Execute the following code cell to make `Console` methods available in every code cell in this notebook.
 
+We cannot create a class library in a .NET Interactive notebook so we will put all code in the same notebook.
+
 #!csharp
 
 using static System.Console;
@@ -104,17 +106,95 @@ public class Person : object
     return $"{Name} says 'Hello {name}!'";
   }
 
+  public string OptionalParameters(
+    string command = "Run!",
+    double number = 0.0,
+    bool active = true)
+  {
+    return string.Format(
+    format: "command is {0}, number is {1}, active is {2}",
+    arg0: command,
+    arg1: number,
+    arg2: active);
+  }
+
+  public void PassingParameters(int x, ref int y, out int z)
+  {
+    // out parameters cannot have a default
+    // AND must be initialized inside the method
+    z = 99;
+    // increment each parameter
+    x++;
+    y++;
+    z++;
+  }
+
+  // a property defined using C# 1 - 5 syntax
+  public string Origin
+  {
+    get
+    {
+    return $"{Name} was born on {HomePlanet}";
+    }
+  }
+
+  // two properties defined using C# 6+ lambda expression body syntax
+  public string Greeting => $"{Name} says 'Hello!'";
+  
+  public int Age => System.DateTime.Today.Year - DateOfBirth.Year;
+
+  public string FavoriteIceCream { get; set; } // auto-syntax
+
+  private string favoritePrimaryColor;
+  public string FavoritePrimaryColor
+  {
+    get
+    {
+      return favoritePrimaryColor;
+    }
+    set
+    {
+      switch (value.ToLower())
+      {
+        case "red":
+        case "green":
+        case "blue":
+          favoritePrimaryColor = value;
+          break;
+        default:
+          throw new System.ArgumentException(
+            $"{value} is not a primary color. " +
+            "Choose from: red, green, blue.");
+      }
+    }
+  }
+
+  // indexers
+  public Person this[int index]
+  {
+    get
+    {
+      return Children[index]; // pass on to the List<T> indexer
+    }
+    set
+    {
+      Children[index] = value;
+    }
+  }
+
+  // end of class
 }
 
 #!markdown
 
 ## Instantiating a class
 
-The namespace for a class defined in a .NET Interactive notebook follows the pattern `Submission#3+[classname]` if it is the third time a code cell has been submitted for execution in a notebook.
+The namespace for a class defined in a .NET Interactive notebook follows the pattern `Submission#[number]+[classname]`.
 
 #!csharp
 
-// var bob = new Person(); // C# 1.0 or later
+// Person bob = new Person(); // C# 1.0 or later
+// var bob = new Person(); // C# 3.0 or later
 Person bob = new(); // C# 9.0 or later
 WriteLine(bob.ToString());
 
@@ -330,3 +410,246 @@ WriteLine($"Deconstructed: {fruitName}, {fruitNumber}");
 
 WriteLine(bob.SayHello());
 WriteLine(bob.SayHello("Emily"));
+
+#!markdown
+
+## Passing optional and named parameters
+
+#!csharp
+
+WriteLine(bob.OptionalParameters());
+
+#!csharp
+
+WriteLine(bob.OptionalParameters("Jump!", 98.5));
+
+#!csharp
+
+WriteLine(bob.OptionalParameters(
+  number: 52.7, command: "Hide!"));
+
+#!csharp
+
+WriteLine(bob.OptionalParameters("Poke!", active: false));
+
+#!markdown
+
+## Controlling how parameters are passed
+
+When a parameter is passed into a method, it can be passed in one of three ways:
+- By value (this is the default): Think of these as being in-only.
+- By reference as a ref parameter: Think of these as being in-and-out.
+- As an out parameter: Think of these as being out-only.
+
+#!csharp
+
+int a = 10;
+int b = 20;
+int c = 30;
+
+WriteLine($"Before: a = {a}, b = {b}, c = {c}");
+bob.PassingParameters(a, ref b, out c);
+WriteLine($"After: a = {a}, b = {b}, c = {c}");
+
+#!markdown
+
+## Simplified out parameters
+
+In C# 7.0 and later, we can simplify code that uses the out variables.
+
+#!csharp
+
+int d = 10;
+int e = 20;
+
+WriteLine($"Before: d = {d}, e = {e}, f doesn't exist yet!");
+
+// simplified C# 7.0 or later syntax for the out parameter
+bob.PassingParameters(d, ref e, out int f);
+WriteLine($"After: d = {d}, e = {e}, f = {f}");
+
+#!markdown
+
+# Splitting classes using partial
+
+Partial classes are not supported in .NET Interactive notebooks. I have added the code to the original class near the top of this notebook. 
+
+#!csharp
+
+Person sam = new()
+{
+  Name = "Sam",
+  DateOfBirth = new(1972, 1, 27)
+};
+WriteLine(sam.Origin);
+WriteLine(sam.Greeting);
+WriteLine(sam.Age);
+
+#!csharp
+
+sam.FavoriteIceCream = "Chocolate Fudge";
+
+WriteLine($"Sam's favorite ice-cream flavor is {sam.FavoriteIceCream}.");
+
+sam.FavoritePrimaryColor = "Red";
+
+WriteLine($"Sam's favorite primary color is {sam.FavoritePrimaryColor}.");
+
+#!markdown
+
+# Defining indexers
+
+#!csharp
+
+sam.Children.Add(new() { Name = "Charlie" });
+sam.Children.Add(new() { Name = "Ella" });
+
+WriteLine($"Sam's first child is {sam.Children[0].Name}");
+WriteLine($"Sam's second child is {sam.Children[1].Name}");
+
+WriteLine($"Sam's first child is {sam[0].Name}");
+WriteLine($"Sam's second child is {sam[1].Name}");
+
+#!markdown
+
+# Pattern matching with objects
+
+#!csharp
+
+public class BusinessClassPassenger
+{
+  public override string ToString()
+  {
+    return $"Business Class";
+  }
+}
+
+public class FirstClassPassenger
+{
+  public int AirMiles { get; set; }
+
+  public override string ToString()
+  {
+    return $"First Class with {AirMiles:N0} air miles";
+  }
+}
+
+public class CoachClassPassenger
+{
+  public double CarryOnKG { get; set; }
+
+  public override string ToString()
+  {
+    return $"Coach Class with {CarryOnKG:N2} KG carry on";
+  }
+}
+
+#!csharp
+
+object[] passengers = {
+  new FirstClassPassenger { AirMiles = 1_419 },
+  new FirstClassPassenger { AirMiles = 16_562 },
+  new BusinessClassPassenger(),
+  new CoachClassPassenger { CarryOnKG = 25.7 },
+  new CoachClassPassenger { CarryOnKG = 0 },
+};
+
+foreach (object passenger in passengers)
+{
+  decimal flightCost = passenger switch
+  {
+    /*
+    FirstClassPassenger p when p.AirMiles > 35000 => 1500M,
+    FirstClassPassenger p when p.AirMiles > 15000 => 1750M,
+    FirstClassPassenger _                         => 2000M, */
+
+    // C# 9 or later syntax
+    FirstClassPassenger p => p.AirMiles switch
+    {
+      > 35000 => 1500M,
+      > 15000 => 1750M,
+      _       => 2000M
+    },
+
+
+    BusinessClassPassenger                        => 1000M,
+    CoachClassPassenger p when p.CarryOnKG < 10.0 => 500M,
+    CoachClassPassenger                           => 650M,
+    _                                             => 800M
+  };
+
+  WriteLine($"Flight costs {flightCost:C} for {passenger}");
+}
+
+#!markdown
+
+# Working with records
+
+#!markdown
+
+## Init-only properties
+
+#!csharp
+
+#nullable enable
+
+public class ImmutablePerson
+{
+  public string? FirstName { get; init; }
+  public string? LastName { get; init; }
+}
+
+#!csharp
+
+ImmutablePerson jeff = new()
+{
+  FirstName = "Jeff",
+  LastName = "Winger"
+};
+jeff.FirstName = "Geoff";
+
+#!markdown
+
+## Understanding records
+
+#!csharp
+
+#nullable enable
+
+public record ImmutableVehicle
+{
+  public int Wheels { get; init; }
+  public string? Color { get; init; }
+  public string? Brand { get; init; }
+}
+
+#!csharp
+
+ImmutableVehicle car = new()
+{
+  Brand = "Mazda MX-5 RF",
+  Color = "Soul Red Crystal Metallic",
+  Wheels = 4
+};
+
+ImmutableVehicle repaintedCar = car
+  with { Color = "Polymetal Grey Metallic" };
+
+  WriteLine($"Original car color was {car.Color}.");
+WriteLine($"New car color is {repaintedCar.Color}.");
+
+#!markdown
+
+## Simplifying data members in records
+
+#!csharp
+
+// simpler way to define a record
+// auto-generates the properties, constructor, and deconstructor
+public record ImmutableAnimal(string Name, string Species);
+
+#!csharp
+
+ImmutableAnimal oscar = new("Oscar", "Labrador");
+var (who, what) = oscar; // calls Deconstruct method
+WriteLine($"{who} is a {what}.");
