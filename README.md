@@ -9,12 +9,19 @@ Visual Studio 2022 and Visual Studio Code use different files to group projects 
 - Visual Studio 2022 for Windows solutions for each chapter: [/vs4win](/vs4win)
 - Visual Studio Code solutions for each chapter: [/vscode](/vscode)
 
+## [Bonus content](9781801077361_Bonus_Content.pdf)
+Three chapters and the appendix available to [download](9781801077361_Bonus_Content.pdf) as a PDF:
+- Chapter 18, Building and Consuming Specialized Services
+- Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI
+- Chapter 20, Protecting Your Data and Applications
+- Appendix A, Answers to the Test Your Knowledge Questions
+
 ## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
 To be published on Tuesday, November 9, 2021. Pre-order today!
 - [Packt](https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development-sixth-edition/9781801077361)
-- [Amazon.com](https://www.amazon.com/dp/B09JV37DM6/)
-- [Amazon.co.uk](https://www.amazon.co.uk/dp/1801077363/)
+- [Amazon.com](https://www.amazon.com/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/)
+- [Amazon.co.uk](https://www.amazon.co.uk/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/)
 - [Amazon.com.au](https://www.amazon.com.au/10-NET-Cross-Platform-Development-websites-ebook/dp/B09JV37DM6/)
 
 Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
@@ -30,7 +37,6 @@ Corrections for typos and other mistakes, and improvements like refactoring code
 ## Online materials
 Supplementary book materials available to download as PDFs: 
 - Color images of the screenshots/diagrams used in this book (coming November 2021)
-- Appendix A, Answers to the Test Your Knowledge Questions (coming November 2021)
 - The [cs9dotnet5-extras](https://github.com/markjprice/cs9dotnet5-extras) repository contains articles that support the book, for example, instructions for using a Raspberry Pi to complete the coding tasks in the book.
 
 ## Interviews with me
