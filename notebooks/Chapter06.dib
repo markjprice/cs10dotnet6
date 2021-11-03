@@ -1,0 +1,860 @@
+#!markdown
+
+# Chapter 6 - Implementing Interfaces and Inheriting Classes
+
+#!csharp
+
+using static System.Console;
+
+#!csharp
+
+public class PersonException : Exception
+{
+  public PersonException() : base() { }
+
+  public PersonException(string message) : base(message) { }
+  
+  public PersonException(string message, Exception innerException)
+    : base(message, innerException) { }
+}
+
+#!csharp
+
+#nullable enable // required in notebook cells that use nullability
+
+public class Person : object, IComparable<Person>
+{
+  // fields
+  public string? Name; // ? allows null
+  public DateTime DateOfBirth;
+  public List<Person> Children = new(); // C# 9 or later
+  
+  // methods
+  public void WriteToConsole()
+  {
+    WriteLine($"{Name} was born on a {DateOfBirth:dddd}.");
+  }
+
+  // static method to "multiply"
+  public static Person Procreate(Person p1, Person p2)
+  {
+    Person baby = new()
+    {
+      Name = $"Baby of {p1.Name} and {p2.Name}"
+    };
+
+    p1.Children.Add(baby);
+    p2.Children.Add(baby);
+    
+    return baby;
+  }
+
+  // instance method to "multiply"
+  public Person ProcreateWith(Person partner)
+  {
+    return Procreate(this, partner);
+  }
+
+  // operator to "multiply"
+  public static Person operator *(Person p1, Person p2)
+  {
+  return Person.Procreate(p1, p2);
+  }
+
+  // method with a local function
+  public static int Factorial(int number)
+  {
+    if (number < 0)
+    {
+      throw new ArgumentException(
+        $"{nameof(number)} cannot be less than zero.");
+    }
+    return localFactorial(number);
+
+    int localFactorial(int localNumber) // local function
+    {
+      if (localNumber < 1) return 1;
+      return localNumber * localFactorial(localNumber - 1);
+    }
+  }
+
+  // delegate field
+  public event EventHandler? Shout;
+
+  // data field
+  public int AngerLevel;
+  
+  // method
+  public void Poke()
+  {
+    AngerLevel++;
+    
+    if (AngerLevel >= 3)
+    {
+      // if something is listening...
+      if (Shout != null)
+      {
+        // ...then call the delegate
+        Shout(this, EventArgs.Empty);
+      }
+    }
+  }
+
+  public int CompareTo(Person? other)
+  {
+    if (Name is null) return 0;
+    return Name.CompareTo(other?.Name);
+  }
+
+  // overridden methods
+  public override string ToString()
+  {
+    return $"{Name} is a {base.ToString()}";
+  }
+
+  public void TimeTravel(DateTime when)
+  {
+    if (when <= DateOfBirth)
+    {
+      throw new PersonException("If you travel back in time to a date earlier than your own birth, then the universe will explode!");
+    }
+    else
+    {
+      WriteLine($"Welcome to {when:yyyy}!");
+    }
+  }
+
+  // end of class
+}
+
+#!markdown
+
+# Implementing functionality using methods
+
+#!csharp
+
+Person harry = new() { Name = "Harry" };
+Person mary = new() { Name = "Mary" };
+Person jill = new() { Name = "Jill" };
+
+// call instance method
+Person baby1 = mary.ProcreateWith(harry);
+baby1.Name = "Gary";
+
+// call static method
+Person baby2 = Person.Procreate(harry, jill);
+
+// call an operator
+Person baby3 = harry * mary;
+
+WriteLine($"{harry.Name} has {harry.Children.Count} children.");
+WriteLine($"{mary.Name} has {mary.Children.Count} children.");
+WriteLine($"{jill.Name} has {jill.Children.Count} children.");
+WriteLine(
+  format: "{0}'s first child is named \"{1}\".",
+  arg0: harry.Name,
+  arg1: harry.Children[0].Name);
+
+#!markdown
+
+## Implementing functionality using local functions
+
+#!csharp
+
+WriteLine($"5! is {Person.Factorial(5)}");
+
+#!markdown
+
+# Raising and handling events
+
+#!markdown
+
+## Defining and handling delegates
+
+#!csharp
+
+#nullable enable
+
+static void Harry_Shout(object? sender, EventArgs e)
+{
+  if (sender is null) return;
+  Person p = (Person)sender;
+  WriteLine($"{p.Name} is this angry: {p.AngerLevel}.");
+}
+
+#!csharp
+
+harry.Shout += Harry_Shout;
+
+#!csharp
+
+harry.Poke();
+harry.Poke();
+harry.Poke();
+harry.Poke();
+
+#!markdown
+
+# Making types safely reusable with generics
+
+#!markdown
+
+## Working with non-generic types
+
+#!csharp
+
+// non-generic lookup collection
+System.Collections.Hashtable lookupObject = new();
+
+lookupObject.Add(key: 1, value: "Alpha");
+lookupObject.Add(key: 2, value: "Beta");
+lookupObject.Add(key: 3, value: "Gamma");
+lookupObject.Add(key: harry, value: "Delta");
+
+int key = 2; // lookup the value that has 2 as its key
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: key,
+  arg1: lookupObject[key]);
+
+// lookup the value that has harry as its key
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: harry,
+  arg1: lookupObject[harry]);
+
+#!markdown
+
+## Working with generic types
+
+#!csharp
+
+// generic lookup collection
+Dictionary<int, string> lookupIntString = new();
+
+lookupIntString.Add(key: 1, value: "Alpha");
+lookupIntString.Add(key: 2, value: "Beta");
+lookupIntString.Add(key: 3, value: "Gamma");
+lookupIntString.Add(key: 4, value: "Delta");
+
+key = 3;
+WriteLine(format: "Key {0} has value: {1}",
+  arg0: key,
+  arg1: lookupIntString[key]);
+
+#!markdown
+
+# Implementing interfaces
+
+#!markdown
+
+## Comparing objects when sorting
+
+#!csharp
+
+Person[] people =
+{
+  new() { Name = "Simon" },
+  new() { Name = "Jenny" },
+  new() { Name = "Adam" },
+  new() { Name = "Richard" }
+};
+
+WriteLine("Initial list of people:");
+foreach (Person p in people)
+{
+  WriteLine($" {p.Name}");
+}
+
+WriteLine("Use Person's IComparable implementation to sort:");
+Array.Sort(people);
+foreach (Person p in people)
+{
+  WriteLine($" {p.Name}");
+}
+
+#!markdown
+
+## Comparing objects using a separate class
+
+#!csharp
+
+#nullable enable
+
+public class PersonComparer : IComparer<Person>
+{
+  public int Compare(Person? x, Person? y)
+  {
+    if (x is null || y is null)
+    {
+      return 0;
+    }
+
+    // Compare the Name lengths...
+    int result = x.Name.Length.CompareTo(y.Name.Length);
+    
+    // ...if they are equal...
+    if (result == 0)
+    {
+      // ...then compare by the Names...
+      return x.Name.CompareTo(y.Name);
+    }
+    else // result will be -1 or 1
+    {
+      // ...otherwise compare by the lengths.
+      return result;
+    }
+  }
+}
+
+#!csharp
+
+WriteLine("Use PersonComparer's IComparer implementation to sort:");
+Array.Sort(people, new PersonComparer());
+foreach (Person p in people)
+{
+  WriteLine($" {p.Name}");
+}
+
+#!markdown
+
+## Implicit and explicit interface implementations
+
+#!csharp
+
+public interface IGamePlayer
+{
+  void Lose();
+}
+
+public interface IKeyHolder
+{
+  void Lose();
+}
+
+public class Human : IGamePlayer, IKeyHolder
+{
+  public void Lose() // implicit implementation
+  {
+    // implement losing a key
+    WriteLine("Lost my key!");
+  }
+  void IGamePlayer.Lose() // explicit implementation
+  {
+    // implement losing a game
+    WriteLine("Lost the game!");
+  }
+}
+
+// calling implicit and explicit implementations of Lose
+Human p = new();
+
+p.Lose(); // calls implicit implementation of losing a key
+
+((IGamePlayer)p).Lose(); // calls explicit implementation of losing a game
+
+IGamePlayer player = p as IGamePlayer;
+
+player.Lose(); // calls explicit implementation of losing a game
+
+#!markdown
+
+## Defining interfaces with default implementations
+
+Note that the code cell below executes successfully despite the `DvdPlayer` class not implementing `Stop`. 
+
+#!csharp
+
+public interface IPlayable
+{
+  void Play();
+  void Pause();
+
+  void Stop() // default interface implementation
+  {
+    WriteLine("Default implementation of Stop.");
+  }
+}
+
+public class DvdPlayer : IPlayable
+{
+  public void Pause()
+  {
+    WriteLine("DVD player is pausing.");
+  }
+  public void Play()
+  {
+    WriteLine("DVD player is playing.");
+  }
+}
+
+#!markdown
+
+# Managing memory with reference and value types
+
+#!markdown
+
+## How reference and value types are stored in memory
+
+#!csharp
+
+int number1 = 49;
+long number2 = 12;
+System.Drawing.Point location = new(x: 4, y: 5);
+
+Person kevin = new() { Name = "Kevin",
+  DateOfBirth = new(year: 1988, month: 9, day: 23) };
+
+Person sally;
+
+#!markdown
+
+## Equality of types
+
+#!csharp
+
+int a = 3;
+int b = 3;
+WriteLine($"a == b: {(a == b)}"); // true
+
+#!csharp
+
+Person2 a = new() { Name = "Kevin" };
+Person2 b = new() { Name = "Kevin" };
+WriteLine($"a == b: {(a == b)}"); // false
+
+#!csharp
+
+Person2 a = new() { Name = "Kevin" };
+Person2 b = a;
+WriteLine($"a == b: {(a == b)}"); // true
+
+#!csharp
+
+string a = "Kevin";
+string b = "Kevin";
+WriteLine($"a == b: {(a == b)}"); // true
+
+#!markdown
+
+# Defining struct types
+
+#!csharp
+
+public struct DisplacementVector
+{
+  public int X;
+  public int Y;
+
+  public DisplacementVector(int initialX, int initialY)
+  {
+    X = initialX;
+    Y = initialY;
+  }
+
+  public static DisplacementVector operator +(
+    DisplacementVector vector1,
+    DisplacementVector vector2)
+  {
+    return new(
+      vector1.X + vector2.X,
+      vector1.Y + vector2.Y);
+  }
+}
+
+#!csharp
+
+DisplacementVector dv1 = new(3, 5);
+DisplacementVector dv2 = new(-2, 7);
+DisplacementVector dv3 = dv1 + dv2;
+
+WriteLine($"({dv1.X}, {dv1.Y}) + ({dv2.X}, {dv2.Y}) = ({dv3.X}, {dv3.Y})");
+
+#!markdown
+
+## Working with record struct types
+
+#!csharp
+
+public record struct DisplacementVector(int X, int Y);
+
+#!markdown
+
+## Releasing unmanaged resources
+
+#!csharp
+
+public class Animal
+{
+  public Animal() // constructor
+  {
+    // allocate any unmanaged resources
+  }
+  
+  ~Animal() // Finalizer aka destructor
+  {
+    // deallocate any unmanaged resources
+  }
+}
+
+#!csharp
+
+public class Animal : IDisposable
+{
+  public Animal()
+  {
+    // allocate unmanaged resource
+  }
+
+  ~Animal() // Finalizer
+  {
+    Dispose(false);
+  }
+
+  bool disposed = false; // have resources been released?
+  
+  public void Dispose()
+  {
+    Dispose(true);
+    // tell garbage collector it does not need to call the finalizer
+    GC.SuppressFinalize(this);
+  }
+
+  protected virtual void Dispose(bool disposing)
+  {
+    if (disposed) return;
+    
+    // deallocate the *unmanaged* resource
+    // ...
+    
+    if (disposing)
+    {
+      // deallocate any other *managed* resources
+      // ...
+    }
+    disposed = true;
+  }
+}
+
+#!csharp
+
+using (Animal a = new())
+{
+  // code that uses the Animal instance
+}
+
+#!csharp
+
+Animal a = new();
+try
+{
+  // code that uses the Animal instance
+}
+finally
+{
+  if (a != null) a.Dispose();
+}
+
+#!markdown
+
+# Working with null values
+
+#!csharp
+
+int thisCannotBeNull = 4;
+//thisCannotBeNull = null; // compile error!
+
+int? thisCouldBeNull = null;
+WriteLine(thisCouldBeNull);
+WriteLine(thisCouldBeNull.GetValueOrDefault());
+
+thisCouldBeNull = 7;
+WriteLine(thisCouldBeNull);
+WriteLine(thisCouldBeNull.GetValueOrDefault());
+
+#!markdown
+
+## Declaring non-nullable variables and parameters
+
+#!csharp
+
+#nullable enable
+
+class Address
+{
+  public string? Building;
+  public string Street = string.Empty;
+  public string City = string.Empty;
+  public string Region = string.Empty;
+}
+
+Address address = new();
+address.Building = null;
+address.Street = null;
+address.City = "London";
+address.Region = null;
+
+#!markdown
+
+## Checking for null
+
+#!csharp
+
+string authorName = null;
+
+// the following throws a NullReferenceException
+//int x = authorName.Length;
+
+// instead of throwing an exception, null is assigned to y
+int? y = authorName?.Length;
+
+if (!y.HasValue) WriteLine("y is null");
+
+// result will be 3 if authorName?.Length is null
+int result = authorName?.Length ?? 3;
+Console.WriteLine(result);
+
+#!markdown
+
+# Inheriting from classes
+
+#!csharp
+
+#nullable enable
+
+public class Employee : Person
+{
+  public string? EmployeeCode { get; set; }
+  public DateTime HireDate { get; set; }
+
+  public new void WriteToConsole()
+  {
+    WriteLine(format:
+      "{0} was born on {1:dd/MM/yy} and hired on {2:dd/MM/yy}",
+      arg0: Name,
+      arg1: DateOfBirth,
+      arg2: HireDate);
+  }
+
+  public override string ToString()
+  {
+    return $"{Name}'s code is {EmployeeCode}";
+  }
+}
+
+#!csharp
+
+Employee john = new()
+{
+  Name = "John Jones",
+  DateOfBirth = new(year: 1990, month: 7, day: 28)
+};
+john.WriteToConsole();
+
+#!markdown
+
+## Extending classes to add functionality
+
+#!csharp
+
+john.EmployeeCode = "JJ001";
+john.HireDate = new(year: 2014, month: 11, day: 23);
+WriteLine($"{john.Name} was hired on {john.HireDate:dd/MM/yy}");
+
+#!markdown
+
+## Overriding members
+
+#!csharp
+
+WriteLine(john.ToString());
+
+#!markdown
+
+## Inheriting from abstract classes
+
+#!csharp
+
+public interface INoImplementation // C# 1.0 and later
+{
+  void Alpha(); // must be implemented by derived type
+}
+
+public interface ISomeImplementation // C# 8.0 and later
+{
+  void Alpha(); // must be implemented by derived type
+
+  void Beta()
+  {
+    // default implementation; can be overridden
+  }
+}
+
+public abstract class PartiallyImplemented // C# 1.0 and later
+{
+  public abstract void Gamma(); // must be implemented by derived type
+
+  public virtual void Delta() // can be overridden
+  {
+    // implementation
+  }
+}
+
+public class FullyImplemented : PartiallyImplemented, ISomeImplementation
+{
+  public void Alpha()
+  {
+    // implementation
+  }
+  public override void Gamma()
+  {
+    // implementation
+  }
+}
+
+// you can only instantiate the fully implemented class
+FullyImplemented a = new();
+
+// all the other types give compile errors
+PartiallyImplemented b = new(); // compile error!
+ISomeImplementation c = new(); // compile error!
+INoImplementation d = new(); // compile error!
+
+#!markdown
+
+## Preventing inheritance and overriding
+
+You can prevent another developer from inheriting from your class by applying the `sealed`
+keyword to its definition. 
+
+#!csharp
+
+public sealed class ScroogeMcDuck
+{
+}
+
+#!markdown
+
+You can prevent someone from further overriding a `virtual` method in your class by applying
+the `sealed` keyword to the method. You can only seal an overridden method.
+
+#!csharp
+
+public class Singer
+{
+  // virtual allows this method to be overridden
+  public virtual void Sing()
+  {
+    WriteLine("Singing...");
+  }
+}
+
+public class LadyGaga : Singer
+{
+  // sealed prevents overriding the method in subclasses
+  public sealed override void Sing()
+  {
+    WriteLine("Singing with style...");
+  }
+}
+
+#!markdown
+
+## Understanding polymorphism
+
+#!csharp
+
+Employee aliceInEmployee = new()
+  { Name = "Alice", EmployeeCode = "AA123" };
+  
+Person aliceInPerson = aliceInEmployee;
+aliceInEmployee.WriteToConsole();
+aliceInPerson.WriteToConsole();
+WriteLine(aliceInEmployee.ToString());
+WriteLine(aliceInPerson.ToString());
+
+#!markdown
+
+## Casting within inheritance hierarchies
+
+#!csharp
+
+Employee explicitAlice = aliceInPerson;
+
+#!csharp
+
+if (aliceInPerson is Employee)
+{
+  WriteLine($"{nameof(aliceInPerson)} IS an Employee");
+  Employee explicitAlice = (Employee)aliceInPerson;
+  // safely do something with explicitAlice
+}
+
+#!csharp
+
+#nullable enable
+
+Employee? aliceAsEmployee = aliceInPerson as Employee; // could be null
+if (aliceAsEmployee != null)
+{
+  WriteLine($"{nameof(aliceInPerson)} AS an Employee");
+  // safely do something with aliceAsEmployee
+}
+
+#!markdown
+
+# Inheriting and extending .NET types
+
+#!csharp
+
+try
+{
+  john.TimeTravel(when: new(1999, 12, 31));
+  john.TimeTravel(when: new(1950, 12, 25));
+}
+catch (PersonException ex)
+{
+  WriteLine(ex.Message);
+}
+
+#!markdown
+
+## Using static methods to reuse functionality
+
+#!csharp
+
+using System.Text.RegularExpressions;
+
+#!csharp
+
+public class StringExtensions
+{
+  public static bool IsValidEmail(string input)
+  {
+    // use simple regular expression to check
+    // that the input string is a valid email
+    return Regex.IsMatch(input,
+      @"[a-zA-Z0-9\.-_]+@[a-zA-Z0-9\.-_]+");
+  }
+}
+
+#!csharp
+
+string email1 = "pamela@test.com";
+string email2 = "ian&test.com";
+
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email1,
+  arg1: StringExtensions.IsValidEmail(email1));
+
+WriteLine("{0} is a valid e-mail address: {1}",
+  arg0: email2,
+  arg1: StringExtensions.IsValidEmail(email2));
+
+#!markdown
+
+Extension methods must be defined in a top-level static method so they cannot be defined in a notebook.
+
+#!markdown
+
+# Using an analyzer to write better code
+
+You cannot run code analyzers on notebook code.
