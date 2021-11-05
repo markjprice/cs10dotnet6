@@ -1,5 +1,7 @@
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs10dotnet6)
 
+[Improvements & Errata - list of corrections](errata.md)
+
 # C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
 Published on Tuesday, November 9, 2021. Order today from [Packt](https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development-sixth-edition/9781801077361), [Amazon.com](https://www.amazon.com/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/), [Amazon.co.uk](https://www.amazon.co.uk/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/), [Amazon.com.au](https://www.amazon.com.au/10-NET-Cross-Platform-Development-websites-ebook/dp/B09JV37DM6/), and all good book stores. My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
@@ -29,8 +31,9 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 - Feedback survey (coming soon): For now, feel free to email me at Gmail using my GitHub username.
 
 ## Microsoft .NET community support
-- .NET Tech Community Forums for all .NET developer topics & discussions: https://techcommunity.microsoft.com/t5/net/ct-p/dotnet
-- Q&A for .NET: https://docs.microsoft.com/en-us/answers/products/dotnet
+- .NET Developer Community: https://dotnet.microsoft.com/platform/community
+- .NET Tech Community Forums for topic discussions: https://techcommunity.microsoft.com/t5/net/ct-p/dotnet
+- Q&A for .NET to get your questions answered: https://docs.microsoft.com/en-us/answers/products/dotnet
 - Technical questions about the C# programming language: https://docs.microsoft.com/en-us/answers/topics/dotnet-csharp.html
 
 ## Interviews with me
