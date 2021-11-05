@@ -6,10 +6,10 @@ Published on Tuesday, November 9, 2021. Order today from [Packt](https://www.pac
 
 ## Code solutions for Visual Studio 2022 and Visual Studio Code
 
-Visual Studio 2022 and Visual Studio Code use different files to group projects so I have separated their solution code:
+If you have Visual Studio 2022 for Windows and Visual Studio Code and its C# extension installed on the same computer, the build process can sometimes conflict. This is because Visual Studio has its own non-standard build server that is different from the standard build server used by .NET SDK. Visual Studio 2022 and Visual Studio Code also use different file types to group projects. So I have duplicated and separated solution code for each product:
 
-- Visual Studio 2022 for Windows solutions for each chapter: [/vs4win](/vs4win)
-- Visual Studio Code solutions for each chapter: [/vscode](/vscode)
+- [/vs4win](/vs4win): Visual Studio 2022 for Windows solution files and projects for each chapter
+- [/vscode](/vscode): Visual Studio Code workspace files and projects for each chapter
 
 ## [Bonus content](9781801077361_Bonus_Content.pdf)
 Three chapters and the appendix available to [download](9781801077361_Bonus_Content.pdf) as a PDF:
