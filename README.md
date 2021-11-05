@@ -1,6 +1,8 @@
-# Repository for the Packt Publishing book
-
 [![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/markjprice/cs10dotnet6)
+
+# C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
+
+Published on Tuesday, November 9, 2021. Order today from [Packt](https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development-sixth-edition/9781801077361), [Amazon.com](https://www.amazon.com/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/), [Amazon.co.uk](https://www.amazon.co.uk/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/), [Amazon.com.au](https://www.amazon.com.au/10-NET-Cross-Platform-Development-websites-ebook/dp/B09JV37DM6/), and all good book stores. My author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
 
 ## Code solutions for Visual Studio 2022 and Visual Studio Code
 
@@ -16,28 +18,20 @@ Three chapters and the appendix available to [download](9781801077361_Bonus_Cont
 - Chapter 20, Protecting Your Data and Applications
 - Appendix A, Answers to the Test Your Knowledge Questions
 
-## C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
-
-To be published on Tuesday, November 9, 2021. Pre-order today!
-- [Packt](https://www.packtpub.com/product/c-10-and-net-6-modern-cross-platform-development-sixth-edition/9781801077361)
-- [Amazon.com](https://www.amazon.com/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/)
-- [Amazon.co.uk](https://www.amazon.co.uk/10-NET-Cross-Platform-Development-websites-dp-1801077363/dp/1801077363/)
-- [Amazon.com.au](https://www.amazon.com.au/10-NET-Cross-Platform-Development-websites-ebook/dp/B09JV37DM6/)
-
-Author page on Amazon: https://www.amazon.com/Mark-J-Price/e/B071DW3QGN/ 
+Supplementary print book materials available to download:
+- Color images of the screenshots/diagrams used in this book (coming November 2021)
 
 ## Important
-Corrections for typos and other mistakes, and improvements like refactoring code.
+Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
 - [Book Links](book-links.md)
 - [Improvements & Errata - list of corrections](errata.md)
 - [Online step-by-step instructions for common code editors](docs/README.md)
-- General feedback survey (coming soon): comment box and star rating. For now, feel free to email me at Gmail using my GitHub username.
-- Detailed feedback survey (coming soon): 10 questions; 3 minutes.
+- Feedback survey (coming soon): For now, feel free to email me at Gmail using my GitHub username.
 
-## Online materials
-Supplementary book materials available to download as PDFs: 
-- Color images of the screenshots/diagrams used in this book (coming November 2021)
-- The [cs9dotnet5-extras](https://github.com/markjprice/cs9dotnet5-extras) repository contains articles that support the book, for example, instructions for using a Raspberry Pi to complete the coding tasks in the book.
+## Microsoft .NET community support
+- .NET Tech Community Forums for all .NET developer topics & discussions: https://techcommunity.microsoft.com/t5/net/ct-p/dotnet
+- Q&A for .NET: https://docs.microsoft.com/en-us/answers/products/dotnet
+- Technical questions about the C# programming language: https://docs.microsoft.com/en-us/answers/topics/dotnet-csharp.html
 
 ## Interviews with me
 Podcast interviews with me:
