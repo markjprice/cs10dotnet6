@@ -1,0 +1,163 @@
+#!markdown
+
+# Chapter 20 - Protecting Your Data and Applications
+- Encrypting and decrypting data
+- Hashing data
+- Signing data
+- Generating random numbers
+- Authenticating and authorizing users
+
+#!markdown
+
+# Encrypting and decrypting data
+
+#!markdown
+
+## Encrypting symmetrically with AES
+
+#!csharp
+
+using System.Diagnostics;
+using System.IO;
+using System.Security.Cryptography;
+using System.Security.Principal;
+using System.Text;
+using System.Xml.Linq;
+
+using static System.Console;
+using static System.Convert;
+
+
+public static class Protector
+{
+  // salt size must be at least 8 bytes, we will use 16 bytes
+  private static readonly byte[] salt =
+    Encoding.Unicode.GetBytes("7BANANAS");
+  
+  // iterations should be high enough to take at least 100ms to
+  // generate a Key and IV on the target machine. 150,000 iterations 
+  // takes 139ms on my 11th Gen Intel Core i7-1165G7 @ 2.80GHz. 
+  private static readonly int iterations = 150_000;
+
+  public static string Encrypt(
+    string plainText, string password)
+  {
+    byte[] encryptedBytes;
+    byte[] plainBytes = Encoding.Unicode.GetBytes(plainText);
+
+    using (Aes aes = Aes.Create()) // abstract class factory method 
+    {
+      // record how long it takes to generate the Key and IV
+      Stopwatch timer = Stopwatch.StartNew();
+    
+      using (Rfc2898DeriveBytes pbkdf2 = new(
+        password, salt, iterations))
+      {
+        aes.Key = pbkdf2.GetBytes(32); // set a 256-bit key 
+        aes.IV = pbkdf2.GetBytes(16); // set a 128-bit IV
+      }
+
+      timer.Stop();
+      
+      WriteLine("{0:N0} milliseconds to generate Key and IV using {1:N0} iterations.",
+        arg0: timer.ElapsedMilliseconds,
+        arg1: iterations);
+
+      using (MemoryStream ms = new())
+      {
+        using (ICryptoTransform transformer = aes.CreateEncryptor())
+        {
+          using (CryptoStream cs = new(
+            ms, transformer, CryptoStreamMode.Write))
+          {
+            cs.Write(plainBytes, 0, plainBytes.Length);
+          } 
+        }
+        encryptedBytes = ms.ToArray();
+      }
+    }
+    return ToBase64String(encryptedBytes);
+  }
+
+  public static string Decrypt(
+    string cipherText, string password)
+  {
+    byte[] plainBytes;
+    byte[] cryptoBytes = FromBase64String(cipherText);
+  
+    using (Aes aes = Aes.Create())
+    {
+      using (Rfc2898DeriveBytes pbkdf2 = new(
+        password, salt, iterations))
+      {
+        aes.Key = pbkdf2.GetBytes(32);
+        aes.IV = pbkdf2.GetBytes(16);
+      }
+      
+      using (MemoryStream ms = new())
+      {
+        using (ICryptoTransform transformer = aes.CreateDecryptor())
+        {
+          using (CryptoStream cs = new(
+            ms, transformer, CryptoStreamMode.Write))
+          {
+            cs.Write(cryptoBytes, 0, cryptoBytes.Length);
+          }
+        }
+        plainBytes = ms.ToArray();
+      }
+    }
+    return Encoding.Unicode.GetString(plainBytes);
+  }
+}
+
+#!csharp
+
+#nullable enable
+
+//Write("Enter a message that you want to encrypt: ");
+string? message = "Hello Bob"; // ReadLine();
+
+//Write("Enter a password: ");
+string? password = "secret"; // ReadLine();
+
+if ((password is null) || (message is null))
+{
+  WriteLine("Message or password cannot be null.");
+  return; 
+}
+
+string cipherText = Protector.Encrypt(message, password);
+
+WriteLine($"Encrypted text: {cipherText}");
+
+//Write("Enter the password: ");
+string? password2Decrypt = "123456"; // ReadLine();
+
+if (password2Decrypt is null)
+{
+  WriteLine("Password to decrypt cannot be null.");
+  return; 
+}
+
+try
+{
+  string clearText = Protector.Decrypt(cipherText, password2Decrypt);
+  WriteLine($"Decrypted text: {clearText}");
+}
+catch (CryptographicException ex)
+{
+  WriteLine("{0}\nMore details: {1}",
+    arg0: "You entered the wrong password!",
+    arg1: ex.Message);
+}
+catch (Exception ex)
+{
+  WriteLine("Non-cryptographic exception: {0}, {1}",
+    arg0: ex.GetType().Name,
+    arg1: ex.Message);
+}
+
+#!markdown
+
+# Hashing data

@@ -1,0 +1,206 @@
+#!markdown
+
+# Chapter 11 - Querying and Manipulating Data Using LINQ
+- Writing LINQ expressions
+- Working with sets using LINQ
+- Using LINQ with EF Core
+- Sweetening LINQ syntax with syntactic sugar
+- Using multiple threads with parallel LINQ
+- Creating your own LINQ extension methods
+- Working with LINQ to XML
+
+#!markdown
+
+# Writing LINQ expressions
+
+#!markdown
+
+## Understanding deferred execution
+
+#!csharp
+
+using static System.Console;
+
+#!csharp
+
+// a string array is a sequence that implements IEnumerable<string>
+string[] names = new[] { "Michael", "Pam", "Jim", "Dwight",
+  "Angela", "Kevin", "Toby", "Creed" };
+
+WriteLine("Deferred execution");
+
+// Question: Which names end with an M?
+// (written using a LINQ extension method)
+var query1 = names.Where(name => name.EndsWith("m"));
+
+// Question: Which names end with an M?
+// (written using LINQ query comprehension syntax)
+var query2 = from name in names where name.EndsWith("m") select name;
+
+#!csharp
+
+// Answer returned as an array of strings containing Pam and Jim
+string[] result1 = query1.ToArray();
+
+// Answer returned as a list of strings containing Pam and Jim
+List<string> result2 = query2.ToList();
+
+// Answer returned as we enumerate over the results
+foreach (string name in query1)
+{
+  WriteLine(name); // outputs Pam
+  //names[2] = "Jimmy"; // change Jim to Jimmy
+  // on the second iteration Jimmy does not end with an M
+}
+
+#!markdown
+
+## Filtering entities with Where
+
+#!csharp
+
+static bool NameLongerThanFour(string name)
+{
+  return name.Length > 4;
+}
+
+#!csharp
+
+WriteLine("Writing queries");
+
+// var query = names.Where(
+//   new Func<string, bool>(NameLongerThanFour));
+
+// var query = names.Where(NameLongerThanFour);
+
+IOrderedEnumerable<string> query = names
+  .Where(name => name.Length > 4)
+  .OrderBy(name => name.Length)
+  .ThenBy(name => name);
+
+foreach (string item in query)
+{
+  WriteLine(item);
+}
+
+#!markdown
+
+## Filtering by type
+
+#!csharp
+
+WriteLine("Filtering by type");
+
+List<Exception> exceptions = new()
+{
+  new ArgumentException(),
+  new SystemException(),
+  new IndexOutOfRangeException(),
+  new InvalidOperationException(),
+  new NullReferenceException(),
+  new InvalidCastException(),
+  new OverflowException(),
+  new DivideByZeroException(),
+  new ApplicationException()
+};
+
+#!csharp
+
+IEnumerable<ArithmeticException> arithmeticExceptionsQuery =
+  exceptions.OfType<ArithmeticException>();
+
+foreach (ArithmeticException exception in arithmeticExceptionsQuery)
+{
+  WriteLine(exception);
+}
+
+#!markdown
+
+## Working with sets and bags using LINQ
+
+#!csharp
+
+static void Output(IEnumerable<string> cohort, string description = "")
+{
+  if (!string.IsNullOrEmpty(description))
+  {
+    WriteLine(description);
+  }
+  Write(" ");
+  WriteLine(string.Join(", ", cohort.ToArray()));
+  WriteLine();
+}
+
+#!csharp
+
+string[] cohort1 = new[]
+  { "Rachel", "Gareth", "Jonathan", "George" };
+string[] cohort2 = new[]
+  { "Jack", "Stephen", "Daniel", "Jack", "Jared" };
+string[] cohort3 = new[]
+  { "Declan", "Jack", "Jack", "Jasmine", "Conor" };
+Output(cohort1, "Cohort 1");
+Output(cohort2, "Cohort 2");
+Output(cohort3, "Cohort 3");
+Output(cohort2.Distinct(), "cohort2.Distinct()");
+/* DistinctBy is only available in .NET 6 and later
+Output(cohort2.DistinctBy(name => name.Substring(0, 2)),
+  "cohort2.DistinctBy(name => name.Substring(0, 2)):");
+*/
+Output(cohort2.Union(cohort3), "cohort2.Union(cohort3)");
+Output(cohort2.Concat(cohort3), "cohort2.Concat(cohort3)");
+Output(cohort2.Intersect(cohort3), "cohort2.Intersect(cohort3)");
+Output(cohort2.Except(cohort3), "cohort2.Except(cohort3)");
+Output(cohort1.Zip(cohort2,(c1, c2) => $"{c1} matched with {c2}"),
+  "cohort1.Zip(cohort2)");
+
+#!markdown
+
+# Using LINQ with EF Core
+
+.NET Interactive Notebooks for SQL Server does not yet support custom EF Core models.
+
+#!markdown
+
+# Using multiple threads with parallel LINQ
+
+To see it in action, we will start with some code that only uses a single thread to calculate Fibonacci numbers for 45 integers.
+
+#!csharp
+
+using System.Diagnostics;
+
+Stopwatch watch = new();
+
+//Write("Press ENTER to start. ");
+//ReadLine();
+watch.Start();
+
+int max = 45;
+
+IEnumerable<int> numbers = Enumerable.Range(start: 1, count: max);
+
+WriteLine($"Calculating Fibonacci sequence up to {max}. Please wait...");
+
+int[] fibonacciNumbers = numbers.AsParallel()
+  .Select(number => Fibonacci(number))
+  .OrderBy(number => number)
+  .ToArray();
+
+watch.Stop();
+WriteLine("{0:#,##0} elapsed milliseconds.",
+  arg0: watch.ElapsedMilliseconds);
+
+Write("Results:");
+foreach (int number in fibonacciNumbers)
+{
+  Write($" {number}");
+}
+
+static int Fibonacci(int term) =>
+  term switch
+  {
+    1 => 0,
+    2 => 1,
+    _ => Fibonacci(term - 1) + Fibonacci(term - 2)
+  };

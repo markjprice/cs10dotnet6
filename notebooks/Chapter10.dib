@@ -13,12 +13,45 @@
 
 #!markdown
 
-# Defining the Northwind database context class
+# Setting up EF Core
+
+[.NET Interactive with SQL](https://devblogs.microsoft.com/dotnet/net-interactive-with-sql-net-notebooks-in-visual-studio-code/)
+
+#!csharp
+
+#r "nuget:Microsoft.DotNet.Interactive.SqlServer,1.0.0-beta.21553.5"
+
+#!sql
+
+#!connect mssql -h
+
+#!sql
+
+#!connect mssql --kernel-name Northwind "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;MultipleActiveResultSets=true;"
+
+#!sql
+
+#!sql-Northwind
+SELECT * FROM Categories
+
+#!sql
+
+#!connect mssql --create-dbcontext --kernel-name Northwind "Data Source=.;Initial Catalog=Northwind;Integrated Security=true;MultipleActiveResultSets=true;"
+
+#!markdown
+
+## Choosing an EF Core database provider
+
+Add package references to the EF Core data provider for both SQL Server and SQLite.
 
 #!csharp
 
 #r "nuget:Microsoft.EntityFrameworkCore.Sqlite,5.0.11"
 #r "nuget:Microsoft.EntityFrameworkCore.SqlServer,5.0.11"
+
+#!markdown
+
+Define a constant to switch between providers.
 
 #!csharp
 
@@ -30,14 +63,18 @@ public class ProjectConstants
 #!csharp
 
 using static System.Console;
-using System.IO;
 
 #!csharp
 
 WriteLine($"Using {ProjectConstants.DatabaseProvider} database provider.");
 
+#!markdown
+
+## Defining the Northwind database context class
+
 #!csharp
 
+using System.IO;
 using Microsoft.EntityFrameworkCore; // DbContext, DbContextOptionsBuilder
 
 #!csharp
