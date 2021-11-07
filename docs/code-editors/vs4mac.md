@@ -1,6 +1,6 @@
-# Using Visual Studio for Mac
+# Using Visual Studio 2022 for Mac
 
-In this article, I provide detailed step-by-step instuctions for using Visual Studio for Mac for topics like creating a solution with multiple projects and using debugging tools.
+In this article, I provide detailed step-by-step instuctions for using Visual Studio 2022 for Mac for topics like creating a solution with multiple projects and using debugging tools.
 
 # Chapter 1
 
@@ -23,11 +23,11 @@ If you have not already installed Visual Studio 2022 for Mac, let's do so now:
 8.	The first time that you run Visual Studio, you will be prompted to configure your environment. For Development Settings, choose Visual C#. For the color theme, I chose Blue, but you can choose whatever tickles your fancy.
 9.	If you want to customize your keyboard shortcuts, navigate to Tools | Options…, and then select the Keyboard section.
 
-## Building console apps using Visual Studio 2022
+## Building console apps using Visual Studio 2022 for Mac
 
 The goal of this section is to showcase how to build a console app using Visual Studio 2022 for Mac. 
 
-### Managing multiple projects using Visual Studio 2022
+### Managing multiple projects using Visual Studio 2022 for Mac
 
 Visual Studio 2022 has a concept named a solution that allows you to open and manage multiple projects simultaneously. We will use a solution to manage the two projects that you will create in this chapter.
 
@@ -58,13 +58,14 @@ The next task is to compile and run the code.
  
 Figure 1.7: Running the console app on Windows
 3.	Press any key to close the console window and return to Visual Studio.
-4.	Select the HelloCS project and then in the Solution Explorer toolbar, toggle on the Show All Files button, and note the compiler-generated bin and obj folders are visible, as shown in Figure 1.8:
+4.	Select the HelloCS project and then in the Solution Explorer toolbar, toggle on the Show All Files button, and note the compiler-generated bin and obj folders are visible, as shown in *Figure 1.8*:
  
  Figure 1.8: Showing the compiler-generated folders and files
 Understanding the compiler-generated folders and files
 Two compiler-generated folders were created, named obj and bin. You do not need to look inside these folders or understand their files yet. Just be aware that the compiler needs to create temporary folders and files to do its work. You could delete these folders and their files, and they can be recreated later. Developers often do this to "clean" a project. Visual Studio even has a command on the Build menu named Clean Solution that deletes some of these temporary files for you. The equivalent command with Visual Studio Code is: dotnet clean
 •	The obj folder contains one compiled object file for each source code file. These objects haven't been linked together into a final executable yet. 
-•	The bin folder contains the binary executable for the application or class library. We will look at this in more detail in Chapter 7, Packaging and Distributing .NET Types.
+•	The bin folder contains the binary executable for the application or class library. We will look at this in more detail in *Chapter 7, Packaging and Distributing .NET Types*.
+
 ### Writing top-level programs
 
 You might be thinking that was a lot of code just to output Hello, C#! 
