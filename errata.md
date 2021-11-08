@@ -2,11 +2,30 @@
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
+
+
 ## Page 28 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
 
 ![Project template Console Application is now Console App](console-app-template.png)
+
+## Page 35 - Writing code using Visual Studio Code
+
+In Step 14, I say that the first time you open a code file, Visual Studio Code may have to download and install C# dependencies and so on. This will not happen if you do not trust the workspace. 
+
+At the top of the window, in the blue bar, click **Manage**, as shown in the following screenshot:
+
+![Restricted mode blue bar](restricted-mode.png)
+
+
+Click the **Trust** button, as shown in the following screenshot:
+
+![Restricted mode](restricted-mode-2.png)
+
+You will then trust the workspace and extensions will activate as described in the book. 
+
+![A trusted workspace allows extensions to run](trust-workspace.png)
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
