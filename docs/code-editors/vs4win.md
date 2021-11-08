@@ -20,30 +20,23 @@ If you have not already installed Visual Studio 2022 for Windows, let's do so no
 - Mobile development with .NET
 -	.NET desktop development
 
-4. On the **Individual components** tab, in the .NET section, select the following, as shown in *Figure 1.2*:
-- .NET 5.0 Runtime
-- .NET WebAssembly build tools
-
-5. In the **Code tools** section, select the following, as shown in *Figure 1.2*:
+4. On the **Individual components** tab, in the **Code tools** section, select the following, as shown in *Figure 1.2*:
 - Class Designer
 - Git for Windows
 - PreEmptive Protection - Dotfuscator
 
-6. In the **Compilers, build tools, and runtimes** section, select the following, as shown in *Figure 1.2*:
-- .NET Compiler Platform SDK
-
 ![Selecting workloads and individual components](B17442_01_02_vs2022.png)
 *Figure 1.2: Selecting workloads and individual components*
 
-7.	Click the **Install** button, and then wait for the installer to acquire the selected software and install it.
-8.	When the installation is complete, click **Launch**, as shown in *Figure 1.3*:
+5.	Click the **Install** button, and then wait for the installer to acquire the selected software and install it.
+6.	When the installation is complete, click **Launch**, as shown in *Figure 1.3*:
 
 ![Click the Launch button](B17442_01_03_vs2022.png)
 *Figure 1.3: Click the Launch button*
 
-9.	The first time that you run Visual Studio 2022, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/
-10.	The first time that you run Visual Studio 2022, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Blue**, but you can choose whatever tickles your fancy.
-11.	If you want to customize your keyboard shortcuts, navigate to **Tools** | **Options...**, and then select the **Keyboard** section.
+7.	The first time that you run Visual Studio 2022, you will be prompted to sign in. If you have a Microsoft account, you can use that account. If you don't, then register for a new one at the following link: https://signup.live.com/
+8.	The first time that you run Visual Studio 2022, you will be prompted to configure your environment. For **Development Settings**, choose **Visual C#**. For the color theme, I chose **Blue**, but you can choose whatever tickles your fancy.
+9.	If you want to customize your keyboard shortcuts, navigate to **Tools** | **Options...**, and then select the **Keyboard** section.
 
 ## Building console apps using Visual Studio 2022
 
