@@ -21,7 +21,7 @@ Three chapters and the appendix available to [download](9781801077361_Bonus_Cont
 - Appendix A, Answers to the Test Your Knowledge Questions
 
 Supplementary print book materials available to download:
-- Color images of the screenshots/diagrams used in this book (coming November 2021)
+- [Color images](https://static.packt-cdn.com/downloads/9781801077361_ColorImages.pdf) of the screenshots/diagrams used in this book
 
 ## Important
 Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
