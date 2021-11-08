@@ -1,5 +1,7 @@
 ![19 Building Mobile and Desktop Apps Using .NET MAUI](images/chapter-19-title.png)
 
+## November 8, 2021 - .NET MAUI Preview 10 released today. I hope to update this chapter for Preview 10 as soon as possible.
+
 This chapter is about learning how to make graphical user interface (GUI) apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using .NET MAUI (Multi-platform App User Interface). 
 
 You will also learn how to build hybrid web/native apps using .NET MAUI Blazor apps and the BlazorWebView component. 

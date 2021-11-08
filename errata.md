@@ -8,7 +8,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
 
-![Project template Console Application is now Console App](console-app-template.png)
+![Project template Console Application is now Console App](images/console-app-template.png)
 
 ## Page 35 - Writing code using Visual Studio Code
 
@@ -16,16 +16,16 @@ In Step 14, I say that the first time you open a code file, Visual Studio Code m
 
 At the top of the window, in the blue bar, click **Manage**, as shown in the following screenshot:
 
-![Restricted mode blue bar](restricted-mode.png)
+![Restricted mode blue bar](images/restricted-mode.png)
 
 
 Click the **Trust** button, as shown in the following screenshot:
 
-![Restricted mode](restricted-mode-2.png)
+![Restricted mode](images/restricted-mode-2.png)
 
 You will then trust the workspace and extensions will activate as described in the book. 
 
-![A trusted workspace allows extensions to run](trust-workspace.png)
+![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
