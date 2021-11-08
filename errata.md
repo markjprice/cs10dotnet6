@@ -1,6 +1,12 @@
 # Errata, Improvements and Troubleshooting
 
-If you find any mistakes in the sixth edition, C# 10 and .NET 6 - Modern Cross-Platform Development, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
+If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
+
+## Page 28 - Writing code using Visual Studio 2022
+
+In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
+
+![Project template Console Application is now Console App](console-app-template.png)
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
