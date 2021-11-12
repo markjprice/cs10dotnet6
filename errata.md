@@ -27,6 +27,29 @@ You will then trust the workspace and extensions will activate as described in t
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
+## Page 87 - Passing arguments to a console app
+
+In Step 5, I say, "If you are using Visual Studio, then navigate to **Project** | **Arguments Properties**, select the **Debug** tab, and in the **Application arguments** box, enter some arguments". 
+
+Microsoft changed the user interface of Visual Studio 2022 after that step was written. 
+
+It should now say, "If you are using Visual Studio, then navigate to **Project** | **Arguments Properties**, select 
+the **Debug** tab, click **Open debug launch profiles UI**, and in the **Command line arguments** box, enter some arguments", as shown in the following screenshot:
+
+![Updated UI for setting arguments in Visual Studio 2022](images/erratum-page-87a.png)
+
+In *Figure 2.6*, it is difficult to see the hyphen in the second argument in the PDF edition (shown in the screenshot below) and impossible to see it in the Kindle edition. 
+
+In Step 5, it would have been clearer if I had written out the arguments as I did in Step 6 instead of relying on Amazon's image processing to clearly show the hyphen! 
+
+For example, `firstarg second-arg third:arg "fourth arg"`. 
+
+![Barely visible hyphen in second-arg](images/erratum-page-87b.png)
+
+## Page 92 - Exercise 2.3 – Practice number sizes and ranges
+
+In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
+
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
 
