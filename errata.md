@@ -4,13 +4,13 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 
 
-## Page 28 - Writing code using Visual Studio 2022
+## Page 18 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
 
 ![Project template Console Application is now Console App](images/console-app-template.png)
 
-## Page 35 - Writing code using Visual Studio Code
+## Page 25 - Writing code using Visual Studio Code
 
 In Step 14, I say that the first time you open a code file, Visual Studio Code may have to download and install C# dependencies and so on. This will not happen if you do not trust the workspace. 
 
