@@ -35,6 +35,7 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 - .NET Tech Community Forums for topic discussions: https://techcommunity.microsoft.com/t5/net/ct-p/dotnet
 - Q&A for .NET to get your questions answered: https://docs.microsoft.com/en-us/answers/products/dotnet
 - Technical questions about the C# programming language: https://docs.microsoft.com/en-us/answers/topics/dotnet-csharp.html
+- If you'd like to apply to be a reviewer: https://authors.packtpub.com/reviewers/
 
 ## Interviews with me
 Podcast interviews with me:
