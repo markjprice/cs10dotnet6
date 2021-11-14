@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Import Remove="System" />
+    <Using Remove="System" />
   </ItemGroup>
 
   <ItemGroup>
