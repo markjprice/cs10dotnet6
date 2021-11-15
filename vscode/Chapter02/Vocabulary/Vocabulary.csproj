@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Import Remove="System.Threading" />
-    <Import Include="System.Numerics" />
+    <Using Remove="System.Threading" />
+    <Using Include="System.Numerics" />
   </ItemGroup>
 
 </Project>
