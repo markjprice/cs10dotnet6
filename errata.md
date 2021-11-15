@@ -2,7 +2,9 @@
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
+## Page 8 - Installing other extensions
 
+In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
 
 ## Page 18 - Writing code using Visual Studio 2022
 
