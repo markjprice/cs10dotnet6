@@ -56,9 +56,19 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 
 In Step 8, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
 
+## Page 183 - Importing a namespace to use a type
 
-
-
+In Step 3, I wrote a comment with the older C# syntax and a statement with the newer syntax for instantiating a new object, as shown in the following code:
+```
+// var bob = new Person(); // C# 1.0 or later
+Person bob = new(); // C# 9.0 or later
+```
+The `var` keyword was not introduced until C# 3.0, so I should have written the following:
+```
+// Person bob = new Person(); // C# 1.0 or later
+// var bob = new Person(); // C# 3.0 or later
+Person bob = new(); // C# 9.0 or later
+```
 
 
 <!---
