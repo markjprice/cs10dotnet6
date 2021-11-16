@@ -52,6 +52,15 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
 
+## Page 179 - Understanding the call stack
+
+In Step 8, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
+
+
+
+
+
+
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
 
