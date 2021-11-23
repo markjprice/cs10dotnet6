@@ -69,7 +69,9 @@ The `var` keyword was not introduced until C# 3.0, so I should have written the 
 // var bob = new Person(); // C# 3.0 or later
 Person bob = new(); // C# 9.0 or later
 ```
+## Page 192 - Making a field constant
 
+In Step 1, the string literal should be `"Homo Sapiens"`. In Step 3, the output should be `"Homo Sapiens"`.
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
