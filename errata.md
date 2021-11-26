@@ -29,6 +29,17 @@ You will then trust the workspace and extensions will activate as described in t
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
+## Page 82 - Formatting using interpolated strings
+
+In the last code block in this section, the string is missing the `$` prefix that makes it interpolated, as shown in the following code:
+```
+private const string fullname = "{firstname} {lastname}";
+```
+The code should be as follows:
+```
+private const string fullname = $"{firstname} {lastname}";
+```
+
 ## Page 87 - Passing arguments to a console app
 
 In Step 5, I say, "If you are using Visual Studio, then navigate to **Project** | **Arguments Properties**, select the **Debug** tab, and in the **Application arguments** box, enter some arguments". 
