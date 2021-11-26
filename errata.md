@@ -65,11 +65,15 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 
 ## Page 140 - Documenting functions with XML comments
 
-In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions declared inside the hidden automatically generated `$<Main>` method, and these do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. 
+First, it is worth emphasizing that this feature is primarily designed to be used with a tool that converts the comments into documentation. The tooltips that appear while entering code or hovering over the function name are a secondary feature. Understanding this will help you understand the limitation involved with this errata item.
 
-To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class, as shown in the following code:
+Second, in Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed in Preview 7 to use top-level statements and an automatically generated `Program` class, the functions you write in the tasks became implemented as local functions declared inside the hidden automatically generated `$<Main>` method. Local functions do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. Sadly, this also means no tooltip, which would still be useful, but neither Visual Studio 2022 nor Visual Studio Code recognize that.
+
+To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class by moving the function to the bottom of the `Program.cs` file and wrapping it in a partial `Program` class, as shown in the following code:
 
 ```
+// This must be at the bottom of the Program.cs file to avoid compile errors.
+// Or you could create a separate file, perhaps named Program.CardinalToOrdinal.cs
 partial class Program
 {
     /// <summary>
