@@ -65,9 +65,9 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 
 ## Page 140 - Documenting functions with XML comments
 
-In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions instead of methods of a class, and these do not seem to support XML comments. 
+In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions declared inside the hidden automatically generated `$<Main>` method, and these do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. 
 
-To enable XML comments for the `CardinalToOrdinal` function, we must define it inside a class. We can add the function to the automatically generated partial `Program` class, as shown in the following code:
+To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class, as shown in the following code:
 
 ```
 partial class Program
