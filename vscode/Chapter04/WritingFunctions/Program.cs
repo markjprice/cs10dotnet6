@@ -5,7 +5,7 @@
 // decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR"); 
 // WriteLine($"You must pay {taxToPay} in tax.");
 
-// RunCardinalToOrdinal();
+RunCardinalToOrdinal();
 // RunFactorial();
 // RunFibImperative();
 // RunFibFunctional();
@@ -65,33 +65,6 @@ static decimal CalculateTax(
   }
 
   return amount * rate;
-}
-
-/// <summary>
-/// Pass a 32-bit integer and it will be converted into its ordinal equivalent.
-/// </summary>
-/// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
-/// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
-static string CardinalToOrdinal(int number)
-{
-  switch (number)
-  {
-    case 11: // special cases for 11th to 13th
-    case 12:
-    case 13:
-      return $"{number}th";
-    default:
-      int lastDigit = number % 10;
-
-      string suffix = lastDigit switch
-      {
-        1 => "st",
-        2 => "nd",
-        3 => "rd",
-        _ => "th"
-      };
-      return $"{number}{suffix}";
-  }
 }
 
 static void RunCardinalToOrdinal()
@@ -179,4 +152,34 @@ static void RunFibFunctional()
       arg0: CardinalToOrdinal(i),
       arg1: FibFunctional(term: i));
   }
+}
+
+partial class Program
+{
+    /// <summary>
+    /// Pass a 32-bit integer and it will be converted into its ordinal equivalent.
+    /// </summary>
+    /// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
+    /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
+    static string CardinalToOrdinal(int number)
+    {
+        switch (number)
+        {
+            case 11: // special cases for 11th to 13th
+            case 12:
+            case 13:
+                return $"{number}th";
+            default:
+                int lastDigit = number % 10;
+
+                string suffix = lastDigit switch
+                {
+                    1 => "st",
+                    2 => "nd",
+                    3 => "rd",
+                    _ => "th"
+                };
+                return $"{number}{suffix}";
+        }
+    }
 }
