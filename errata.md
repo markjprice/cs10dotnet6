@@ -63,6 +63,43 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
 
+## Page 140 - Documenting functions with XML comments
+
+In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions instead of methods of a class, and these do not seem to support XML comments. 
+
+To enable XML comments for the `CardinalToOrdinal` function, we must define it inside a class. We can add the function to the automatically generated partial `Program` class, as shown in the following code:
+
+```
+partial class Program
+{
+    /// <summary>
+    /// Pass a 32-bit integer and it will be converted into its ordinal equivalent.
+    /// </summary>
+    /// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
+    /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
+    static string CardinalToOrdinal(int number)
+    {
+        switch (number)
+        {
+            case 11: // special cases for 11th to 13th
+            case 12:
+            case 13:
+                return $"{number}th";
+            default:
+                int lastDigit = number % 10;
+                string suffix = lastDigit switch
+                {
+                    1 => "st",
+                    2 => "nd",
+                    3 => "rd",
+                    _ => "th"
+                };
+                return $"{number}{suffix}";
+        }
+    }
+}
+```
+
 ## Page 179 - Understanding the call stack
 
 In Step 8, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
