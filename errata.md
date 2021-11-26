@@ -29,6 +29,17 @@ You will then trust the workspace and extensions will activate as described in t
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
+## Page 82 - Formatting using interpolated strings
+
+In the last code block in this section, the string is missing the `$` prefix that makes it interpolated, as shown in the following code:
+```
+private const string fullname = "{firstname} {lastname}";
+```
+The code should be as follows:
+```
+private const string fullname = $"{firstname} {lastname}";
+```
+
 ## Page 87 - Passing arguments to a console app
 
 In Step 5, I say, "If you are using Visual Studio, then navigate to **Project** | **Arguments Properties**, select the **Debug** tab, and in the **Application arguments** box, enter some arguments". 
@@ -52,6 +63,43 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
 
+## Page 140 - Documenting functions with XML comments
+
+In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions declared inside the hidden automatically generated `$<Main>` method, and these do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. 
+
+To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class, as shown in the following code:
+
+```
+partial class Program
+{
+    /// <summary>
+    /// Pass a 32-bit integer and it will be converted into its ordinal equivalent.
+    /// </summary>
+    /// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
+    /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
+    static string CardinalToOrdinal(int number)
+    {
+        switch (number)
+        {
+            case 11: // special cases for 11th to 13th
+            case 12:
+            case 13:
+                return $"{number}th";
+            default:
+                int lastDigit = number % 10;
+                string suffix = lastDigit switch
+                {
+                    1 => "st",
+                    2 => "nd",
+                    3 => "rd",
+                    _ => "th"
+                };
+                return $"{number}{suffix}";
+        }
+    }
+}
+```
+
 ## Page 179 - Understanding the call stack
 
 In Step 8, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
@@ -69,7 +117,9 @@ The `var` keyword was not introduced until C# 3.0, so I should have written the 
 // var bob = new Person(); // C# 3.0 or later
 Person bob = new(); // C# 9.0 or later
 ```
+## Page 192 - Making a field constant
 
+In Step 1, the string literal should be `"Homo Sapiens"`. In Step 3, the output should be `"Homo Sapiens"`.
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code

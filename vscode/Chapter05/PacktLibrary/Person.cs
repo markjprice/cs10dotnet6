@@ -16,7 +16,7 @@ namespace Packt.Shared
     public List<Person> Children = new List<Person>();
 
     // constants
-    public const string Species = "Homo Sapien";
+    public const string Species = "Homo Sapiens";
 
     // read-only fields
     public readonly string HomePlanet = "Earth";
