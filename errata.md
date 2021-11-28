@@ -130,8 +130,7 @@ Person bob = new(); // C# 9.0 or later
 ## Page 192 - Making a field constant
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
-
-In Step 3, the output should be `"Bob Smith is a Homo Sapiens"`.
+In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
