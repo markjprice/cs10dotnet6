@@ -2,6 +2,12 @@
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
+## Page 7 - Downloading and installing Visual Studio Code
+
+At the time of writing on November 28, 2021, you must install .NET 5.0 SDK to use .NET Interactive Notebooks. Eventually, I expect .NET Interactive Notebooks to be updated to work with .NET 6.0 SDK and therefore support C# 10 language features. But it doesn't yet. You can check the current requirements for .NET Interactive Notebooks at the following link:
+
+https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode
+
 ## Page 8 - Installing other extensions
 
 In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
