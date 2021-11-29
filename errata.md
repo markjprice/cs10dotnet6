@@ -29,6 +29,17 @@ You will then trust the workspace and extensions will activate as described in t
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
+## Page 62 - Implicitly and globally importing namespaces
+
+After Step 9, I say that you can disable implicit usings by **removing the entry**, as shown in the following screenshot: 
+
+![Disabling implicit usings](images/erratum-page-62.png)
+
+It would have been clearer to say, "You can disable the implicitly imported namespaces feature for all SDKs by removing the `<ImplicitUsings>` element completely from the project file, or changing its value to `disable`, as shown in the following markup:"
+```
+<ImplicitUsings>disable</ImplicitUsings>
+```
+
 ## Page 82 - Formatting using interpolated strings
 
 In the last code block in this section, the string is missing the `$` prefix that makes it interpolated, as shown in the following code:
