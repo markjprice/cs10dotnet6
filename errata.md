@@ -2,6 +2,12 @@
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
+## Page 7 - Downloading and installing Visual Studio Code
+
+At the time of writing on November 28, 2021, you must install .NET 5.0 SDK to use .NET Interactive Notebooks. Eventually, I expect .NET Interactive Notebooks to be updated to work with .NET 6.0 SDK and therefore support C# 10 language features. But it doesn't yet. You can check the current requirements for .NET Interactive Notebooks at the following link:
+
+https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode
+
 ## Page 8 - Installing other extensions
 
 In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
@@ -76,11 +82,15 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 
 ## Page 140 - Documenting functions with XML comments
 
-In Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed to use top-level statements and an automatically generated `Program` class, the functions became implemented as local functions declared inside the hidden automatically generated `$<Main>` method, and these do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. 
+First, it is worth emphasizing that this feature is primarily designed to be used with a tool that converts the comments into documentation. The tooltips that appear while entering code or hovering over the function name are a secondary feature. Understanding this will help you understand the limitation involved with this errata item.
 
-To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class, as shown in the following code:
+Second, in Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed in Preview 7 to use top-level statements and an automatically generated `Program` class, the functions you write in the tasks became implemented as local functions declared inside the hidden automatically generated `$<Main>` method. Local functions do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. Sadly, this also means no tooltip, which would still be useful, but neither Visual Studio 2022 nor Visual Studio Code recognize that.
+
+To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class by moving the function to the bottom of the `Program.cs` file and wrapping it in a partial `Program` class, as shown in the following code:
 
 ```
+// This must be at the bottom of the Program.cs file to avoid compile errors.
+// Or you could create a separate file, perhaps named Program.CardinalToOrdinal.cs
 partial class Program
 {
     /// <summary>
@@ -111,9 +121,9 @@ partial class Program
 }
 ```
 
-## Page 179 - Understanding the call stack
+## Page 168 - Understanding the call stack
 
-In Step 8, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
+In Step 8, on page 170, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
 
 ## Page 183 - Importing a namespace to use a type
 
@@ -130,7 +140,8 @@ Person bob = new(); // C# 9.0 or later
 ```
 ## Page 192 - Making a field constant
 
-In Step 1, the string literal should be `"Homo Sapiens"`. In Step 3, the output should be `"Homo Sapiens"`.
+In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
+In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
