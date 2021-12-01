@@ -2,6 +2,25 @@
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, or if you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
+- [Errata, Improvements and Troubleshooting](#errata-improvements-and-troubleshooting)
+- [Print Book](#print-book)
+  - [Page 7 - Downloading and installing Visual Studio Code](#page-7---downloading-and-installing-visual-studio-code)
+  - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
+  - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
+  - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
+  - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
+  - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
+  - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
+  - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
+  - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+  - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
+  - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
+  - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
+- [Bonus Content](#bonus-content)
+  - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
+
+# Print Book
+
 ## Page 7 - Downloading and installing Visual Studio Code
 
 At the time of writing on November 28, 2021, you must install .NET 5.0 SDK to use .NET Interactive Notebooks. Eventually, I expect .NET Interactive Notebooks to be updated to work with .NET 6.0 SDK and therefore support C# 10 language features. But it doesn't yet. You can check the current requirements for .NET Interactive Notebooks at the following link:
@@ -142,6 +161,18 @@ Person bob = new(); // C# 9.0 or later
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
+
+# Bonus Content 
+
+## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
+
+Question 6 asked, "What are the three parts of a `for` statement and which of them are required?"
+
+Answer: The three parts of a `for` statement are the *initializer*, *condition*, and 
+*incrementer* expressions. The condition expression is required to evaluate to `true` or 
+`false`, but the other two are optional.
+
+But the conditional expression is NOT required to evaluate to `true` or `false`. Like the other two parts, it is optional. If it is missing then the `for` statement will loop forever. 
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
