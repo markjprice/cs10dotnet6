@@ -174,6 +174,11 @@ Answer: The three parts of a `for` statement are the *initializer*, *condition*,
 
 But the conditional expression is NOT required to evaluate to `true` or `false`. Like the other two parts, it is optional. If it is missing then the `for` statement will loop forever. 
 
+Question 8 asked, "Does the following statement compile? for ( ; true; ) ;"
+
+For the same reasons, the description in the answer should read, "Yes. The `for` statement does not require any of the three parts to be defined. The initializer, condition, and incrementer expressions are optional. Even if the `true` value was missing, this `for` statement will execute the empty `;` statement after the close brace, forever. It is an 
+example of an infinite loop."
+
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
 
