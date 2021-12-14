@@ -114,7 +114,7 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 
 I wrote, "Iteration statements repeat a block of statements either while a condition is true or for each item in a collection."
 
-This covers `while` and `foreach` but does not cover the `for` statement. A more inclusive sentence would be, "Iteration statements repeat a block of statements while a condition is `true`, while the conditional part of a `for` statement is `true`, or for each item in a collection."
+Some readers do not realize that the `for` statement does not iterate a specific number of times; it uses a while condition. But to make that clearer, a more inclusive sentence would be, "Iteration statements repeat a block of statements while a condition is `true`, or while the conditional part of a `for` statement is `true`, or for each item in a collection."
 
 ## Page 137 - Calculating factorials with recursion
 
