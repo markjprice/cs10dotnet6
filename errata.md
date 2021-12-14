@@ -31,6 +31,14 @@ https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-intera
 
 In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
 
+## Page 16 - Understanding .NET Standard
+
+I wrote. ".NET 6 has a single BCL and two CLRs: CoreCLR is optimized for server or desktop scenarios like websites and Windows desktop apps, and the Mono runtime is optimized for mobile and web browser apps that have limited resources."
+
+In August 2021, Stephen Toub (Partner Software Engineer, .NET) wrote the article, "Performance Improvements in .NET 6". It has a section about Blazor and mono where he wrote, "The runtime is itself compiled to WASM, downloaded to the browser, and used to execute the application and library code on which the app depends. I say “the runtime” here, but in reality there are actually multiple incarnations of a runtime for .NET. In .NET 6, all of the .NET core libraries for all of the .NET app models, whether it be console apps or ASP.NET Core or Blazor WASM or mobile apps, come from the same source in dotnet/runtime, but there are actually two runtime implementations in dotnet/runtime: “coreclr” and “mono”."
+
+Read more at the following link: https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-6/#blazor-and-mono
+
 ## Page 18 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
@@ -98,6 +106,40 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 ## Page 92 - Exercise 2.3 – Practice number sizes and ranges
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
+
+## Page 110 - Understanding iteration statements
+
+I wrote, "Iteration statements repeat a block of statements either while a condition is true or for each item in a collection."
+
+This covers `while` and `foreach` but does not cover the `for` statement. A more inclusive sentence would be, "Iteration statements repeat a block of statements while a condition is `true`, while the conditional part of a `for` statement is `true`, or for each item in a collection."
+
+## Page 137 - Calculating factorials with recursion
+
+The factorial function is defined for non-negative integers only i.e. for 0, 1, 2, 3, and so on, and it is defined as:
+```
+0!=1 
+
+n!=n×(n−1)!, for n∈{1,2,3,…}
+```
+So the implementation of the function in the book should be as shown in the following code: 
+
+```
+static int Factorial(int number)
+{
+  if (number < 0)
+  {
+    throw new ArgumentException("The factorial function is defined for non-negative integers only.");
+  }
+  else if ((number == 0) || (number == 1))
+  {
+    return 1;
+  }
+  else
+  {
+    return number * Factorial(number - 1);
+  }
+}
+```
 
 ## Page 140 - Documenting functions with XML comments
 
