@@ -131,11 +131,11 @@ static int Factorial(int number)
 {
   if (number < 0)
   {
-    throw new ArgumentException(
-      "The factorial function is defined for non-negative integers only.",
-      number, "number");
+     throw new ArgumentException(
+       message: "The factorial function is defined for non-negative integers only.", 
+       paramName: "number");
   }
-  else if ((number == 0) || (number == 1))
+  else if (number == 0)
   {
     return 1;
   }
