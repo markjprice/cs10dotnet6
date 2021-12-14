@@ -4,7 +4,6 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 - [Errata, Improvements and Troubleshooting](#errata-improvements-and-troubleshooting)
 - [Print Book](#print-book)
-  - [Page 7 - Downloading and installing Visual Studio Code](#page-7---downloading-and-installing-visual-studio-code)
   - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
   - [Page 16 - Understanding .NET Standard](#page-16---understanding-net-standard)
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
@@ -23,12 +22,6 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
 
 # Print Book
-
-## Page 7 - Downloading and installing Visual Studio Code
-
-At the time of writing on November 28, 2021, you must install .NET 5.0 SDK to use .NET Interactive Notebooks. Eventually, I expect .NET Interactive Notebooks to be updated to work with .NET 6.0 SDK and therefore support C# 10 language features. But it doesn't yet. You can check the current requirements for .NET Interactive Notebooks at the following link:
-
-https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode
 
 ## Page 8 - Installing other extensions
 
