@@ -18,6 +18,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
+  - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
 
@@ -49,7 +50,6 @@ At the top of the window, in the blue bar, click **Manage**, as shown in the fol
 
 ![Restricted mode blue bar](images/restricted-mode.png)
 
-
 Click the **Trust** button, as shown in the following screenshot:
 
 ![Restricted mode](images/restricted-mode-2.png)
@@ -65,18 +65,18 @@ After Step 9, I say that you can disable implicit usings by **removing the entry
 ![Disabling implicit usings](images/erratum-page-62.png)
 
 It would have been clearer to say, "You can disable the implicitly imported namespaces feature for all SDKs by removing the `<ImplicitUsings>` element completely from the project file, or changing its value to `disable`, as shown in the following markup:"
-```
+```xml
 <ImplicitUsings>disable</ImplicitUsings>
 ```
 
 ## Page 82 - Formatting using interpolated strings
 
 In the last code block in this section, the string is missing the `$` prefix that makes it interpolated, as shown in the following code:
-```
+```cs
 private const string fullname = "{firstname} {lastname}";
 ```
 The code should be as follows:
-```
+```cs
 private const string fullname = $"{firstname} {lastname}";
 ```
 
@@ -119,7 +119,7 @@ n!=n×(n−1)!, for n∈{1,2,3,…}
 ```
 So the implementation of the function in the book should be as shown in the following code: 
 
-```
+```cs
 static int Factorial(int number)
 {
   if (number < 0)
@@ -147,7 +147,7 @@ Second, in Step 4, I say that when calling the function you will see more detail
 
 To enable XML comments for the `CardinalToOrdinal` function, we must therefore define it inside a class. The easiest way to do this is to add the function to the automatically generated partial `Program` class by moving the function to the bottom of the `Program.cs` file and wrapping it in a partial `Program` class, as shown in the following code:
 
-```
+```cs
 // This must be at the bottom of the Program.cs file to avoid compile errors.
 // Or you could create a separate file, perhaps named Program.CardinalToOrdinal.cs
 partial class Program
@@ -187,12 +187,12 @@ In Step 8, on page 170, I say to run the console app. Unless you need to step th
 ## Page 183 - Importing a namespace to use a type
 
 In Step 3, I wrote a comment with the older C# syntax and a statement with the newer syntax for instantiating a new object, as shown in the following code:
-```
+```cs
 // var bob = new Person(); // C# 1.0 or later
 Person bob = new(); // C# 9.0 or later
 ```
 The `var` keyword was not introduced until C# 3.0, so I should have written the following:
-```
+```cs
 // Person bob = new Person(); // C# 1.0 or later
 // var bob = new Person(); // C# 3.0 or later
 Person bob = new(); // C# 9.0 or later
@@ -201,6 +201,22 @@ Person bob = new(); // C# 9.0 or later
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
+
+## Page 391 - Encoding strings as byte arrays
+
+In Step 4, you write code to detect numbers 1 to 5 entered on the keyboard to select between encodings. But the code only accepts numbers entered from the top row of the keyboard. To accept numbers entered on the number pad on an extended keyboard, the code needs to be modified, as shown in the following code:
+
+```cs
+Encoding encoder = number switch
+{
+  ConsoleKey.D1 or ConsoleKey.NumPad1 => Encoding.ASCII,
+  ConsoleKey.D2 or ConsoleKey.NumPad2 => Encoding.UTF7,
+  ConsoleKey.D3 or ConsoleKey.NumPad3 => Encoding.UTF8,
+  ConsoleKey.D4 or ConsoleKey.NumPad4 => Encoding.Unicode,
+  ConsoleKey.D5 or ConsoleKey.NumPad5 => Encoding.UTF32,
+  _                                   => Encoding.Default
+};
+```
 
 # Bonus Content 
 
