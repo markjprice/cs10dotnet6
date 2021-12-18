@@ -18,11 +18,11 @@ WriteLine();
 
 Encoding encoder = number switch
 {
-  ConsoleKey.D1 => Encoding.ASCII,
-  ConsoleKey.D2 => Encoding.UTF7,
-  ConsoleKey.D3 => Encoding.UTF8,
-  ConsoleKey.D4 => Encoding.Unicode,
-  ConsoleKey.D5 => Encoding.UTF32,
+  ConsoleKey.D1 or ConsoleKey.NumPad1 => Encoding.ASCII,
+  ConsoleKey.D2 or ConsoleKey.NumPad2 => Encoding.UTF7,
+  ConsoleKey.D3 or ConsoleKey.NumPad3 => Encoding.UTF8,
+  ConsoleKey.D4 or ConsoleKey.NumPad4 => Encoding.Unicode,
+  ConsoleKey.D5 or ConsoleKey.NumPad5 => Encoding.UTF32,
   _ => Encoding.Default
 };
 
