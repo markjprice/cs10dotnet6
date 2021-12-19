@@ -19,6 +19,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
+  - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
 
@@ -216,6 +217,91 @@ Encoding encoder = number switch
   ConsoleKey.D5 or ConsoleKey.NumPad5 => Encoding.UTF32,
   _                                   => Encoding.Default
 };
+```
+
+## Page 402 - Controlling JSON processing
+
+In Step 5, you write code to configure options for serializing JSON. The code was written in the spring of 2021 when the previews of .NET 6 at the time supported working with the new `DateOnly` type, although in an inefficient format as shown in the book. Over the summer, the System.Text.Json team added source generator support to improve performance and decided to remove support for `DateOnly`. 
+
+When you run the code in the book with the final release of .NET 6, it throws an, "Unhandled exception. System.NotSupportedException: Serialization and deserialization of 'System.DateOnly' instances are not supported. Path: $.PublishDate."
+
+There is a request to add support for `DateOnly` and `TimeOnly` but it seems that we will have to wait for .NET 7 until it is officially supported. **Support DateOnly and TimeOnly in JsonSerializer #53539**: https://github.com/dotnet/runtime/issues/53539
+
+Meanwhile, we have to implement our own custom `JsonConverter` classes, like **Jørn H. Dalvik (jornhd)** suggests in the comments: 
+https://github.com/dotnet/runtime/issues/53539#issuecomment-965275504
+
+I have used Jørn's code to add a new class file to the code solutions that defines converters for `DateOnly` and `DateOnly?`, as shown in the following code:
+
+```cs
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
+
+namespace WorkingWithJson
+{
+  public class DateOnlyConverter : JsonConverter<DateOnly>
+  {
+    public override DateOnly Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+      if (reader.TryGetDateTime(out var dt))
+      {
+        return DateOnly.FromDateTime(dt);
+      };
+      var value = reader.GetString();
+      if (value == null)
+      {
+        return default;
+      }
+      var match = new Regex("^(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)(T|\\s|\\z)").Match(value);
+      return match.Success
+          ? new DateOnly(int.Parse(match.Groups[1].Value), int.Parse(match.Groups[2].Value), int.Parse(match.Groups[3].Value))
+          : default;
+    }
+
+    public override void Write(Utf8JsonWriter writer, DateOnly value, JsonSerializerOptions options)
+        => writer.WriteStringValue(value.ToString("yyyy-MM-dd"));
+  }
+
+  public class DateOnlyNullableConverter : JsonConverter<DateOnly?>
+  {
+    public override DateOnly? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+      if (reader.TryGetDateTime(out var dt))
+      {
+        return DateOnly.FromDateTime(dt);
+      };
+      var value = reader.GetString();
+      if (value == null)
+      {
+        return default;
+      }
+      var match = new Regex("^(\\d\\d\\d\\d)-(\\d\\d)-(\\d\\d)(T|\\s|\\z)").Match(value);
+      return match.Success
+          ? new DateOnly(int.Parse(match.Groups[1].Value), int.Parse(match.Groups[2].Value), int.Parse(match.Groups[3].Value))
+          : default;
+    }
+
+    public override void Write(Utf8JsonWriter writer, DateOnly? value, JsonSerializerOptions options)
+        => writer.WriteStringValue(value?.ToString("yyyy-MM-dd"));
+  }
+}
+```
+
+Then you must add the `DateOnly` (and optionally `DateOnly?`) converters to the JSON `options` to fix this issue. 
+
+```cs
+// existing code to configure JSON options
+JsonSerializerOptions options = new()
+{
+  IncludeFields = true, // includes all fields
+  PropertyNameCaseInsensitive = true,
+  WriteIndented = true,
+  PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+};
+
+// add converters to enable working with DateOnly and DateOnly?
+options.Converters.Add(new DateOnlyConverter());
+options.Converters.Add(new DateOnlyNullableConverter());
 ```
 
 # Bonus Content 
