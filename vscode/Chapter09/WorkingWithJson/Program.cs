@@ -1,13 +1,14 @@
 ﻿using System.Text.Json; // JsonSerializer
 using System.Text.Json.Serialization; // [JsonInclude]
+using WorkingWithJson;
 
 using static System.Console;
 using static System.Environment;
 using static System.IO.Path;
 
-Book csharp10 = new(title: 
+Book csharp10 = new(title:
   "C# 10 and .NET 6 - Modern Cross-platform Development")
-{ 
+{
   Author = "Mark J Price",
   PublishDate = new(year: 2021, month: 11, day: 9),
   Pages = 823,
@@ -21,6 +22,9 @@ JsonSerializerOptions options = new()
   WriteIndented = true,
   PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
 };
+
+options.Converters.Add(new DateOnlyConverter());
+options.Converters.Add(new DateOnlyNullableConverter());
 
 string filePath = Combine(CurrentDirectory, "book.json");
 
