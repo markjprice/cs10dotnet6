@@ -224,6 +224,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Scott Hanselman's videos: http://computerstufftheydidntteachyou.com/
 - Get better at programming by learning how things work: https://jvns.ca/blog/learn-how-things-work/
 - Practice .NET anywhere with .NET Fiddle: https://dotnetfiddle.net/
+- Try .NET: https://try.dot.net/
 - Stack Overflow: https://stackoverflow.com/
 - Google Advanced Search: https://www.google.com/advanced_search
 - Microsoft Learn: https://docs.microsoft.com/en-us/learn/
