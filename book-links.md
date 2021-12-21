@@ -3,7 +3,7 @@
   - [Visual Studio Code](#visual-studio-code)
   - [Other C# code editors and platforms](#other-c-code-editors-and-platforms)
   - [.NET Interactive](#net-interactive)
-  - [Comand Line Interfaces](#comand-line-interfaces)
+  - [Command Line Interfaces](#command-line-interfaces)
   - [.NET](#net)
   - [Open source and other projects related to .NET](#open-source-and-other-projects-related-to-net)
   - [Git](#git)
@@ -181,7 +181,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - .NET Interactive Samples: https://github.com/dotnet/interactive/tree/main/samples
 - Markdown syntax: https://daringfireball.net/projects/markdown/syntax
 
-## Comand Line Interfaces
+## Command Line Interfaces
 - Windows Terminal as your Default Command Line Experience: https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/
 - .NET Core Command-Line Interface (CLI) tool: https://aka.ms/dotnet-cli-docs
 
