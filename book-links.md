@@ -3,6 +3,7 @@
   - [Visual Studio Code](#visual-studio-code)
   - [Other C# code editors and platforms](#other-c-code-editors-and-platforms)
   - [.NET Interactive](#net-interactive)
+  - [Comand Line Interfaces](#comand-line-interfaces)
   - [.NET](#net)
   - [Open source and other projects related to .NET](#open-source-and-other-projects-related-to-net)
   - [Git](#git)
@@ -10,6 +11,8 @@
 - [Chapter 2 - Speaking C](#chapter-2---speaking-c)
   - [C# language version and the journey to C# 10](#c-language-version-and-the-journey-to-c-10)
   - [C# language](#c-language)
+  - [C# implemented proposals](#c-implemented-proposals)
+  - [C# proposals being worked on](#c-proposals-being-worked-on)
   - [Text types](#text-types)
   - [Number types](#number-types)
   - [Console apps and formatting](#console-apps-and-formatting)
@@ -54,6 +57,7 @@
   - [Dates and times](#dates-and-times)
   - [Collections](#collections)
   - [Spans](#spans)
+  - [Networking](#networking)
   - [Assemblies and reflection](#assemblies-and-reflection)
   - [Working with images](#working-with-images)
   - [Internationalization](#internationalization)
@@ -135,6 +139,7 @@
 - Download Visual Studio for Windows: https://visualstudio.microsoft.com/downloads/
 - Sign up for a Microsoft account: https://signup.live.com/
 - Visual Studio for Windows documentation: https://docs.microsoft.com/en-us/visualstudio/windows/
+- MSBuild and 64-bit Visual Studio 2022: https://devblogs.microsoft.com/dotnet/msbuild-and-64-bit-visual-studio-2022/
 - Create C# apps with Visual Studio: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/
 - Tutorial: Open a project from a repo:   https://docs.microsoft.com/en-us/visualstudio/get-started/tutorial-open-project-from-repo-visual-studio-2019
 - Comparison of Visual Studio Code and Visual Studio: https://www.itworld.com/article/3403683/visual-studio-code-stepping-on-visual-studios-toes.html
@@ -176,6 +181,10 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - .NET Interactive Samples: https://github.com/dotnet/interactive/tree/main/samples
 - Markdown syntax: https://daringfireball.net/projects/markdown/syntax
 
+## Comand Line Interfaces
+- Windows Terminal as your Default Command Line Experience: https://devblogs.microsoft.com/commandline/windows-terminal-as-your-default-command-line-experience/
+- .NET Core Command-Line Interface (CLI) tool: https://aka.ms/dotnet-cli-docs
+
 ## .NET
 - Download .NET SDK: https://www.microsoft.com/net/download
 - Stack Overflow survey 2021 - Most loved frameworks and libraries: https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-other-frameworks-and-libraries
@@ -190,7 +199,6 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Remove .NET SDKs and runtimes: https://docs.microsoft.com/en-us/dotnet/core/install/remove-runtime-sdk-versions
 - ASP.NET Core and EF Core branding for .NET 5: https://docs.microsoft.com/en-us/dotnet/core/dotnet-five
 - .NET Optional SDK Workloads: https://github.com/dotnet/designs/blob/main/accepted/2020/workloads/workloads.md
-- .NET Core Command-Line Interface (CLI) tool: https://aka.ms/dotnet-cli-docs
 - .NET Core runtime, CoreCLR: https://github.com/dotnet/runtime
 - .NET Core Roadmap: https://github.com/dotnet/core/blob/master/roadmap.md
 - .NET Standard FAQ: https://github.com/dotnet/standard/blob/master/docs/faq.md
@@ -206,9 +214,11 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 ## Git
 - Download Git: https://git-scm.com/download
 - Download GitHub Desktop: https://desktop.github.com
+- Become a master at Git and Open Source: https://devblogs.microsoft.com/visualstudio/become-a-master-at-git-and-open-source/
 
 ## Help and learning
 - Raise an issue with the book: https://github.com/markjprice/cs10dotnet6/issues
+- .NET Conf 2021 Recap – Videos, Slides, Demos, and More: https://devblogs.microsoft.com/dotnet/net-conf-2021-recap-videos-slides-demos-and-more/
 - Microsoft Docs: https://docs.microsoft.com/
 - Official .NET Blog written by the .NET engineering teams: https://devblogs.microsoft.com/dotnet/
 - Scott Hanselman's videos: http://computerstufftheydidntteachyou.com/
@@ -223,6 +233,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 # Chapter 2 - Speaking C#
 
 ## C# language version and the journey to C# 10
+- Welcome to C# 10: https://devblogs.microsoft.com/dotnet/welcome-to-csharp-10/
 - Announcing Open Source C# standardization: https://devblogs.microsoft.com/dotnet/announcing-open-source-c-standardization-standards/
 - Rosalyn and C# compiler versions: https://github.com/dotnet/roslyn/blob/master/docs/wiki/NuGet-packages.md
 - How Microsoft rewrote its C# compiler in C# and made it open source: https://medium.com/microsoft-open-source-stories/how-microsoft-rewrote-its-c-compiler-in-c-and-made-it-open-source-4ebed5646f98
@@ -246,6 +257,22 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Naming guidelines: https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
 - Types (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/
 - Statements, Expressions, and Operators (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/
+
+## C# implemented proposals
+- C# 10: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-10.0
+- C# 9: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-9.0
+- C# 8: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-8.0
+- C# 7.3: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.3
+- C# 7.2: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.2
+- C# 7.1: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.1
+- C# 7.0: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-7.0
+- C# 6.0: https://github.com/dotnet/csharplang/tree/main/proposals/csharp-6.0
+
+## C# proposals being worked on
+- [Proposal] Required Properties #3630: https://github.com/dotnet/csharplang/issues/3630
+- Champion: Simplified parameter null validation code #2145: https://github.com/dotnet/csharplang/issues/2145
+- Proposal: Semi-Auto-Properties; field keyword #140: https://github.com/dotnet/csharplang/issues/140
+- Working Set (of proposals): https://github.com/dotnet/csharplang/milestone/19
 
 ## Text types
 - Strings (C# Programming Guide): https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/strings/
@@ -315,6 +342,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Trace listeners: https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.tracelistener
 - Console log formatting: https://docs.microsoft.com/en-us/dotnet/core/extensions/console-log-formatter
 - Using .env in .NET: https://dusted.codes/dotenv-in-dotnet
+- Announcing dotnet monitor in .NET 6: https://devblogs.microsoft.com/dotnet/announcing-dotnet-monitor-in-net-6/
 
 ## Testing
 - Test Driven Development (TDD): https://en.wikipedia.org/wiki/Test-driven_development
@@ -408,6 +436,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - .NET 5 announcement: https://devblogs.microsoft.com/dotnet/announcing-net-5-0
 - Performance improvements in .NET 5: https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-5/
 - .NET 5.0 Runtime Highlights: https://codemag.com/Article/2010092/.NET-5.0-Runtime-Highlights
+- Announcing .NET 6 — The Fastest .NET Yet: https://devblogs.microsoft.com/dotnet/announcing-net-6/
 
 ## .NET API, packages and frameworks
 - Search and browse all .NET APIs: https://docs.microsoft.com/en-us/dotnet/api/
@@ -431,6 +460,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - App trimming: https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5/
 - The PackageReference format: https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
 - NuGet packages: https://www.nuget.org/packages
+- Announcing NuGet 6.0: https://devblogs.microsoft.com/nuget/announcing-nuget-6/
 - .NET Core application publishing overview: https://docs.microsoft.com/en-us/dotnet/core/deploying/
 - How to Deploy .NET apps to Raspberry Pi: https://www.ryadel.com/en/deploy-net-apps-raspberry-pi/
 - How to solve a circular reference using an interface: https://stackoverflow.com/questions/6928387/how-to-solve-circular-reference
@@ -486,6 +516,9 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Span<T>: https://docs.microsoft.com/en-us/dotnet/api/system.span-1
 - How spans work internally: https://docs.microsoft.com/en-us/archive/msdn-magazine/2018/january/csharp-all-about-span-exploring-a-new-net-mainstay
 
+## Networking
+- .NET 6 Networking Improvements: https://devblogs.microsoft.com/dotnet/dotnet-6-networking-improvements/
+
 ## Assemblies and reflection
 - .NET API Reference: https://docs.microsoft.com/en-us/dotnet/api/
 - Compiler-generated display class: http://stackoverflow.com/a/2509524/55847
@@ -530,7 +563,8 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - EF Core team's plans: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/plan
 - New features in EF Core 5: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/whatsnew
 - New features in EF Core 6: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/whatsnew
-- Plan for Entity Framework Core 6.0: https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-6.0/plan
+- Get to Know EF Core 6: https://devblogs.microsoft.com/dotnet/get-to-know-ef-core-6/
+- Announcing the Plan for EF7: https://devblogs.microsoft.com/dotnet/announcing-the-plan-for-ef7/
 - Plans for Entity Framework Core 6.0 revealed as Microsoft admits it is unlikely to match Dapper for performance: https://www.theregister.com/2021/01/19/entity_framework_core_6/
 - Entity Framework Community Standup - Performance Tuning an EF Core App: https://www.youtube.com/watch?v=VgNFFEqwZPU
 
@@ -647,6 +681,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 
 ## Windows desktop app development
 - Choices of platform for building Windows desktop apps: https://docs.microsoft.com/en-us/windows/apps/desktop/choose-your-platform
+- What’s new in Windows Forms in .NET 6.0: https://devblogs.microsoft.com/dotnet/whats-new-in-windows-forms-in-net-6-0/
 - Migrating WPF apps: https://devblogs.microsoft.com/dotnet/migrating-a-sample-wpf-app-to-net-core-3-part-1/
 - Windows Compatibility Pack: https://devblogs.microsoft.com/dotnet/announcing-the-windows-compatibility-pack-for-net-core/
 - Packt book about building WPF apps: https://www.packtpub.com/product/mastering-windows-presentation-foundation/9781785883002
@@ -670,11 +705,13 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Compact Folders feature: https://github.com/microsoft/vscode-docs/blob/vnext/release-notes/v1_41.md#compact-folders-in-explorer
 
 ## ASP.NET Core
+- Announcing ASP.NET Core in .NET 6: https://devblogs.microsoft.com/dotnet/announcing-asp-net-core-in-net-6/
 - ASP.NET Core fundamentals: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/
 - Static files in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files
 - HttpContext class: https://docs.microsoft.com/en-us/dotnet/api/system.web.httpcontext
 
 ## Razor Pages and layouts
+- Introducing the new Razor editor in Visual Studio 2022: https://devblogs.microsoft.com/visualstudio/introducing-the-new-razor-editor-in-visual-studio-2022/
 - Introduction to Razor Pages in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/razor-pages/
 - Razor syntax reference for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/razor
 - Layout in ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout
@@ -704,6 +741,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Default configuration of web hosts: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/web-host
 - Dependency injection for ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection
 - Configuring middleware: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/
+- Announcing YARP 1.0 Release: https://devblogs.microsoft.com/dotnet/announcing-yarp-1-0-release/
 
 ## Controllers
 - Handle requests with controllers in ASP.NET Core MVC: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/actions
@@ -809,6 +847,7 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 
 ## gRPC
 - gRPC: https://grpc.io
+- What’s new for gRPC in .NET 6: https://devblogs.microsoft.com/dotnet/grpc-in-dotnet-6/
 - Introduction to gRPC on .NET: https://docs.microsoft.com/en-us/aspnet/core/grpc/
 - gRPC as an alternative to WCF: https://devblogs.microsoft.com/premier-developer/grpc-asp-net-core-as-a-migration-path-for-wcfs-in-net-core/
 - How to use gRPC with ASP.NET Core: https://docs.microsoft.com/en-us/aspnet/core/grpc/aspnetcore
