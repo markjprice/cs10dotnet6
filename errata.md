@@ -18,6 +18,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
+  - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
+  - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
 - [Bonus Content](#bonus-content)
@@ -202,6 +204,183 @@ Person bob = new(); // C# 9.0 or later
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
+
+## Page 233 - Comparing objects when sorting
+
+In Step 1, I say to add statements to create an array of `Person` instances and write the 
+items to the console. But the array of `Person` instances does not allow `null` values and
+it would be more interesting to write the example to include `null` values for both a
+`Person` instance and an instance with a `null` value for its `Name`, as shown in the following code:
+
+```cs
+Person?[] people =
+{
+  new() { Name = "Simon" },
+  null,
+  new() { Name = "Jenny" },
+  new() { Name = "Adam" },
+  new() { Name = null },
+  new() { Name = "Richard" }
+};
+
+WriteLine("Initial list of people:");
+foreach (Person? p in people)
+{
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
+}
+
+WriteLine("Use Person's IComparable implementation to sort:");
+Array.Sort(people);
+foreach (Person? p in people)
+{
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
+}
+```
+
+In Step 3, it would be better to implement the `IComparable<T>` 
+interface for a nullable `Person`, as shown in the following code:
+
+```cs
+public class Person : object, IComparable<Person?>
+```
+
+In Step 5, I say to add a statement to call the `CompareTo` method of the 
+`Name` field. This does not properly account for scenarios where the 
+`other` instance of the `Person` class might be `null`, or various 
+combinations of `null` values for the `Name` field. A better implementation 
+is shown in the following code that handles null values and positions them 
+at the end of the sort order:
+
+```cs
+public int CompareTo(Person? other)
+{
+  if ((this is not null) && (other is not null))
+  {
+    if (Name is null)
+    {
+      // if both this and the other person have null
+      // Name values then we occur at the same position
+      if (other.Name is null) return 0;
+
+      // else this follows other
+      return 1;
+    }
+    else
+    {
+      if (other.Name is null)
+      {
+        return -1;
+      }
+    }
+
+    // if both Name values are not null,
+    // use the string implementation of CompareTo
+    return Name.CompareTo(other.Name);
+  }
+  else if ((this is not null) && (other is null))
+  {
+    return -1; // this precedes other
+  }
+  else if ((this is null) && (other is not null))
+  {
+    return 1; // this follows other
+  }
+  else
+  {
+    return 0; // this and other are at same position
+  }
+}
+```
+
+## Page 235 - Comparing objects using a separate class
+
+As with the erratum item above, the implementation could be improved to 
+better handle `null` values, as shown in the following code:
+
+```cs
+namespace Packt.Shared;
+
+public class PersonComparer : IComparer<Person?>
+{
+  public int Compare(Person? x, Person? y)
+  {
+    if ((x is not null) && (y is not null))
+    {
+      if (x.Name is null)
+      {
+        // if both x and y person instances have null
+        // Name values then they occur at the same position
+        if (y.Name is null) return 0;
+
+        // else x follows y
+        return 1;
+      }
+      else
+      {
+        if (y.Name is null)
+        {
+          return -1;
+        }
+      }
+
+      // if both Name values are not null...
+
+      // Compare the Name lengths...
+      int result = x.Name.Length
+        .CompareTo(y.Name.Length);
+
+      /// ...if they are equal... 
+      if (result == 0)
+      {
+        // ...then compare by the Names...
+        return x.Name.CompareTo(y.Name);
+      }
+      else
+      {
+        // ...otherwise compare by the lengths.
+        return result;
+      }
+    }
+    else if ((x is not null) && (y is null))
+    {
+      return -1; // x precedes y
+    }
+    else if ((x is null) && (y is not null))
+    {
+      return 1; // x follows y
+    }
+    else
+    {
+      return 0; // x and y are at same position
+    }
+  }
+}
+```
+
+Then in `Program.cs`:
+
+```cs
+// Comparing objects using a separate class
+
+WriteLine("Use PersonComparer's IComparer implementation to sort:");
+Array.Sort(people, new PersonComparer());
+foreach (Person? p in people)
+{
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
+}
+```
+
+The output will now be:
+
+```
+Use PersonComparer's IComparer implementation to sort:
+  Adam
+  Jenny
+  Simon
+  Richard
+  <null> Name
+  <null> Person
+```
 
 ## Page 391 - Encoding strings as byte arrays
 

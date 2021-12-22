@@ -2,7 +2,7 @@
 
 namespace Packt.Shared;
 
-public class Person : object, IComparable<Person>
+public class Person : object, IComparable<Person?>
 {
   // fields 
   public string? Name; // ? allows null
@@ -81,8 +81,41 @@ public class Person : object, IComparable<Person>
 
   public int CompareTo(Person? other)
   {
-    if (Name is null) return 0;
-    return Name.CompareTo(other?.Name);
+    if ((this is not null) && (other is not null))
+    {
+      if (Name is null)
+      {
+        // if both this and the other person have null
+        // Name values then we occur at the same position
+        if (other.Name is null) return 0;
+
+        // else this follows other
+        return 1;
+      }
+      else
+      {
+        if (other.Name is null)
+        {
+          return -1;
+        }
+      }
+
+      // if both Name values are not null,
+      // use the string implementation of CompareTo
+      return Name.CompareTo(other.Name);
+    }
+    else if ((this is not null) && (other is null))
+    {
+      return -1; // this precedes other
+    }
+    else if ((this is null) && (other is not null))
+    {
+      return 1; // this follows other
+    }
+    else
+    {
+      return 0; // this and other are at same position
+    }
   }
 
   // overridden methods 

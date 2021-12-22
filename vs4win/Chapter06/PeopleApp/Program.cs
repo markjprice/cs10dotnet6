@@ -73,34 +73,36 @@ WriteLine(format: "Key {0} has value: {1}",
 
 // Comparing objects when sorting
 
-Person[] people =
+Person?[] people =
 {
   new() { Name = "Simon" },
+  null,
   new() { Name = "Jenny" },
   new() { Name = "Adam" },
+  new() { Name = null },
   new() { Name = "Richard" }
 };
 
 WriteLine("Initial list of people:");
-foreach (Person p in people)
+foreach (Person? p in people)
 {
-  WriteLine($"  {p.Name}");
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
 }
 
 WriteLine("Use Person's IComparable implementation to sort:");
 Array.Sort(people);
-foreach (Person p in people)
+foreach (Person? p in people)
 {
-  WriteLine($"  {p.Name}");
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
 }
 
 // Comparing objects using a separate class
 
 WriteLine("Use PersonComparer's IComparer implementation to sort:");
 Array.Sort(people, new PersonComparer());
-foreach (Person p in people)
+foreach (Person? p in people)
 {
-  WriteLine($"  {p.Name}");
+  WriteLine($"  {(p is null ? "<null> Person" : p.Name ?? "<null> Name")}");
 }
 
 // How reference and value types are stored in memory
