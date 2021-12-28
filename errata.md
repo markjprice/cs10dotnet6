@@ -8,6 +8,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 16 - Understanding .NET Standard](#page-16---understanding-net-standard)
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
+  - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
@@ -60,6 +61,17 @@ Click the **Trust** button, as shown in the following screenshot:
 You will then trust the workspace and extensions will activate as described in the book. 
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
+
+## Page 28 - Adding a second project using Visual Studio Code
+
+In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you have installed version 1.23.17 of the C# extension (released on December 3, 2021) then it gives an error, as shown in the following screenshot and described in these issues: 
+
+![OmniSharp: Select Project error dialog with version 1.23.17](https://user-images.githubusercontent.com/14040265/145404220-e4d80970-f879-4724-9c48-89be44e65874.png)
+
+- https://github.com/markjprice/cs10dotnet6/issues/11
+- https://github.com/markjprice/cs10dotnet6/issues/14
+
+To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1. I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
 
 ## Page 62 - Implicitly and globally importing namespaces
 
