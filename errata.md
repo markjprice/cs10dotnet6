@@ -23,6 +23,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+  - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
 
@@ -494,6 +495,21 @@ JsonSerializerOptions options = new()
 options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
+
+## Page 510 - Implementing a Recorder class
+
+In Step 3, we see the result of generating an array of 10,000 integers in terms of memory usage. 
+On an M1 Mac you might see a negative value for the physical bytes used, as shown in the following output:
+
+```
+Processing. Please wait...
+-1,867,776 physical bytes used.
+14,041,088 virtual bytes used.
+00:00:06.0042556 time span ellapsed.
+6,004 total milliseconds ellapsed.
+```
+
+This could be a bug but I am investigating.
 
 # Bonus Content 
 
