@@ -24,7 +24,7 @@ string bananasText = "Bananas";
 int bananasCount = 56789;
 
 WriteLine(
-    format: "{0,-10} {1,6:N0}",
+    format: "{0,-10} {1,6}",
     arg0: "Name",
     arg1: "Count");
 
