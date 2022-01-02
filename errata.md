@@ -13,6 +13,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
+  - [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
@@ -137,6 +138,13 @@ In Step 5, it would have been clearer if I had written out the arguments as I di
 For example, `firstarg second-arg third:arg "fourth arg"`. 
 
 ![Barely visible hyphen in second-arg](images/erratum-page-87b.png)
+
+## Page 88 - Setting options with arguments
+
+It would have been clearer if I had explained that `ForegroundColor`, `BackgroundColor` and 
+`CursorSize` are all properties of `Console`, and that we had earlier statically imported the 
+`Console` type so that we can call methods like `WriteLine` and access all its properties 
+without explicitly typing the `Console` class name. 
 
 ## Page 92 - Exercise 2.3 – Practice number sizes and ranges
 
