@@ -11,6 +11,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
+  - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
@@ -94,6 +95,28 @@ private const string fullname = "{firstname} {lastname}";
 The code should be as follows:
 ```cs
 private const string fullname = $"{firstname} {lastname}";
+```
+
+## Page 83 - Understanding format strings
+
+In Step 1, the statement to output the column headings does not need the number 
+format code `:N0` because it is a `string` value, although it does still need the 
+right-alignment format code `,6` to position it within the six character width column. 
+
+The following statement:
+```
+Console.WriteLine(
+  format: "{0,-10} {1,6:N0}",
+  arg0: "Name",
+  arg1: "Count");
+```
+
+Should be:
+```
+Console.WriteLine(
+  format: "{0,-10} {1,6}",
+  arg0: "Name",
+  arg1: "Count");
 ```
 
 ## Page 87 - Passing arguments to a console app
