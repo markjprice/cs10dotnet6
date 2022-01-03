@@ -18,6 +18,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+  - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
@@ -227,6 +228,16 @@ partial class Program
     }
 }
 ```
+
+## Page 162 - Creating a class library that needs testing
+
+In Step 1, I instruct the reader to "Use your preferred coding tool to add a new Class Library to the Chapter04
+workspace/solution named CalculatorLib. The dotnet new template is named classlib."
+
+At this point, readers have created at least a dozen new console app projects and added them to a Visual Studio Code workspace or Visual Studio 2022 solution. For example, to create the previous project I said, "Use your preferred coding tool to add a new Console Application to the Chapter04
+workspace/solution named Instrumenting."
+
+The only difference when creating a Class Library/classlib is to select a different project template. The rest of the steps are exactly the same as creating a Console App/console project. Remember that you can refer to Chapter 1 for step-by-step instructions. 
 
 ## Page 168 - Understanding the call stack
 
