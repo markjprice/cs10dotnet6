@@ -472,6 +472,8 @@ There is a request to add support for `DateOnly` and `TimeOnly` but it seems tha
 Meanwhile, we have to implement our own custom `JsonConverter` classes, like **Jørn H. Dalvik (jornhd)** suggests in the comments: 
 https://github.com/dotnet/runtime/issues/53539#issuecomment-965275504
 
+> **DO NOT USE THIS IN PRODUCTION CODE.** Any implementation you use could be different from the official implementation so it is likely to break if you serialize data today with a customer implementation and then try to deseralize it with the official one later. 
+
 I have used Jørn's code to add a new class file to the code solutions that defines converters for `DateOnly` and `DateOnly?`, as shown in the following code:
 
 ```cs
