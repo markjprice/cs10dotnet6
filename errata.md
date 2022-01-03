@@ -231,11 +231,11 @@ partial class Program
 
 ## Page 162 - Creating a class library that needs testing
 
-In Step 1, I instruct the reader to "Use your preferred coding tool to add a new Class Library to the Chapter04
-workspace/solution named CalculatorLib. The dotnet new template is named classlib."
-
 At this point, readers have created at least a dozen new console app projects and added them to a Visual Studio Code workspace or Visual Studio 2022 solution. For example, to create the previous project I said, "Use your preferred coding tool to add a new Console Application to the Chapter04
 workspace/solution named Instrumenting."
+
+In Step 1, I tell the reader to "Use your preferred coding tool to add a new Class Library to the Chapter04
+workspace/solution named CalculatorLib. The dotnet new template is named classlib."
 
 The only difference when creating a Class Library/classlib is to select a different project template. The rest of the steps are exactly the same as creating a Console App/console project. Remember that you can refer to Chapter 1 for step-by-step instructions. 
 
