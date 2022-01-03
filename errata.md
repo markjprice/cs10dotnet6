@@ -28,6 +28,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
+  - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
 
 # Print Book
 
@@ -558,6 +559,18 @@ Question 8 asked, "Does the following statement compile? for ( ; true; ) ;"
 
 For the same reasons, the description in the answer should read, "Yes. The `for` statement does not require any of the three parts to be defined. The initializer, condition, and incrementer expressions are optional. Even if the `true` value was missing, this `for` statement will execute the empty `;` statement after the close brace, forever. It is an 
 example of an infinite loop."
+
+## Page 143 - Appendix A - Exercise 4.1 – Test your knowledge
+
+Question 3 asked, "In Visual Studio Code or Visual Studio, what is the difference between pressing F5, Ctrl
+or Cmd + F5, Shift + F5, and Ctrl or Cmd + Shift + F5?"
+
+The answer included a typo: the word "with" instead of the correct "without", as shown in the following text:
+
+**Answer**: F5 saves, compiles, runs, and attaches the debugger; Ctrl or Cmd + F5 saves, 
+compiles, and runs the application with**out** the debugger attached; Shift + F5 stops the 
+debugger and running application; and Ctrl or Cmd + Shift + F5 restarts the application 
+with**out** the debugger attached.
 
 <!---
 ## Conflicting build servers for Omnisharp with Visual Studio Code
