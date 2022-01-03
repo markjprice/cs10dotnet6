@@ -18,6 +18,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+  - [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
   - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
@@ -228,6 +229,12 @@ partial class Program
     }
 }
 ```
+
+## Page 152 - Customizing breakpoints
+
+In Steps 5 or 6, after entering the condition expression, press *Enter* to ensure
+the condition expression has been accepted before starting debugging. If you do not, it might look
+like the condition expression is defined but it might not be and the breakpoint could always be hit.
 
 ## Page 162 - Creating a class library that needs testing
 
