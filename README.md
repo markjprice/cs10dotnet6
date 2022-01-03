@@ -16,7 +16,7 @@ If you have Visual Studio 2022 for Windows and Visual Studio Code and its C# ext
 ## [Bonus content](9781801077361_Bonus_Content.pdf)
 Three chapters and the appendix available to [download](9781801077361_Bonus_Content.pdf) as a PDF:
 - Chapter 18, Building and Consuming Specialized Services
-- Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI (also available as an [https://github.com/markjprice/cs10dotnet6/tree/main/docs/chapter19](updated online document))
+- Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI (also available as an [updated online document](https://github.com/markjprice/cs10dotnet6/tree/main/docs/chapter19)
 - Chapter 20, Protecting Your Data and Applications
 - Appendix A, Answers to the Test Your Knowledge Questions
 
