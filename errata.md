@@ -551,7 +551,7 @@ options.Converters.Add(new DateOnlyNullableConverter());
 
 ## Page 417 - Database Provider for MySQL
 
-The table shows for MySQL the `depretaced` NuGet package "MySQL.`Data`.EntityFrameworkCore".
+The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
 The new one is "MySQL.EntityFrameworkCore"  
 
 ## Page 510 - Implementing a Recorder class
