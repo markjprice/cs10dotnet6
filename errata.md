@@ -27,6 +27,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+  - [Page 417 - Database provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
@@ -547,6 +548,11 @@ JsonSerializerOptions options = new()
 options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
+
+## Page 417 - Database Provider for MySQL
+
+The table shows for MySQL the `depretaced` NuGet package "MySQL.`Data`.EntityFrameworkCore".
+The new one is "MySQL.EntityFrameworkCore"  
 
 ## Page 510 - Implementing a Recorder class
 
