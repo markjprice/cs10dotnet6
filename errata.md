@@ -22,6 +22,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
+  - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
@@ -263,6 +264,11 @@ The `var` keyword was not introduced until C# 3.0, so I should have written the 
 // var bob = new Person(); // C# 3.0 or later
 Person bob = new(); // C# 9.0 or later
 ```
+
+## Page 187 - Storing a value using an enum type
+
+In the **Good Practice** box, the text "If you use are writing code" should be "If you are writing code"
+
 ## Page 192 - Making a field constant
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
