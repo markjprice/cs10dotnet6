@@ -28,6 +28,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+  - [Page 417 - Database provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
@@ -478,6 +479,8 @@ There is a request to add support for `DateOnly` and `TimeOnly` but it seems tha
 Meanwhile, we have to implement our own custom `JsonConverter` classes, like **Jørn H. Dalvik (jornhd)** suggests in the comments: 
 https://github.com/dotnet/runtime/issues/53539#issuecomment-965275504
 
+> **DO NOT USE THIS IN PRODUCTION CODE.** Any custom converter implementation that you use is likely to be different from the official implementation so it will break if you serialize data today with your custom implementation and then try to deseralize it later with the official implementation. 
+
 I have used Jørn's code to add a new class file to the code solutions that defines converters for `DateOnly` and `DateOnly?`, as shown in the following code:
 
 ```cs
@@ -551,6 +554,11 @@ JsonSerializerOptions options = new()
 options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
+
+## Page 417 - Database Provider for MySQL
+
+The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
+The new one is "MySQL.EntityFrameworkCore"  
 
 ## Page 510 - Implementing a Recorder class
 
