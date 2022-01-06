@@ -21,6 +21,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
   - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
+  - [Page 172 - Rethrowing exceptions](#page-172---rethrowing-exceptions)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
@@ -28,7 +29,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
-  - [Page 417 - Database provider for MySQL](#page-417---database-provider-for-mysql)
+  - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
@@ -251,6 +252,10 @@ The only difference when creating a Class Library/classlib is to select a differ
 ## Page 168 - Understanding the call stack
 
 In Step 8, on page 170, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
+
+## Page 172 - Rethrowing exceptions
+
+In Step 4, instead of saying, "Delete the `ex` when rethrowing", it would be clearer to say, "Remove the `ex` by replacing the statement `throw ex;` with `throw;`"
 
 ## Page 183 - Importing a namespace to use a type
 
