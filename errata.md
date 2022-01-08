@@ -41,6 +41,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 ## Page 8 - Installing other extensions
 
+> Thanks to [ifduyue](https://github.com/ifduyue) for raising this [issue on 14 November 2021](https://github.com/markjprice/cs10dotnet6/issues/1). 
+
 In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
 
 ## Page 16 - Understanding .NET Standard
@@ -53,9 +55,7 @@ Read more at the following link: https://devblogs.microsoft.com/dotnet/performan
 
 ## Page 18 - Writing code using Visual Studio 2022
 
-In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022, as shown in the following screenshot:
-
-![Project template Console Application is now Console App](images/console-app-template.png)
+In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022.
 
 ## Page 25 - Writing code using Visual Studio Code
 
@@ -75,6 +75,8 @@ You will then trust the workspace and extensions will activate as described in t
 
 ## Page 28 - Adding a second project using Visual Studio Code
 
+> Thanks to [johncflorida](https://github.com/johncflorida) for raising this [issue on 9 December 2021](https://github.com/markjprice/cs10dotnet6/issues/11). Also thanks to [Paul-Schroeder](https://github.com/Paul-Schroeder) and [ken-from-the-uk](https://github.com/ken-from-the-uk) who raised the same issue and made suggestions.
+
 In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you have installed version 1.23.17 of the C# extension (released on December 3, 2021) then it gives an error, as shown in the following screenshot and described in these issues: 
 
 ![OmniSharp: Select Project error dialog with version 1.23.17](https://user-images.githubusercontent.com/14040265/145404220-e4d80970-f879-4724-9c48-89be44e65874.png)
@@ -82,7 +84,9 @@ In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you ha
 - https://github.com/markjprice/cs10dotnet6/issues/11
 - https://github.com/markjprice/cs10dotnet6/issues/14
 
-To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1. I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
+To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1 by [downloading the VSIX](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.23.18-beta2) and in then in Visual Studio Code **EXTENSIONS**, select the **Views and More Actions** menu (three dots) and then **Install from VSIX...**. 
+
+I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
 
 ## Page 57 - Changing the color scheme for C# syntax
 
@@ -104,6 +108,8 @@ It would have been clearer to say, "You can disable the implicitly imported name
 
 ## Page 82 - Formatting using interpolated strings
 
+> Thanks to [GregStevenson](https://github.com/GregStevenson) for raising this [issue on 26 November 2021](https://github.com/markjprice/cs10dotnet6/issues/6). 
+
 In the last code block in this section, the string is missing the `$` prefix that makes it interpolated, as shown in the following code:
 ```cs
 private const string fullname = "{firstname} {lastname}";
@@ -115,12 +121,14 @@ private const string fullname = $"{firstname} {lastname}";
 
 ## Page 83 - Understanding format strings
 
+> Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 2 January 2022](https://github.com/markjprice/cs10dotnet6/issues/20). 
+
 In Step 1, the statement to output the column headings does not need the number 
 format code `:N0` because it is a `string` value, although it does still need the 
 right-alignment format code `,6` to position it within the six character width column. 
 
 The following statement:
-```
+```cs
 Console.WriteLine(
   format: "{0,-10} {1,6:N0}",
   arg0: "Name",
@@ -128,7 +136,7 @@ Console.WriteLine(
 ```
 
 Should be:
-```
+```cs
 Console.WriteLine(
   format: "{0,-10} {1,6}",
   arg0: "Name",
@@ -155,6 +163,8 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 ![Barely visible hyphen in second-arg](images/erratum-page-87b.png)
 
 ## Page 88 - Setting options with arguments
+
+> Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 2 January 2022](https://github.com/markjprice/cs10dotnet6/issues/21). 
 
 It would have been clearer if I had explained that `ForegroundColor`, `BackgroundColor` and 
 `CursorSize` are all properties of `Console`, and that we had earlier statically imported the 
@@ -203,6 +213,8 @@ static int Factorial(int number)
 
 ## Page 140 - Documenting functions with XML comments
 
+> Thanks to [CoRB-ops](https://github.com/CoRB-ops) for raising this [issue on 21 November 2021](https://github.com/markjprice/cs10dotnet6/issues/3). 
+
 First, it is worth emphasizing that this feature is primarily designed to be used with a tool that converts the comments into documentation. The tooltips that appear while entering code or hovering over the function name are a secondary feature. Understanding this will help you understand the limitation involved with this errata item.
 
 Second, in Step 4, I say that when calling the function you will see more details. However, when the .NET 6 project templates changed in Preview 7 to use top-level statements and an automatically generated `Program` class, the functions you write in the tasks became implemented as local functions declared inside the hidden automatically generated `<Main>$` method. Local functions do not support XML comments because local functions cannot be used outside the member in which they are declared so it makes no sense to generate documentation from them. Sadly, this also means no tooltip, which would still be useful, but neither Visual Studio 2022 nor Visual Studio Code recognize that.
@@ -244,12 +256,16 @@ partial class Program
 
 ## Page 152 - Customizing breakpoints
 
+> Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 1 January 2022](https://github.com/markjprice/cs10dotnet6/issues/18). 
+
 In Steps 5 or 6, after entering the condition expression, press *Enter* to ensure
 the condition expression has been accepted before starting debugging. If you do not, it might look
 like the condition expression is defined but it might not be and the breakpoint could always be hit.
 
 ## Page 162 - Creating a class library that needs testing
 
+> Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 3 January 2022](https://github.com/markjprice/cs10dotnet6/issues/23). 
+ 
 At this point, readers have created at least a dozen new console app projects and added them to a Visual Studio Code workspace or Visual Studio 2022 solution. For example, to create the previous project I said, "Use your preferred coding tool to add a new Console Application to the Chapter04
 workspace/solution named Instrumenting."
 
@@ -264,6 +280,8 @@ In Step 8, on page 170, I say to run the console app. Unless you need to step th
 
 ## Page 172 - Rethrowing exceptions
 
+> Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 5 January 2022](https://github.com/markjprice/cs10dotnet6/issues/28). 
+ 
 In Step 4, instead of saying, "Delete the `ex` when rethrowing", it would be clearer to say, "Remove the `ex` by replacing the statement `throw ex;` with `throw;`"
 
 ## Page 183 - Importing a namespace to use a type
@@ -282,6 +300,8 @@ Person bob = new(); // C# 9.0 or later
 
 ## Page 187 - Storing a value using an enum type
 
+> Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 5 January 2022](https://github.com/markjprice/cs10dotnet6/issues/29). 
+ 
 In the **Good Practice** box, the text "If you use are writing code" should be "If you are writing code"
 
 ## Page 192 - Making a field constant
@@ -468,6 +488,8 @@ Use PersonComparer's IComparer implementation to sort:
 
 ## Page 391 - Encoding strings as byte arrays
 
+> Thanks to [KlarenAlexander](https://github.com/KlarenAlexander) for raising this [issue on 17 December 2021](https://github.com/markjprice/cs10dotnet6/issues/12). 
+
 In Step 4, you write code to detect numbers 1 to 5 entered on the keyboard to select between encodings. But the code only accepts numbers entered from the top row of the keyboard. To accept numbers entered on the number pad on an extended keyboard, the code needs to be modified, as shown in the following code:
 
 ```cs
@@ -483,6 +505,8 @@ Encoding encoder = number switch
 ```
 
 ## Page 402 - Controlling JSON processing
+
+> Thanks to [KlarenAlexander](https://github.com/KlarenAlexander) for raising this [issue on 17 December 2021](https://github.com/markjprice/cs10dotnet6/issues/13). 
 
 In Step 5, you write code to configure options for serializing JSON. The code was written in the spring of 2021 when the previews of .NET 6 at the time supported working with the new `DateOnly` type, although in an inefficient format as shown in the book. Over the summer, the System.Text.Json team added source generator support to improve performance and decided to remove support for `DateOnly`. 
 
@@ -576,6 +600,8 @@ The new one is "MySQL.EntityFrameworkCore"
 
 ## Page 510 - Implementing a Recorder class
 
+> Thanks to [akrsnr](https://github.com/akrsnr) for raising this [issue on 30 December 2021](https://github.com/markjprice/cs10dotnet6/issues/16). 
+
 In Step 3, we see the result of generating an array of 10,000 integers in terms of memory usage. 
 On an M1 Mac you might see a negative value for the physical bytes used, as shown in the following output:
 
@@ -631,6 +657,8 @@ The four corrected elements are as shown in the following markup:
 
 ## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
 
+> Thanks to [zeier](https://github.com/zeier) for raising this [issue on 1 December 2021](https://github.com/markjprice/cs10dotnet6/issues/10). 
+
 Question 6 asked, "What are the three parts of a `for` statement and which of them are required?"
 
 Answer: The three parts of a `for` statement are the *initializer*, *condition*, and 
@@ -646,6 +674,8 @@ example of an infinite loop."
 
 ## Page 143 - Appendix A - Exercise 4.1 – Test your knowledge
 
+> Thanks to [jbeale1 John Beale](https://github.com/jbeale1) for raising this [issue on 3 January 2022](https://github.com/markjprice/cs10dotnet6/issues/24). 
+ 
 Question 3 asked, "In Visual Studio Code or Visual Studio, what is the difference between pressing F5, Ctrl
 or Cmd + F5, Shift + F5, and Ctrl or Cmd + Shift + F5?"
 
