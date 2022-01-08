@@ -84,16 +84,18 @@ In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you ha
 - https://github.com/markjprice/cs10dotnet6/issues/11
 - https://github.com/markjprice/cs10dotnet6/issues/14
 
-To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1 by [downloading the VSIX](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.23.18-beta2) and in then in Visual Studio Code **EXTENSIONS**, select the **Views and More Actions** menu (three dots) and then **Install from VSIX...**. 
+To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1 by [downloading the VSIX](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.23.18-beta2) and then in Visual Studio Code **EXTENSIONS**, select the **Views and More Actions** menu (three dots) and then **Install from VSIX...**. 
 
 I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
 
 ## Page 57 - Changing the color scheme for C# syntax
 
-In Step 1, I say, "In Visual Studio Code, navigate to Code | Preferences | Color Theme (it is on the File
-menu on Windows)." In  the next edition, I will swap this around to make Windows the default not the Mac, for example, 
-"In Visual Studio Code, navigate to File | Preferences | Color Theme (it is in the Code
-menu on macOS)."
+In Step 1, I say, "In Visual Studio Code, navigate to **Code** | **Preferences** | **Color Theme** (it is on the **File**
+menu on Windows)." 
+
+In  the next edition, I will swap this around since Windows is more commonly used than macOS. 
+For example, "In Visual Studio Code, navigate to **File** | **Preferences** | **Color Theme** 
+(it is in the **Code** menu on macOS)."
 
 ## Page 62 - Implicitly and globally importing namespaces
 
