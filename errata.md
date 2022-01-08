@@ -9,6 +9,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
   - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
+  - [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
@@ -81,6 +82,13 @@ In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you ha
 - https://github.com/markjprice/cs10dotnet6/issues/14
 
 To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1. I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
+
+## Page 57 - Changing the color scheme for C# syntax
+
+In Step 1, I say, "In Visual Studio Code, navigate to Code | Preferences | Color Theme (it is on the File
+menu on Windows)." In  the next edition, I will swap this around to make Windows the default not the Mac, for example, 
+"In Visual Studio Code, navigate to File | Preferences | Color Theme (it is in the Code
+menu on macOS)."
 
 ## Page 62 - Implicitly and globally importing namespaces
 
