@@ -32,6 +32,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
+  - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
@@ -587,6 +588,44 @@ Processing. Please wait...
 ```
 
 This could be a bug but I am investigating.
+
+## Page 645 - Defining a typed view
+
+> Thanks to [johncflorida](https://github.com/johncflorida) for raising this issue. 
+
+In Step 3, I say to "add new markup to output categories in a carousel" but the 
+attribute names that I use are for Bootstrap 4 rather than Bootstrap 5 that is 
+included with the ASP.NET Core 6 MVC project template. 
+
+In Bootstrap 5, to avoid conflicts with other attribute names:
+
+- `data-ride` becomes `data-bs-ride`
+- `data-interval` becomes `data-bs-interval`
+- `data-target` becomes `data-bs-target`
+- `data-slide-to` becomes `data-bs-slide-to`
+- `data-slide` becomes `data-bs-slide`
+
+The four corrected elements are as shown in the following markup:
+
+```xml
+<div id="categories" class="carousel slide" data-bs-ride="carousel"
+     data-bs-interval="3000" data-keyboard="true">
+```
+
+```xml
+<li data-bs-target="#categories" data-bs-slide-to="@c" 
+    class="@currentItem"></li>
+```
+
+```xml
+<a class="carousel-control-prev" href="#categories"
+   role="button" data-bs-slide="prev">
+```
+
+```xml
+<a class="carousel-control-next" href="#categories"
+   role="button" data-bs-slide="next">
+```
 
 # Bonus Content 
 
