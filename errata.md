@@ -28,6 +28,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
+  - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
@@ -487,6 +488,15 @@ Use PersonComparer's IComparer implementation to sort:
   <null> Name
   <null> Person
 ```
+
+## Page 347 - Using immutable collections
+
+In Step 4, I wrote, "note that the immutable list of cities does not get 
+modified when you call the `Add` method on it; instead, it returns a new 
+list with the newly added city"
+
+It would have been clearer to write that it returns a new list containing 
+the members from the old list plus the newly added city.
 
 ## Page 391 - Encoding strings as byte arrays
 
