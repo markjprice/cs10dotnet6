@@ -29,6 +29,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
+  - [Page 360 - Working with images](#page-360---working-with-images)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
@@ -497,6 +498,65 @@ list with the newly added city"
 
 It would have been clearer to write that it returns a new list containing 
 the members from the old list plus the newly added city.
+
+## Page 360 - Working with images
+
+In Step 3, I tell the reader to create an `images` folder but I do not specify where. 
+
+- For Visual Studio 2022, the `images` folder must be in the `WorkingWithImages\bin` folder.
+- For Visual Studio Code that uses `dotnet run`, the `images` folder must be in the `WorkingWithImages` folder.
+
+I have extended the code in the GitHub solution to warn if the folder is in the wrong location, and to output when a file has already been converted and so should be skipped, and when each image file is converted, as shown in the following code:
+
+```cs
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+using static System.Console;
+
+string imagesFolder = Path.Combine(
+  Environment.CurrentDirectory, "images");
+
+WriteLine($"I will look for images in the following folder:\n{imagesFolder}");
+WriteLine();
+
+if (!Directory.Exists(imagesFolder))
+{
+  WriteLine();
+  WriteLine("Folder does not exist!");
+  return;
+}
+
+IEnumerable<string> images =
+  Directory.EnumerateFiles(imagesFolder);
+
+foreach (string imagePath in images)
+{
+  if (Path.GetFileNameWithoutExtension(imagePath).EndsWith("-thumbnail"))
+  {
+    WriteLine($"Skipping:\n  {imagePath}");
+    WriteLine();
+    continue; // this file has already been converted
+  }
+
+  string thumbnailPath = Path.Combine(
+    Environment.CurrentDirectory, "images",
+    Path.GetFileNameWithoutExtension(imagePath)
+    + "-thumbnail" + Path.GetExtension(imagePath));
+
+  using (Image image = Image.Load(imagePath))
+  {
+    WriteLine($"Converting:\n  {imagePath}");
+    WriteLine($"To:\n  {thumbnailPath}");
+    image.Mutate(x => x.Resize(image.Width / 10, image.Height / 10));
+    image.Mutate(x => x.Grayscale());
+    image.Save(thumbnailPath);
+    WriteLine();
+  }
+}
+
+WriteLine("Image processing complete. View the images folder.");
+```
 
 ## Page 391 - Encoding strings as byte arrays
 
