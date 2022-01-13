@@ -503,7 +503,7 @@ the members from the old list plus the newly added city.
 
 In Step 3, I tell the reader to create an `images` folder but I do not specify where. 
 
-- For Visual Studio 2022, the `images` folder must be in the `WorkingWithImages\bin` folder.
+- For Visual Studio 2022, the `images` folder must be in the `WorkingWithImages\bin\Debug\net6.0` folder.
 - For Visual Studio Code that uses `dotnet run`, the `images` folder must be in the `WorkingWithImages` folder.
 
 I have extended the code in the GitHub solution to warn if the folder is in the wrong location, and to output when a file has already been converted and so should be skipped, and when each image file is converted, as shown in the following code:
