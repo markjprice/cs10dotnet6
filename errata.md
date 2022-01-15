@@ -274,7 +274,7 @@ partial class Program
 
 > Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 1 January 2022](https://github.com/markjprice/cs10dotnet6/issues/18). 
 
-In Steps 5 or 6, after entering the condition expression, press *Enter* to ensure
+In Steps 5 or 6, after typing the condition expression, press *Enter* to ensure
 the condition expression has been accepted before starting debugging. If you do not, it might look
 like the condition expression is defined but it might not be and the breakpoint could always be hit.
 
