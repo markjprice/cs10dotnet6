@@ -9,6 +9,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
   - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
+  - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
   - [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
@@ -89,6 +90,11 @@ In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you ha
 To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1 by [downloading the VSIX](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.24.0-beta1) and then in Visual Studio Code **EXTENSIONS**, select the **Views and More Actions** menu (three dots) and then **Install from VSIX...**. 
 
 I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
+
+## Page 32 - Adding Markdown and special commands to a notebook
+
+In Step 3, I wrote to "click **+ Markup** to add a Markdown cell." I should have 
+written "click **+ Markdown** to add a Markdown cell." 
 
 ## Page 57 - Changing the color scheme for C# syntax
 
