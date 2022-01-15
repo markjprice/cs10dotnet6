@@ -157,6 +157,8 @@ Console.WriteLine(
 
 ## Page 87 - Passing arguments to a console app
 
+> Thanks to Bob Molloy for emailing me this issue.
+
 In Step 5, I say, "If you are using Visual Studio, then navigate to **Project** | **Arguments Properties**, select the **Debug** tab, and in the **Application arguments** box, enter some arguments". 
 
 Microsoft changed the user interface of Visual Studio 2022 after that step was written. 
@@ -184,6 +186,8 @@ It would have been clearer if I had explained that `ForegroundColor`, `Backgroun
 without explicitly typing the `Console` class name. 
 
 ## Page 92 - Exercise 2.3 – Practice number sizes and ranges
+
+> Thanks to Bob Molloy for emailing me this issue.
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
 
@@ -288,6 +292,8 @@ The only difference when creating a Class Library/classlib is to select a differ
 
 ## Page 168 - Understanding the call stack
 
+> Thanks to Bob Molloy for emailing me this issue.
+
 In Step 8, on page 170, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
 
 ## Page 172 - Rethrowing exceptions
@@ -317,6 +323,8 @@ Person bob = new(); // C# 9.0 or later
 In the **Good Practice** box, the text "If you use are writing code" should be "If you are writing code"
 
 ## Page 192 - Making a field constant
+
+> Thanks to Bob Molloy for emailing me this issue.
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
@@ -500,6 +508,8 @@ Use PersonComparer's IComparer implementation to sort:
 
 ## Page 347 - Using immutable collections
 
+> Thanks to Bob Molloy for emailing me this issue.
+
 In Step 4, I wrote, "note that the immutable list of cities does not get 
 modified when you call the `Add` method on it; instead, it returns a new 
 list with the newly added city"
@@ -508,6 +518,8 @@ It would have been clearer to write that it returns a new list containing
 the members from the old list plus the newly added city.
 
 ## Page 360 - Working with images
+
+> Thanks to Bob Molloy for emailing me this issue.
 
 In Step 3, I tell the reader to create an `images` folder but I do not specify where. 
 
