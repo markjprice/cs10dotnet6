@@ -93,6 +93,8 @@ I had hoped that the seriousness of this issue would prompt a non-beta fix by no
 
 ## Page 32 - Adding Markdown and special commands to a notebook
 
+> Thanks to [exzzy22](https://github.com/exzzy22) for raising this [issue on January 14, 2022](https://github.com/markjprice/cs10dotnet6/issues/34).
+
 In Step 3, I wrote to "click **+ Markup** to add a Markdown cell." I should have 
 written "click **+ Markdown** to add a Markdown cell." 
 
