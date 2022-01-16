@@ -12,6 +12,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
   - [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
+  - [Page 78 - Using target-typed new to instantiate objects](#page-78---using-target-typed-new-to-instantiate-objects)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
@@ -117,6 +118,25 @@ It would have been clearer to say, "You can disable the implicitly imported name
 ```xml
 <ImplicitUsings>disable</ImplicitUsings>
 ```
+
+## Page 78 - Using target-typed new to instantiate objects
+
+I show an example of how target-typed new works, as shown in the following code:
+```cs
+class Person
+{
+ public DateTime BirthDate;
+}
+
+Person kim = new();
+kim.BirthDate = new(1967, 12, 26); // instead of: new DateTime(1967, 12, 26)
+```
+
+I did not expect readers to type the code, so I did not give step-by-step instructions. 
+If a reader wants to try the code, note that the class must be declared either 
+at the bottom of the file, below the statements that use it, or in a separate file.
+If you enter the code as shown in the book you will get a compiler error: 
+`Error CS8803: Top-level statements must precede namespace and type declarations.`
 
 ## Page 82 - Formatting using interpolated strings
 
