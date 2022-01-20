@@ -2,7 +2,7 @@
 
 This chapter is about learning how to make **graphical user interface (GUI)** apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using **.NET MAUI (Multi-platform App User Interface)**. 
 
-> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.101, .NET MAUI Preview 11, and Visual Studio 2022. I expect to update this chapter in Q1 2022 for the .NET MAUI Release Candidate and in Q2 2022 for the .NET MAUI GA (General Availability) release. You can read the roadmap at the following link: https://github.com/dotnet/maui/wiki/Roadmap
+> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.200, .NET MAUI Preview 12, and Visual Studio 2022 17.1 Preview 3. I expect to update this chapter in Q1 2022 for the .NET MAUI Release Candidate and in Q2 2022 for the .NET MAUI GA (General Availability) release. You can read the roadmap at the following link: https://github.com/dotnet/maui/wiki/Roadmap
 
 You will see how **eXtensible Application Markup Language (XAML)** makes it easy to define the user interface for a graphical app. 
 
