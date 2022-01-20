@@ -58,10 +58,10 @@ https://devblogs.microsoft.com/dotnet/update-on-dotnet-maui/
 
 The following seems a likely timeline of preview and release candidate releases leading to the general availability release of .NET MAUI in about six months:
 
-- October 12, 2021: .NET MAUI Preview 9 and .NET 6 Release Candidate 2 that were used for this chapter in the published edition of this book. You can [download this version as a PDF](https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf)
-- November 9, 2021: .NET MAUI Preview 10 and .NET 6
-- December 2021: .NET MAUI Preview 11
-- January 2022: .NET MAUI Preview 12
+- October 12, 2021: [.NET MAUI Preview 9](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-9/) and .NET 6 Release Candidate 2 that were used for this chapter in the published edition of this book. You can [download this version as a PDF](https://github.com/markjprice/cs10dotnet6/blob/main/9781801077361_Bonus_Content.pdf)
+- November 9, 2021: [.NET MAUI Preview 10](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-10/) and .NET 6
+- January 5, 2021: [.NET MAUI Preview 11](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-preview-11/)
+- January 19, 2022: [.NET MAUI Preview 12](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-12/)
 - February 2022: .NET MAUI Preview 13
 - March 2022: .NET MAUI Release Candidate 1
 - April 2022: .NET MAUI Release Candidate 2
