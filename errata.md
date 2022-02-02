@@ -35,6 +35,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
+  - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
 - [Bonus Content](#bonus-content)
@@ -710,7 +711,20 @@ options.Converters.Add(new DateOnlyNullableConverter());
 ## Page 417 - Database Provider for MySQL
 
 The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
-The new one is "MySQL.EntityFrameworkCore"  
+The new one is "MySQL.EntityFrameworkCore"
+
+## Page 438 - Getting the generated SQL
+
+> Thanks to Bob Molloy for emailing this issue.
+
+In Step 3, the `ORDER BY` clause shows the SQL sorts by `CategoryId` and then by `ProductId`:
+```
+ORDER BY "c"."CategoryId", "t"."ProductId"
+```
+The `ORDER BY` clause should only show the SQL sorts by `CategoryId`:
+```
+ORDER BY "c"."CategoryId"
+```
 
 ## Page 510 - Implementing a Recorder class
 
