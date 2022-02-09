@@ -190,7 +190,7 @@
 - Themes of .NET: https://themesof.net/
 - Microsoft's positioning of .NET Core and .NET Framework: https://devblogs.microsoft.com/dotnet/update-on-net-core-3-0-and-net-framework-4-8/
 - Microsoft's plans for the journey to one .NET: https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/
-- Official list of .NET 6 supported operating systems: https://github.com/dotnet/core/blob/master/release-notes/6.0/6.0-supported-os.md
+- Official list of .NET 6 supported operating systems: https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md
 - Windows ARM64 support: https://github.com/dotnet/runtime/issues/36699
 - .NET Support Policy: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
 - .NET versions: https://docs.microsoft.com/en-us/dotnet/core/versions/
