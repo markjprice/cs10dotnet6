@@ -159,8 +159,7 @@
 - Microsoft's plans for Visual Studio Code: https://github.com/Microsoft/vscode/wiki/Roadmap
 - Learning with VS Code on Chromebooks: https://code.visualstudio.com/blogs/2020/12/03/chromebook-get-started
 - Google and Amazon are supporters of Visual Studio Code: https://www.cnbc.com/2018/12/20/microsoft-cmo-capossela-says-google-employees-use-visual-studio-code.html
-- Visual Studio Code: How Microsoft's 'any OS, any programming language, any software' plan is paying off: https://www.zdnet.com/article/visual-studio-code-
-how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
+- Visual Studio Code: How Microsoft's 'any OS, any programming language, any software' plan is paying off: https://www.zdnet.com/article/visual-studio-code-how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - The History of Visual Studio Code: https://mybuild.microsoft.com/sessions/6b571733-8198-48da-b870-ef804dcfea93?source=sessions
 
 ## Other C# code editors and platforms
