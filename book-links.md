@@ -385,12 +385,12 @@ how-microsofts-any-os-any-programming-language-any-software-plan-is-paying-off/
 - Symbols that can be overloaded: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/overloadable-operators
 
 ## Delegates and events
-- Delegates: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/features-delegates-and-lambda-expressions
+- Delegates: https://docs.microsoft.com/en-us/dotnet/standard/delegates-lambdas
 - Events (C# reference): https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/event
 - Custom EventArgs: https://docs.microsoft.com/en-us/dotnet/standard/events/how-to-raise-and-consume-events
 
 ## Interfaces and generics
-- Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-interfaces
+- Interfaces: https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/interfaces
 - Explicit interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation
 - Design decisions for default interface implementations: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/default-interface-methods
 - Default interface implementations tutorial: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-members-versions
