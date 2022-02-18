@@ -109,12 +109,12 @@ For the `NorthwindContextLib` project, the referenced NuGet package for SQLite s
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\NorthwindEntitiesLib\NorthwindEntitiesLib.csproj" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="7.0.0-*" />
   </ItemGroup>
 
 </Project>
