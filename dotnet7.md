@@ -2,7 +2,7 @@
 Microsoft will release previews of .NET 7 regularly until the final version on November 7, 2022.
 
 - [Download .NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0)
-- November 7, 2022: Announcing .NET 7.0 — The Fastest .NET Yet
+- November 7, 2022: Announcing .NET 7.0 — The Bestest .NET Yet
 - October 2022: Announcing .NET 7 Release Candidate 2
 - September 2022: Announcing .NET 7 Release Candidate 1
 - August 2022: Announcing .NET 7 Preview 7
@@ -13,7 +13,7 @@ Microsoft will release previews of .NET 7 regularly until the final version on N
 - March 2022: Announcing .NET 7 Preview 2
 - February 17, 2022: [Announcing .NET 7 Preview 1](https://devblogs.microsoft.com/dotnet/announcing-net-7-preview-1/)
 
-## Chapters 1 to 19
+## All Chapters
 After [downloading](https://dotnet.microsoft.com/download/dotnet/7.0) and installing .NET 7.0 SDK, follow the step-by-step instructions in the book and they should work as expected since the project file will automatically reference .NET 7.0 as the target framework. 
 
 To upgrade a project in the GitHub repository from .NET 6.0 to .NET 7.0 just requires a target framework change in your project file.
