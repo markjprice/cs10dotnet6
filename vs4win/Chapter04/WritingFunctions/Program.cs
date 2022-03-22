@@ -69,7 +69,7 @@ static decimal CalculateTax(
 
 static void RunCardinalToOrdinal()
 {
-  for (int number = 1; number <= 40; number++)
+  for (int number = 1; number <= 1040; number++)
   {
     Write($"{CardinalToOrdinal(number)} ");
   }
@@ -165,7 +165,9 @@ partial class Program
     /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
     static string CardinalToOrdinal(int number)
     {
-        switch (number)
+        int lastTwoDigits = number % 100;
+
+        switch (lastTwoDigits)
         {
             case 11: // special cases for 11th to 13th
             case 12:

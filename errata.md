@@ -19,6 +19,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
+  - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
   - [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
@@ -219,6 +220,37 @@ In Exercise 2.3, I say, "create a console application project named Exercise02".
 I wrote, "Iteration statements repeat a block of statements either while a condition is true or for each item in a collection."
 
 Some readers do not realize that the `for` statement does not iterate a specific number of times; it uses a while condition, or loops forever if the while condition is missing. To make that clearer, the sentence could be, "Iteration statements repeat a block of statements either while a condition is `true` (`while` and `for` statements) or for each item in a collection (`foreach` statement)."
+
+## Page 136 - Converting numbers from cardinal to ordinal
+
+> Thanks to [Felix Namutare](https://github.com/namutare) for raising this issue.
+
+The `CardinalToOrdinal` function fails to properly convert numbers larger than 100 like 111, 112, 113. The fix is to calculate the last two digits and then switch on that value instead, as shown in the following code:
+```cs
+static string CardinalToOrdinal(int number)
+{
+  int lastTwoDigits = number % 100;
+
+  switch (lastTwoDigits)
+  {
+    case 11: // special cases from 11th to 13th
+    case 12:
+    case 13:
+      return $"{number}th";
+    default:
+      int lastDigit = number % 10;
+
+      string suffix = lastDigit switch
+      {
+        1 => "st",
+        2 => "nd",
+        3 => "rd",
+        _ => "th"
+      };
+      return $"{number}{suffix}";
+  }
+}
+```
 
 ## Page 137 - Calculating factorials with recursion
 
