@@ -31,6 +31,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
+  - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
+  - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
   - [Page 360 - Working with images](#page-360---working-with-images)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
@@ -560,6 +562,21 @@ Use PersonComparer's IComparer implementation to sort:
   <null> Name
   <null> Person
 ```
+
+## Page 252 - Inheriting from classes
+
+> Thanks to Nick Tsiatinis for emailing me this issue.
+
+In Step 3, I wrote, "In `Program.cs`, ...", but at that point there are now two 
+console app projects with a `Program.cs` file. I should have said, 
+"In the `PeopleApp` project, in `Program.cs`, ..."
+
+## Page 260 - Avoiding casting exceptions
+
+> Thanks to Nick Tsiatinis for emailing me this issue.
+
+In Step 3, I wrote, "In `Main`, ...", but there is no `Main` method. 
+I should have written, "In `Program.cs`, ..."
 
 ## Page 347 - Using immutable collections
 
