@@ -37,6 +37,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 360 - Working with images](#page-360---working-with-images)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+  - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
@@ -756,6 +757,12 @@ JsonSerializerOptions options = new()
 options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
+
+## Page 414 - Setting Up SQLite for Windows
+
+> Thanks to John David Bowman for emailing this issue.
+
+In Step 4, I wrote, "Extract the ZIP file into a folder named `C:\SQLite`." It would be clearer to add the following, "Make sure that the extracted  `sqlite3.exe` file is directly inside the `C:\SQLite` folder or the executable will not be found later when you try to use it."
 
 ## Page 417 - Database Provider for MySQL
 
