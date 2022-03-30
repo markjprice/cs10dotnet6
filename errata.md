@@ -39,6 +39,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
+  - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
@@ -768,6 +769,21 @@ In Step 4, I wrote, "Extract the ZIP file into a folder named `C:\SQLite`." It w
 
 The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
 The new one is "MySQL.EntityFrameworkCore"
+
+## Page 428 - Setting up the dotnet-ef tool
+
+> Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 30 March 2022](https://github.com/markjprice/cs10dotnet6/issues/45)
+
+If you have an M1 Mac and you choose to install the .NET SDK 6 for Arm64, then beware there is an installer bug that means when you install the `dotnet-ef` tool, it installs the tool for Intel x64 architecture instead of Arm64. You will not see any problem until you try to run `dotnet-ef` commands, at which point you see the following error:
+```
+A fatal error occurred. The required library libhostfxr.dylib could not be found.
+If this is a self-contained application, that library should exist in [/Users/[name]/.dotnet/tools/.store/dotnet-ef/6.0.0/dotnet-ef/6.0.0/tools/netcoreapp3.1/any/].
+If this is a framework-dependent application, install the runtime in the global location [/usr/local/share/dotnet/x64] or use the DOTNET_ROOT environment variable to specify the runtime location or register the runtime location in [/etc/dotnet].
+```
+To fix this problem:
+
+1. Uninstall the x86 version using: `dotnet tool uninstall --global dotnet-ef`.
+2. Force the install of the ARM version using: `dotnet tool install --global dotnet-ef -a arm64`.
 
 ## Page 438 - Getting the generated SQL
 
