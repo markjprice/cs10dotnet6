@@ -43,6 +43,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
+  - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
@@ -852,6 +853,30 @@ The four corrected elements are as shown in the following markup:
 <a class="carousel-control-next" href="#categories"
    role="button" data-bs-slide="next">
 ```
+
+## Page 701 - Enabling HTTP logging
+
+> Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/47).
+
+The book misses an important step to enable HTTP logging. You must configure the level of ASP.NET Core logging to `Information` because it usually is configured as `Warning` and therefore does not output.
+
+1. Open `appsettings.Development.json`.
+2. Add an entry or modify the log level of `Microsoft.AspNetCore` to `Information`:
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.AspNetCore": "Information",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  }
+}
+```
+
+> Note: Although the `Default` log level might be set to `Information`, more specific configurations take priority. For example, any logging systems in the `Microsoft` namespace will use `Warning` level. Any logging systems in the `Microsoft.AspNetCore` namespace will now use `Information.`
 
 # Bonus Content 
 
