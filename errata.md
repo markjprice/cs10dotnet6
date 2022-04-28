@@ -42,6 +42,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
+  - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
 - [Bonus Content](#bonus-content)
@@ -815,6 +816,23 @@ Processing. Please wait...
 ```
 
 This could be a bug but I am investigating.
+
+## Page 535 - Improving responsiveness for GUI apps
+
+> Thanks to [Chang-Ping](https://github.com/Chang-Ping) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/50).
+
+If you get the error, `"The certificate chain was issued by an authority that is not trusted."`, 
+then either add the following to the database connection string:
+
+```
+"TrustServerCertificate=True;" +
+```
+
+Or run the following at the command line:
+
+```
+dotnet dev-certs https --trust
+```
 
 ## Page 645 - Defining a typed view
 
