@@ -46,6 +46,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
+  - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
@@ -904,11 +905,10 @@ The book misses an important step to enable HTTP logging. You must configure the
 In Step 1, I tell you to configure the Web API service to use port 5002 by calling the `UseUrls` method, as shown in the following code:
 
 ```cs
-var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseUrls("https://localhost:5002/");
 ```
 
-But there is a bug in .NET 6 that causes it to ignore this configuration and continue to use the configuration in the `launchSetting.json` file, as explained at the following link: https://github.com/dotnet/aspnetcore/issues/38185
+But there is a bug in .NET 6 that causes it to ignore this configuration and continue to use the configuration in the `launchSettings.json` file, as explained at the following link: https://github.com/dotnet/aspnetcore/issues/38185
 
 To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, as shown in the following configuration:
 
@@ -920,6 +920,34 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
       "launchBrowser": false,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:5002",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+```
+
+## Page 712 - Building a weather service using minimal APIs
+
+> Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/49).
+
+In Step 1, I tell you to configure the Minimal Web API service to use port 5003 by calling the `UseUrls` method, as shown in the following code:
+
+```cs
+builder.WebHost.UseUrls("https://localhost:5003/");
+```
+
+But there is a bug in .NET 6 that causes it to ignore this configuration and continue to use the configuration in the `launchSettings.json` file, as explained at the following link: https://github.com/dotnet/aspnetcore/issues/38185
+
+To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, as shown in the following configuration:
+
+```json
+"profiles": {
+    "Minimal.WebApi": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "weatherforecast",
+      "applicationUrl": "https://localhost:5003",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
