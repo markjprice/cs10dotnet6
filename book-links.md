@@ -8,7 +8,7 @@
   - [Open source and other projects related to .NET](#open-source-and-other-projects-related-to-net)
   - [Git](#git)
   - [Help and learning](#help-and-learning)
-- [Chapter 2 - Speaking C](#chapter-2---speaking-c)
+- [Chapter 2 - Speaking C#](#chapter-2---speaking-c)
   - [C# language version and the journey to C# 10](#c-language-version-and-the-journey-to-c-10)
   - [C# language](#c-language)
   - [C# implemented proposals](#c-implemented-proposals)
@@ -696,7 +696,7 @@
 # Chapter 14 - Building Websites Using ASP.NET Core Razor Pages
 
 ## General web development
-- HTML5 and CSS3: Building Responsive Websites: https://www.packtpub.com/producthtml5-and-css3-building-responsive-websites/9781787124813h
+- HTML5 and CSS3: Building Responsive Websites: https://subscription.packtpub.com/product/web_development/9781839211560
 - Kestrel web server: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
 - Free TLS/SSL certificates: https://letsencrypt.org
 - ASP.NET Core hosting environments: https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments
@@ -905,12 +905,12 @@
 ## Learn from other Packt books
 - Mobile Development with .NET: https://www.packtpub.com/product/mobile-development-with-net-second-edition/9781800204690
 - Enterprise Application Development with C# 9 and .NET 5: https://www.packtpub.com/product/enterprise-application-development-with-c-9-and-net-5/9781800209442
-- Software Architecture with C# 9 and .NET 5: https://www.packtpub.com/product/software-architecture-with-c-9-and-net-5-second-edition/9781800566040
-- An Atypical ASP.NET Core 5 Design Patterns Guide: https://www.packtpub.com/product/an-atypical-asp-net-core-5-design-patterns-guide/9781789346091
+- Software Architecture with C# 10 and .NET 6: https://www.packtpub.com/product/software-architecture-with-c-10-and-net-6-third-edition/9781803235257
+- An Atypical ASP.NET Core 6 Design Patterns Guide: https://subscription.packtpub.com/product/web_development/9781803249841
 - Customizing ASP.NET Core 5.0: https://www.packtpub.com/product/customizing-asp-net-core-5-0/9781801077866
 - ASP.NET Core Secure Coding Cookbook: https://www.packtpub.com/product/asp-net-core-secure-coding-cookbook/9781801071567
 - ASP.NET Core 5 and React: https://www.packtpub.com/product/asp-net-core-5-and-react-second-edition/9781800206168
-- ASP.NET Core 5 and Angular: https://www.packtpub.com/product/asp-net-core-5-and-angular-fourth-edition/9781800560338
+- ASP.NET Core 6 and Angular: https://subscription.packtpub.com/product/web_development/9781803239705
 - ASP.NET Core and Vue.js: https://www.packtpub.com/product/asp-net-core-and-vue-js/9781800206694
 - Practical Microservices with Dapr and .NET: https://www.packtpub.com/product/practical-microservices-with-dapr-and-net/9781800568372
 - Web Development with Blazor and .NET 5: https://www.packtpub.com/product/web-development-with-blazor-and-net-5/9781800208728
