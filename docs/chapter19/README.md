@@ -2,7 +2,7 @@
 
 This chapter is about learning how to make **graphical user interface (GUI)** apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using **.NET MAUI (Multi-platform App User Interface)**. 
 
-> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.200, .NET MAUI Preview 13, and Visual Studio 2022 17.2 Preview 1. I expect to update this chapter in Q1 2022 for the .NET MAUI Release Candidate and in Q2 2022 for the .NET MAUI GA (General Availability) release. You can read the roadmap at the following link: https://github.com/dotnet/maui/wiki/Roadmap
+> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.200, .NET MAUI Release Candidate 2, and Visual Studio 2022 17.2 Preview 5. I expect to update this chapter in Q2 2022 for the .NET MAUI GA (General Availability) release. You can read the roadmap at the following link: https://github.com/dotnet/maui/wiki/Roadmap
 
 You will see how **eXtensible Application Markup Language (XAML)** makes it easy to define the user interface for a graphical app. 
 
@@ -63,8 +63,10 @@ The following seems a likely timeline of preview and release candidate releases 
 - January 5, 2021: [.NET MAUI Preview 11](https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-preview-11/)
 - January 19, 2022: [.NET MAUI Preview 12](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-12/)
 - February 15, 2022: [.NET MAUI Preview 13](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-13/)
-- March 2022: .NET MAUI Release Candidate 1
-- April 2022: .NET MAUI Release Candidate 2
+- March 16, 2022: [.NET MAUI Preview 14](https://devblogs.microsoft.com/dotnet/announcing-net-maui-preview-14/)
+- April 12, 2022: [.NET MAUI Release Candidate 1](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-1/)
+- April 26, 2022: [.NET MAUI Release Candidate 2](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-2/)
+- May 10, 2022: [.NET MAUI Release Candidate 3](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-3/)
 - May 2022: .NET MAUI General Availability at Microsoft Build
 - November 2022: .NET MAUI included with .NET 7
 
