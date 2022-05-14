@@ -56,12 +56,13 @@ namespace Packt.Shared
     [StringLength(24)]
     public string? Fax { get; set; }
 
-    [InverseProperty(nameof(CustomerCustomerDemo.Customer))]
-    [XmlIgnore]
-    public virtual ICollection<CustomerCustomerDemo> CustomerCustomerDemos { get; set; }
-
     [InverseProperty(nameof(Order.Customer))]
     [XmlIgnore]
     public virtual ICollection<Order> Orders { get; set; }
+
+    [ForeignKey(CustomerId")]
+    [InverseProperty("Customers")]
+    [XmlIgnore]
+    public virtual ICollection<CustomerDemographic> CustomerTypes { get; set; }
   }
 }
