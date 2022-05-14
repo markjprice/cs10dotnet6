@@ -44,6 +44,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
+  - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
   - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
@@ -873,6 +874,13 @@ The four corrected elements are as shown in the following markup:
 <a class="carousel-control-next" href="#categories"
    role="button" data-bs-slide="next">
 ```
+
+## Page 688 - Controlling XML serialization
+
+In Step 4, I say, "In the `Northwind.Common.EntityModels.SqlServer` project, decorate the 
+`CustomerCustomerDemos` property with `[XmlIgnore]` too." 
+
+This should say, "In the `Northwind.Common.EntityModels.SqlServer` project, in `Customers.cs`, decorate the `CustomerTypes` property with `[XmlIgnore]` too."
 
 ## Page 701 - Enabling HTTP logging
 
