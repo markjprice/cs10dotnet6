@@ -48,6 +48,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
   - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
+  - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 - [Bonus Content](#bonus-content)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
@@ -961,6 +962,50 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
       }
     },
 ```
+
+## Page 768 - Exercise 17.3 – Practice by creating a country navigation item
+
+This exercise is probably too difficult to complete for Blazor WebAssembly 
+with the knowledge that I cover in the chapter because it requires you to extend 
+the service and then dynamically create components at runtime, as documented here: 
+https://docs.microsoft.com/en-us/aspnet/core/blazor/components/dynamiccomponent
+
+I am also looking at using pre-rendered components to solve the exercise for
+Blazor WebAssembly.
+
+Instead, try to complete the exercise for Blazor Server. For example...
+
+In the `Northwind.BlazorServer` project, in `INorthwindService.cs`, I added the following:
+```cs
+List<string?> GetCountries();
+```
+In `NorthwindService.cs`, I added the following:
+```cs
+public List<string?> GetCountries()
+{
+  return db.Customers.Select(c => c.Country).Distinct().OrderBy(country => country).ToList();
+}
+```
+In `NavMenu.razor`, I added the following:
+```cs
+@inject INorthwindService northwind
+```
+```cs
+@foreach(string? country in northwind.GetCountries())
+{
+    string countryLink = "customers/" + country;
+
+    <div class="nav-item px-3">
+        <NavLink class="nav-link" href="@countryLink">
+        <span class="oi oi-people" aria-hidden="true"></span>
+        Customers in @country
+        </NavLink>
+    </div>
+}
+```
+You cannot use `<NavLink class="nav-link" href="customers/@c">` because Blazor does 
+not allow combined text and @ expression in components. That is why my code above 
+creates a local variable to do the combining to make the country URL.
 
 # Bonus Content 
 
