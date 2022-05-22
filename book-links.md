@@ -347,7 +347,7 @@
 ## Testing
 - Test Driven Development (TDD): https://en.wikipedia.org/wiki/Test-driven_development
 - Unit testing in .NET: https://docs.microsoft.com/en-us/dotnet/core/testing/
-- xUnit.net: http://xunit.github.io/
+- xUnit.net: http://xunit.net/
 
 # Chapter 5 - Building Your Own Types with Object-Oriented Programming
 
