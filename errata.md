@@ -7,6 +7,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
   - [Page 16 - Understanding .NET Standard](#page-16---understanding-net-standard)
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
+  - [Page 20 - Compiling and running code using Visual Studio](#page-20---compiling-and-running-code-using-visual-studio)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
   - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
   - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
@@ -73,6 +74,16 @@ Read more at the following link: https://devblogs.microsoft.com/dotnet/performan
 ## Page 18 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022.
+
+## Page 20 - Compiling and running code using Visual Studio
+
+In Step 1, I say, "In Visual Studio, navigate to Debug | Start Without Debugging."
+
+I do not explain why it is best to start without debugging, or that the alternative is to start a project with the Visual Studio 2022 debugger attached. Some developers get into a bad habit of always starting their projects with the debugger attached.
+
+Always start your Visual Studio 2022 projects *without debugging* unless you are *actually debugging*. This is for two good reasons. First, starting a project with the debugger attached is much slower, and second, it prevents that copy of Visual Studio from starting another project at the same time. If you start a project *without* the debugger attached then you can use that single copy of Visual Studio to start as many projects as you need. This is useful when a solution is composed of multiple projects like web services, websites, and client apps.
+
+If you start a project with the debugger attached then you must start another copy of Visual Studio if you want to run another project at the same time.
 
 ## Page 25 - Writing code using Visual Studio Code
 
