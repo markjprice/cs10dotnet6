@@ -47,6 +47,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
+  - [Page 706 - Enabling Cross-Origin Resource Sharing](#page-706---enabling-cross-origin-resource-sharing)
   - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 - [Bonus Content](#bonus-content)
@@ -934,6 +935,13 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
       }
     },
 ```
+
+## Page 706 - Enabling Cross-Origin Resource Sharing
+
+In Step 4, I say, "Start the Northwind.WebApi project and confirm that the web service is listening only on 
+port 5002." In the next edition I will add that if you are using Visual Studio then you should start it without debugging.
+
+> **Good Practice**: Always start your Visual Studio 2022 projects *without debugging* unless you are *actually debugging*. This is for two good reasons. First, starting a project with the debugger attached is much slower, and second, it prevents that copy of Visual Studio from starting another project at the same time. If you start a project *without* the debugger attached then you can use that single copy of Visual Studio to start as many projects as you need.
 
 ## Page 712 - Building a weather service using minimal APIs
 
