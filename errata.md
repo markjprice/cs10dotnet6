@@ -46,6 +46,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
   - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
+  - [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
   - [Page 706 - Enabling Cross-Origin Resource Sharing](#page-706---enabling-cross-origin-resource-sharing)
@@ -894,6 +895,50 @@ In Step 4, I say, "In the `Northwind.Common.EntityModels.SqlServer` project, dec
 `CustomerCustomerDemos` property with `[XmlIgnore]` too." 
 
 This should say, "In the `Northwind.Common.EntityModels.SqlServer` project, in `Customers.cs`, decorate the `CustomerTypes` property with `[XmlIgnore]` too."
+
+## Page 692 - Making other requests using REST Client
+
+In Step 1, I say to define a `POST` request to create a new customer, as shown in the following document:
+```
+POST https://localhost:5001/api/customers/ HTTP/1.1 
+Content-Type: application/json
+Content-Length: 301
+
+{
+ "customerID": "ABCXY",
+ "companyName": "ABC Corp",
+ "contactName": "John Smith",
+ "contactTitle": "Sir",
+ "address": "Main Street",
+ "city": "New York",
+ "region": "NY",
+ "postalCode": "90210",
+ "country": "USA",
+ "phone": "(123) 555-1234",
+ "fax": null,
+ "orders": null
+}
+```
+The `POST` document would be better without the `fax` and `orders` since they are `null` anyway and this avoids errors if the service expects `orders` to not be `null`. Change the `POST` to request to remove those two properties, as shown in the following document:
+```
+POST https://localhost:5001/api/customers/ HTTP/1.1 
+Content-Type: application/json
+Content-Length: 266
+
+{
+ "customerID": "ABCXY",
+ "companyName": "ABC Corp",
+ "contactName": "John Smith",
+ "contactTitle": "Sir",
+ "address": "Main Street",
+ "city": "New York",
+ "region": "NY",
+ "postalCode": "90210",
+ "country": "USA",
+ "phone": "(123) 555-1234"
+}
+```
+> Note the `Content-Length` has had to change too.
 
 ## Page 701 - Enabling HTTP logging
 
