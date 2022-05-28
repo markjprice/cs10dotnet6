@@ -898,6 +898,8 @@ This should say, "In the `Northwind.Common.EntityModels.SqlServer` project, in `
 
 ## Page 692 - Making other requests using REST Client
 
+> Thanks to [Tim](https://github.com/tcrum06) for raising this [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/67). 
+
 In Step 1, I say to define a `POST` request to create a new customer, as shown in the following document:
 ```
 POST https://localhost:5001/api/customers/ HTTP/1.1 
