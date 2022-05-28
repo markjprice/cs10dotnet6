@@ -34,6 +34,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
   - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
+  - [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
   - [Page 360 - Working with images](#page-360---working-with-images)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
@@ -598,6 +599,12 @@ console app projects with a `Program.cs` file. I should have said,
 
 In Step 3, I wrote, "In `Main`, ...", but there is no `Main` method. 
 I should have written, "In `Program.cs`, ..."
+
+## Page 311 - Understanding the .NET Portability Analyzer
+
+> Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 28 May 2022](https://github.com/markjprice/cs10dotnet6/issues/68).
+
+The link to the demonstration video has changed to: https://docs.microsoft.com/en-us/shows/seth-juarez/brief-look-net-portability-analyzer
 
 ## Page 347 - Using immutable collections
 
