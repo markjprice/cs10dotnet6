@@ -34,6 +34,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
   - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
+  - [Page 289 - Creating a console application to publish](#page-289---creating-a-console-application-to-publish)
   - [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
   - [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
@@ -600,6 +601,16 @@ console app projects with a `Program.cs` file. I should have said,
 
 In Step 3, I wrote, "In `Main`, ...", but there is no `Main` method. 
 I should have written, "In `Program.cs`, ..."
+
+## Page 289 - Creating a console application to publish
+
+> Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this 
+> [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/66).
+
+In Step 5, I tell you to "add the runtime identifiers to target three 
+operating systems inside the `<PropertyGroup>` element." It is easy to miss that 
+the element name must be plural, not singular. It must be 
+`<RuntimeIdentifiers>`, not `<RuntimeIdentifier>`.
 
 ## Page 311 - Understanding the .NET Portability Analyzer
 
