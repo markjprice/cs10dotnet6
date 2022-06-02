@@ -44,8 +44,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
   - [Page 420 - Defining the Northwind database context class](#page-420---defining-the-northwind-database-context-class)
-    - [If you are using SQL Server or SQLite with Visual Studio Code](#if-you-are-using-sql-server-or-sqlite-with-visual-studio-code)
-    - [If you are using SQLite and Visual Studio 2022](#if-you-are-using-sqlite-and-visual-studio-2022)
+    - [If you are using (a) SQL Server or (b) SQLite with Visual Studio Code](#if-you-are-using-a-sql-server-or-b-sqlite-with-visual-studio-code)
+    - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
@@ -821,9 +821,14 @@ The new one is "MySQL.EntityFrameworkCore"
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 1 June 2022](https://github.com/markjprice/cs10dotnet6/issues/73)
 
-After step 7, steps 8 to 10 are only needed for SQLite and its `Northwind.db` file. Step 11 is needed for both SQLite and SQL Server. I should have made that clearer. For example:
+After step 7, steps 8 to 10 are only needed for SQLite and its `Northwind.db` file 
+if you are running the project using Visual Studio 2022. 
 
-### If you are using SQL Server or SQLite with Visual Studio Code
+Step 11 is needed for both SQLite and SQL Server. I should have made that clearer. 
+
+For example:
+
+### If you are using (a) SQL Server or (b) SQLite with Visual Studio Code
 
 If you are using SQL Server then the data is stored in a database outside the project. 
 It will be found if the connection string is valid for the server name and database name.
@@ -838,7 +843,7 @@ In both cases:
 1. Run the console application.
 2. Note the output showing which database provider you chose to use.
 
-### If you are using SQLite and Visual Studio 2022
+### If you are using SQLite with Visual Studio 2022
 
 If you are using **SQLite** with **Visual Studio 2022**, then you need to ensure 
 that the `Northwind.db` file is in the correct folder. The compiled application executes in 
