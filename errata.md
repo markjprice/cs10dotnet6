@@ -43,6 +43,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
+  - [Page 420 - Defining the Northwind database context class](#page-420---defining-the-northwind-database-context-class)
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
@@ -813,6 +814,29 @@ In Step 4, I wrote, "Extract the ZIP file into a folder named `C:\SQLite`." It w
 
 The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
 The new one is "MySQL.EntityFrameworkCore"
+
+## Page 420 - Defining the Northwind database context class
+
+After Step 7, steps 8 to 10 are only needed for SQLite and its `Northwind.db` file. Step 11 is for both SQLite and SQL Server. I should have made that clearer. For example:
+
+8. If you are using SQL Server, run the console application and note the output showing which database provider you 
+chose to use.
+9. If you are using SQLite, you need to ensure that the Northwind.db file is in the correct folder:
+    - If you are using Visual Studio Code, then the compiled application executes in the 
+`WorkingWithEFCore` folder so it will find the database file without it being copied.
+    - If you are using Visual Studio for Windows, then the compiled application executes in 
+the `WorkingWithEFCore\bin\Debug\net6.0` folder so it will not find the database file.
+   1. In **Solution Explorer**, right-click the `Northwind.db` file and select **Properties**.
+   2. In **Properties**, set **Copy to Output Directory** to **Copy always**.
+   3. Open `WorkingWithEFCore.csproj` and note the new elements, as shown in the following 
+markup:
+```xml
+<ItemGroup>
+ <None Update="Northwind.db">
+ <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+ </None>
+</ItemGroup>
+```
 
 ## Page 428 - Setting up the dotnet-ef tool
 
