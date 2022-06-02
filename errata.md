@@ -831,8 +831,9 @@ the `WorkingWithEFCore\bin\Debug\net6.0` folder so it will not find the database
 copy it to the output directory each time we run the project:
     1. In **Solution Explorer**, right-click the `Northwind.db` file and select **Properties**.
     2. In **Properties**, set **Copy to Output Directory** to **Copy always**.
-    3. Open `WorkingWithEFCore.csproj` and note the new elements, as shown in the following 
-markup:
+    3. Run the console application and note the output showing which database provider you chose to use.
+    4. Optionally, open `WorkingWithEFCore.csproj` and note the new elements, as shown in the following markup:
+
 ```xml
 <ItemGroup>
   <None Update="Northwind.db">
@@ -840,8 +841,6 @@ markup:
   </None>
 </ItemGroup>
 ```
-    4. Run the console application and note the output showing which database provider you 
-chose to use.
 
 ## Page 428 - Setting up the dotnet-ef tool
 
