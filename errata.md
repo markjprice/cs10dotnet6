@@ -48,6 +48,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
     - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
+  - [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
@@ -888,6 +889,25 @@ ORDER BY "c"."CategoryId", "t"."ProductId"
 The `ORDER BY` clause should only show the SQL sorts by `CategoryId`:
 ```
 ORDER BY "c"."CategoryId"
+```
+
+## Page 509 - Implementing a Recorder class
+
+> Thanks to [akrsnr](https://github.com/HoshyarKarimi) for raising this [issue on 5 June 2022](https://github.com/markjprice/cs10dotnet6/issues/76). 
+
+In Step 1, the implementation of the Stop method includes "elapsed" spelled wrong in the output text:
+```cs
+WriteLine("{0} time span ellapsed.", timer.Elapsed);
+
+WriteLine("{0:N0} total milliseconds ellapsed.",
+  timer.ElapsedMilliseconds);
+```
+The code should be:
+```cs
+WriteLine("{0} time span elapsed.", timer.Elapsed);
+
+WriteLine("{0:N0} total milliseconds elapsed.",
+  timer.ElapsedMilliseconds);
 ```
 
 ## Page 510 - Implementing a Recorder class

@@ -40,9 +40,9 @@ public static class Recorder
     WriteLine("{0:N0} virtual bytes used.",
       bytesVirtualAfter - bytesVirtualBefore);
 
-    WriteLine("{0} time span ellapsed.", timer.Elapsed);
+    WriteLine("{0} time span elapsed.", timer.Elapsed);
 
-    WriteLine("{0:N0} total milliseconds ellapsed.",
+    WriteLine("{0:N0} total milliseconds elapsed.",
       timer.ElapsedMilliseconds);
   }
 }
