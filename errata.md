@@ -893,7 +893,7 @@ ORDER BY "c"."CategoryId"
 
 ## Page 509 - Implementing a Recorder class
 
-> Thanks to [akrsnr](https://github.com/HoshyarKarimi) for raising this [issue on 5 June 2022](https://github.com/markjprice/cs10dotnet6/issues/76). 
+> Thanks to [HoshyarKarimi](https://github.com/HoshyarKarimi) for raising this [issue on 5 June 2022](https://github.com/markjprice/cs10dotnet6/issues/76). 
 
 In Step 1, the implementation of the Stop method includes "elapsed" spelled wrong in the output text:
 ```cs
