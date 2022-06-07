@@ -1,4 +1,5 @@
 [Improvements & Errata - list of corrections](errata.md)
+[Join me on Discord](https://packt.link/csharp10dotnet6)
 
 # C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
@@ -25,6 +26,7 @@ Supplementary print book materials available to download:
 Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
 - [Book Links](book-links.md)
 - [Improvements & Errata - list of corrections](errata.md)
+- [Join me on Discord](https://packt.link/csharp10dotnet6)
 - [Sixth edition's support for .NET 7](dotnet7.md)
 - [Online step-by-step instructions for common code editors](docs/README.md)
 - Feedback survey (coming soon): For now, feel free to email me at Gmail using my GitHub username.
