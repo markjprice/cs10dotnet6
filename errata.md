@@ -16,6 +16,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 78 - Using target-typed new to instantiate objects](#page-78---using-target-typed-new-to-instantiate-objects)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
+  - [Page 84 - Simplifying the usage of the console](#page-84---simplifying-the-usage-of-the-console)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
   - [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
@@ -208,6 +209,36 @@ Console.WriteLine(
   arg0: "Name",
   arg1: "Count");
 ```
+
+## Page 84 - Simplifying the usage of the console
+
+> Thanks to [Fercho](https://github.com/theFissh) for raising this [issue on 12 June 2022](https://github.com/markjprice/cs10dotnet6/issues/80). 
+
+In Step 1, I wrote, "At the top of the `Program.cs` file, add a statement to statically import the 
+`System.Console` class, as shown in the following code:
+```cs
+using static System.Console;
+```
+Earlier in the chapter, in the **Implicitly and globally importing namespaces** section starting on page 59, I introduced the *implicit usings* feature of the .NET 6 SDK. But I did not show how to import a type statically using it. You will need to import the `System.Console` class a lot throughout the book, and in multiple class files, so a better way is to use the *implicit usings* feature to do it once at the project level, as shown in the following markup:
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+
+</Project>
+```
+Note the `<ImplicitUsings>` element must be set to `enable` and the `<Using>` element must have its `Static` attribute set to `true`.
+
+In the seventh edition, I have changed the instructions throughout the book to do it this way, for example:
+https://github.com/markjprice/cs11dotnet7/blob/main/vs4win/Chapter06/PacktLibrary/PacktLibrary.csproj#L10
 
 ## Page 87 - Passing arguments to a console app
 
