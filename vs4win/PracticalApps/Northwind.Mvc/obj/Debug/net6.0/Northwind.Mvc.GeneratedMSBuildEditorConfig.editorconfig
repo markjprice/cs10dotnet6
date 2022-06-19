@@ -1,0 +1,76 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Northwind.Mvc
+build_property.RootNamespace = Northwind.Mvc
+build_property.ProjectDir = C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\PracticalApps\Northwind.Mvc\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\PracticalApps\Northwind.Mvc
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/Chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGF0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/Customers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdXN0b21lcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/ModelBinding.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb2RlbEJpbmRpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/ProductDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/ProductsThatCostMoreThan.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0c1RoYXRDb3N0TW9yZVRoYW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Mvc/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

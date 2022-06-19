@@ -1,0 +1,52 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = Northwind.Blazor.Customers
+build_property.RootNamespace = Northwind.Blazor.Customers
+build_property.ProjectDir = C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\PracticalApps\Northwind.Blazor.Customers\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\PracticalApps\Northwind.Blazor.Customers
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Pages/CreateCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQ3VzdG9tZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Pages/Customers.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Pages/DeleteCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlQ3VzdG9tZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Pages/EditCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEN1c3RvbWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Shared/CustomerDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEN1c3RvbWVyRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-p3n1itzj3d
+
+[C:/Users/David-Local/Source/Repos/blueboy90780/cs10dotnet6/vs4win/PracticalApps/Northwind.Blazor.Customers/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-aufjzhsarz
