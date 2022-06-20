@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\vs4win",
+    "\\vs4win\\Chapter01",
+    "\\vs4win\\Chapter01\\HelloCS"
   ],
-  "SelectedNode": "\\C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6",
   "PreviewInSolutionExplorer": false
 }
