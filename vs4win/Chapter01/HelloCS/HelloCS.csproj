@@ -5,4 +5,8 @@
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
+	<ItemGroup>
+		<Using Remove="System.Threading" />
+		<Using Include="System.Numerics" />
+	</ItemGroup>
 </Project>
