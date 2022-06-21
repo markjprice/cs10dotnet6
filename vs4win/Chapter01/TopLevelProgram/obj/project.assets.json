@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6\\vs4win\\Chapter01\\TopLevelProgram\\TopLevelProgram.csproj",
+      "projectUniqueName": "C:\\Users\\David-Local\\source\\repos\\blueboy90780\\CS10.NET6_Student_Exercise\\vs4win\\Chapter01\\TopLevelProgram\\TopLevelProgram.csproj",
       "projectName": "TopLevelProgram",
-      "projectPath": "C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6\\vs4win\\Chapter01\\TopLevelProgram\\TopLevelProgram.csproj",
+      "projectPath": "C:\\Users\\David-Local\\source\\repos\\blueboy90780\\CS10.NET6_Student_Exercise\\vs4win\\Chapter01\\TopLevelProgram\\TopLevelProgram.csproj",
       "packagesPath": "C:\\Users\\David-Local\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6\\vs4win\\Chapter01\\TopLevelProgram\\obj\\",
+      "outputPath": "C:\\Users\\David-Local\\source\\repos\\blueboy90780\\CS10.NET6_Student_Exercise\\vs4win\\Chapter01\\TopLevelProgram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David-Local\\AppData\\Roaming\\NuGet\\NuGet.Config",

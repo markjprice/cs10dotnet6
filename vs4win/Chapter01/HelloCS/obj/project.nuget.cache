@@ -1,45 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kna5LYV9t3VrbVpLEK2hR3XBz1/Art6bCRPbZ5D+PKEhSp9GKn7HN6by9GtDzarDZkJrQ/S8QxslNyIdL+4f2A==",
-  "success": false,
-  "projectFilePath": "C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6\\vs4win\\Chapter01\\HelloCS\\HelloCS.csproj",
+  "dgSpecHash": "ag3AEzoL34SBPMlbe3I078cZemJrH2Vu1QKDzjI1jmZ8+GjkqkCeIfScf1yBhGCpNneyocDCfHlN0Pn02hbxRQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David-Local\\source\\repos\\blueboy90780\\CS10.NET6_Student_Exercise\\vs4win\\Chapter01\\HelloCS\\HelloCS.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Microsoft.NETCore.App.Host.win-x64. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "Microsoft.NETCore.App.Host.win-x64",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Microsoft.AspNetCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "Microsoft.AspNetCore.App.Ref",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Microsoft.WindowsDesktop.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "Microsoft.WindowsDesktop.App.Ref",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1101",
-      "level": "Error",
-      "message": "Unable to find package Microsoft.NETCore.App.Ref. No packages exist with this id in source(s): Microsoft Visual Studio Offline Packages",
-      "libraryId": "Microsoft.NETCore.App.Ref",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  "logs": []
 }
