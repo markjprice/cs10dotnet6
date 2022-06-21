@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.exe
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.deps.json
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.runtimeconfig.json
@@ -13,3 +14,20 @@ C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.pdb
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.genruntimeconfig.cache
 C:\Users\David-Local\source\repos\blueboy90780\CS10.NET6_Student_Exercise\vs4win\Chapter02\Formatting\obj\Debug\net6.0\ref\Formatting.dll
+=======
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.exe
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.deps.json
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.runtimeconfig.json
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\bin\Debug\net6.0\Formatting.pdb
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.csproj.AssemblyReference.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.AssemblyInfoInputs.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.AssemblyInfo.cs
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.csproj.CoreCompileInputs.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\refint\Formatting.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.pdb
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\Formatting.genruntimeconfig.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Formatting\obj\Debug\net6.0\ref\Formatting.dll
+>>>>>>> d01ca1ded0e268fc60ecbcef9477cd96fe4e9344

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ag3AEzoL34SBPMlbe3I078cZemJrH2Vu1QKDzjI1jmZ8+GjkqkCeIfScf1yBhGCpNneyocDCfHlN0Pn02hbxRQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\David-Local\\source\\repos\\blueboy90780\\CS10.NET6_Student_Exercise\\vs4win\\Chapter01\\HelloCS\\HelloCS.csproj",
+=======
+  "dgSpecHash": "cmTCnjUAY+A9tYbHJZkNDMs7nqYM57OVTEBUbQvTOXmyPofmHZrrwgZkIsguz3uGXc1gIMW1DAgYYHLu9WmR5g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\David-Local\\Source\\Repos\\blueboy90780\\cs10dotnet6\\vs4win\\Chapter01\\HelloCS\\HelloCS.csproj",
+>>>>>>> d01ca1ded0e268fc60ecbcef9477cd96fe4e9344
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,4 +1,0 @@
-// Validating benchmarks:
-Assembly ℛ*177708b4-a314-43d5-8cdf-26b846c337df#1-14 which defines benchmarks is non-optimized
-Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
-If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.

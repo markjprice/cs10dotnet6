@@ -1,0 +1,15 @@
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\bin\Debug\net6.0\Numbers.exe
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\bin\Debug\net6.0\Numbers.deps.json
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\bin\Debug\net6.0\Numbers.runtimeconfig.json
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\bin\Debug\net6.0\Numbers.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\bin\Debug\net6.0\Numbers.pdb
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.csproj.AssemblyReference.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.AssemblyInfoInputs.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.AssemblyInfo.cs
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.csproj.CoreCompileInputs.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\refint\Numbers.dll
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.pdb
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\Numbers.genruntimeconfig.cache
+C:\Users\David-Local\Source\Repos\blueboy90780\cs10dotnet6\vs4win\Chapter02\Numbers\obj\Debug\net6.0\ref\Numbers.dll
