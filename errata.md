@@ -10,6 +10,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 20 - Compiling and running code using Visual Studio](#page-20---compiling-and-running-code-using-visual-studio)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
   - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
+  - [Page 29 - Exploring code using .NET Interactive Notebooks](#page-29---exploring-code-using-net-interactive-notebooks)
   - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
   - [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
   - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
@@ -126,6 +127,30 @@ In Step 6, I say to select **OmniSharp: Select Project**. Unfortuately if you ha
 To avoid the issue, revert back to an earlier version or manually install version v1.24.0-beta1 by [downloading the VSIX](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.24.0-beta1) and then in Visual Studio Code **EXTENSIONS**, select the **Views and More Actions** menu (three dots) and then **Install from VSIX...**. 
 
 I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
+
+## Page 29 - Exploring code using .NET Interactive Notebooks
+
+Although the **.NET Interactive Notebooks** extension requires Visual Studio Code, 
+Microsoft's ML.NET team have created a similar extension for Visual Studio 2022. 
+It is not as capable as the extension for Visual Studio Code so I still recommend 
+installing Visual Studio Code alongside Visual Studio 2022 but some readers may 
+find it useful.
+
+To install it:
+
+1. In **Visual Studio 2022**, navigate to **Extensions** | **Manage Extensions**.
+2. Search for `Notebook Editor`.
+
+![Notebook Editor extension for Visual Studio 2022](images/notebook-editor.png)
+
+3. Click **Install**.
+4. Restart Visual Studio 2022.
+
+To create a new notebook:
+
+1. In **Visual Studio 2022**, navigate to **Project** | **Add New Item**.
+2. Search for `Notebook`.
+3. Enter a filename.
 
 ## Page 32 - Adding Markdown and special commands to a notebook
 
