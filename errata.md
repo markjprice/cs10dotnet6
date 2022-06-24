@@ -37,6 +37,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
   - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
   - [Page 289 - Creating a console application to publish](#page-289---creating-a-console-application-to-publish)
+  - [Page 297 - Decompiling using the ILSpy extension for Visual Studio Code](#page-297---decompiling-using-the-ilspy-extension-for-visual-studio-code)
   - [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
   - [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
@@ -671,6 +672,23 @@ In Step 5, I tell you to "add the runtime identifiers to target three
 operating systems inside the `<PropertyGroup>` element." It is easy to miss that 
 the element name must be plural, not singular. It must be 
 `<RuntimeIdentifiers>`, not `<RuntimeIdentifier>`.
+
+## Page 297 - Decompiling using the ILSpy extension for Visual Studio Code
+
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this 
+> [issue on 24 June 2022](https://github.com/markjprice/cs10dotnet6/issues/86).
+
+The  ILSpy .NET Decompiler extension for Visual Studio Code has changed behavior. It no longer 
+shows two edit panes side-by-side. Instead, you can only see one language at a time. You can 
+toggle between C# and IL code by clicking the **Output language** button in the top right corner.
+
+In the next edition, I will tell the reader to open a different assembly so it works with the latest version of ILSpy. Probably the `System.Linq` assembly and decompile the `Enumerable` class and its `Average` method for a sequence of `int` values:
+
+![image](https://user-images.githubusercontent.com/14040265/175520803-4f3e0442-f91d-436a-8f74-925e48937da4.png)
+
+And then show how to toggle between C# and IL code by clicking **Output language**:
+
+![image](https://user-images.githubusercontent.com/14040265/175520894-2a8e3987-cfec-4a4a-81bb-19d211c901c2.png)
 
 ## Page 311 - Understanding the .NET Portability Analyzer
 
