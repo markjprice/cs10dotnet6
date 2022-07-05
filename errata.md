@@ -42,6 +42,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
   - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
   - [Page 360 - Working with images](#page-360---working-with-images)
+  - [Page 384 - Disposing of file resources](#page-384---disposing-of-file-resources)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
@@ -772,6 +773,34 @@ foreach (string imagePath in images)
 }
 
 WriteLine("Image processing complete. View the images folder.");
+```
+
+## Page 384 - Disposing of file resources
+In the `finally` block, I tell the reader to dispose of the XmlWriter and the FileStream, as shown in the following code:
+```cs
+if (xml != null)
+{
+  xml.Dispose();
+  WriteLine("The XML writer's unmanaged resources have been disposed.");
+  if (xmlFileStream != null)
+  {
+    xmlFileStream.Dispose();
+    WriteLine("The file stream's unmanaged resources have been disposed.");
+  }
+}
+```
+But the file stream will only be disposed if the XML writer is successfully created and therefore not null. It would be better to not nest the `if` statements, as shown in the following code:
+```cs
+if (xml != null)
+{
+  xml.Dispose();
+  WriteLine("The XML writer's unmanaged resources have been disposed.");
+}
+if (xmlFileStream != null)
+{
+  xmlFileStream.Dispose();
+  WriteLine("The file stream's unmanaged resources have been disposed.");
+}
 ```
 
 ## Page 391 - Encoding strings as byte arrays
