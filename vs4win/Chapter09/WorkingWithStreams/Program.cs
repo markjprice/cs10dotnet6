@@ -89,11 +89,11 @@ static void WorkWithXml()
     {
       xml.Dispose();
       WriteLine("The XML writer's unmanaged resources have been disposed.");
-      if (xmlFileStream != null)
-      {
-        xmlFileStream.Dispose();
-        WriteLine("The file stream's unmanaged resources have been disposed.");
-      }
+    }
+    if (xmlFileStream != null)
+    {
+      xmlFileStream.Dispose();
+      WriteLine("The file stream's unmanaged resources have been disposed.");
     }
   }
 }
