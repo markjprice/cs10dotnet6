@@ -44,6 +44,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 360 - Working with images](#page-360---working-with-images)
   - [Page 384 - Disposing of file resources](#page-384---disposing-of-file-resources)
   - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
+  - [Page 396 - Serializing as XML](#page-396---serializing-as-xml)
   - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
   - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
   - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
@@ -776,6 +777,9 @@ WriteLine("Image processing complete. View the images folder.");
 ```
 
 ## Page 384 - Disposing of file resources
+
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 5 July 2022](https://github.com/markjprice/cs10dotnet6/issues/90).
+
 In the `finally` block, I tell the reader to dispose of the XmlWriter and the FileStream, as shown in the following code:
 ```cs
 if (xml != null)
@@ -820,6 +824,12 @@ Encoding encoder = number switch
   _                                   => Encoding.Default
 };
 ```
+
+## Page 396 - Serializing as XML
+
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 6 July 2022](https://github.com/markjprice/cs10dotnet6/issues/91).
+
+In Step 8, I show the XML output but I manually formatted it to be easier to read. The output you will see is all on one line.
 
 ## Page 402 - Controlling JSON processing
 
