@@ -476,11 +476,13 @@ In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
 
 ## Page 203 - Controlling how parameters are passed
 
+> Thanks to Rajiv Sonik for emailing me this improvement.
+
 In Step 1, the code comment explains why the `z` paramater must be initialized inside the method: (a) `out` parameters cannot have a default value assigned in the parameter declaration, and (b) `out` parameters cannot be left uninitialised so they must be set inside the method.
 
 Like `out` parameters, `ref` parameters also cannot have default values, but since they can already be set outside the method, they do not need to be set inside the method.
 
-In future editions I will add a note to say that both `out` and `ref` parameters cannot be default values in the bullets above the code example.
+In future editions I will add a note to say that both `out` and `ref` parameters cannot have default values in the bullets above the code example.
 
 ## Page 233 - Comparing objects when sorting
 
