@@ -32,6 +32,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
+  - [Page 203 - Controlling how parameters are passed](#page-203---controlling-how-parameters-are-passed)
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
@@ -472,6 +473,14 @@ In the **Good Practice** box, the text "If you use are writing code" should be "
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
+
+## Page 203 - Controlling how parameters are passed
+
+In Step 1, the code comment explains why the `z` paramater must be initialized inside the method: (a) `out` parameters cannot have a default value assigned in the parameter declaration, and (b) `out` parameters cannot be left uninitialised so they must be set inside the method.
+
+Like `out` parameters, `ref` parameters also cannot have default values, but since they can already be set outside the method, they do not need to be set inside the method.
+
+In future editions I will add a note to say that both `out` and `ref` parameters cannot be default values in the bullets above the code example.
 
 ## Page 233 - Comparing objects when sorting
 
