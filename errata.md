@@ -1111,7 +1111,7 @@ The four corrected elements are as shown in the following markup:
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this issue on [29 July 2022](https://github.com/markjprice/cs10dotnet6/issues/96). 
 
-In Step 1, if you following the instructions and only add the highlighted code to 
+In Step 1, if you follow the instructions and only add the highlighted code to 
 make the action method asynchronous, then it will work. However, the setting of 
 the property values shown in the code block mistakenly use = instead of :. 
 The code block should look like this:
