@@ -58,6 +58,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
   - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
+  - [Page 662 - Making controller action methods asynchronous](#page-662---making-controller-action-methods-asynchronous)
   - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
   - [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
@@ -1104,6 +1105,27 @@ The four corrected elements are as shown in the following markup:
 ```xml
 <a class="carousel-control-next" href="#categories"
    role="button" data-bs-slide="next">
+```
+
+## Page 662 - Making controller action methods asynchronous
+
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this issue on [29 July 2022](https://github.com/markjprice/cs10dotnet6/issues/96). 
+
+In Step 1, if you following the instructions and only add the highlighted code to 
+make the action method asynchronous, then it will work. However, the setting of 
+the property values shown in the code block mistakenly use = instead of :. 
+The code block should look like this:
+```cs
+public async Task<IActionResult> Index()
+{
+  HomeIndexViewModel model = new
+  (
+    VisitorCount: (new Random()).Next(1, 1001),
+    Categories: await db.Categories.ToListAsync(),
+    Products: await db.Products.ToListAsync()
+  );
+  return View(model); // pass model to view
+}
 ```
 
 ## Page 688 - Controlling XML serialization
