@@ -1116,8 +1116,14 @@ make the action method asynchronous, then it will work. However, the setting of
 the property values shown in the code block mistakenly use = instead of :. 
 The code block should look like this:
 ```cs
+[ResponseCache(Duration = 10, Location = ResponseCacheLocation.Any)]
 public async Task<IActionResult> Index()
 {
+  _logger.LogError("This is a serious error (not really!)");
+  _logger.LogWarning("This is your first warning!");
+  _logger.LogWarning("Second warning!");
+  _logger.LogInformation("I am in the Index method of the HomeController.");
+
   HomeIndexViewModel model = new
   (
     VisitorCount: (new Random()).Next(1, 1001),
