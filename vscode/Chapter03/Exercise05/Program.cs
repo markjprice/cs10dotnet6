@@ -12,7 +12,7 @@ WriteLine("x = 3 << 2;");
 WriteLine("y = 10 >> 1;");
 
 x = 3 << 2;
-y = 10 >> 1; ;
+y = 10 >> 1;
 WriteLine($"x = {x} and y = {y}");
 WriteLine();
 
