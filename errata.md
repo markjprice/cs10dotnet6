@@ -64,6 +64,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
   - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
   - [Page 706 - Enabling Cross-Origin Resource Sharing](#page-706---enabling-cross-origin-resource-sharing)
+  - [Page 708 - Implementing a Health Check API](#page-708---implementing-a-health-check-api)
   - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 - [Bonus Content](#bonus-content)
@@ -1241,10 +1242,48 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
 
 ## Page 706 - Enabling Cross-Origin Resource Sharing
 
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 3 August 2022](https://github.com/markjprice/cs10dotnet6/issues/98).
+
+In Step 3, I say, "Add a statement in the HTTP pipeline configuration section, before calling 
+UseEndpoints, to use CORS" but there is no call to `UseEndpoints`. 
+
+Add the code immediately after the `app` object is built, as shown in the following code:
+
+```cs
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+
+app.UseCors(configurePolicy: options =>
+{
+  options.WithMethods("GET", "POST", "PUT", "DELETE");
+  options.WithOrigins(
+    "https://localhost:5001" // allow requests from the MVC client
+  );
+});
+```
+
 In Step 4, I say, "Start the Northwind.WebApi project and confirm that the web service is listening only on 
 port 5002." In the next edition I will add that if you are using Visual Studio then you should start it without debugging.
 
 > **Good Practice**: Always start your Visual Studio 2022 projects *without debugging* unless you are *actually debugging*. This is for two good reasons. First, starting a project with the debugger attached is much slower, and second, it prevents that copy of Visual Studio from starting another project at the same time. If you start a project *without* the debugger attached then you can use that single copy of Visual Studio to start as many projects as you need.
+
+## Page 708 - Implementing a Health Check API
+
+In Step 8, I say to note the SQL statement that is executed to check the health of the service. This behavior was removed late in the process. To add it back, you can install the following package to your `Northwind.WebApi` project file:
+```xml
+<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
+```
+And then in your `Program.cs` file, in the section for configuring services, 
+add a call to the `AddSqlServer` method to use it:
+```cs
+builder.Services.AddHealthChecks()
+  .AddDbContextCheck<NorthwindContext>()
+  // execute SELECT 1 using the specified connection string
+  .AddSqlServer("Data Source=.;Initial Catalog=Northwind;Integrated Security=true;");
+```
+
+> **Warning!** The `AspNetCore.HealthChecks.SqlServer` is not officially supported by Microsoft.
 
 ## Page 712 - Building a weather service using minimal APIs
 
