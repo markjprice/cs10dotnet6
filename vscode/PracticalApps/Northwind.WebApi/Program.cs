@@ -54,7 +54,9 @@ builder.Services.AddHttpLogging(options =>
 });
 
 builder.Services.AddHealthChecks()
-  .AddDbContextCheck<NorthwindContext>();
+  .AddDbContextCheck<NorthwindContext>()
+  // execute SELECT 1 using the specified connection string
+  .AddSqlServer("Data Source=.;Initial Catalog=Northwind;Integrated Security=true;");
 
 var app = builder.Build();
 
