@@ -67,7 +67,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 708 - Implementing a Health Check API](#page-708---implementing-a-health-check-api)
   - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
-- [Bonus Content](#bonus-content)
+- [Bonus Content: Chapters 18 to 20 and Appendix](#bonus-content-chapters-18-to-20-and-appendix)
+  - [Page 20 - Adding a services page to the Northwind MVC website](#page-20---adding-a-services-page-to-the-northwind-mvc-website)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
 
@@ -1357,7 +1358,31 @@ You cannot use `<NavLink class="nav-link" href="customers/@c">` because Blazor d
 not allow combined text and @ expression in components. That is why my code above 
 creates a local variable to do the combining to make the country URL.
 
-# Bonus Content 
+# Bonus Content: Chapters 18 to 20 and Appendix
+
+## Page 20 - Adding a services page to the Northwind MVC website
+
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 11 August 2022](https://github.com/markjprice/cs10dotnet6/issues/99).
+
+In Step 3, I say to "add a new empty view named `Services.cshtml` and modify its contents 
+to render the products". The code uses the older Bootstrap 4 class names of `badge badge-info` 
+but it should use the newer Bootstrap 5 classes named of `badge bg-info`, as shown in 
+the following markup:
+```xml
+<h2>Products that start with Cha using OData</h2>
+  <p>
+  @if (products is null)
+  {
+    <span class="badge bg-info">No products found.</span>
+  }
+  else
+  {
+    @foreach (Product p in products)
+   {
+     <span class="badge bg-info">
+       @p.ProductId 
+       @p.ProductName
+```
 
 ## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
 
