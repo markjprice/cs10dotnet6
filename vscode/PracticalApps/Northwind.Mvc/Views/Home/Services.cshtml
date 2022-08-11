@@ -24,13 +24,13 @@
     <p>
       @if (products is null)
       {
-        <span class="badge badge-info">No products found.</span>
+        <span class="badge bg-info">No products found.</span>
       }
       else
       {
         @foreach (Product p in products)
         {
-          <span class="badge badge-info">
+          <span class="badge bg-info">
             @p.ProductId
             @p.ProductName
             @(p.UnitPrice is null ? "" : p.UnitPrice.Value.ToString("c"))
@@ -45,7 +45,7 @@
     <p>
       @foreach (Product p in seafoodProducts)
       {
-        <span class="badge badge-success">
+        <span class="badge bg-success">
           @p.ProductId
           @p.ProductName
           -
