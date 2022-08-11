@@ -69,6 +69,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 - [Bonus Content: Chapters 18 to 20 and Appendix](#bonus-content-chapters-18-to-20-and-appendix)
   - [Page 20 - Adding a services page to the Northwind MVC website](#page-20---adding-a-services-page-to-the-northwind-mvc-website)
+  - [Page 35 - Building a client for GraphQL](#page-35---building-a-client-for-graphql)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
 
@@ -1382,6 +1383,27 @@ the following markup:
      <span class="badge bg-info">
        @p.ProductId 
        @p.ProductName
+```
+
+## Page 35 - Building a client for GraphQL
+
+In Step 5, I say to "render the Seafood products". The code uses the older Bootstrap 4 class names of `badge badge-success` 
+but it should use the newer Bootstrap 5 classes named of `badge bg-success`, as shown in 
+the following markup:
+
+```xml
+<h2>Seafood products using GraphQL</h2>
+<p>
+  @foreach (Product p in seafoodProducts)
+  {
+    <span class="badge bg-success">
+      @p.ProductId
+      @p.ProductName
+      -
+      @(p.UnitsInStock is null ? "0" : p.UnitsInStock.Value) in stock
+    </span>
+  }
+</p>
 ```
 
 ## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
