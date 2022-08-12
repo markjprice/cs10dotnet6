@@ -70,6 +70,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 - [Bonus Content: Chapters 18 to 20 and Appendix](#bonus-content-chapters-18-to-20-and-appendix)
   - [Page 20 - Adding a services page to the Northwind MVC website](#page-20---adding-a-services-page-to-the-northwind-mvc-website)
   - [Page 35 - Building a client for GraphQL](#page-35---building-a-client-for-graphql)
+  - [Page 41 - Testing a gRPC client to the gRPC service](#page-41---testing-a-grpc-client-to-the-grpc-service)
   - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
   - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
 
@@ -1405,6 +1406,12 @@ the following markup:
   }
 </p>
 ```
+
+## Page 41 - Testing a gRPC client to the gRPC service
+
+In Step 8, I say to "View the command prompt or terminal for the gRPC service and 
+note the info messages" but you will only see this output if you have enabled Info 
+level logging as described in [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory).
 
 ## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
 
