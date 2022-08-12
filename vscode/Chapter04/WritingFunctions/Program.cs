@@ -81,8 +81,8 @@ static int Factorial(int number)
   if (number < 0)
   {
      throw new ArgumentException(
-       message: "The factorial function is defined for non-negative integers only.", 
-       paramName: "number");
+       message: $"The factorial function is defined for non-negative integers only. Input: {number}", 
+       paramName: nameof(number));
   }
   else if (number == 0)
   {
@@ -99,7 +99,7 @@ static int Factorial(int number)
 
 static void RunFactorial()
 {
-  for (int i = 1; i < 15; i++)
+  for (int i = -2; i < 15; i++)
   {
     try
     {
@@ -108,6 +108,10 @@ static void RunFactorial()
     catch (System.OverflowException)
     {
       WriteLine($"{i}! is too big for a 32-bit integer.");
+    }
+    catch (Exception ex)
+    {
+      WriteLine($"{ex.GetType()}: {ex.Message}");
     }
   }
 }
@@ -165,9 +169,7 @@ partial class Program
     /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
     static string CardinalToOrdinal(int number)
     {
-        int lastTwoDigits = number % 100;
-
-        switch (lastTwoDigits)
+        switch (number)
         {
             case 11: // special cases for 11th to 13th
             case 12:
