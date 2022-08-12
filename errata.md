@@ -355,7 +355,8 @@ The factorial function is defined for non-negative integers only i.e. for 0, 1, 
 
 n!=n×(n−1)!, for n∈{1,2,3,…}
 ```
-So the implementation of the function in the book should be as shown in the following code: 
+So the implementation of the functions in the book, both for defining the function 
+and for testing it, would be better as shown in the following code: 
 
 ```cs
 static int Factorial(int number)
@@ -363,8 +364,8 @@ static int Factorial(int number)
   if (number < 0)
   {
      throw new ArgumentException(
-       message: "The factorial function is defined for non-negative integers only.", 
-       paramName: "number");
+       message: $"The factorial function is defined for non-negative integers only. Input: {number}", 
+       paramName: nameof(number));
   }
   else if (number == 0)
   {
@@ -372,7 +373,30 @@ static int Factorial(int number)
   }
   else
   {
-    return number * Factorial(number - 1);
+    checked // for overflow
+    {
+      return number * Factorial(number - 1);
+    }
+  }
+}
+
+
+static void RunFactorial()
+{
+  for (int i = -2; i < 15; i++)
+  {
+    try
+    {
+      WriteLine($"{i}! = {Factorial(i):N0}");
+    }
+    catch (System.OverflowException)
+    {
+      WriteLine($"{i}! is too big for a 32-bit integer.");
+    }
+    catch (Exception ex)
+    {
+      WriteLine($"{ex.GetType()}: {ex.Message}");
+    }
   }
 }
 ```
