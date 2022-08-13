@@ -2,7 +2,11 @@
 
 This chapter is about learning how to make **graphical user interface (GUI)** apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using **.NET MAUI (Multi-platform App User Interface)**. 
 
-> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.200, .NET MAUI Release Candidate 2, and Visual Studio 2022 17.2 Preview 5. I expect to update this chapter in Q2 2022 for the .NET MAUI GA (General Availability) release. You can read the roadmap at the following link: https://github.com/dotnet/maui/wiki/Roadmap
+> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.400, 
+> .NET MAUI ([August 2022]( (https://github.com/dotnet/maui/releases/tag/6.0.424))), 
+> and Visual Studio 2022 17.3 that (finally!) added support for .NET MAUI on 
+> August 9, 2022, as you can read about at the following link: 
+> https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
 
 You will see how **eXtensible Application Markup Language (XAML)** makes it easy to define the user interface for a graphical app. 
 
@@ -10,7 +14,9 @@ Cross-platform GUI development cannot be learned in a single chapter, but like w
 
 The app will allow the listing and management of customers in the Northwind database. The mobile app that you create will call the Northwind service that you built using ASP.NET Core Web API in *Chapter 17, Building and Consuming Web Services*. If you have not built the Northwind service, please go back and build it now or download it from the GitHub repository for this book at the following link: https://github.com/markjprice/cs10dotnet6.
 
-Either a Windows computer with Visual Studio or a macOS computer with Visual Studio for Mac can be used to create a .NET MAUI project. But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you. That is expected to come with .NET 7.0 in later 2022. 
+Either a Windows computer with Visual Studio 2022 for Windows or a macOS computer with 
+Visual Studio 2022 for Mac can be used to create a .NET MAUI project. 
+But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you. That is expected to come with .NET 7.0 in later 2022. 
 
 In this chapter, we will cover the following topics:
 - [Understanding the .NET MAUI delay](#understanding-the-net-maui-delay)
