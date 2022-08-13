@@ -3,7 +3,7 @@
 This chapter is about learning how to make **graphical user interface (GUI)** apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using **.NET MAUI (Multi-platform App User Interface)**. 
 
 > **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.400, 
-> .NET MAUI ([August 2022]( (https://github.com/dotnet/maui/releases/tag/6.0.424))), 
+> .NET MAUI 6.0.486 ([August 2022]( (https://github.com/dotnet/maui/releases/tag/6.0.486))), 
 > and Visual Studio 2022 17.3 that (finally!) added support for .NET MAUI on 
 > August 9, 2022, as you can read about at the following link: 
 > https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
@@ -73,8 +73,9 @@ The following seems a likely timeline of preview and release candidate releases 
 - April 12, 2022: [.NET MAUI Release Candidate 1](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-1/)
 - April 26, 2022: [.NET MAUI Release Candidate 2](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-2/)
 - May 10, 2022: [.NET MAUI Release Candidate 3](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-3/)
-- May 2022: .NET MAUI General Availability at Microsoft Build
-- November 2022: .NET MAUI included with .NET 7
+- May 23, 2022: [Introducing .NET MAUI – One Codebase, Many Platforms](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/) at Microsoft Build
+- August 9, 2022: [Productivity comes to .NET MAUI in Visual Studio 2022](https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/)
+- November 7, 2022: .NET MAUI included with .NET 7
 
 Let's start by looking at the markup language used by .NET MAUI.
 
