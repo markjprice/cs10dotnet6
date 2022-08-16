@@ -2,11 +2,7 @@
 
 This chapter is about learning how to make **graphical user interface (GUI)** apps by building a cross-platform mobile and desktop app for iOS and Android, macOS Catalyst and Windows using **.NET MAUI (Multi-platform App User Interface)**. 
 
-> **Warning!** This online GitHub chapter was tested using .NET SDK 6.0.400, 
-> .NET MAUI 6.0.486 ([August 2022]( (https://github.com/dotnet/maui/releases/tag/6.0.486))), 
-> and Visual Studio 2022 17.3 that (finally!) added support for .NET MAUI on 
-> August 9, 2022, as you can read about at the following link: 
-> https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
+> This online GitHub chapter was tested using .NET SDK 6.0.400, .NET MAUI 6.0.486 ([August 2022]( (https://github.com/dotnet/maui/releases/tag/6.0.486))), and Visual Studio 2022 version 17.3, that (finally!) added support for .NET MAUI on August 9, 2022, as you can read about at the following link: https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/
 
 You will see how **eXtensible Application Markup Language (XAML)** makes it easy to define the user interface for a graphical app. 
 
@@ -14,9 +10,7 @@ Cross-platform GUI development cannot be learned in a single chapter, but like w
 
 The app will allow the listing and management of customers in the Northwind database. The mobile app that you create will call the Northwind service that you built using ASP.NET Core Web API in *Chapter 17, Building and Consuming Web Services*. If you have not built the Northwind service, please go back and build it now or download it from the GitHub repository for this book at the following link: https://github.com/markjprice/cs10dotnet6.
 
-Either a Windows computer with Visual Studio 2022 for Windows or a macOS computer with 
-Visual Studio 2022 for Mac can be used to create a .NET MAUI project. 
-But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you. That is expected to come with .NET 7.0 in later 2022. 
+Either a Windows computer with Visual Studio 2022 for Windows version 17.3 or later, or a macOS computer with Visual Studio 2022 for Mac version 17.4 Preview 1 or later can be used to create a .NET MAUI project. But you will need a computer with Windows to compile WinUI 3 apps and you will need a computer with macOS and Xcode to compile for macOS Catalyst and iOS. Although you can create a .NET MAUI project at the command line and then edit it using Visual Studio Code, there is no official tooling to help you.
 
 In this chapter, we will cover the following topics:
 - [Understanding the .NET MAUI delay](#understanding-the-net-maui-delay)
@@ -75,11 +69,11 @@ The following seems a likely timeline of preview and release candidate releases 
 - May 10, 2022: [.NET MAUI Release Candidate 3](https://devblogs.microsoft.com/dotnet/dotnet-maui-rc-3/)
 - May 23, 2022: [Introducing .NET MAUI – One Codebase, Many Platforms](https://devblogs.microsoft.com/dotnet/introducing-dotnet-maui-one-codebase-many-platforms/) at Microsoft Build
 - August 9, 2022: [Productivity comes to .NET MAUI in Visual Studio 2022](https://devblogs.microsoft.com/dotnet/dotnet-maui-visualstudio-2022-release/)
-- November 7, 2022: .NET MAUI included with .NET 7
-
-Let's start by looking at the markup language used by .NET MAUI.
+- November 7, 2022: .NET MAUI included with .NET 7 and Visual Studio 2022 version 17.4.
 
 # Understanding XAML
+
+Let's start by looking at the markup language used by .NET MAUI.
 
 In 2006, Microsoft released **Windows Presentation Foundation (WPF)**, which was the first technology to use **XAML (eXtensible Application Markup Language)**. Silverlight, for web and mobile apps, quickly followed, but it is no longer supported by Microsoft. WPF is still used today to create Windows desktop applications; for example, Visual Studio for Windows is partially built using WPF.
 
@@ -165,7 +159,8 @@ Business logic layer code can be written once and shared between all platforms. 
 
 Like WPF and UWP apps, .NET MAUI uses XAML to define the user interface once for all platforms using abstractions of platform-specific user interface components. Applications built with .NET MAUI draw the user interface using native platform widgets, meaning the app's look and feel fit naturally with the target mobile platform.
 
-A user experience built using .NET MAUI will not perfectly fit a specific platform in a way that one custom built with native tools for that platform would, but for mobile and desktop apps that will not have millions of users, it is good enough.
+A user experience built using .NET MAUI will not perfectly fit a specific platform in a way that one custom built with native tools for that platform would, but for mobile and desktop apps that will not have millions of users, it is good enough. And with some effort, you can build beautiful apps, as illustrated by Microsoft challenge that you can read about at the following link:
+https://devblogs.microsoft.com/dotnet/announcing-dotnet-maui-beautiful-ui-challenge/
 
 ## Development tools for mobile first, cloud first
 
@@ -177,11 +172,11 @@ Satya Nadella, CEO of Microsoft, famously said the following:
 
 As you have seen earlier in this book, to create an ASP.NET Core Web API service to support a mobile app, we can use Visual Studio Code. To create .NET MAUI apps, developers can use either Visual Studio 2022 for Windows or Visual Studio 2022 for Mac.
 
-When installing Visual Studio 2022, you must select the **.NET MAUI (Preview)** checkbox that is part of the **Mobile development with .NET** workload, as shown in *Figure 19.1*:
+When installing Visual Studio 2022 version 17.3 or later, you must select the .NET Multi-platform App UI development workload that is in the Desktop & Mobile section, as shown in *Figure 19.1*:
 
-![Figure 19.1: Selecting the .NET MAUI workload for Visual Studio 2022](images/B17442_20_01.png)
+![Figure 19.1: Selecting the .NET MAUI workload for Visual Studio 2022](images/B18857_18_01.png)
 
-Figure 19.1: Selecting the .NET MAUI workload for Visual Studio 2022
+*Figure 19.1: Selecting the .NET MAUI workload for Visual Studio 2022*
 
 ## Using Windows to create iOS and macOS apps
 
@@ -283,7 +278,7 @@ namespace Northwind.Maui.iOS
 IDialer dialer = DependencyService.Get<IDialer>();
 ```
 
-> **.NET MAUI Essentials** includes a `PhoneDialer` component, so we will use that in our project rather than have to define our own phone dialer dependency service.
+> **.NET MAUI Essentials** includes a `PhoneDialer` component, so we will use that in our project rather than define our own phone dialer dependency service.
 
 ## Understanding .NET MAUI user interface components
 
@@ -293,8 +288,6 @@ IDialer dialer = DependencyService.Get<IDialer>();
 - **Layouts**: represent the structure of a combination of other user interface components, for example, `Grid`, `StackLayout`, and `FlexLayout`.
 - **Views**: represent a single user interface component, for example, `CarouselView`, `CollectionView`, `Label`, `Entry`, `Editor`, and `Button`.
 - **Cells**: represent a single item in a list or table view, for example, `TextCell`, `ImageCell`, `SwitchCell`, and `EntryCell`.
-
-> You can track the status of the migration progress of .NET MAUI components at the following link: https://github.com/dotnet/maui/wiki/Status
 
 ### Understanding the ContentPage view
 
@@ -384,7 +377,7 @@ We will build a mobile and desktop app for managing customers in Northwind.
 
 ## Creating a virtual Android device for local app testing
 
-To target Android, you must install at least one Android SDK. A default installation of Visual Studio with the mobile development workload already includes one Android SDK, but it is often an older version to support as many Android devices as possible.
+To target Android, you must install at least one Android SDK. A default installation of Visual Studio 2022 with the mobile development workload already includes one Android SDK, but it is often an older version to support as many Android devices as possible.
 
 To use the latest features of .NET MAUI, you must install a more recent Android SDK:
 
@@ -398,7 +391,11 @@ To use the latest features of .NET MAUI, you must install a more recent Android 
 5. Click **Create**.
 6. Accept any license agreements.
 7. Wait for any required downloads.
-8. In **Android Device Manager**, in the list of devices, in the row for the device that you just created, click **Start**.
+8. In **Android Device Manager**, in the list of devices, in the row for the device that you just created, click **Start**, as shown in *Figure 19.2*:
+
+![Figure 19.2: Selecting a virtual Android device to start](images/B18857_18_02.png)
+*Figure 19.2: Selecting a virtual Android device to start*
+
 9. When the Android device has finished starting, click the browser and test that it has access to the network by navigating to https://www.bbc.co.uk/news.
 10. Close the emulator.
 11. Restart Visual Studio 2022 to ensure that it is aware of the new emulator.
@@ -407,11 +404,15 @@ To use the latest features of .NET MAUI, you must install a more recent Android 
 
 We will now create a project for a cross-platform mobile and desktop app:
 
-1. In Visual Studio for Windows, add a new project, as defined in the following list:
-   1. Project template: **.NET MAUI App (Preview)** / `maui`
+1. In Visual Studio 2022 for Windows, add a new project, as defined in the following list:
+   1. Project template: **.NET MAUI App** / `maui`, as shown in *Figure 19.3*.
    2. Workspace/solution file and folder: `PracticalApps`
-   3. Project file and folder: `Northwind.Maui.Customers`
-2. Open the project file, and uncomment the element to enable Windows targeting, as shown highlighted in the following markup:
+   3. Project file and folder: `Northwind.Maui.Client`
+
+![Figure 19.3: Selecting the .NET MAUI App project template](images/B18857_18_03.png)
+*Figure 19.3: Selecting the .NET MAUI App project template*
+
+2. Open the project file, and note the elements target iOS, Android, Mac Catalyst and to enable Windows targeting, as shown highlighted in the following markup:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -419,38 +420,40 @@ We will now create a project for a cross-platform mobile and desktop app:
         <TargetFrameworks>net6.0-ios;net6.0-android;net6.0-maccatalyst</TargetFrameworks>
         <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windo
 ws')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net6.0-
-windows10.0.19041</TargetFrameworks>
+windows10.0.19041.0</TargetFrameworks>
+		    <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		    <!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
         <OutputType>Exe</OutputType>
-        <RootNamespace>Northwind.Maui.Customers</RootNamespace>
+        <RootNamespace>Northwind.Maui.Client</RootNamespace>
         <UseMaui>true</UseMaui>
         <SingleProject>true</SingleProject>
 ```
 
-3. To the right of the **Run** button in the toolbar, set the **Framework** to **net6.0-android**, and select the **Pixel 2 - API 28 (Android 9.0 - API 28)** emulator image that you previously created, as shown in *Figure 19.2*:
+3. To the right of the **Run** button in the toolbar, set the **Framework** to **net6.0-android**, and select the **Pixel 4a - API 30 (Android 11.0 - API 30)** emulator image that you previously created, as shown in *Figure 19.4*:
 
-![Figure 19.2: Selecting Android as the target for startup](images/B17442_20_02.png)
-*Figure 19.2: Selecting Android as the target for startup*
+![Figure 19.4: Selecting Android as the target for startup](images/B18857_18_04.png)
+*Figure 19.4: Selecting Android as the target for startup*
 
 4. Click the **Run** button in the toolbar and wait for the device emulator to start the Android operating system and launch your mobile app.
-5. In the .NET MAUI app, click the **Click me** button to increment the counter three times, as shown in *Figure 19.3*:
+5. In the .NET MAUI app, click the **Click me** button to increment the counter three times, as shown in *Figure 19.5*:
 
-![Figure 19.3: Incrementing the counter in the Android .NET MAUI app](images/B17442_20_03.png)
-*Figure 19.3: Incrementing the counter in the Android .NET MAUI app*
+![Figure 19.5: Incrementing the counter in the Android .NET MAUI app](images/B18857_18_05.png)
+*Figure 19.5: Incrementing the counter in the Android .NET MAUI app*
 
 6. Note the **XAML Live Preview window** in Visual Studio and that **XAML Hot Reload** is connected so that you could make changes to the XAML and see them reflected in the app without restarting. For example, try changing the text of the Hello World label to something else, save the XAML file, and click the **Hot Reload** button in the toolbar.
 7. Close the Android device emulator.
 8. Navigate to **Build** | **Configuration Manager**.
-9. In the row for the **Northwind.Maui.Customers** project, select the checkbox in the **Deploy** column, as shown in *Figure 19.4*:
+9. In the row for the **Northwind.Maui.Customers** project, select the checkbox in the **Deploy** column, as shown in *Figure 19.6*:
 
-![Figure 19.4: Enabling the Windows app to deploy to the Windows machine](images/B17442_20_04.png)
-*Figure 19.4: Enabling the Windows app to deploy to the Windows machine*
+![Figure 19.6: Enabling the Windows app to deploy to the Windows machine](images/B18857_18_06.png)
+*Figure 19.6: Enabling the Windows app to deploy to the Windows machine*
 
 10. To the right of the **Run** button in the toolbar, set the **Framework** to **net6.0-windows**, and then select **Windows Machine**.
 11. Make sure that the **Debug** configuration is selected and then click the green triangle start button labeled **Windows Machine**.
-12. After a few moments, note that the Windows app displays with the same **Click me** button and counter functionality, as shown in *Figure 19.5*:
+12. After a few moments, note that the Windows app displays with the same **Click me** button and counter functionality, as shown in *Figure 19.7*:
 
-![Figure 19.5: Incrementing the counter in the Windows .NET MAUI app](images/B17442_20_05.png)
-*Figure 19.5: Incrementing the counter in the Windows .NET MAUI app*
+![Figure 19.7: Incrementing the counter in the Windows .NET MAUI app](images/B18857_18_07.png)
+*Figure 19.7: Incrementing the counter in the Windows .NET MAUI app*
 
 13. Close the Windows app.
 
@@ -637,10 +640,10 @@ You will now replace the existing MainPage with a view to show a list of custome
 
 First, we will create two views for a list of customers and show details of one customer, and then we will implement the list of customers:
 
-1. Right-click the `Northwind.Maui.Customers` project folder, choose **Add** | **New Item...**, select **Content Page**, enter the name `CustomersListPage`, and click Add, as shown in *Figure 19.6*:
+1. Right-click the `Northwind.Maui.Customers` project folder, choose **Add** | **New Item...**, select **Content Page**, enter the name `CustomersListPage`, and click Add, as shown in *Figure 19.8*:
 
-![Figure 19.6: Adding a new XAML Content Page item](images/B17442_20_06.png)
-*Figure 19.6: Adding a new XAML Content Page item*
+![Figure 19.8: Adding a new XAML Content Page item](images/B18857_18_08.png)
+*Figure 19.8: Adding a new XAML Content Page item*
 
 2. Right-click the **Views** folder, choose **Add** | **New Item...**, select **Content Page**, enter the name `CustomerDetailPage`, and click **Add**.
 
@@ -879,15 +882,15 @@ public App()
 We will now test the mobile app using the Android device emulator:
 
 1. In Visual Studio, to the right of the **Run** button in the toolbar, set the target **Framework** to **net6.0-android** and select the Android emulator.
-2. Start with project debugging. The project will build, and then after a few moments, the Android device emulator will appear with your running .NET MAUI app, as shown in *Figure 19.7*:
+2. Start with project debugging. The project will build, and then after a few moments, the Android device emulator will appear with your running .NET MAUI app, as shown in *Figure 19.9*:
 
-![Figure 19.7: The Android device emulator running the Northwind Customers .NET MAUI app](images/B17442_20_07.png)
-*Figure 19.7: The Android device emulator running the Northwind Customers .NET MAUI app*
+![Figure 19.9: The Android device emulator running the Northwind Customers .NET MAUI app](images/B18857_18_09.png)
+*Figure 19.9: The Android device emulator running the Northwind Customers .NET MAUI app*
 
-3. Click **Seven Seas Imports** and modify **Company Name** to **Seven Oceans Imports**, as shown in the following screenshot of the customer detail page in *Figure 19.8*:
+3. Click **Seven Seas Imports** and modify **Company Name** to **Seven Oceans Imports**, as shown in the following screenshot of the customer detail page in *Figure 19.10*:
 
-![Figure 19.8: Editing a company name on the customer detail page](images/B17442_20_08.png)
-*Figure 19.8: Editing a company name on the customer detail page*
+![Figure 19.10: Editing a company name on the customer detail page](images/B18857_18_10.png)
+*Figure 19.10: Editing a company name on the customer detail page*
 
 4. Click the back button to return to the list of customers and note that the company name has been updated due to the two-way data binding.
 5. Click **Add**, and then fill in the fields for a new customer.
@@ -895,10 +898,10 @@ We will now test the mobile app using the Android device emulator:
 > By default, in the Android device emulator, the virtual keyboard is shown when typing on a physical keyboard. To hide the virtual keyboard, click the keyboard icon to the right of the square Android soft button and then toggle **Show virtual keyboard**.
 
 6. On the customer detail page, click **Insert Customer**, and after being returned to the list of customers, note that the new customer has been added to the bottom of the list. (At the time of writing using .NET MAUI Preview 9, there is a bug that means the list view does not update properly. Click, hold, and drag down on the list view and then release to refresh it.)
-7. Click and hold on one of the customers to reveal two action buttons, **Phone** and **Delete**, as shown in Figure 19.9:
+7. Click and hold on one of the customers to reveal two action buttons, **Phone** and **Delete**, as shown in *Figure 19.11*:
 
-![Figure 19.9: Extra commands for a selected customer](images/B17442_20_09.png)
-*Figure 19.9: Extra commands for a selected customer*
+![Figure 19.11: Extra commands for a selected customer](images/B18857_18_11.png)
+*Figure 19.11: Extra commands for a selected customer*
 
 8. Click **Phone** and note the pop-up prompt to the user to dial the number of that customer with **Yes** and **No** buttons.
 9. Click **No**.
