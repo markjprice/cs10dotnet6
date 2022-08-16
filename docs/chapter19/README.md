@@ -385,9 +385,9 @@ To use the latest features of .NET MAUI, you must install a more recent Android 
 2. Navigate to **Tools** | **Android** | **Android Device Manager**.
 3. In **Android Device Manager**, click the **+ New button** to create a new device.
 4. In the **New Device** dialog, make the following choices:
-   1. Base Device: Pixel 2 (+ Store)
+   1. Base Device: Pixel 4a
    2. Processor: x86
-   3. OS: Pie 9.0 – API 28
+   3. OS: Android 11.0 – API 30
 5. Click **Create**.
 6. Accept any license agreements.
 7. Wait for any required downloads.
