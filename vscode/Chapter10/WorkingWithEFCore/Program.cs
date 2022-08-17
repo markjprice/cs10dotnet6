@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore; // Include extension method
-using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Infrastructure; // GetService extension method
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.ChangeTracking; // CollectionEntry
@@ -10,9 +10,9 @@ using static System.Console;
 
 WriteLine($"Using {ProjectConstants.DatabaseProvider} database provider.");
 
-QueryingCategories();
+// QueryingCategories();
 // FilteredIncludes();
-// QueryingProducts();
+QueryingProducts();
 // QueryingWithLike();
 
 /*
@@ -73,7 +73,7 @@ static void QueryingCategories()
       WriteLine();
     }
 
-    if (categories is null)
+    if ((categories is null) || (!categories.Any()))
     {
       WriteLine("No categories found.");
       return;
@@ -109,7 +109,7 @@ static void FilteredIncludes()
     IQueryable<Category>? categories = db.Categories?
       .Include(c => c.Products.Where(p => p.Stock >= stock));
 
-    if (categories is null)
+    if ((categories is null) || (!categories.Any()))
     {
       WriteLine("No categories found.");
       return;
@@ -150,7 +150,7 @@ static void QueryingProducts()
       .Where(product => product.Cost > price)
       .OrderByDescending(product => product.Cost);
 
-    if (products is null)
+    if ((products is null) || (!products.Any()))
     {
       WriteLine("No products found.");
       return;
@@ -178,7 +178,7 @@ static void QueryingWithLike()
     IQueryable<Product>? products = db.Products?
       .Where(p => EF.Functions.Like(p.ProductName, $"%{input}%"));
 
-    if (products is null)
+    if ((products is null) || (!products.Any()))
     {
       WriteLine("No products found.");
       return;
