@@ -1036,17 +1036,19 @@ To fix this problem:
 
 > Thanks to Arendjan Hoek for emailing this issue on 17 August 2022.
 
-In Step 1, I tell you to enter code that queries for products. It checks for a null value and outputs a message to say there were no matches. But if you enter a price like 9999 that would return no matches, the query is empty but it is not null so no message is output.
+In Step 1, I tell you to enter code that queries for products. It checks for a `null` value and outputs a message to say there were no matches. But if you enter a price like `9999` that should have no matches, the query is empty but it is not `null`, so no message is output.
 
-The problem is that the query could return `null` or an empty sequence of products. If we only check for the count using `products.Count()` then that statement could throw a `NullReferenceException` when `products` is `null`. The best approach would therefore be to check for both `null` or a count of zero, as shown in the following code:
+The problem is that as far as the compiler knows, the query could return `null` or a sequence of `Product` entities (that could be empty). If we attempt to access any member of products, like `Count()` or `Any()`, then that would throw a `NullReferenceException` when `products` is `null`. The best approach is therefore to check for both `null` or "not any", as shown in the following code:
 
 ```cs
-if ((products is null) || (products.Count() == 0))
+if ((products is null) || (!products.Any()))
 {
   WriteLine("No products found.");
   return;
 }
 ```
+
+Checking for "not any" is more efficient than checking for a count of zero using the following code: `(products.Count() == 0)`.
 
 > Note that the order of the clauses in the `if` statement is important. We must check that `products is null` first. If it is `true`, then it will never execute the second clause and therefore it won't throw a `NullReferenceException` when accessing the `Count()` member.
 
