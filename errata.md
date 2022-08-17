@@ -1048,6 +1048,8 @@ if ((products is null) || (products.Count() == 0))
 }
 ```
 
+> Note that the order of the clauses in the `if` statement is important. We must check that `products is null` first. If it is `true`, then it will never execute the second clause and therefore it won't throw a `NullReferenceException` when accessing the `Count()` member.
+
 ## Page 438 - Getting the generated SQL
 
 > Thanks to Bob Molloy for emailing this issue.
