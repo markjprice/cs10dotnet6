@@ -1035,7 +1035,7 @@ To fix this problem:
 
 ## Page 429 - Scaffolding models using an existing database
 
-Be careful when entering the command to scaffold the models if you are using O'Reilly's online version because their formatting does not show long lines and thety do not show a scroll bar to indicate there is more, as shown in the following screenshot:
+Be careful when entering the command to scaffold the models if you are using O'Reilly's online version because their formatting does not show long lines and they do not show a scroll bar to indicate there is more, as shown in the following screenshot:
 
 ![A command in O'Reilly's online version of the book](images/ef-core-command-oreilly.png)
 
