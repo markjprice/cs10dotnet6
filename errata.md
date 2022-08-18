@@ -53,6 +53,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
     - [If you are using (a) SQL Server or (b) SQLite with Visual Studio Code](#if-you-are-using-a-sql-server-or-b-sqlite-with-visual-studio-code)
     - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
+  - [Page 429 - Scaffolding models using an existing database](#page-429---scaffolding-models-using-an-existing-database)
   - [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
@@ -1031,6 +1032,20 @@ To fix this problem:
 
 1. Uninstall the x86 version using: `dotnet tool uninstall --global dotnet-ef`.
 2. Force the install of the ARM version using: `dotnet tool install --global dotnet-ef -a arm64`.
+
+## Page 429 - Scaffolding models using an existing database
+
+Be careful when entering the command to scaffold the models if you are using O'Reilly's online version because their formatting does not show long lines and thety do not show a scroll bar to indicate there is more, as shown in the following screenshot:
+
+![A command in O'Reilly's online version of the book](images/ef-core-command-oreilly.png)
+
+The print book and PDF look like this:
+
+![A command in the print and PDF versions of the book](images/ef-core-command-pdf.png)
+
+The Packt online version looks like this:
+
+![A command in Packt's online version of the book](images/ef-core-command-packt.png)
 
 ## Page 437 - Filtering and sorting products
 
