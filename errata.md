@@ -56,6 +56,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 429 - Scaffolding models using an existing database](#page-429---scaffolding-models-using-an-existing-database)
   - [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
+  - [Page 452 - Updating entities](#page-452---updating-entities)
   - [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
@@ -1079,6 +1080,10 @@ The `ORDER BY` clause should only show the SQL sorts by `CategoryId`:
 ```
 ORDER BY "c"."CategoryId"
 ```
+
+## Page 452 - Updating entities
+
+In Step 1, the code finds a product to update by specifying the start of a product name and just returns the first match. There isn't a particular reason why I chose to do it that way, I was just trying to show different methods to add some variety. If you need to update a specific product then you must use a unique identifier like `ProductId` instead. In the next edition, I will add a note to say this.
 
 ## Page 509 - Implementing a Recorder class
 
