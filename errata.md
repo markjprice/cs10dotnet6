@@ -1083,7 +1083,11 @@ ORDER BY "c"."CategoryId"
 
 ## Page 452 - Updating entities
 
-In Step 1, the code finds a product to update by specifying the start of a product name and just returns the first match. There isn't a particular reason why I chose to do it that way, I was just trying to show different methods to add some variety. If you need to update a specific product then you must use a unique identifier like `ProductId` instead. In the next edition, I will add a note to say this.
+In Step 1, the code finds a product to update by specifying the start of a product name and just returns the first match. There isn't a particular reason why I chose to do it that way, I was just trying to show different methods to add some variety. If you need to update a specific product then you must use a unique identifier like `ProductId` instead. 
+
+But I cannot know what the product ID will be for the products that a reader adds. I do know that there are no products that start with "Bob" in the existing Northwind database. So oding it this way avoids having to tell the reader to first discover what the product ID is for the products they've added. It is likely to be 78 because there are already 77 products in the table, but once you've added that and then deleted it, the next product to be added would be 79 and it all gets out of sync.
+
+In the next edition, I will add a note to say this.
 
 ## Page 509 - Implementing a Recorder class
 
