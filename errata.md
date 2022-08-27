@@ -57,6 +57,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 452 - Updating entities](#page-452---updating-entities)
+  - [Page 473 - Targeting a named method](#page-473---targeting-a-named-method)
   - [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
   - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
   - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
@@ -1088,6 +1089,25 @@ In Step 1, the code finds a product to update by specifying the start of a produ
 But I cannot know what the product ID will be for the products that a reader adds. I do know that there are no products that start with "Bob" in the existing Northwind database. So oding it this way avoids having to tell the reader to first discover what the product ID is for the products they've added. It is likely to be 78 because there are already 77 products in the table, but once you've added that and then deleted it, the next product to be added would be 79 and it all gets out of sync.
 
 In the next edition, I will add a note to say this.
+
+## Page 473 - Targeting a named method
+
+In Step 2, I say "Above the `NameLongerThanFour` method, pass the method's name into the `Func<string, 
+bool>` delegate, and then loop through the query items". But earlier, you would already have looped 
+through the items, and you would have modified Jim to Jimmy. So you should comment out the statement 
+that assigns Jimmy, as shown in the following code:
+
+```cs
+var query = names.Where(
+  new Func<string, bool>(NameLongerThanFour));
+
+foreach (string item in query)
+{
+  WriteLine(item);// outputs Pam
+  // names[2] = "Jimmy"; // change Jim to Jimmy
+  // on the second iteration Jimmy does not end with an M 
+}
+```
 
 ## Page 509 - Implementing a Recorder class
 
