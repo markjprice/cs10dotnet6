@@ -33,6 +33,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
   - [Page 203 - Controlling how parameters are passed](#page-203---controlling-how-parameters-are-passed)
+  - [Page 208 - Defining settable properties](#page-208---defining-settable-properties)
+  - [Page 225 - Implementing functionality using local functions](#page-225---implementing-functionality-using-local-functions)
   - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
   - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
@@ -516,6 +518,57 @@ In Step 1, the code comment explains why the `z` paramater must be initialized i
 Like `out` parameters, `ref` parameters also cannot have default values, but since they can already be set outside the method, they do not need to be set inside the method.
 
 In future editions I will add a note to say that both `out` and `ref` parameters cannot have default values in the bullets above the code example.
+
+## Page 208 - Defining settable properties
+
+> Thanks to Amer Cejudo for emailing me this issue on 27 August 2022.
+
+In Step 2, the `FavoritePrimaryColor` property setter could throw an exception if the value being set is not one of: red, green, or blue.
+
+In Step 3, we set the `FavoritePrimaryColor` property to a valid value, as shown in the following code:
+```cs
+sam.FavoritePrimaryColor = "Red";
+```
+
+If you set an invalid value, like `Black`, then the code will throw an unhandled exception. The code would be better with a `try-catch` statement, as shown in the following code:
+```cs
+try
+{
+  sam.FavoritePrimaryColor = "Red"; // change to Black to make the exception handling code execute
+}
+catch (Exception ex)
+{
+  WriteLine($"{ex.GetType()} says: {ex.Message}.");
+}
+```
+
+> The print book is limited to 820 pages. If I added exception handling code to all code examples then I would have to remove at least one chapter from the book to make enough space. I do think it's worth me explicitly explaining that in a note box, so I will add one in the exception handling section in Chapter 4 of the 7th edition. Then reader will know to add their own exception handling throughout all code. But those seven extra lines are very boring to repeat in every code block.
+
+## Page 225 - Implementing functionality using local functions
+
+> Thanks to Amer Cejudo for emailing me this issue on 27 August 2022.
+
+In Step 1, the `Factorial` function could throw an exception if the number parameter passed is less than zero.
+
+In Step 2, we pass the value 5, as shown in the following code:
+```cs
+WriteLine($"5! is {Person.Factorial(5)}");
+```
+
+If you set an invalid value, like `-1`, then the code will throw an unhandled exception. The code would be better with a `try-catch` statement, as shown in the following code:
+```cs
+try
+{
+  int number = 5; // change to -1 to make the exception handling code execute
+  WriteLine($"{number}! is {Person.Factorial(number)}"); 
+}
+catch (Exception ex)
+{
+  WriteLine($"{ex.GetType()} says: {ex.Message}.");
+}
+```
+
+> The print book is limited to 820 pages. If I added exception handling code to all code examples then I would have to remove at least one chapter from the book to make enough space. I do think it's worth me explicitly explaining that in a note box, so I will add one in the exception handling section in Chapter 4 of the 7th edition. Then reader will know to add their own exception handling throughout all code. But those seven extra lines are very boring to repeat in every code block.
 
 ## Page 233 - Comparing objects when sorting
 
