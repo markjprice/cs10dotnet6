@@ -56,6 +56,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
     - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
   - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
   - [Page 429 - Scaffolding models using an existing database](#page-429---scaffolding-models-using-an-existing-database)
+  - [Page 435 - Filtering included entities](#page-435---filtering-included-entities)
   - [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
   - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
   - [Page 452 - Updating entities](#page-452---updating-entities)
@@ -1101,6 +1102,27 @@ The print book and PDF look like this:
 The Packt online version looks like this:
 
 ![A command in Packt's online version of the book](images/ef-core-command-packt.png)
+
+## Page 435 - Filtering included entities
+
+In Step 1, I tell you to add code to define a `FilteredIncludes` method, and prompt the user to enter a minimum value for units in stock. The code assumes that if the user enters nothing then `ReadLine` returns `null` so it uses a null-coallesing operator to replace that with `10`, as shown in the following code:
+```cs
+Write("Enter a minimum for units in stock: ");
+string unitsInStock = ReadLine() ?? "10";
+int stock = int.Parse(unitsInStock);
+```
+But `ReadLine` returns an empty string if the user enters nothing. A better way to check would be to loop while the `TryParse` method returns not `true`:
+```cs
+string? input;
+int stock;
+
+do
+{
+  Write("Enter a minimum for units in stock: ");
+  input = ReadLine();
+} while (!int.TryParse(input, out stock));
+
+```
 
 ## Page 437 - Filtering and sorting products
 
