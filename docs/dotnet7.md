@@ -1,5 +1,5 @@
 # Sixth Edition's support for .NET 7
-Microsoft will release previews of .NET 7 regularly until the final version on November 7, 2022.
+Microsoft will release previews of .NET 7 regularly until the final version on November 8, 2022.
 
 - [Download .NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0)
 - November 8, 2022: Announcing .NET 7.0 - The Bestest .NET Yet
