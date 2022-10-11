@@ -1,4 +1,4 @@
-[Improvements & Errata - list of corrections](errata.md)
+[Improvements & Errata - list of corrections](errata/README.md)
 
 [Join me on Discord](https://packt.link/csharp10dotnet6)
 
@@ -28,8 +28,8 @@ Supplementary print book materials available to download:
 ## Important
 Corrections for typos and other mistakes and improvements like refactoring code. Useful links to other related material. 
 - [Book Links](book-links.md)
-- [Improvements & Errata - list of corrections](errata.md)
-- [Sixth edition's support for .NET 7](dotnet7.md)
+- [Improvements & Errata - list of corrections](errata/README.md)
+- [Sixth edition's support for .NET 7](docs/dotnet7.md)
 - [Online step-by-step instructions for common code editors](docs/README.md)
 - Feedback survey (coming soon): For now, feel free to email me at Gmail using my GitHub username.
 
