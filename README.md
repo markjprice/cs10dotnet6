@@ -37,7 +37,7 @@ Corrections for typos and other mistakes and improvements like refactoring code.
 
 Join me on Discord using this invite: https://packt.link/csharp10dotnet6
 
-![Discord channel for the C# 10 and .NET 6 book](discord-channel.png)
+![Discord channel for the C# 10 and .NET 6 book](images/discord-channel.png)
 
 
 ## Microsoft .NET community support
