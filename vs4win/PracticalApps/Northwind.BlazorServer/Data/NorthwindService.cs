@@ -21,6 +21,11 @@ public class NorthwindService : INorthwindService
     return db.Customers.Where(c => c.Country == country).ToListAsync();
   }
 
+  public List<string?> GetCountries()
+  {
+    return db.Customers.Select(c => c.Country).Distinct().OrderBy(country => country).ToList();
+  }
+
   public Task<Customer?> GetCustomerAsync(string id)
   {
     return db.Customers.FirstOrDefaultAsync
@@ -44,7 +49,7 @@ public class NorthwindService : INorthwindService
   public Task DeleteCustomerAsync(string id)
   {
     Customer? customer = db.Customers.FirstOrDefaultAsync
-      (c => c.CustomerId == id)?.Result;
+      (c => c.CustomerId == id).Result;
 
     if (customer == null)
     {

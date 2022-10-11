@@ -613,15 +613,15 @@ In Step 4, I wrote, "Extract the ZIP file into a folder named `C:\SQLite`." It w
 
 Be careful when entering the command to scaffold the models if you are using O'Reilly's online version because their formatting does not show long lines and they do not show a scroll bar to indicate there is more, as shown in the following screenshot:
 
-![A command in O'Reilly's online version of the book](../../images/ef-core-command-oreilly.png)
+![A command in O'Reilly's online version of the book](images/ef-core-command-oreilly.png)
 
 The print book and PDF look like this:
 
-![A command in the print and PDF versions of the book](../../images/ef-core-command-pdf.png)
+![A command in the print and PDF versions of the book](images/ef-core-command-pdf.png)
 
 The Packt online version looks like this:
 
-![A command in Packt's online version of the book](../../images/ef-core-command-packt.png)
+![A command in Packt's online version of the book](images/ef-core-command-packt.png)
 
 ## Page 435 - Filtering included entities
 
