@@ -3,7 +3,7 @@ Microsoft will release previews of .NET 7 regularly until the final version on N
 
 - [Download .NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0)
 - November 8, 2022: Announcing .NET 7.0 - The Bestest .NET Yet
-- October, 2022: [Announcing .NET 7 Release Candidate 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-2/)
+- October 11, 2022: [Announcing .NET 7 Release Candidate 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-2/)
 - September 14, 2022: [Announcing .NET 7 Release Candidate 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)
 - August 9, 2022: [Announcing .NET 7 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-7/)
 - July 12, 2022: [Announcing .NET 7 Preview 6](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-6/)
