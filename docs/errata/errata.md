@@ -16,6 +16,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+  - [Page 165 - Running unit tests using Visual Studio Code](#page-165---running-unit-tests-using-visual-studio-code)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
@@ -296,6 +297,12 @@ partial class Program
     }
 }
 ```
+
+## Page 165 - Running unit tests using Visual Studio Code
+
+> Thanks to [kwatsonkairosmgt](https://github.com/kwatsonkairosmgt) for raising this [issue on 27 October 2022](https://github.com/markjprice/cs10dotnet6/issues/106).
+
+In Step 1, the project name `CalculatorLibUnitTest` should be `CalculatorLibUnitTests`.
 
 ## Page 183 - Importing a namespace to use a type
 
