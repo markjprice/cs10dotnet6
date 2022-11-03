@@ -528,6 +528,8 @@ The new one is "MySQL.EntityFrameworkCore"
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 1 June 2022](https://github.com/markjprice/cs10dotnet6/issues/73)
 
+> Thanks to Dylan Sclanders for raising a related issue about losing changes to the database file if you choose to **Copy always** which will later cause exceptions to be thrown.
+
 After step 7, steps 8 to 10 are only needed for SQLite and its `Northwind.db` file 
 if you are running the project using Visual Studio 2022. 
 
@@ -555,19 +557,22 @@ In both cases:
 If you are using **SQLite** with **Visual Studio 2022**, then you need to ensure 
 that the `Northwind.db` file is in the correct folder. The compiled application executes in 
 the `WorkingWithEFCore\bin\Debug\net6.0` folder so it will not find the database file
-and an exception will be thrown. We need to copy it to the output directory each time we run the project:
+and an exception will be thrown. We need to copy it to the output directory, either 
+only when the database file is newer or each time we run the project:
   1. In **Solution Explorer**, right-click the `Northwind.db` file and select **Properties**.
-  2. In **Properties**, set **Copy to Output Directory** to **Copy always**.
+  2. In **Properties**, set **Copy to Output Directory** to **Copy if newer**.
   3. Run the console application and note the output showing which database provider you chose to use.
   4. Optionally, open `WorkingWithEFCore.csproj` and note the new elements, as shown in the following markup:
 
 ```xml
 <ItemGroup>
   <None Update="Northwind.db">
-    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </None>
 </ItemGroup>
 ```
+
+> Note that in the book I say to set it to **Copy always** but this means that you will lose changes made since the last time you ran the project. For example, later in this exercise, you will write code to add a new product and then update it. If you choose to always copy then when you stop and restart the project you will lose the newly added product and so your code to update it will throw an exception.
 
 ## Page 428 - Setting up the dotnet-ef tool
 
