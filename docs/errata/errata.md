@@ -4,6 +4,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 - [Errata](#errata)
 - [Print Book](#print-book)
+  - [Page 3 - Pros and cons of the .NET Interactive Notebooks extension](#page-3---pros-and-cons-of-the-net-interactive-notebooks-extension)
+  - [Page 7 - Downloading and installing Visual Studio Code](#page-7---downloading-and-installing-visual-studio-code)
   - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
   - [Page 18 - Writing code using Visual Studio 2022](#page-18---writing-code-using-visual-studio-2022)
   - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
@@ -56,11 +58,21 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 # Print Book
 
+## Page 3 - Pros and cons of the .NET Interactive Notebooks extension
+
+The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
+
+## Page 7 - Downloading and installing Visual Studio Code
+
+The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
+
 ## Page 8 - Installing other extensions
 
 > Thanks to [ifduyue](https://github.com/ifduyue) for raising this [issue on 14 November 2021](https://github.com/markjprice/cs10dotnet6/issues/1). 
 
 In the table of extensions, the identifier for **MSBuild project tools** should be `tintoy` not `tinytoy`.
+
+The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
 ## Page 18 - Writing code using Visual Studio 2022
 
