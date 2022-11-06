@@ -62,7 +62,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 
 The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
-> Read more here: https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/
+> Read more here: https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/#why-the-name-change
 
 ## Page 7 - Downloading and installing Visual Studio Code
 
