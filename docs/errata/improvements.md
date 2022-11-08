@@ -13,6 +13,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
   - [Page 84 - Simplifying the usage of the console](#page-84---simplifying-the-usage-of-the-console)
   - [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
   - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
+  - [Page 135 - Writing a function that returns a value](#page-135---writing-a-function-that-returns-a-value)
   - [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
   - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
   - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
@@ -161,6 +162,13 @@ without explicitly typing the `Console` class name.
 I wrote, "Iteration statements repeat a block of statements either while a condition is true or for each item in a collection."
 
 Some readers do not realize that the `for` statement does not iterate a specific number of times; it uses a while condition, or loops forever if the while condition is missing. To make that clearer, the sentence could be, "Iteration statements repeat a block of statements either while a condition is `true` (`while` and `for` statements) or for each item in a collection (`foreach` statement)."
+
+## Page 135 - Writing a function that returns a value
+
+At the end of this section there is a note box that explains that we could use the `C` format code to format the output as currency. If you are running on a computer in a culture that uses Euros then to show the Euro currency symbol you must enable UTF-8 encoding. Add the following statement before doing any writing to the console:
+```cs
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+```
 
 ## Page 152 - Customizing breakpoints
 
