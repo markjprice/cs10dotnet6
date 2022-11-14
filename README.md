@@ -60,3 +60,5 @@ Written interviews with me:
 
 ## Book cover
 ![C# 10 and .NET 6 by Packt Publishing](images/B17442_Cover.png)
+
+This PR is intended to address Issue #107

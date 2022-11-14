@@ -1,40 +1,35 @@
-using Packt;
+using CalculatorLib;
 using Xunit;
 
-namespace CalculatorLibUnitTests
+namespace CalculatorLibUnitTests;
+
+public class CalculatorUnitTests
 {
-  public class CalculatorUnitTests
-  {
     [Fact]
     public void TestAdding2And2()
     {
-      // arrange 
-      double a = 2;
-      double b = 2;
-      double expected = 4;
-      Calculator calc = new();
+        // arrange 
+        double a = 2, b = 2, expected = 4;
+        Calculator calc = new();
 
-      // act
-      double actual = calc.Add(a, b);
+        // act
+        var actual = calc.Add(a, b);
 
-      // assert 
-      Assert.Equal(expected, actual);
+        // assert 
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void TestAdding2And3()
     {
-      // arrange 
-      double a = 2;
-      double b = 3;
-      double expected = 5;
-      Calculator calc = new();
+        // arrange 
+        double a = 2, b = 3, expected = 5;
+        Calculator calc = new();
 
-      // act
-      double actual = calc.Add(a, b);
+        // act
+        var actual = calc.Add(a, b);
 
-      // assert 
-      Assert.Equal(expected, actual);
+        // assert 
+        Assert.Equal(expected, actual);
     }
-  }
 }
