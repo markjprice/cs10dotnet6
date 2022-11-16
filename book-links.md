@@ -309,6 +309,8 @@
 - goto keyword and examples of when it can be used: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/goto
 - Pattern matching: https://docs.microsoft.com/en-us/dotnet/csharp/pattern-matching
 - Patterns and switch expressions: https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/
+- Pattern matching overview: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/functional/pattern-matching
+- Patterns (C# reference): https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns
 
 ## Casting, converting, rounding, and formatting data
 - Taking control of rounding: https://docs.microsoft.com/en-us/dotnet/api/system.math.round
