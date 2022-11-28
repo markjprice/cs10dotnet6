@@ -13,6 +13,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
   - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
   - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
+- [Page 84 - Getting text input from the user](#page-84---getting-text-input-from-the-user)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
   - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
@@ -63,6 +64,8 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
 > Read more here: https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/#why-the-name-change
+
+I wrote that "They cannot read input from the user, for example, you cannot use ReadLine or ReadKey." Although you cannot use the `Console` class methods, you can use the `Microsoft.DotNet.Interactive.Kernel` class and its `GetInputAsync` method. This uses the Visual Studio Code user interface to prompt the user for input.
 
 ## Page 7, 8 - Downloading and installing Visual Studio Code
 
@@ -178,6 +181,22 @@ Console.WriteLine(
   arg0: "Name",
   arg1: "Count");
 ```
+
+# Page 84 - Getting text input from the user
+
+I wrote that a notebook "does not support reading input from the console using `Console.ReadLine()`." Although this is true, you can use the `Microsoft.DotNet.Interactive.Kernel` class and its `GetInputAsync` method instead. This uses the .NET Interactive integration with the Visual Studio Code user interface to prompt the user for input.
+
+```cs
+using Microsoft.DotNet.Interactive; // to use the Kernel class
+
+string firstName = await Kernel.GetInputAsync("Type your first name: ");
+
+string age = await Kernel.GetInputAsync("Type your age: ");
+
+Console.WriteLine($"Hello {firstName}, you look good for {age}.");
+```
+
+![Getting input from the .NET Interactive kernel](images/kernel-getinputasync.png)
 
 ## Page 87 - Passing arguments to a console app
 
