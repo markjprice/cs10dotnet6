@@ -736,7 +736,7 @@ Content-Length: 266
 
 ## Page 709 - Implementing Open API analyzers and conventions
 
-> Thanks to [Andrei Tarutin](https://github.com/tarurar) for raising this [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/111). 
+> Thanks to [Andrei Tarutin](https://github.com/tarurar) for raising this [issue on 24 December 2022](https://github.com/markjprice/cs10dotnet6/issues/111). 
 
 In this section, I explain how to enable Open API analyzers by adding an entry to the project file, as shown in the following markup and in this GitHub code file: https://github.com/markjprice/cs10dotnet6/blob/main/vs4win/PracticalApps/Northwind.WebApi/Northwind.WebApi.csproj#L7
 
