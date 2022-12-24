@@ -33,6 +33,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
   - [Page 452 - Updating entities](#page-452---updating-entities)
   - [Page 662 - Making controller action methods asynchronous](#page-662---making-controller-action-methods-asynchronous)
   - [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
+  - [Page 709 - Implementing Open API analyzers and conventions](#page-709---implementing-open-api-analyzers-and-conventions)
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 
 # Print Book
@@ -732,6 +733,32 @@ Content-Length: 266
 }
 ```
 > Note the `Content-Length` has had to change too.
+
+## Page 709 - Implementing Open API analyzers and conventions
+
+> Thanks to [Andrei Tarutin](https://github.com/tarurar) for raising this [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/111). 
+
+In this section, I explain how to enable Open API analyzers by adding an entry to the project file, as shown in the following markup and in this GitHub code file: https://github.com/markjprice/cs10dotnet6/blob/main/vs4win/PracticalApps/Northwind.WebApi/Northwind.WebApi.csproj#L7
+
+```xml
+<PropertyGroup>
+  <TargetFramework>net6.0</TargetFramework>
+  <Nullable>enable</Nullable>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+</PropertyGroup>
+```
+This whole chapter is about Web API projects but I did not explicitly say that the Open API analyzers only work with web projects. In the eighth edition I will show more of the project markup with a note to make this clearer, as shown in the following markup:
+```xml
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+  </PropertyGroup>
+```
 
 ## Page 768 - Exercise 17.3 – Practice by creating a country navigation item
 
