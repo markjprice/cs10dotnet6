@@ -23,7 +23,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
   - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
-- [Page 246 - Releasing unmanaged resources](#page-246---releasing-unmanaged-resources)
+  - [Page 246 - Releasing unmanaged resources](#page-246---releasing-unmanaged-resources)
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
   - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
   - [Page 297 - Decompiling using the ILSpy extension for Visual Studio Code](#page-297---decompiling-using-the-ilspy-extension-for-visual-studio-code)
@@ -387,7 +387,7 @@ In the **Good Practice** box, the text "If you use are writing code" should be "
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
 
-# Page 246 - Releasing unmanaged resources
+## Page 246 - Releasing unmanaged resources
 
 > Thanks to `Wuu#0348` on the Discord channel for raising this issue.
 
