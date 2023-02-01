@@ -39,6 +39,8 @@ Join me on Discord using this invite: https://packt.link/csharp10dotnet6
 
 ![Discord channel for the C# 10 and .NET 6 book](images/discord-channel.png)
 
+## Microsoft Certifications
+Microsoft used to have exams and certifications for developers that covered skills like C# and ASP.NET. Sadly, they have retired them all. These days, the only developer-adjacent exams and certifications are for Azure or Power Platform, as you can see from the certification poster: https://aka.ms/traincertposter
 
 ## Microsoft .NET community support
 - .NET Developer Community: https://dotnet.microsoft.com/platform/community
@@ -49,6 +51,7 @@ Join me on Discord using this invite: https://packt.link/csharp10dotnet6
 
 ## Interviews with me
 Podcast interviews with me:
+- [Yet Another Podcast with Jesse Liberty - December 2022](https://jesseliberty.com/2022/12/10/mark-price-on-c-11-fixed/)
 - [The .NET Core Podcast](https://dotnetcore.show/episode-44-learning-net-core-with-mark-j-price/)
 - [Yet Another Podcast with Jesse Liberty - May 2021](http://jesseliberty.com/2021/05/16/mark-price-on-c9-and-net-6/)
 - [Yet Another Podcast with Jesse Liberty - February 2020](http://jesseliberty.com/2020/02/23/mark-price-c-net-core/)
