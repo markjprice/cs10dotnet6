@@ -751,6 +751,12 @@ And create a view that matches the name `CategoryDetail.cshtml`, as shown in the
 
 > Note: You could also use the simpler link format `https://localhost:5001/home/category/1` but then both the action method and the view filename must be just `Category` instead of `CategoryDetail`.
 
+If you want to keep the original link format, then you would need to decorate the action method as shown in the following code:
+```cs
+[Route("category/{id}")]
+public async Task<IActionResult> CategoryDetail(int? id)
+```
+
 ## Page 692 - Making other requests using REST Client
 
 > Thanks to [Tim](https://github.com/tcrum06) for raising this [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/67). 
