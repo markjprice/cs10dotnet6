@@ -264,4 +264,22 @@ public class HomeController : Controller
     return View();
   }
 
+
+  public async Task<IActionResult> CategoryDetail(int? id)
+  {
+    if (!id.HasValue)
+    {
+      return BadRequest("You must pass a category ID in the route, for example, /Home/CategoryDetail/6");
+    }
+
+    Category? model = await db.Categories.Include(p => p.Products)
+      .SingleOrDefaultAsync(p => p.CategoryId == id);
+
+    if (model is null)
+    {
+      return NotFound($"CategoryId {id} not found.");
+    }
+
+    return View(model); // pass model to view and then return result
+  }
 }
