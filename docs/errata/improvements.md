@@ -32,7 +32,7 @@ If you have suggestions for improvements, then please [raise an issue in this re
   - [Page 435 - Filtering included entities](#page-435---filtering-included-entities)
   - [Page 452 - Updating entities](#page-452---updating-entities)
   - [Page 662 - Making controller action methods asynchronous](#page-662---making-controller-action-methods-asynchronous)
-- [Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page](#page-664---exercise-152--practice-implementing-mvc-by-implementing-a-category-detail-page)
+  - [Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page](#page-664---exercise-152--practice-implementing-mvc-by-implementing-a-category-detail-page)
   - [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
   - [Page 709 - Implementing Open API analyzers and conventions](#page-709---implementing-open-api-analyzers-and-conventions)
   - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
@@ -689,7 +689,7 @@ public async Task<IActionResult> Index()
 }
 ```
 
-# Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page
+## Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page
 
 Earlier in the chapter, and in Exercise 15.2, the link generated for a category detail page looks like this:
 ```
