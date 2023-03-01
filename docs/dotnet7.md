@@ -1,8 +1,8 @@
 # Sixth Edition's support for .NET 7
-Microsoft will release previews of .NET 7 regularly until the final version on November 8, 2022.
+Microsoft released previews of .NET 7 regularly until the final version on November 8, 2022.
 
 - [Download .NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet/7.0)
-- November 8, 2022: Announcing .NET 7.0 - The Bestest .NET Yet
+- November 8, 2022: [.NET 7 is Available Today](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7/)
 - October 11, 2022: [Announcing .NET 7 Release Candidate 2](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-2/)
 - September 14, 2022: [Announcing .NET 7 Release Candidate 1](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-rc-1/)
 - August 9, 2022: [Announcing .NET 7 Preview 7](https://devblogs.microsoft.com/dotnet/announcing-dotnet-7-preview-7/)
@@ -39,10 +39,10 @@ For the `Instrumenting` project, the additional referenced NuGet packages should
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
@@ -57,10 +57,10 @@ For the `CalculatorLibUnitTests` project, the additional referenced NuGet packag
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />
-    <PackageReference Include="coverlet.collector" Version="3.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+    <PackageReference Include="coverlet.collector" Version="3.2.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,8 +81,8 @@ For the `WorkingWithEFCore` project, the additional referenced NuGet packages sh
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.0-*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
@@ -98,7 +98,7 @@ For the `LinqWithEFCore` and `Exercise02` projects, the additional referenced Nu
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0-*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
@@ -114,7 +114,7 @@ For the `NorthwindContextLib` project, the referenced NuGet package for SQLite s
 
   <ItemGroup>
     <ProjectReference Include="..\NorthwindEntitiesLib\NorthwindEntitiesLib.csproj" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="7.0.0-*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
@@ -134,14 +134,14 @@ For the `NorthwindMvc` project, the referenced NuGet packages should use the .NE
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0-*" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0-*" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0" />
     
     <!-- added in Chapter 17 to call a web service -->
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -163,9 +163,9 @@ For the `NorthwindService` project, the referenced NuGet packages should use the
   <ItemGroup>
     <ProjectReference Include="..\NorthwindContextLib\NorthwindContextLib.csproj" />
 
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" 
-                      Version="7.0.0-*" />
+                      Version="7.0.0" />
   </ItemGroup>
 
 </Project>
