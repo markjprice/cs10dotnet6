@@ -27,6 +27,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
   - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
   - [Page 292 - Publishing a self-contained app, Page 316 - Exercise 7.3 – Explore PowerShell](#page-292---publishing-a-self-contained-app-page-316---exercise-73--explore-powershell)
+  - [Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022](#page-296---decompiling-using-the-ilspy-extension-for-visual-studio-2022)
   - [Page 297 - Decompiling using the ILSpy extension for Visual Studio Code](#page-297---decompiling-using-the-ilspy-extension-for-visual-studio-code)
   - [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
   - [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
@@ -415,16 +416,23 @@ I should have written, "In `Program.cs`, ..."
 
 In the **Good Practice** box on page 292, I wrote about how you can automate commands using scripts written in the PowerShell language. My original plan was to write content about PowerShell in the GitHub repository. But PowerShell is a massive topic and there will always be higher priority content to create that is specifically about C# and .NET. In the 8th edition, I will just reference the official PowerShell documentation: https://learn.microsoft.com/en-us/powershell/ And I will remove **Exercise 7.3** that suggests exploring PowerShell.
 
+## Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022
+
+> Thanks to [omarz7](https://github.com/omarz7) for raising this [issue on 17 March 2023](https://github.com/markjprice/cs10dotnet6/issues/114).
+
+In Step 10, I say to "Select the System.IO.FileSystem.dll assembly". This was an unfortunate choice because in the final release version of .NET 6, that assembly's classes use type forwarding and the implementations were moved to the `System.Private.Corelib.dll` assembly. In the 7th edition, I changed the instructions to open the `System.Linq.dll` assembly instead and view the `Enumerable.Count` method.
+
 ## Page 297 - Decompiling using the ILSpy extension for Visual Studio Code
 
-> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this 
-> [issue on 24 June 2022](https://github.com/markjprice/cs10dotnet6/issues/86).
+> Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 24 June 2022](https://github.com/markjprice/cs10dotnet6/issues/86).
 
 The  ILSpy .NET Decompiler extension for Visual Studio Code has changed behavior. It no longer 
 shows two edit panes side-by-side. Instead, you can only see one language at a time. You can 
 toggle between C# and IL code by clicking the **Output language** button in the top right corner.
 
 In the next edition, I will tell the reader to open a different assembly so it works with the latest version of ILSpy. Probably the `System.Linq` assembly and decompile the `Enumerable` class and its `Average` method for a sequence of `int` values:
+
+> Note: In the 7th edition I decided to show the `Count` method instead. This is so later in the book the reader will better understand how calling `Count` can be inefficient because it could require a sequence to be enumerated!
 
 ![image](https://user-images.githubusercontent.com/14040265/175520803-4f3e0442-f91d-436a-8f74-925e48937da4.png)
 
