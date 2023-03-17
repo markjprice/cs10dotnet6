@@ -420,7 +420,11 @@ In the **Good Practice** box on page 292, I wrote about how you can automate com
 
 > Thanks to [omarz7](https://github.com/omarz7) for raising this [issue on 17 March 2023](https://github.com/markjprice/cs10dotnet6/issues/114).
 
-In Step 10, I say to "Select the System.IO.FileSystem.dll assembly". This was an unfortunate choice because in the final release version of .NET 6, that assembly's classes use type forwarding and the implementations were moved to the `System.Private.Corelib.dll` assembly. In the 7th edition, I changed the instructions to open the `System.Linq.dll` assembly instead and view the `Enumerable.Count` method.
+In Step 10, I wrote, "Select the `System.IO.FileSystem.dll` assembly". This was an unfortunate choice because in the final release version of .NET 6, that assembly's classes use type forwarding and the implementations were moved to the `System.Private.Corelib.dll` assembly. 
+
+In Step 10, it should therefore say, "Select the `System.Private.Corelib.dll` assembly" instead. The rest of the steps will then work.
+
+In the 7th edition, I changed the instructions to open the `System.Linq.dll` assembly instead and view the `Enumerable.Count` method. This is so later in the book the reader will better understand how calling `Count` can be inefficient because it could require a sequence to be enumerated!
 
 ## Page 297 - Decompiling using the ILSpy extension for Visual Studio Code
 
@@ -432,7 +436,7 @@ toggle between C# and IL code by clicking the **Output language** button in the 
 
 In the next edition, I will tell the reader to open a different assembly so it works with the latest version of ILSpy. Probably the `System.Linq` assembly and decompile the `Enumerable` class and its `Average` method for a sequence of `int` values:
 
-> Note: In the 7th edition I decided to show the `Count` method instead. This is so later in the book the reader will better understand how calling `Count` can be inefficient because it could require a sequence to be enumerated!
+> Note: In the 7th edition I decided to show the `Count` method instead.
 
 ![image](https://user-images.githubusercontent.com/14040265/175520803-4f3e0442-f91d-436a-8f74-925e48937da4.png)
 
