@@ -19,6 +19,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+  - [Page 159 - Reviewing project packages](#page-159---reviewing-project-packages)
   - [Page 165 - Running unit tests using Visual Studio Code](#page-165---running-unit-tests-using-visual-studio-code)
   - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
   - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
@@ -355,6 +356,14 @@ partial class Program
     }
 }
 ```
+
+## Page 159 - Reviewing project packages
+
+If you are having trouble with this section, please read the following two entries from the 7th edition that might be related:
+
+- Avoid a bug in a recent Microsoft package: https://github.com/markjprice/cs11dotnet7/blob/main/docs/errata/errata.md#page-178---reviewing-project-packages
+
+- Make sure the `appsettings.json` file is not ignored: https://github.com/markjprice/cs11dotnet7/blob/main/docs/errata/errata.md#page-180---reviewing-project-packages
 
 ## Page 165 - Running unit tests using Visual Studio Code
 
