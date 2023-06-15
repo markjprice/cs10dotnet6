@@ -87,6 +87,12 @@ In the table of extensions, the identifier for **MSBuild project tools** should 
 
 The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
+In the table, the **C# for Visual Studio Code** extension says it is "powered by OmniSharp". This is true up to the most recent release version `1.25.9`. But if you install the pre-release version `2.0.x` then it does not include OmniSharp any more.
+
+To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
+
+If you have installed the **C# Dev Kit** then it will install the pre-release version of the **C#** extension.
+
 ## Page 18, 19 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022.
@@ -111,7 +117,9 @@ You have three choices to proceed:
 2. You can install the last version 5.0.408 that was released on May 10, 2022 from the following link: https://dotnet.microsoft.com/en-us/download/dotnet/5.0. .NET 5 has now reached end-of-life which means it is not supported by Microsoft *but it still works perfectly well* so for learning purposes its fine to use. 
 3. You can install .NET 7 SDK from the following link: https://dotnet.microsoft.com/en-us/download/dotnet/7.0. Then when you get to Step 12, enter the following command: `dotnet new console --use-program-main`. This option returns the behavior of the .NET 7 console app template back to similar behavior of .NET 5.
 
-In Step 14, I say that the first time you open a code file, Visual Studio Code may have to download and install C# dependencies and so on. This will not happen if you do not trust the workspace. 
+In Step 14, I wrote, "Visual Studio Code may have to download and install C# dependencies like OmniSharp, .NET Core Debugger, and Razor Language Server". This is true up to the most recent release version `1.25.9`. But if you install the pre-release version `2.0.x` then it does not include OmniSharp any more. To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
+
+Downloading and installing C# dependencies will not happen if you do not trust the workspace. 
 
 At the top of the window, in the blue bar, click **Manage**, as shown in the following screenshot:
 
@@ -127,7 +135,13 @@ You will then trust the workspace and extensions will activate as described in t
 
 ## Page 28 - Adding a second project using Visual Studio Code
 
-> This issue has now been resolved with the release of C# extension 1.24.0 on January 20, 2022: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
+In Step 6, I wrote, "Enter `omni`, and then, in the drop-down list that appears, select **OmniSharp: Select Project**." 
+
+This works if you installed the most recent release version `1.25.9`. But if you installed the pre-release version `2.0.x` then it does not include OmniSharp any more.
+
+To follow the instructions in the book, if you have installed the pre-release version `2.0.x` then on the **C#** extension page, I recommend that you click the button **Switch to Release Version** to revert back to the current release version `1.25.9`.
+
+> There was also an older issue that has now been resolved with the release of C# extension 1.24.0 on January 20, 2022: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
 
 > Thanks to [johncflorida](https://github.com/johncflorida) for raising this [issue on 9 December 2021](https://github.com/markjprice/cs10dotnet6/issues/11). Also thanks to [Paul-Schroeder](https://github.com/Paul-Schroeder) and [ken-from-the-uk](https://github.com/ken-from-the-uk) who raised the same issue and made suggestions.
 
