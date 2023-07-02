@@ -76,9 +76,7 @@ I wrote that "They cannot read input from the user, for example, you cannot use 
 
 > Thanks to [Bert_the_Dad](https://github.com/jbertino) who raised this issue on [1 July 2023](https://github.com/markjprice/cs10dotnet6/issues/118).
 
-In Step 3, I list the **Workloads** to select to install, including **Mobile development with .NET** which installs the Xamarin platform.
-
-In the most recent versions of Visual Studio, this workload has been replaced by **.NET Multi-platform App UI development**.
+In Step 3, I list the **Workloads** to select to install, including **Mobile development with .NET**. I should have written **.NET Multi-platform App UI development**. This workload is only needed for the optional online-only *Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI*.
 
 ## Page 7, 8 - Downloading and installing Visual Studio Code
 
