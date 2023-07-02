@@ -5,6 +5,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 - [Errata](#errata)
 - [Print Book](#print-book)
   - [Page 3 - Pros and cons of the .NET Interactive Notebooks extension](#page-3---pros-and-cons-of-the-net-interactive-notebooks-extension)
+  - [Page 6 - Downloading and installing Visual Studio 2022 for Windows](#page-6---downloading-and-installing-visual-studio-2022-for-windows)
   - [Page 7, 8 - Downloading and installing Visual Studio Code](#page-7-8---downloading-and-installing-visual-studio-code)
   - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
   - [Page 18, 19 - Writing code using Visual Studio 2022](#page-18-19---writing-code-using-visual-studio-2022)
@@ -70,6 +71,12 @@ The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Note
 > Read more here: https://devblogs.microsoft.com/dotnet/dotnet-interactive-notebooks-is-now-polyglot-notebooks/#why-the-name-change
 
 I wrote that "They cannot read input from the user, for example, you cannot use ReadLine or ReadKey." Although you cannot use the `Console` class methods, you can use the `Microsoft.DotNet.Interactive.Kernel` class and its `GetInputAsync` method. This uses the Visual Studio Code user interface to prompt the user for input.
+
+## Page 6 - Downloading and installing Visual Studio 2022 for Windows
+
+In Step 3, I list the **Workloads** to select to install, including **Mobile development with .NET** which installs the Xamarin platform.
+
+In the most recent versions of Visual Studio, this workload has been replaced by **.NET Multi-platform App UI development**.
 
 ## Page 7, 8 - Downloading and installing Visual Studio Code
 
