@@ -74,6 +74,8 @@ I wrote that "They cannot read input from the user, for example, you cannot use 
 
 ## Page 6 - Downloading and installing Visual Studio 2022 for Windows
 
+> Thanks to [Bert_the_Dad](https://github.com/jbertino) who raised this issue on [1 July 2023](https://github.com/markjprice/cs10dotnet6/issues/118).
+
 In Step 3, I list the **Workloads** to select to install, including **Mobile development with .NET** which installs the Xamarin platform.
 
 In the most recent versions of Visual Studio, this workload has been replaced by **.NET Multi-platform App UI development**.
