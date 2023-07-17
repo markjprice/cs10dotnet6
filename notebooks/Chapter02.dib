@@ -326,43 +326,6 @@ for (int i = 0; i < names.Length; i++)
 
 #!markdown
 
-## Making a value type nullable
-
-#!csharp
-
-int thisCannotBeNull = 4; 
-// thisCannotBeNull = null; // compile error!
-
-int? thisCouldBeNull = null; 
-Console.WriteLine(thisCouldBeNull); 
-Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
-
-thisCouldBeNull = 7; 
-Console.WriteLine(thisCouldBeNull); 
-Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
-
-#!markdown
-
-## Checking for null
-
-#!csharp
-
-string authorName = null;
-
-// the following throws a NullReferenceException 
-// int x = authorName.Length;
-
-// instead of throwing an exception, null is assigned to y 
-int? y = authorName?.Length;
-
-Console.WriteLine($"y is null: {y is null}");
-
-// result will be 3 if authorName?.Length is null 
-var result = authorName?.Length ?? 3; 
-Console.WriteLine(result);
-
-#!markdown
-
 ## Formatting using numbered positional arguments
 
 #!csharp
