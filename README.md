@@ -40,7 +40,10 @@ Join me on Discord using this invite: https://packt.link/csharp10dotnet6
 ![Discord channel for the C# 10 and .NET 6 book](images/discord-channel.png)
 
 ## Microsoft Certifications
-Microsoft used to have exams and certifications for developers that covered skills like C# and ASP.NET. Sadly, they have retired them all. These days, the only developer-adjacent exams and certifications are for Azure or Power Platform, as you can see from the certification poster: https://aka.ms/traincertposter
+Announcing the New Foundational C# Certification with freeCodeCamp:
+https://devblogs.microsoft.com/dotnet/announcing-foundational-csharp-certification/
+
+Microsoft used to have professional exams and certifications for developers that covered skills like C# and ASP.NET. Sadly, they have retired them all. These days, the only developer-adjacent exams and certifications are for Azure or Power Platform, as you can see from the certification poster: https://aka.ms/traincertposter
 
 ## Microsoft .NET community support
 - .NET Developer Community: https://dotnet.microsoft.com/platform/community
