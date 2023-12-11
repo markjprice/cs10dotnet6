@@ -12,7 +12,9 @@ while (x < 10)
 
 // Looping with the do statement
 
+string? actualPassword = "Pa$$w0rd";
 string? password;
+int maximumAttempts = 10;
 int attempts = 0;
 
 do
@@ -21,15 +23,16 @@ do
   Write("Enter your password: ");
   password = ReadLine();
 }
-while ((password != "Pa$$w0rd") & (attempts < 10));
+while ((password != actualPassword) & (attempts < maximumAttempts));
 
-if (attempts < 10)
+if (password == actualPassword)
 {
   WriteLine("Correct!");
 }
 else
 {
-  WriteLine("You have used 10 attempts!");
+  WriteLine("You have used {0} attempts! The password was {1}.",
+    arg0: maximumAttempts, arg1: actualPassword);
 }
 
 // Looping with the for statement

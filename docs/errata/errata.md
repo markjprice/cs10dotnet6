@@ -17,6 +17,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
   - [Page 84 - Getting text input from the user](#page-84---getting-text-input-from-the-user)
   - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
   - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
+- [Page 111 - Looping with the do statement](#page-111---looping-with-the-do-statement)
   - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
   - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
   - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
@@ -249,6 +250,43 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 > Thanks to Bob Molloy for emailing me this issue.
 
 In Exercise 2.3, I say, "create a console application project named Exercise02". I should have said, "create a console application project named Exercise03".
+
+# Page 111 - Looping with the do statement
+
+> Thanks to Norbert Duenki who raised this issue by email on 4 April 2023. Thanks to YachtRocker in the Discord channel for pointing out that I should make the same fix for the 6th edition.
+
+In Step 3, I wrote, "As an optional challenge, add statements so that the user can only make ten attempts before 
+an error message is displayed."
+
+In my code solution in GitHub, I made a mistake in my logic so that if the user entered the correct password on their tenth attempt, it output the error message.
+
+I have updated the logic to fix this issue, as well as to use variables to store the actual password and the maximum number of attempts, as shown in the following code:
+```cs
+// Looping with the do statement
+
+string? actualPassword = "Pa$$w0rd";
+string? password;
+int maximumAttempts = 10;
+int attempts = 0;
+
+do
+{
+  attempts++;
+  Write("Enter your password: ");
+  password = ReadLine();
+}
+while ((password != actualPassword) & (attempts < maximumAttempts));
+
+if (password == actualPassword)
+{
+  WriteLine("Correct!");
+}
+else
+{
+  WriteLine("You have used {0} attempts! The password was {1}.",
+    arg0: maximumAttempts, arg1: actualPassword);
+}
+```
 
 ## Page 136 - Converting numbers from cardinal to ordinal
 
