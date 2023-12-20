@@ -457,7 +457,7 @@
 - Tutorial: Create an item template: https://docs.microsoft.com/en-us/dotnet/core/tutorials/cli-templates-create-item-template
 
 ## Packaging and publishing
-- PDB files: https://www.wintellect.com/pdb-files-what-every-developer-must-know/
+- PDB files: https://www.atmosera.com/blog/pdb-files-what-every-developer-must-know/
 - Single-file app issue: https://github.com/dotnet/runtime/issues/36590
 - App trimming: https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5/
 - The PackageReference format: https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets
