@@ -56,6 +56,7 @@ Microsoft used to have professional exams and certifications for developers that
 
 ## Interviews with me
 Podcast interviews with me:
+- [The Modern .NET Show Podcast - January 26, 2024](https://dotnetcore.show/season-6/the-net-trilogy-and-learning-net-with-mark-j-price/)
 - [The .NET Core Podcast - March 3, 2023](https://dotnetcore.show/episode-117-our-perspectives-on-the-future-of-net-with-mark-j-price/)
 - [Yet Another Podcast with Jesse Liberty - December 2022](https://jesseliberty.com/2022/12/10/mark-price-on-c-11-fixed/)
 - [The .NET Core Podcast](https://dotnetcore.show/episode-44-learning-net-core-with-mark-j-price/)
