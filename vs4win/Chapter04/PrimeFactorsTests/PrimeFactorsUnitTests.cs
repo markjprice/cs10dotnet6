@@ -1,77 +1,77 @@
+using PrimeFactorsLib;
 using Xunit;
 
-namespace PrimeFactors
+namespace PrimeFactorsTests;
+
+public class PrimeFactorsTests
 {
-  public class PrimeFactorsTests
-  {
     [Fact]
     public void PrimeFactorsOf40()
     {
-      // arrange
-      int number = 40;
-      string expected = "5 x 2 x 2 x 2";
+        // arrange
+        var number = 40;
+        var expected = "5 x 2 x 2 x 2";
 
-      // act
-      string actual = Primes.PrimeFactors(number);
+        // act
+        var actual = Primes.PrimeFactors(number);
 
-      // assert
-      Assert.Equal(expected, actual);
+        // assert
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void PrimeFactorsOf99()
     {
-      // arrange
-      int number = 99;
-      string expected = "11 x 3 x 3";
+        // arrange
+        var number = 99;
+        var expected = "11 x 3 x 3";
 
-      // act
-      string actual = Primes.PrimeFactors(number);
+        // act
+        var actual = Primes.PrimeFactors(number);
 
-      // assert
-      Assert.Equal(expected, actual);
+        // assert
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void PrimeFactorsOf519()
     {
-      // arrange
-      int number = 519;
-      string expected = "173 x 3";
+        // arrange
+        var number = 519;
+        var expected = "173 x 3";
 
-      // act
-      string actual = Primes.PrimeFactors(number);
+        // act
+        var actual = Primes.PrimeFactors(number);
 
-      // assert
-      Assert.Equal(expected, actual);
+        // assert
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void PrimeFactorsOf997()
     {
-      // arrange
-      int number = 997;
-      string expected = "997";
+        // arrange
+        var number = 997;
+        var expected = "997";
 
-      // act
-      string actual = Primes.PrimeFactors(number);
+        // act
+        var actual = Primes.PrimeFactors(number);
 
-      // assert
-      Assert.Equal(expected, actual);
+        // assert
+        Assert.Equal(expected, actual);
     }
 
     [Fact]
     public void PrimeFactorsOf1000()
     {
-      // arrange
-      int number = 1000;
-      string expected = "5 x 5 x 5 x 2 x 2 x 2";
+        // arrange
+        var number = 1000;
+        var expected = "5 x 5 x 5 x 2 x 2 x 2";
 
-      // act
-      string actual = Primes.PrimeFactors(number);
+        // act
+        var actual = Primes.PrimeFactors(number);
 
-      // assert
-      Assert.Equal(expected, actual);
+        // assert
+        Assert.Equal(expected, actual);
     }
-  }
 }
