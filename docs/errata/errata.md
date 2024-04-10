@@ -1,73 +1,68 @@
-# Errata
+**Errata** (58 items)
 
 If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-Platform Development*, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
-- [Errata](#errata)
-- [Print Book](#print-book)
-  - [Page 3 - Pros and cons of the .NET Interactive Notebooks extension](#page-3---pros-and-cons-of-the-net-interactive-notebooks-extension)
-  - [Page 6 - Downloading and installing Visual Studio 2022 for Windows](#page-6---downloading-and-installing-visual-studio-2022-for-windows)
-  - [Page 7, 8 - Downloading and installing Visual Studio Code](#page-7-8---downloading-and-installing-visual-studio-code)
-  - [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
-  - [Page 18, 19 - Writing code using Visual Studio 2022](#page-18-19---writing-code-using-visual-studio-2022)
-  - [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
-  - [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
-  - [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
-  - [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
-  - [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
-  - [Page 84 - Getting text input from the user](#page-84---getting-text-input-from-the-user)
-  - [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
-  - [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
+- [Page 3 - Pros and cons of the .NET Interactive Notebooks extension](#page-3---pros-and-cons-of-the-net-interactive-notebooks-extension)
+- [Page 6 - Downloading and installing Visual Studio 2022 for Windows](#page-6---downloading-and-installing-visual-studio-2022-for-windows)
+- [Page 7, 8 - Downloading and installing Visual Studio Code](#page-7-8---downloading-and-installing-visual-studio-code)
+- [Page 8 - Installing other extensions](#page-8---installing-other-extensions)
+- [Page 18, 19 - Writing code using Visual Studio 2022](#page-18-19---writing-code-using-visual-studio-2022)
+- [Page 25 - Writing code using Visual Studio Code](#page-25---writing-code-using-visual-studio-code)
+- [Page 28 - Adding a second project using Visual Studio Code](#page-28---adding-a-second-project-using-visual-studio-code)
+- [Page 32 - Adding Markdown and special commands to a notebook](#page-32---adding-markdown-and-special-commands-to-a-notebook)
+- [Page 82 - Formatting using interpolated strings](#page-82---formatting-using-interpolated-strings)
+- [Page 83 - Understanding format strings](#page-83---understanding-format-strings)
+- [Page 84 - Getting text input from the user](#page-84---getting-text-input-from-the-user)
+- [Page 87 - Passing arguments to a console app](#page-87---passing-arguments-to-a-console-app)
+- [Page 92 - Exercise 2.3 – Practice number sizes and ranges](#page-92---exercise-23--practice-number-sizes-and-ranges)
 - [Page 111 - Looping with the do statement](#page-111---looping-with-the-do-statement)
-  - [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
-  - [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
-  - [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
-  - [Page 159 - Reviewing project packages](#page-159---reviewing-project-packages)
-  - [Page 165 - Running unit tests using Visual Studio Code](#page-165---running-unit-tests-using-visual-studio-code)
-  - [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
-  - [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
-  - [Page 192 - Making a field constant](#page-192---making-a-field-constant)
-  - [Page 246 - Releasing unmanaged resources](#page-246---releasing-unmanaged-resources)
-  - [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
-  - [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
-  - [Page 292 - Publishing a self-contained app, Page 316 - Exercise 7.3 – Explore PowerShell](#page-292---publishing-a-self-contained-app-page-316---exercise-73--explore-powershell)
-  - [Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022](#page-296---decompiling-using-the-ilspy-extension-for-visual-studio-2022)
-  - [Page 297 - Decompiling using the ILSpy extension for Visual Studio Code](#page-297---decompiling-using-the-ilspy-extension-for-visual-studio-code)
-  - [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
-  - [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
-  - [Page 384 - Disposing of file resources](#page-384---disposing-of-file-resources)
-  - [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
-  - [Page 396 - Serializing as XML](#page-396---serializing-as-xml)
-  - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
-  - [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
-  - [Page 420 - Defining the Northwind database context class](#page-420---defining-the-northwind-database-context-class)
-    - [If you are using (a) SQL Server or (b) SQLite with Visual Studio Code](#if-you-are-using-a-sql-server-or-b-sqlite-with-visual-studio-code)
-    - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
-  - [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
-  - [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
-  - [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
-  - [Page 473 - Targeting a named method](#page-473---targeting-a-named-method)
-  - [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
-  - [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
-  - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
-  - [Page 562 - Creating a class library for a Northwind database context](#page-562---creating-a-class-library-for-a-northwind-database-context)
-  - [Page 564 - Creating a class library for entity models using SQL Server](#page-564---creating-a-class-library-for-entity-models-using-sql-server)
-  - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
-  - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
-  - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
-  - [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
-  - [Page 706 - Enabling Cross-Origin Resource Sharing](#page-706---enabling-cross-origin-resource-sharing)
-  - [Page 708 - Implementing a Health Check API](#page-708---implementing-a-health-check-api)
-  - [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
-- [Bonus Content: Chapters 18 to 20 and Appendix](#bonus-content-chapters-18-to-20-and-appendix)
-  - [Page 20 - Adding a services page to the Northwind MVC website](#page-20---adding-a-services-page-to-the-northwind-mvc-website)
-  - [Page 35 - Building a client for GraphQL](#page-35---building-a-client-for-graphql)
-  - [Page 41 - Testing a gRPC client to the gRPC service](#page-41---testing-a-grpc-client-to-the-grpc-service)
-  - [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
-  - [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
+- [Page 136 - Converting numbers from cardinal to ordinal](#page-136---converting-numbers-from-cardinal-to-ordinal)
+- [Page 137 - Calculating factorials with recursion](#page-137---calculating-factorials-with-recursion)
+- [Page 140 - Documenting functions with XML comments](#page-140---documenting-functions-with-xml-comments)
+- [Page 159 - Reviewing project packages](#page-159---reviewing-project-packages)
+- [Page 165 - Running unit tests using Visual Studio Code](#page-165---running-unit-tests-using-visual-studio-code)
+- [Page 183 - Importing a namespace to use a type](#page-183---importing-a-namespace-to-use-a-type)
+- [Page 187 - Storing a value using an enum type](#page-187---storing-a-value-using-an-enum-type)
+- [Page 192 - Making a field constant](#page-192---making-a-field-constant)
+- [Page 246 - Releasing unmanaged resources](#page-246---releasing-unmanaged-resources)
+- [Page 252 - Inheriting from classes](#page-252---inheriting-from-classes)
+- [Page 260 - Avoiding casting exceptions](#page-260---avoiding-casting-exceptions)
+- [Page 292 - Publishing a self-contained app, Page 316 - Exercise 7.3 – Explore PowerShell](#page-292---publishing-a-self-contained-app-page-316---exercise-73--explore-powershell)
+- [Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022](#page-296---decompiling-using-the-ilspy-extension-for-visual-studio-2022)
+- [Page 297 - Decompiling using the ILSpy extension for Visual Studio Code](#page-297---decompiling-using-the-ilspy-extension-for-visual-studio-code)
+- [Page 311 - Understanding the .NET Portability Analyzer](#page-311---understanding-the-net-portability-analyzer)
+- [Page 316 - Exercise 7.2 – Explore topics](#page-316---exercise-72--explore-topics)
+- [Page 384 - Disposing of file resources](#page-384---disposing-of-file-resources)
+- [Page 391 - Encoding strings as byte arrays](#page-391---encoding-strings-as-byte-arrays)
+- [Page 396 - Serializing as XML](#page-396---serializing-as-xml)
+- [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+- [Page 417 - Database Provider for MySQL](#page-417---database-provider-for-mysql)
+- [Page 420 - Defining the Northwind database context class](#page-420---defining-the-northwind-database-context-class)
+  - [If you are using (a) SQL Server or (b) SQLite with Visual Studio Code](#if-you-are-using-a-sql-server-or-b-sqlite-with-visual-studio-code)
+  - [If you are using SQLite with Visual Studio 2022](#if-you-are-using-sqlite-with-visual-studio-2022)
+- [Page 428 - Setting up the dotnet-ef tool](#page-428---setting-up-the-dotnet-ef-tool)
+- [Page 437 - Filtering and sorting products](#page-437---filtering-and-sorting-products)
+- [Page 438 - Getting the generated SQL](#page-438---getting-the-generated-sql)
+- [Page 473 - Targeting a named method](#page-473---targeting-a-named-method)
+- [Page 509 - Implementing a Recorder class](#page-509---implementing-a-recorder-class)
+- [Page 510 - Implementing a Recorder class](#page-510---implementing-a-recorder-class)
+- [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
+- [Page 562 - Creating a class library for a Northwind database context](#page-562---creating-a-class-library-for-a-northwind-database-context)
+- [Page 564 - Creating a class library for entity models using SQL Server](#page-564---creating-a-class-library-for-entity-models-using-sql-server)
+- [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
+- [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
+- [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
+- [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory)
+- [Page 706 - Enabling Cross-Origin Resource Sharing](#page-706---enabling-cross-origin-resource-sharing)
+- [Page 708 - Implementing a Health Check API](#page-708---implementing-a-health-check-api)
+- [Page 712 - Building a weather service using minimal APIs](#page-712---building-a-weather-service-using-minimal-apis)
+- [Page 20 - Adding a services page to the Northwind MVC website](#page-20---adding-a-services-page-to-the-northwind-mvc-website)
+- [Page 35 - Building a client for GraphQL](#page-35---building-a-client-for-graphql)
+- [Page 41 - Testing a gRPC client to the gRPC service](#page-41---testing-a-grpc-client-to-the-grpc-service)
+- [Page 141 - Appendix A - Exercise 3.1 – Test your knowledge](#page-141---appendix-a---exercise-31--test-your-knowledge)
+- [Page 143 - Appendix A - Exercise 4.1 – Test your knowledge](#page-143---appendix-a---exercise-41--test-your-knowledge)
 
-# Print Book
-
-## Page 3 - Pros and cons of the .NET Interactive Notebooks extension
+# Page 3 - Pros and cons of the .NET Interactive Notebooks extension
 
 The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
@@ -75,13 +70,13 @@ The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Note
 
 I wrote that "They cannot read input from the user, for example, you cannot use ReadLine or ReadKey." Although you cannot use the `Console` class methods, you can use the `Microsoft.DotNet.Interactive.Kernel` class and its `GetInputAsync` method. This uses the Visual Studio Code user interface to prompt the user for input.
 
-## Page 6 - Downloading and installing Visual Studio 2022 for Windows
+# Page 6 - Downloading and installing Visual Studio 2022 for Windows
 
 > Thanks to [Bert_the_Dad](https://github.com/jbertino) who raised this issue on [1 July 2023](https://github.com/markjprice/cs10dotnet6/issues/118).
 
 In Step 3, I list the **Workloads** to select to install, including **Mobile development with .NET**. I should have written **.NET Multi-platform App UI development**. This workload is only needed for the optional online-only *Chapter 19, Building Mobile and Desktop Apps Using .NET MAUI*.
 
-## Page 7, 8 - Downloading and installing Visual Studio Code
+# Page 7, 8 - Downloading and installing Visual Studio Code
 
 The **.NET Interactive Notebooks** extension has been renamed to **Polyglot Notebooks**. It still retains its original identifier `ms-dotnettools.dotnet-interactive-vscode`.
 
@@ -89,7 +84,7 @@ In Step 2, I wrote to "install the .NET SDKs for versions 3.1, 5.0, and 6.0". Yo
 
 https://dotnet.microsoft.com/en-us/download/dotnet/5.0
 
-## Page 8 - Installing other extensions
+# Page 8 - Installing other extensions
 
 > Thanks to [ifduyue](https://github.com/ifduyue) for raising this [issue on 14 November 2021](https://github.com/markjprice/cs10dotnet6/issues/1). 
 
@@ -103,7 +98,7 @@ To follow the instructions in the book, if you have installed the pre-release ve
 
 If you have installed the **C# Dev Kit** then it will install the pre-release version of the **C#** extension.
 
-## Page 18, 19 - Writing code using Visual Studio 2022
+# Page 18, 19 - Writing code using Visual Studio 2022
 
 In Step 3, the project template name has been changed from **Console Application** to **Console App** in the final release of Visual Studio 2022.
 
@@ -117,7 +112,7 @@ You have three choices to proceed:
 2. You can install the last version 5.0.408 that was released on May 10, 2022 from the following link: https://dotnet.microsoft.com/en-us/download/dotnet/5.0. .NET 5 has now reached end-of-life which means it is not supported by Microsoft *but it still works perfectly well* so for learning purposes its fine to use. 
 3. You can install .NET 7 SDK from the following link: https://dotnet.microsoft.com/en-us/download/dotnet/7.0. Then when you get to Step 7, in the **Additional information** dialog, select the check box **Do not use top-level statements**. This option returns the behavior of the .NET 7 console app template back to similar behavior of .NET 5.
 
-## Page 25 - Writing code using Visual Studio Code
+# Page 25 - Writing code using Visual Studio Code
 
 In Step 12, I wrote to "create a new console app that targets .NET 5.0". For this option to be available, you must have installed a version of .NET 5 SDK. If you have only installed .NET 6 then you will get an error.
 
@@ -143,7 +138,7 @@ You will then trust the workspace and extensions will activate as described in t
 
 ![A trusted workspace allows extensions to run](images/trust-workspace.png)
 
-## Page 28 - Adding a second project using Visual Studio Code
+# Page 28 - Adding a second project using Visual Studio Code
 
 In Step 6, I wrote, "Enter `omni`, and then, in the drop-down list that appears, select **OmniSharp: Select Project**." 
 
@@ -166,14 +161,14 @@ To avoid the issue, revert back to an earlier version or manually install versio
 
 I had hoped that the seriousness of this issue would prompt a non-beta fix by now but the holidays have probably slowed development down. I will leave both issues open and I have added this erratum to warn readers about this temporary issue.
 
-## Page 32 - Adding Markdown and special commands to a notebook
+# Page 32 - Adding Markdown and special commands to a notebook
 
 > Thanks to [exzzy22](https://github.com/exzzy22) for raising this [issue on January 14, 2022](https://github.com/markjprice/cs10dotnet6/issues/34).
 
 In Step 3, I wrote to "click **+ Markup** to add a Markdown cell." I should have 
 written "click **+ Markdown** to add a Markdown cell." 
 
-## Page 82 - Formatting using interpolated strings
+# Page 82 - Formatting using interpolated strings
 
 > Thanks to [GregStevenson](https://github.com/GregStevenson) for raising this [issue on 26 November 2021](https://github.com/markjprice/cs10dotnet6/issues/6). 
 
@@ -186,7 +181,7 @@ The code should be as follows:
 private const string fullname = $"{firstname} {lastname}";
 ```
 
-## Page 83 - Understanding format strings
+# Page 83 - Understanding format strings
 
 > Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 2 January 2022](https://github.com/markjprice/cs10dotnet6/issues/20). 
 
@@ -210,7 +205,7 @@ Console.WriteLine(
   arg1: "Count");
 ```
 
-## Page 84 - Getting text input from the user
+# Page 84 - Getting text input from the user
 
 I wrote that a notebook "does not support reading input from the console using `Console.ReadLine()`." Although this is true, you can use the `Microsoft.DotNet.Interactive.Kernel` class and its `GetInputAsync` method instead. This uses the .NET Interactive integration with the Visual Studio Code user interface to prompt the user for input.
 
@@ -226,7 +221,7 @@ Console.WriteLine($"Hello {firstName}, you look good for {age}.");
 
 ![Getting input from the .NET Interactive kernel](images/kernel-getinputasync.png)
 
-## Page 87 - Passing arguments to a console app
+# Page 87 - Passing arguments to a console app
 
 > Thanks to Bob Molloy for emailing me this issue.
 
@@ -247,7 +242,7 @@ For example, `firstarg second-arg third:arg "fourth arg"`.
 
 ![Barely visible hyphen in second-arg](images/erratum-page-87b.png)
 
-## Page 92 - Exercise 2.3 – Practice number sizes and ranges
+# Page 92 - Exercise 2.3 – Practice number sizes and ranges
 
 > Thanks to Bob Molloy for emailing me this issue.
 
@@ -290,7 +285,7 @@ else
 }
 ```
 
-## Page 136 - Converting numbers from cardinal to ordinal
+# Page 136 - Converting numbers from cardinal to ordinal
 
 > Thanks to [Felix Namutare](https://github.com/namutare) for raising this issue.
 
@@ -321,7 +316,7 @@ static string CardinalToOrdinal(int number)
 }
 ```
 
-## Page 137 - Calculating factorials with recursion
+# Page 137 - Calculating factorials with recursion
 
 The factorial function is defined for non-negative integers only i.e. for 0, 1, 2, 3, and so on, and it is defined as:
 ```
@@ -375,7 +370,7 @@ static void RunFactorial()
 }
 ```
 
-## Page 140 - Documenting functions with XML comments
+# Page 140 - Documenting functions with XML comments
 
 > Thanks to Bob Molloy via email and [CoRB-ops](https://github.com/CoRB-ops) for raising this [issue on 21 November 2021](https://github.com/markjprice/cs10dotnet6/issues/3). 
 
@@ -418,7 +413,7 @@ partial class Program
 }
 ```
 
-## Page 159 - Reviewing project packages
+# Page 159 - Reviewing project packages
 
 If you are having trouble with this section, please read the following two entries from the 7th edition that might be related:
 
@@ -426,13 +421,13 @@ If you are having trouble with this section, please read the following two entri
 
 - Make sure the `appsettings.json` file is not ignored: https://github.com/markjprice/cs11dotnet7/blob/main/docs/errata/errata.md#page-180---reviewing-project-packages
 
-## Page 165 - Running unit tests using Visual Studio Code
+# Page 165 - Running unit tests using Visual Studio Code
 
 > Thanks to [kwatsonkairosmgt](https://github.com/kwatsonkairosmgt) for raising this [issue on 27 October 2022](https://github.com/markjprice/cs10dotnet6/issues/106).
 
 In Step 1, the project name `CalculatorLibUnitTest` should be `CalculatorLibUnitTests`.
 
-## Page 183 - Importing a namespace to use a type
+# Page 183 - Importing a namespace to use a type
 
 In Step 3, I wrote a comment with the older C# syntax and a statement with the newer syntax for instantiating a new object, as shown in the following code:
 ```cs
@@ -446,20 +441,20 @@ The `var` keyword was not introduced until C# 3.0, so I should have written the 
 Person bob = new(); // C# 9.0 or later
 ```
 
-## Page 187 - Storing a value using an enum type
+# Page 187 - Storing a value using an enum type
 
 > Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 5 January 2022](https://github.com/markjprice/cs10dotnet6/issues/29). 
  
 In the **Good Practice** box, the text "If you use are writing code" should be "If you are writing code"
 
-## Page 192 - Making a field constant
+# Page 192 - Making a field constant
 
 > Thanks to Bob Molloy for emailing me this issue.
 
 In Step 1, the assigned `string` literal should be `"Homo Sapiens"`. 
 In Step 3, the output should be `Bob Smith is a Homo Sapiens`.
 
-## Page 246 - Releasing unmanaged resources
+# Page 246 - Releasing unmanaged resources
 
 > Thanks to `Wuu#0348` on the Discord channel for raising this issue.
 
@@ -467,7 +462,7 @@ In the second bullet point after the large code block, I wrote, "It needs to che
 
 It might be clearer if I wrote, "It needs to check the `disposing` parameter and `disposed` field because if the finalizer thread has already run and it called the `~Animal` method, then unmanaged resources will already have been deallocated and only managed resources remain to be deallocated by the garbage collector." This same typo is in the 7th edition. I will fix this in the 8th edition due to be published in November 2023.
 
-## Page 252 - Inheriting from classes
+# Page 252 - Inheriting from classes
 
 > Thanks to Nick Tsiatinis for emailing me this issue.
 
@@ -475,18 +470,18 @@ In Step 3, I wrote, "In `Program.cs`, ...", but at that point there are now two
 console app projects with a `Program.cs` file. I should have said, 
 "In the `PeopleApp` project, in `Program.cs`, ..."
 
-## Page 260 - Avoiding casting exceptions
+# Page 260 - Avoiding casting exceptions
 
 > Thanks to Nick Tsiatinis for emailing me this issue.
 
 In Step 3, I wrote, "In `Main`, ...", but there is no `Main` method. 
 I should have written, "In `Program.cs`, ..."
 
-## Page 292 - Publishing a self-contained app, Page 316 - Exercise 7.3 – Explore PowerShell
+# Page 292 - Publishing a self-contained app, Page 316 - Exercise 7.3 – Explore PowerShell
 
 In the **Good Practice** box on page 292, I wrote about how you can automate commands using scripts written in the PowerShell language. My original plan was to write content about PowerShell in the GitHub repository. But PowerShell is a massive topic and there will always be higher priority content to create that is specifically about C# and .NET. In the 8th edition, I will just reference the official PowerShell documentation: https://learn.microsoft.com/en-us/powershell/ And I will remove **Exercise 7.3** that suggests exploring PowerShell.
 
-## Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022
+# Page 296 - Decompiling using the ILSpy extension for Visual Studio 2022
 
 > Thanks to [omarz7](https://github.com/omarz7) for raising this [issue on 17 March 2023](https://github.com/markjprice/cs10dotnet6/issues/114).
 
@@ -496,7 +491,7 @@ In Step 10, it should therefore say, "Select the `System.Private.Corelib.dll` as
 
 In the 7th edition, I changed the instructions to open the `System.Linq.dll` assembly instead and view the `Enumerable.Count` method. This is so later in the book the reader will better understand how calling `Count` can be inefficient because it could require a sequence to be enumerated!
 
-## Page 297 - Decompiling using the ILSpy extension for Visual Studio Code
+# Page 297 - Decompiling using the ILSpy extension for Visual Studio Code
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 24 June 2022](https://github.com/markjprice/cs10dotnet6/issues/86).
 
@@ -514,19 +509,19 @@ And then show how to toggle between C# and IL code by clicking **Output language
 
 ![image](https://user-images.githubusercontent.com/14040265/175520894-2a8e3987-cfec-4a4a-81bb-19d211c901c2.png)
 
-## Page 311 - Understanding the .NET Portability Analyzer
+# Page 311 - Understanding the .NET Portability Analyzer
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 28 May 2022](https://github.com/markjprice/cs10dotnet6/issues/68).
 
 The link to the demonstration video has changed to: https://docs.microsoft.com/en-us/shows/seth-juarez/brief-look-net-portability-analyzer
 
-## Page 316 - Exercise 7.2 – Explore topics
+# Page 316 - Exercise 7.2 – Explore topics
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 28 May 2022](https://github.com/markjprice/cs10dotnet6/issues/69).
 
 The link to the chapter links has changed to: https://github.com/markjprice/cs10dotnet6/blob/main/book-links.md#chapter-7---packaging-and-distributing-net-types
 
-## Page 384 - Disposing of file resources
+# Page 384 - Disposing of file resources
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 5 July 2022](https://github.com/markjprice/cs10dotnet6/issues/90).
 
@@ -557,7 +552,7 @@ if (xmlFileStream != null)
 }
 ```
 
-## Page 391 - Encoding strings as byte arrays
+# Page 391 - Encoding strings as byte arrays
 
 > Thanks to [KlarenAlexander](https://github.com/KlarenAlexander) for raising this [issue on 17 December 2021](https://github.com/markjprice/cs10dotnet6/issues/12). 
 
@@ -575,13 +570,13 @@ Encoding encoder = number switch
 };
 ```
 
-## Page 396 - Serializing as XML
+# Page 396 - Serializing as XML
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 6 July 2022](https://github.com/markjprice/cs10dotnet6/issues/91).
 
 In Step 8, I show the XML output but I manually formatted it to be easier to read. The output you will see is all on one line.
 
-## Page 402 - Controlling JSON processing
+# Page 402 - Controlling JSON processing
 
 > Thanks to [KlarenAlexander](https://github.com/KlarenAlexander) for raising this [issue on 17 December 2021](https://github.com/markjprice/cs10dotnet6/issues/13). 
 
@@ -670,12 +665,12 @@ options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
 
-## Page 417 - Database Provider for MySQL
+# Page 417 - Database Provider for MySQL
 
 The table shows for MySQL the `deprecated` NuGet package "MySQL.`Data`.EntityFrameworkCore".
 The new one is "MySQL.EntityFrameworkCore"
 
-## Page 420 - Defining the Northwind database context class
+# Page 420 - Defining the Northwind database context class
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this [issue on 1 June 2022](https://github.com/markjprice/cs10dotnet6/issues/73)
 
@@ -688,7 +683,7 @@ Step 11 is needed for both SQLite and SQL Server. I should have made that cleare
 
 For example:
 
-### If you are using (a) SQL Server or (b) SQLite with Visual Studio Code
+## If you are using (a) SQL Server or (b) SQLite with Visual Studio Code
 
 If you are using SQL Server then the data is stored in a database outside the project. 
 It will be found if the connection string is valid for the server name and database name.
@@ -703,7 +698,7 @@ In both cases:
 1. Run the console application.
 2. Note the output showing which database provider you chose to use.
 
-### If you are using SQLite with Visual Studio 2022
+## If you are using SQLite with Visual Studio 2022
 
 If you are using **SQLite** with **Visual Studio 2022**, then you need to ensure 
 that the `Northwind.db` file is in the correct folder. The compiled application executes in 
@@ -725,7 +720,7 @@ only when the database file is newer or each time we run the project:
 
 > Note that in the book I say to set it to **Copy always** but this means that you will lose changes made since the last time you ran the project. For example, later in this exercise, you will write code to add a new product and then update it. If you choose to always copy then when you stop and restart the project you will lose the newly added product and so your code to update it will throw an exception.
 
-## Page 428 - Setting up the dotnet-ef tool
+# Page 428 - Setting up the dotnet-ef tool
 
 > Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 30 March 2022](https://github.com/markjprice/cs10dotnet6/issues/45)
 
@@ -740,7 +735,7 @@ To fix this problem:
 1. Uninstall the x86 version using: `dotnet tool uninstall --global dotnet-ef`.
 2. Force the install of the ARM version using: `dotnet tool install --global dotnet-ef -a arm64`.
 
-## Page 437 - Filtering and sorting products
+# Page 437 - Filtering and sorting products
 
 > Thanks to Arendjan Hoek for emailing this issue on 17 August 2022.
 
@@ -760,7 +755,7 @@ Checking for "not any" is more efficient than checking for a count of zero using
 
 > Note that the order of the clauses in the `if` statement is important. We must check that `products is null` first. If it is `true`, then it will never execute the second clause and therefore it won't throw a `NullReferenceException` when accessing the `Count()` member.
 
-## Page 438 - Getting the generated SQL
+# Page 438 - Getting the generated SQL
 
 > Thanks to Bob Molloy for emailing this issue.
 
@@ -773,7 +768,7 @@ The `ORDER BY` clause should only show the SQL sorts by `CategoryId`:
 ORDER BY "c"."CategoryId"
 ```
 
-## Page 473 - Targeting a named method
+# Page 473 - Targeting a named method
 
 In Step 2, I say "Above the `NameLongerThanFour` method, pass the method's name into the `Func<string, 
 bool>` delegate, and then loop through the query items". But earlier, you would already have looped 
@@ -792,7 +787,7 @@ foreach (string item in query)
 }
 ```
 
-## Page 509 - Implementing a Recorder class
+# Page 509 - Implementing a Recorder class
 
 > Thanks to [HoshyarKarimi](https://github.com/HoshyarKarimi) for raising this [issue on 5 June 2022](https://github.com/markjprice/cs10dotnet6/issues/76). 
 
@@ -811,7 +806,7 @@ WriteLine("{0:N0} total milliseconds elapsed.",
   timer.ElapsedMilliseconds);
 ```
 
-## Page 510 - Implementing a Recorder class
+# Page 510 - Implementing a Recorder class
 
 > Thanks to [akrsnr](https://github.com/akrsnr) for raising this [issue on 30 December 2021](https://github.com/markjprice/cs10dotnet6/issues/16). 
 
@@ -828,7 +823,7 @@ Processing. Please wait...
 
 This could be a bug but I am investigating.
 
-## Page 535 - Improving responsiveness for GUI apps
+# Page 535 - Improving responsiveness for GUI apps
 
 > Thanks to [Chang-Ping](https://github.com/Chang-Ping) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/50).
 
@@ -845,7 +840,7 @@ Or run the following at the command line:
 dotnet dev-certs https --trust
 ```
 
-## Page 562 - Creating a class library for a Northwind database context
+# Page 562 - Creating a class library for a Northwind database context
 
 In Step 11, you write an extension method that registers the `NorthwindContext` class for use as a dependency service. In later chapters, this will be used in ASP.NET Core and Blazor projects. By default, a `DbContext` class is registered using `Scope` lifetime, meaning that multiple threads can share the same instance. If more than one thread attempts to use the same `NorthwindContext` class instance at the same time then you will see the following runtime exception thrown:
 
@@ -887,7 +882,7 @@ public static class NorthwindContextExtensions {
 }
 ```
 
-## Page 564 - Creating a class library for entity models using SQL Server
+# Page 564 - Creating a class library for entity models using SQL Server
 
 In Step 17, you write an extension method that registers the `NorthwindContext` class for use as a dependency service. In later chapters, this will be used in ASP.NET Core and Blazor projects. By default, a `DbContext` class is registered using `Scope` lifetime, meaning that multiple threads can share the same instance. If more than one thread attempts to use the same `NorthwindContext` class instance at the same time then you will see the following runtime exception thrown:
 
@@ -927,7 +922,7 @@ public static class NorthwindContextExtensions {
 
 > Note that I have also written a related improvement here: https://github.com/markjprice/cs11dotnet7/blob/main/docs/errata/improvements.md#page-551---creating-a-class-library-for-entity-models-using-sql-server
 
-## Page 645 - Defining a typed view
+# Page 645 - Defining a typed view
 
 > Thanks to [johncflorida](https://github.com/johncflorida) for raising this issue. 
 
@@ -965,14 +960,14 @@ The four corrected elements are as shown in the following markup:
    role="button" data-bs-slide="next">
 ```
 
-## Page 688 - Controlling XML serialization
+# Page 688 - Controlling XML serialization
 
 In Step 4, I say, "In the `Northwind.Common.EntityModels.SqlServer` project, decorate the 
 `CustomerCustomerDemos` property with `[XmlIgnore]` too." 
 
 This should say, "In the `Northwind.Common.EntityModels.SqlServer` project, in `Customers.cs`, decorate the `CustomerTypes` property with `[XmlIgnore]` too."
 
-## Page 701 - Enabling HTTP logging
+# Page 701 - Enabling HTTP logging
 
 > Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/47).
 
@@ -996,7 +991,7 @@ The book misses an important step to enable HTTP logging. You must configure the
 
 > Note: Although the `Default` log level might be set to `Information`, more specific configurations take priority. For example, any logging systems in the `Microsoft` namespace will use `Warning` level. Any logging systems in the `Microsoft.AspNetCore` namespace will now use `Information.`
 
-## Page 703 - Configuring HTTP clients using HttpClientFactory
+# Page 703 - Configuring HTTP clients using HttpClientFactory
 
 > Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/48).
 
@@ -1024,7 +1019,7 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
     },
 ```
 
-## Page 706 - Enabling Cross-Origin Resource Sharing
+# Page 706 - Enabling Cross-Origin Resource Sharing
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 3 August 2022](https://github.com/markjprice/cs10dotnet6/issues/98).
 
@@ -1052,7 +1047,7 @@ port 5002." In the next edition I will add that if you are using Visual Studio t
 
 > **Good Practice**: Always start your Visual Studio 2022 projects *without debugging* unless you are *actually debugging*. This is for two good reasons. First, starting a project with the debugger attached is much slower, and second, it prevents that copy of Visual Studio from starting another project at the same time. If you start a project *without* the debugger attached then you can use that single copy of Visual Studio to start as many projects as you need.
 
-## Page 708 - Implementing a Health Check API
+# Page 708 - Implementing a Health Check API
 
 In Step 8, I say to note the SQL statement that is executed to check the health of the service. This behavior was removed late in the process. To add it back, you can install the following package to your `Northwind.WebApi` project file:
 ```xml
@@ -1069,7 +1064,7 @@ builder.Services.AddHealthChecks()
 
 > **Warning!** The `AspNetCore.HealthChecks.SqlServer` is not officially supported by Microsoft.
 
-## Page 712 - Building a weather service using minimal APIs
+# Page 712 - Building a weather service using minimal APIs
 
 > Thanks to [Nick Tsiatinis](https://github.com/ntsiatinis) for raising this [issue on 27 April 2022](https://github.com/markjprice/cs10dotnet6/issues/49).
 
@@ -1097,9 +1092,9 @@ To fix this, modify `applicationUrl` setting in the `launchSettings.json` file, 
     },
 ```
 
-# Bonus Content: Chapters 18 to 20 and Appendix
+**Bonus Content: Chapters 18 to 20 and Appendix**
 
-## Page 20 - Adding a services page to the Northwind MVC website
+# Page 20 - Adding a services page to the Northwind MVC website
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this [issue on 11 August 2022](https://github.com/markjprice/cs10dotnet6/issues/99).
 
@@ -1123,7 +1118,7 @@ the following markup:
        @p.ProductName
 ```
 
-## Page 35 - Building a client for GraphQL
+# Page 35 - Building a client for GraphQL
 
 In Step 5, I say to "render the Seafood products". The code uses the older Bootstrap 4 class names of `badge badge-success` 
 but it should use the newer Bootstrap 5 classes named of `badge bg-success`, as shown in 
@@ -1144,13 +1139,13 @@ the following markup:
 </p>
 ```
 
-## Page 41 - Testing a gRPC client to the gRPC service
+# Page 41 - Testing a gRPC client to the gRPC service
 
 In Step 8, I say to "View the command prompt or terminal for the gRPC service and 
 note the info messages" but you will only see this output if you have enabled Info 
 level logging as described in [Page 703 - Configuring HTTP clients using HttpClientFactory](#page-703---configuring-http-clients-using-httpclientfactory).
 
-## Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
+# Page 141 - Appendix A - Exercise 3.1 – Test your knowledge
 
 > Thanks to [zeier](https://github.com/zeier) for raising this [issue on 1 December 2021](https://github.com/markjprice/cs10dotnet6/issues/10). 
 
@@ -1167,7 +1162,7 @@ Question 8 asked, "Does the following statement compile? for ( ; true; ) ;"
 For the same reasons, the description in the answer should read, "Yes. The `for` statement does not require any of the three parts to be defined. The initializer, condition, and incrementer expressions are optional. Even if the `true` value was missing, this `for` statement will execute the empty `;` statement after the close brace, forever. It is an 
 example of an infinite loop."
 
-## Page 143 - Appendix A - Exercise 4.1 – Test your knowledge
+# Page 143 - Appendix A - Exercise 4.1 – Test your knowledge
 
 > Thanks to [jbeale1 John Beale](https://github.com/jbeale1) for raising this [issue on 3 January 2022](https://github.com/markjprice/cs10dotnet6/issues/24). 
  

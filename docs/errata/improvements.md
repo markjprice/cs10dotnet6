@@ -1,46 +1,42 @@
-# Improvements
+**Improvements** (33 items)
 
 If you have suggestions for improvements, then please [raise an issue in this repository](https://github.com/markjprice/cs10dotnet6/issues) or email me at markjprice (at) gmail.com.
 
-- [Improvements](#improvements)
-- [Print Book](#print-book)
-  - [Page 16 - Understanding .NET Standard](#page-16---understanding-net-standard)
-  - [Page 20 - Compiling and running code using Visual Studio](#page-20---compiling-and-running-code-using-visual-studio)
-  - [Page 29 - Exploring code using .NET Interactive Notebooks](#page-29---exploring-code-using-net-interactive-notebooks)
-  - [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
-  - [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
-  - [Page 78 - Using target-typed new to instantiate objects](#page-78---using-target-typed-new-to-instantiate-objects)
-  - [Page 84 - Simplifying the usage of the console](#page-84---simplifying-the-usage-of-the-console)
-  - [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
-  - [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
-  - [Page 135 - Writing a function that returns a value](#page-135---writing-a-function-that-returns-a-value)
-  - [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
-  - [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
-  - [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
-  - [Page 172 - Rethrowing exceptions](#page-172---rethrowing-exceptions)
-  - [Page 203 - Controlling how parameters are passed](#page-203---controlling-how-parameters-are-passed)
-  - [Page 208 - Defining settable properties](#page-208---defining-settable-properties)
-  - [Page 225 - Implementing functionality using local functions](#page-225---implementing-functionality-using-local-functions)
-  - [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
-  - [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
-  - [Page 289 - Creating a console application to publish](#page-289---creating-a-console-application-to-publish)
-  - [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
-  - [Page 360 - Working with images](#page-360---working-with-images)
-  - [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
-  - [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
-  - [Page 429 - Scaffolding models using an existing database](#page-429---scaffolding-models-using-an-existing-database)
-  - [Page 435 - Filtering included entities](#page-435---filtering-included-entities)
-  - [Page 452 - Updating entities](#page-452---updating-entities)
-  - [Page 662 - Making controller action methods asynchronous](#page-662---making-controller-action-methods-asynchronous)
-  - [Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page](#page-664---exercise-152--practice-implementing-mvc-by-implementing-a-category-detail-page)
-  - [Page 683 - Configuring the customer repository and Web API controller](#page-683---configuring-the-customer-repository-and-web-api-controller)
-  - [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
-  - [Page 709 - Implementing Open API analyzers and conventions](#page-709---implementing-open-api-analyzers-and-conventions)
-  - [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
+- [Page 16 - Understanding .NET Standard](#page-16---understanding-net-standard)
+- [Page 20 - Compiling and running code using Visual Studio](#page-20---compiling-and-running-code-using-visual-studio)
+- [Page 29 - Exploring code using .NET Interactive Notebooks](#page-29---exploring-code-using-net-interactive-notebooks)
+- [Page 57 - Changing the color scheme for C# syntax](#page-57---changing-the-color-scheme-for-c-syntax)
+- [Page 62 - Implicitly and globally importing namespaces](#page-62---implicitly-and-globally-importing-namespaces)
+- [Page 78 - Using target-typed new to instantiate objects](#page-78---using-target-typed-new-to-instantiate-objects)
+- [Page 84 - Simplifying the usage of the console](#page-84---simplifying-the-usage-of-the-console)
+- [Page 88 - Setting options with arguments](#page-88---setting-options-with-arguments)
+- [Page 110 - Understanding iteration statements](#page-110---understanding-iteration-statements)
+- [Page 135 - Writing a function that returns a value](#page-135---writing-a-function-that-returns-a-value)
+- [Page 152 - Customizing breakpoints](#page-152---customizing-breakpoints)
+- [Page 162 - Creating a class library that needs testing](#page-162---creating-a-class-library-that-needs-testing)
+- [Page 168 - Understanding the call stack](#page-168---understanding-the-call-stack)
+- [Page 172 - Rethrowing exceptions](#page-172---rethrowing-exceptions)
+- [Page 203 - Controlling how parameters are passed](#page-203---controlling-how-parameters-are-passed)
+- [Page 208 - Defining settable properties](#page-208---defining-settable-properties)
+- [Page 225 - Implementing functionality using local functions](#page-225---implementing-functionality-using-local-functions)
+- [Page 233 - Comparing objects when sorting](#page-233---comparing-objects-when-sorting)
+- [Page 235 - Comparing objects using a separate class](#page-235---comparing-objects-using-a-separate-class)
+- [Page 289 - Creating a console application to publish](#page-289---creating-a-console-application-to-publish)
+- [Page 347 - Using immutable collections](#page-347---using-immutable-collections)
+- [Page 360 - Working with images](#page-360---working-with-images)
+- [Page 402 - Controlling JSON processing](#page-402---controlling-json-processing)
+- [Page 414 - Setting Up SQLite for Windows](#page-414---setting-up-sqlite-for-windows)
+- [Page 429 - Scaffolding models using an existing database](#page-429---scaffolding-models-using-an-existing-database)
+- [Page 435 - Filtering included entities](#page-435---filtering-included-entities)
+- [Page 452 - Updating entities](#page-452---updating-entities)
+- [Page 662 - Making controller action methods asynchronous](#page-662---making-controller-action-methods-asynchronous)
+- [Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page](#page-664---exercise-152--practice-implementing-mvc-by-implementing-a-category-detail-page)
+- [Page 683 - Configuring the customer repository and Web API controller](#page-683---configuring-the-customer-repository-and-web-api-controller)
+- [Page 692 - Making other requests using REST Client](#page-692---making-other-requests-using-rest-client)
+- [Page 709 - Implementing Open API analyzers and conventions](#page-709---implementing-open-api-analyzers-and-conventions)
+- [Page 768 - Exercise 17.3 – Practice by creating a country navigation item](#page-768---exercise-173--practice-by-creating-a-country-navigation-item)
 
-# Print Book
-
-## Page 16 - Understanding .NET Standard
+# Page 16 - Understanding .NET Standard
 
 I wrote. ".NET 6 has a single BCL and two CLRs: CoreCLR is optimized for server or desktop scenarios like websites and Windows desktop apps, and the Mono runtime is optimized for mobile and web browser apps that have limited resources."
 
@@ -48,7 +44,7 @@ In August 2021, Stephen Toub (Partner Software Engineer, .NET) wrote the article
 
 Read more at the following link: https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-6/#blazor-and-mono
 
-## Page 20 - Compiling and running code using Visual Studio
+# Page 20 - Compiling and running code using Visual Studio
 
 In Step 1, I say, "In Visual Studio, navigate to Debug | Start Without Debugging."
 
@@ -58,7 +54,7 @@ Always start your Visual Studio 2022 projects *without debugging* unless you are
 
 If you start a project with the debugger attached then you must start another copy of Visual Studio if you want to run another project at the same time.
 
-## Page 29 - Exploring code using .NET Interactive Notebooks
+# Page 29 - Exploring code using .NET Interactive Notebooks
 
 Although the **.NET Interactive Notebooks** extension requires Visual Studio Code, 
 Microsoft's ML.NET team have created a similar extension for Visual Studio 2022. 
@@ -82,7 +78,7 @@ To create a new notebook:
 2. Search for `Notebook`.
 3. Enter a filename.
 
-## Page 57 - Changing the color scheme for C# syntax
+# Page 57 - Changing the color scheme for C# syntax
 
 In Step 1, I say, "In Visual Studio Code, navigate to **Code** | **Preferences** | **Color Theme** (it is on the **File**
 menu on Windows)." 
@@ -91,7 +87,7 @@ In  the next edition, I will swap this around since Windows is more commonly use
 For example, "In Visual Studio Code, navigate to **File** | **Preferences** | **Color Theme** 
 (it is in the **Code** menu on macOS)."
 
-## Page 62 - Implicitly and globally importing namespaces
+# Page 62 - Implicitly and globally importing namespaces
 
 After Step 9, I say that you can disable implicit usings by **removing the entry**, as shown in the following screenshot: 
 
@@ -102,7 +98,7 @@ It would have been clearer to say, "You can disable the implicitly imported name
 <ImplicitUsings>disable</ImplicitUsings>
 ```
 
-## Page 78 - Using target-typed new to instantiate objects
+# Page 78 - Using target-typed new to instantiate objects
 
 I show an example of how target-typed new works, as shown in the following code:
 ```cs
@@ -121,7 +117,7 @@ at the bottom of the file, below the statements that use it, or in a separate fi
 If you enter the code as shown in the book you will get a compiler error: 
 `Error CS8803: Top-level statements must precede namespace and type declarations.`
 
-## Page 84 - Simplifying the usage of the console
+# Page 84 - Simplifying the usage of the console
 
 > Thanks to [Fercho](https://github.com/theFissh) for raising this [issue on 12 June 2022](https://github.com/markjprice/cs10dotnet6/issues/80). 
 
@@ -151,7 +147,7 @@ Note the `<ImplicitUsings>` element must be set to `enable` and the `<Using>` el
 In the seventh edition, I have changed the instructions throughout the book to do it this way, for example:
 https://github.com/markjprice/cs11dotnet7/blob/main/vs4win/Chapter06/PacktLibrary/PacktLibrary.csproj#L10
 
-## Page 88 - Setting options with arguments
+# Page 88 - Setting options with arguments
 
 > Thanks to [dpkwhan](https://github.com/dpkwhan) for raising this [issue on 2 January 2022](https://github.com/markjprice/cs10dotnet6/issues/21). 
 
@@ -160,20 +156,20 @@ It would have been clearer if I had explained that `ForegroundColor`, `Backgroun
 `Console` type so that we can call methods like `WriteLine` and access all its properties 
 without explicitly typing the `Console` class name. 
 
-## Page 110 - Understanding iteration statements
+# Page 110 - Understanding iteration statements
 
 I wrote, "Iteration statements repeat a block of statements either while a condition is true or for each item in a collection."
 
 Some readers do not realize that the `for` statement does not iterate a specific number of times; it uses a while condition, or loops forever if the while condition is missing. To make that clearer, the sentence could be, "Iteration statements repeat a block of statements either while a condition is `true` (`while` and `for` statements) or for each item in a collection (`foreach` statement)."
 
-## Page 135 - Writing a function that returns a value
+# Page 135 - Writing a function that returns a value
 
 At the end of this section there is a note box that explains that we could use the `C` format code to format the output as currency. If you are running on a computer in a culture that uses Euros then to show the Euro currency symbol you must enable UTF-8 encoding. Add the following statement before doing any writing to the console:
 ```cs
 Console.OutputEncoding = System.Text.Encoding.UTF8;
 ```
 
-## Page 152 - Customizing breakpoints
+# Page 152 - Customizing breakpoints
 
 > Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 1 January 2022](https://github.com/markjprice/cs10dotnet6/issues/18). 
 
@@ -181,7 +177,7 @@ In Steps 5 or 6, after typing the condition expression, press *Enter* to ensure
 the condition expression has been accepted before starting debugging. If you do not, it might look
 like the condition expression is defined but it might not be and the breakpoint could always be hit.
 
-## Page 162 - Creating a class library that needs testing
+# Page 162 - Creating a class library that needs testing
 
 > Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 3 January 2022](https://github.com/markjprice/cs10dotnet6/issues/23). 
  
@@ -193,19 +189,19 @@ workspace/solution named CalculatorLib. The dotnet new template is named classli
 
 The only difference when creating a Class Library/classlib is to select a different project template. The rest of the steps are exactly the same as creating a Console App/console project. Remember that you can refer to Chapter 1 for step-by-step instructions. 
 
-## Page 168 - Understanding the call stack
+# Page 168 - Understanding the call stack
 
 > Thanks to Bob Molloy for emailing me this issue.
 
 In Step 8, on page 170, I say to run the console app. Unless you need to step through your code to debug it, you should always run your code without the debugger attached. In this case it is especially important not to attach the debugger because if you do, then it will catch the exception and show it in a GUI dialog box instead of outputting it as shown in the book. 
 
-## Page 172 - Rethrowing exceptions
+# Page 172 - Rethrowing exceptions
 
 > Thanks to [ghlouwho](https://github.com/ghlouwho) for raising this [issue on 5 January 2022](https://github.com/markjprice/cs10dotnet6/issues/28). 
  
 In Step 4, instead of saying, "Delete the `ex` when rethrowing", it would be clearer to say, "Remove the `ex` by replacing the statement `throw ex;` with `throw;`"
 
-## Page 203 - Controlling how parameters are passed
+# Page 203 - Controlling how parameters are passed
 
 > Thanks to Rajiv Sonik for emailing me this improvement.
 
@@ -215,7 +211,7 @@ Like `out` parameters, `ref` parameters also cannot have default values, but sin
 
 In future editions I will add a note to say that both `out` and `ref` parameters cannot have default values in the bullets above the code example.
 
-## Page 208 - Defining settable properties
+# Page 208 - Defining settable properties
 
 > Thanks to Amer Cejudo for emailing me this issue on 27 August 2022.
 
@@ -240,7 +236,7 @@ catch (Exception ex)
 
 > The print book is limited to 820 pages. If I added exception handling code to all code examples then I would have to remove at least one chapter from the book to make enough space. I do think it's worth me explicitly explaining that in a note box, so I will add one in the exception handling section in Chapter 4 of the 7th edition. Then reader will know to add their own exception handling throughout all code. But those seven extra lines are very boring to repeat in every code block.
 
-## Page 225 - Implementing functionality using local functions
+# Page 225 - Implementing functionality using local functions
 
 > Thanks to Amer Cejudo for emailing me this issue on 27 August 2022.
 
@@ -266,7 +262,7 @@ catch (Exception ex)
 
 > The print book is limited to 820 pages. If I added exception handling code to all code examples then I would have to remove at least one chapter from the book to make enough space. I do think it's worth me explicitly explaining that in a note box, so I will add one in the exception handling section in Chapter 4 of the 7th edition. Then reader will know to add their own exception handling throughout all code. But those seven extra lines are very boring to repeat in every code block.
 
-## Page 233 - Comparing objects when sorting
+# Page 233 - Comparing objects when sorting
 
 In Step 1, I say to add statements to create an array of `Person` instances and write the 
 items to the console. But the array of `Person` instances does not allow `null` values and
@@ -353,7 +349,7 @@ public int CompareTo(Person? other)
 }
 ```
 
-## Page 235 - Comparing objects using a separate class
+# Page 235 - Comparing objects using a separate class
 
 As with the erratum item above, the implementation could be improved to 
 better handle `null` values, as shown in the following code:
@@ -443,7 +439,7 @@ Use PersonComparer's IComparer implementation to sort:
   <null> Person
 ```
 
-## Page 289 - Creating a console application to publish
+# Page 289 - Creating a console application to publish
 
 > Thanks to [Hoshyar Karimi](https://github.com/HoshyarKarimi) for raising this 
 > [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/66).
@@ -453,7 +449,7 @@ operating systems inside the `<PropertyGroup>` element." It is easy to miss that
 the element name must be plural, not singular. It must be 
 `<RuntimeIdentifiers>`, not `<RuntimeIdentifier>`.
 
-## Page 347 - Using immutable collections
+# Page 347 - Using immutable collections
 
 > Thanks to Bob Molloy for emailing me this issue.
 
@@ -464,7 +460,7 @@ list with the newly added city"
 It would have been clearer to write that it returns a new list containing 
 the members from the old list plus the newly added city.
 
-## Page 360 - Working with images
+# Page 360 - Working with images
 
 > Thanks to Bob Molloy for emailing me this issue.
 
@@ -525,7 +521,7 @@ foreach (string imagePath in images)
 WriteLine("Image processing complete. View the images folder.");
 ```
 
-## Page 402 - Controlling JSON processing
+# Page 402 - Controlling JSON processing
 
 > Thanks to [KlarenAlexander](https://github.com/KlarenAlexander) for raising this [issue on 17 December 2021](https://github.com/markjprice/cs10dotnet6/issues/13). 
 
@@ -614,13 +610,13 @@ options.Converters.Add(new DateOnlyConverter());
 options.Converters.Add(new DateOnlyNullableConverter());
 ```
 
-## Page 414 - Setting Up SQLite for Windows
+# Page 414 - Setting Up SQLite for Windows
 
 > Thanks to John David Bowman for emailing this issue.
 
 In Step 4, I wrote, "Extract the ZIP file into a folder named `C:\SQLite`." It would be clearer to add the following, "Make sure that the extracted  `sqlite3.exe` file is directly inside the `C:\SQLite` folder or the executable will not be found later when you try to use it."
 
-## Page 429 - Scaffolding models using an existing database
+# Page 429 - Scaffolding models using an existing database
 
 Be careful when entering the command to scaffold the models if you are using O'Reilly's online version because their formatting does not show long lines and they do not show a scroll bar to indicate there is more, as shown in the following screenshot:
 
@@ -634,7 +630,7 @@ The Packt online version looks like this:
 
 ![A command in Packt's online version of the book](images/ef-core-command-packt.png)
 
-## Page 435 - Filtering included entities
+# Page 435 - Filtering included entities
 
 In Step 1, I tell you to add code to define a `FilteredIncludes` method, and prompt the user to enter a minimum value for units in stock. The code assumes that if the user enters nothing then `ReadLine` returns `null` so it uses a null-coallesing operator to replace that with `10`, as shown in the following code:
 ```cs
@@ -655,7 +651,7 @@ do
 
 ```
 
-## Page 452 - Updating entities
+# Page 452 - Updating entities
 
 In Step 1, the code finds a product to update by specifying the start of a product name and just returns the first match. There isn't a particular reason why I chose to do it that way, I was just trying to show different methods to add some variety. If you need to update a specific product then you must use a unique identifier like `ProductId` instead. 
 
@@ -663,7 +659,7 @@ But I cannot know what the product ID will be for the products that a reader add
 
 In the next edition, I will add a note to say this.
 
-## Page 662 - Making controller action methods asynchronous
+# Page 662 - Making controller action methods asynchronous
 
 > Thanks to [Dreamoochy](https://github.com/Dreamoochy) for raising this issue on [29 July 2022](https://github.com/markjprice/cs10dotnet6/issues/96). 
 
@@ -690,7 +686,7 @@ public async Task<IActionResult> Index()
 }
 ```
 
-## Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page
+# Page 664 - Exercise 15.2 – Practice implementing MVC by implementing a category detail page
 
 Earlier in the chapter, and in Exercise 15.2, the link generated for a category detail page looks like this:
 ```
@@ -758,7 +754,7 @@ If you want to keep the original link format, then you would need to decorate th
 public async Task<IActionResult> CategoryDetail(int? id)
 ```
 
-## Page 683 - Configuring the customer repository and Web API controller
+# Page 683 - Configuring the customer repository and Web API controller
 
 In Step 4, you add a `CustomersController.cs` file and define a `CustomersController` class, as shown in the following partial code:
 ```cs
@@ -771,7 +767,7 @@ public class CustomersController : ControllerBase
 
 In the 8th edition, I will add more explanation about how the route is defined by the `[Route]` attribute. The `[controller]` part is automatically replaced with the class name with the `Controller` suffix removed. Therefore the base address of the route to the `CustomersController` is `api/customers`.
 
-## Page 692 - Making other requests using REST Client
+# Page 692 - Making other requests using REST Client
 
 > Thanks to [Tim](https://github.com/tcrum06) for raising this [issue on 27 May 2022](https://github.com/markjprice/cs10dotnet6/issues/67). 
 
@@ -817,7 +813,7 @@ Content-Length: 266
 ```
 > Note the `Content-Length` has had to change too.
 
-## Page 709 - Implementing Open API analyzers and conventions
+# Page 709 - Implementing Open API analyzers and conventions
 
 > Thanks to [Andrei Tarutin](https://github.com/tarurar) for raising this [issue on 24 December 2022](https://github.com/markjprice/cs10dotnet6/issues/111). 
 
@@ -843,7 +839,7 @@ This whole chapter is about Web API projects but I did not explicitly say that t
   </PropertyGroup>
 ```
 
-## Page 768 - Exercise 17.3 – Practice by creating a country navigation item
+# Page 768 - Exercise 17.3 – Practice by creating a country navigation item
 
 This exercise is probably too difficult to complete for Blazor WebAssembly 
 with the knowledge that I cover in the chapter because it requires you to extend 
