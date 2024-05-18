@@ -49,6 +49,7 @@ If you find any mistakes in the sixth edition, *C# 10 and .NET 6 - Modern Cross-
 - [Page 535 - Improving responsiveness for GUI apps](#page-535---improving-responsiveness-for-gui-apps)
 - [Page 562 - Creating a class library for a Northwind database context](#page-562---creating-a-class-library-for-a-northwind-database-context)
 - [Page 564 - Creating a class library for entity models using SQL Server](#page-564---creating-a-class-library-for-entity-models-using-sql-server)
+- [Page 597 - Defining a form to insert a new supplier](#page-597---defining-a-form-to-insert-a-new-supplier)
 - [Page 645 - Defining a typed view](#page-645---defining-a-typed-view)
 - [Page 688 - Controlling XML serialization](#page-688---controlling-xml-serialization)
 - [Page 701 - Enabling HTTP logging](#page-701---enabling-http-logging)
@@ -921,6 +922,49 @@ public static class NorthwindContextExtensions {
 ```
 
 > Note that I have also written a related improvement here: https://github.com/markjprice/cs11dotnet7/blob/main/docs/errata/improvements.md#page-551---creating-a-class-library-for-entity-models-using-sql-server
+
+# Page 597 - Defining a form to insert a new supplier
+
+> Thanks to [zhangjinshan1990](https://github.com/zhangjinshan1990) for raising this [issue on May 18, 2024](https://github.com/markjprice/cs10dotnet6/issues/128).
+
+In Step 2, you bind HTML three `<input>` elements to properties of the `Supplier` class, as shown in the following markup:
+```xml
+<form method="POST">
+  <div>
+    <input asp-for="Supplier.CompanyName"
+            placeholder="Company Name" />
+  </div>
+  <div>
+    <input asp-for="Supplier.Country"
+            placeholder="Country" />
+  </div>
+  <div>
+    <input asp-for="Supplier.Phone"
+            placeholder="Phone" />
+  </div>
+  <input type="submit" />
+</form>
+```
+But you will see three `null` warnings, as shown in the following output:
+```
+Warning (active) CS8602	Dereference of a possibly null reference. Northwind.Web C:\cs10dotnet6\PracticalApps\Northwind.Web\Pages\Suppliers.cshtml 34
+Warning (active) CS8602	Dereference of a possibly null reference. Northwind.Web C:\cs10dotnet6\PracticalApps\Northwind.Web\Pages\Suppliers.cshtml 38
+Warning (active) CS8602	Dereference of a possibly null reference. Northwind.Web C:\cs10dotnet6\PracticalApps\Northwind.Web\Pages\Suppliers.cshtml 42
+```
+
+To prevent this, in the Razor Page code-behind file, you should make the `Supplier` property non-nullable (by removing the `?` from `Supplier?`), and then add a statement in the constructor to initialize the `Supplier` property to a new instance, as shown in the following code:
+```cs
+[BindProperty]
+public Supplier Supplier { get; set; }
+
+public SuppliersModel(NorthwindContext db)
+{
+  _db = db;
+
+  // Initialize the Supplier property to avoid null warnings in the view.
+  Supplier = new();
+}
+```
 
 # Page 645 - Defining a typed view
 
