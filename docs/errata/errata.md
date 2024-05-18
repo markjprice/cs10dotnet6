@@ -954,6 +954,7 @@ Warning (active) CS8602	Dereference of a possibly null reference. Northwind.Web 
 
 To prevent this, in the Razor Page code-behind file, you should make the `Supplier` property non-nullable (by removing the `?` from `Supplier?`), and then add a statement in the constructor to initialize the `Supplier` property to a new instance, as shown in the following code:
 ```cs
+// Disallow nulls to avoid null warnings in the view.
 [BindProperty]
 public Supplier Supplier { get; set; }
 
@@ -961,7 +962,8 @@ public SuppliersModel(NorthwindContext db)
 {
   _db = db;
 
-  // Initialize the Supplier property to avoid null warnings in the view.
+  // Initialize the Supplier property to avoid compile error 
+  // and potential errors at runtime.
   Supplier = new();
 }
 ```
