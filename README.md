@@ -2,7 +2,7 @@
 
 [Join me on Discord](https://packt.link/csharp10dotnet6)
 
-> .NET 6 has started its maintenance support period. During the maintenance period, releases are updated to mitigate security vulnerabilities, only. The maintenance support period is the final 6 months of support for any release (STS or LTS). After the maintenance period ends, end of life is reached and the release is out of support. .NET 6 will reach its end-of-life on [Tuesday, November 12, 2024](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle). I recommend upgrading to [.NET 8](https://github.com/markjprice/cs12dotnet8/blob/main/README.md) as soon as possible.
+> .NET 6 reached its end-of-life on [Tuesday, November 12, 2024](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core#lifecycle). I recommend upgrading to [.NET 8](https://github.com/markjprice/cs12dotnet8/blob/main/README.md) as soon as possible and then plan to upgrade to .NET 10 in November 2025.
 
 # C# 10 and .NET 6 - Modern Cross-Platform Development, Sixth Edition
 
